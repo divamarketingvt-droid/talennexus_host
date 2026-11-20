@@ -1,0 +1,1842 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script src="components/site-gtm.js?v=20261118"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Talennexus Healthcare Hiring — Scalable, fast, and precise recruitment for hospitals, pharma, medtech, and life sciences organizations.">
+    <meta name="keywords" content="Healthcare Hiring, Medical Staffing, Nurse Recruitment, Physician Hiring, Pharma Talent, Clinical Research Staffing, Healthcare IT, Allied Health Staffing">
+    <title>Healthcare Hiring | Talennexus</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #1e3a5f;
+            --primary-accent: #4a90d9;
+            --secondary-color: #14355d;
+            --primary-hover: #16304f;
+            --gradient-primary: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-accent) 100%);
+            --primary-light: #e6eef7;
+            --primary-soft: #a8c8e8;
+            --text-dark: #1a1a2e;
+            --text-gray: #5a6a7a;
+            --bg-light: #f0f4f8;
+            --white: #FFFFFF;
+            --shadow-sm: 0 4px 15px rgba(30, 58, 95, 0.08);
+            --shadow-md: 0 8px 25px rgba(30, 58, 95, 0.12);
+            --shadow-lg: 0 15px 40px rgba(30, 58, 95, 0.18);
+            --glow-primary: 0 0 20px rgba(74, 144, 217, 0.4);
+            --border-radius: 12px;
+            --transition: all 0.3s ease;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; color: var(--text-dark); line-height: 1.6; overflow-x: hidden; }
+        h1,h2,h3,h4,h5,h6 { font-family: 'Poppins', sans-serif; font-weight: 700; color: var(--secondary-color); }
+
+     
+ /* ===== NAV ===== */
+
+/* Fixed Header — exact same as Home page (90px) */
+.navbar {
+    background: var(--white);
+    box-shadow: var(--shadow-sm);
+    height: 90px;
+    padding: 0 !important;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+}
+
+/* Keep same header height after scrolling — same as Home page */
+.navbar.scrolled {
+    height: 90px;
+    padding: 0 !important;
+    box-shadow: var(--shadow-md);
+}
+
+/* Bootstrap container alignment */
+.navbar > .container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+/* Logo container — same as Home page */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    padding: 0 !important;
+    margin-right: 25px;
+}
+
+/* Logo — EXACT size from Home page */
+.navbar-brand img,
+.logo-img {
+    width: auto !important;
+    height: 160px !important;
+    max-width: none !important;
+    object-fit: contain;
+    display: block;
+}
+
+/* Do NOT shrink logo on scroll — same as Home page */
+.navbar.scrolled .navbar-brand img,
+.navbar.scrolled .logo-img {
+    height: 160px !important;
+}
+
+/* Navigation */
+.navbar-nav {
+    display: flex;
+    align-items: center;
+}
+
+/* Navigation links */
+.nav-link {
+    font-weight: 500;
+    color: var(--secondary-color) !important;
+    padding: 10px 18px !important;
+    transition: var(--transition);
+    position: relative;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+/* Hover / Active */
+.nav-link:hover,
+.nav-link.active {
+    color: var(--primary-color) !important;
+}
+
+/* Active underline */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 18px;
+    right: 18px;
+    height: 2px;
+    background: var(--gradient-primary);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    transform: scaleX(1);
+}
+
+/* Dropdown arrow */
+.dropdown-toggle::after {
+    margin-left: 6px;
+    vertical-align: middle;
+    transition: transform 0.3s ease;
+}
+
+.dropdown.show .dropdown-toggle::after {
+    transform: rotate(180deg);
+}
+
+/* Dropdown */
+.dropdown-menu {
+    border: none;
+    box-shadow: var(--shadow-lg);
+    border-radius: var(--border-radius);
+    padding: 15px;
+    margin-top: 15px;
+    animation: dropdownFadeIn 0.25s ease;
+}
+
+@keyframes dropdownFadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Dropdown items */
+.dropdown-item {
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: var(--transition);
+    font-weight: 500;
+    color: var(--text-gray);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.dropdown-item i {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    width: 22px;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.dropdown-item:hover {
+    background: var(--primary-light);
+    color: var(--primary-color);
+}
+
+.dropdown-item:hover i {
+    color: var(--primary-accent);
+    transform: scale(1.15);
+}
+
+/* Active dropdown item */
+.dropdown-item.active-item {
+    background: var(--primary-light);
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.dropdown-item.active-item i {
+    color: var(--primary-accent);
+}
+
+/* Nested submenu */
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu > .dropdown-item.submenu-toggle {
+    justify-content: space-between;
+}
+
+.dropdown-submenu > .dropdown-item.submenu-toggle::after {
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-left: 5px solid currentColor;
+    margin-left: auto;
+}
+
+.dropdown-submenu .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: 0;
+    margin-left: 6px;
+    display: none;
+    min-width: 260px;
+}
+
+.dropdown-submenu.show-submenu > .dropdown-menu {
+    display: block;
+    animation: dropdownFadeIn 0.2s ease;
+}
+
+/* Desktop submenu */
+@media (min-width: 992px) {
+    .dropdown-submenu:hover > .dropdown-menu {
+        display: block;
+    }
+}
+
+
+       /* Mobile */
+        @media (max-width: 991px) {
+            .navbar {
+                height: 90px;
+                padding: 0 !important;
+            }
+
+            .navbar.scrolled {
+                height: 90px;
+            }
+
+            .navbar-brand {
+                margin-right: 10px;
+            }
+
+            .navbar-brand img {
+                height: 78px !important;
+                width: auto !important;
+                max-height: 78px !important;
+                object-fit: contain;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .navbar {
+                height: 85px;
+                padding: 0 !important;
+            }
+
+            .navbar.scrolled {
+                height: 85px;
+            }
+
+            .navbar-brand img {
+                height: 90px !important;
+                width: auto !important;
+                max-height: 120px !important;
+                object-fit: contain;
+               
+            }
+        }
+
+        /* ===== BUTTONS ===== */
+        .btn-primary-custom { background: var(--gradient-primary); color: var(--white) !important; border: none; padding: 12px 30px; border-radius: 50px; font-weight: 600; transition: var(--transition); box-shadow: 0 4px 15px rgba(30, 58, 95, 0.3); position: relative; z-index: 1; overflow: hidden; display: inline-flex; align-items: center; gap: 8px; text-decoration: none; }
+        .btn-primary-custom::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(135deg, var(--primary-hover) 0%, var(--primary-color) 100%); z-index: -1; transition: opacity 0.3s ease; opacity: 0; }
+        .btn-primary-custom:hover { transform: translateY(-2px); box-shadow: var(--glow-primary); color: var(--white) !important; }
+        .btn-primary-custom:hover::before { opacity: 1; }
+        .btn-outline-custom { background: transparent; color: var(--primary-color) !important; border: 2px solid var(--primary-color); padding: 10px 28px; border-radius: 50px; font-weight: 600; transition: var(--transition); display: inline-flex; align-items: center; gap: 8px; text-decoration: none; }
+        .btn-outline-custom:hover { background: var(--gradient-primary); border-color: transparent; color: var(--white) !important; box-shadow: var(--glow-primary); }
+
+        /* ===== HERO ===== */
+        .hero-section { background: linear-gradient(160deg, #f0f4f8 0%, #eef3f9 40%, #e6eef7 100%); padding: 150px 0 100px; position: relative; overflow: hidden; }
+        .hero-section::before { content: ''; position: absolute; top: -20%; right: -10%; width: 800px; height: 800px; background: radial-gradient(circle, rgba(74, 144, 217, 0.12) 0%, transparent 60%); border-radius: 50%; filter: blur(40px); }
+        .hero-section::after { content: ''; position: absolute; bottom: -20%; left: -10%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(30, 58, 95, 0.12) 0%, transparent 60%); border-radius: 50%; filter: blur(40px); }
+        .hero-content h1 { font-size: 3.5rem; line-height: 1.15; margin-bottom: 25px; animation: fadeInUp 0.8s ease; }
+        .hero-content h1 span { background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero-content p { font-size: 1.2rem; color: var(--text-gray); margin-bottom: 35px; animation: fadeInUp 0.8s ease 0.2s both; }
+        .hero-buttons { animation: fadeInUp 0.8s ease 0.4s both; display: flex; gap: 15px; flex-wrap: wrap; }
+        .hero-image { position: relative; animation: fadeInRight 1s ease 0.3s both; }
+        .hero-image img { max-width: 100%; border-radius: 20px; box-shadow: var(--shadow-lg); }
+        .floating-card { position: absolute; background: var(--white); padding: 20px 25px; border-radius: var(--border-radius); box-shadow: var(--shadow-md); animation: float 3s ease-in-out infinite; border-left: 4px solid var(--primary-accent); z-index: 2; }
+        .floating-card.card-1 { top: 20px; left: -40px; animation-delay: 0s; }
+        .floating-card.card-2 { bottom: 60px; right: -30px; animation-delay: 1s; border-left-color: var(--primary-color); }
+        .floating-card.card-3 { top: 55%; left: -50px; animation-delay: 1.8s; border-left-color: #2ecc71; }
+        .floating-card i { font-size: 24px; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-right: 10px; }
+        .floating-card strong { color: var(--secondary-color); }
+        .hero-mobile-stats { display: none; flex-direction: column; gap: 12px; margin-top: 16px; }
+        .hero-mobile-stats .floating-card { position: relative; top: auto; left: auto; right: auto; bottom: auto; animation: none; width: 100%; justify-content: center; }
+        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeInRight { from { opacity: 0; transform: translateX(50px); } to { opacity: 1; transform: translateX(0); } }
+
+        /* ===== SECTION COMMON ===== */
+        .section-padding { padding: 100px 0; }
+        .section-title { text-align: center; margin-bottom: 60px; }
+        .section-title .label { display: inline-block; background: var(--primary-light); color: var(--primary-color); padding: 6px 18px; border-radius: 50px; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 15px; }
+        .section-title h2 { font-size: 2.5rem; margin-bottom: 15px; }
+        .section-title p { color: var(--text-gray); font-size: 1.1rem; max-width: 700px; margin: 0 auto; }
+
+        /* ===== TECH DOMAINS ===== */
+        .domains-section { background: var(--white); position: relative; }
+        .domains-section::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--gradient-primary); }
+        .domain-card { background: var(--white); border-radius: var(--border-radius); padding: 35px 28px; box-shadow: var(--shadow-sm); transition: var(--transition); height: 100%; border: 1px solid transparent; position: relative; overflow: hidden; text-align: center; }
+        .domain-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--gradient-primary); transform: scaleX(0); transition: transform 0.4s ease; transform-origin: left; }
+        .domain-card:hover::before { transform: scaleX(1); }
+        .domain-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-lg); border-color: var(--primary-light); }
+        .domain-icon { width: 80px; height: 80px; background: var(--primary-light); border-radius: 20px; display: flex; align-items: center; justify-content: center; margin: 0 auto 22px; transition: var(--transition); }
+        .domain-card:hover .domain-icon { background: var(--gradient-primary); transform: scale(1.05); }
+        .domain-icon i { font-size: 34px; color: var(--primary-color); transition: var(--transition); }
+        .domain-card:hover .domain-icon i { color: var(--white); }
+        .domain-card h4 { font-size: 1.15rem; margin-bottom: 10px; }
+        .domain-card p { color: var(--text-gray); margin-bottom: 18px; font-size: 0.93rem; }
+        .domain-tags { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; }
+        .domain-tag { background: var(--bg-light); color: var(--text-gray); padding: 4px 12px; border-radius: 20px; font-size: 0.78rem; font-weight: 500; transition: var(--transition); }
+        .domain-card:hover .domain-tag { background: var(--primary-light); color: var(--primary-color); }
+
+        /* ===== HIRING PROCESS ===== */
+        .process-section { background: var(--bg-light); }
+        .process-card { background: var(--white); border-radius: var(--border-radius); padding: 35px 25px; text-align: center; box-shadow: var(--shadow-sm); transition: var(--transition); height: 100%; position: relative; }
+        .process-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-lg); }
+        .process-number { width: 55px; height: 55px; background: var(--gradient-primary); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Poppins', sans-serif; font-size: 1.3rem; font-weight: 700; margin: 0 auto 20px; }
+        .process-card h5 { margin-bottom: 12px; font-size: 1.1rem; }
+        .process-card p { color: var(--text-gray); font-size: 0.95rem; margin: 0; }
+        .process-connector { display: flex; align-items: center; justify-content: center; padding-top: 60px; color: var(--primary-accent); font-size: 1.8rem; }
+
+        /* ===== FEATURES GRID ===== */
+        .features-section { background: var(--white); }
+        .feature-card { background: var(--white); border-radius: var(--border-radius); padding: 40px 30px; box-shadow: var(--shadow-sm); transition: var(--transition); height: 100%; border: 1px solid transparent; position: relative; overflow: hidden; }
+        .feature-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--gradient-primary); transform: scaleX(0); transition: transform 0.4s ease; transform-origin: left; }
+        .feature-card:hover::before { transform: scaleX(1); }
+        .feature-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-lg); border-color: var(--primary-light); }
+        .feature-icon { width: 70px; height: 70px; background: var(--primary-light); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 22px; transition: var(--transition); }
+        .feature-card:hover .feature-icon { background: var(--gradient-primary); }
+        .feature-icon i { font-size: 30px; color: var(--primary-color); transition: var(--transition); }
+        .feature-card:hover .feature-icon i { color: var(--white); }
+        .feature-card h4 { font-size: 1.2rem; margin-bottom: 12px; }
+        .feature-card p { color: var(--text-gray); margin-bottom: 18px; font-size: 0.95rem; }
+        .feature-list { list-style: none; padding: 0; margin: 0; }
+        .feature-list li { padding: 6px 0; color: var(--text-gray); font-size: 0.9rem; display: flex; align-items: center; gap: 8px; }
+        .feature-list li i { color: var(--primary-accent); font-size: 0.85rem; }
+
+        /* ===== PLATFORM / DASHBOARD ===== */
+        .platform-section { background: var(--secondary-color); color: var(--white); position: relative; overflow: hidden; }
+        .platform-section::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
+        .platform-section h2 { color: var(--white); }
+        .platform-section .section-title p { color: rgba(255,255,255,0.7); }
+        .platform-feature { background: rgba(255,255,255,0.08); backdrop-filter: blur(10px); border-radius: var(--border-radius); padding: 30px; margin-bottom: 20px; border: 1px solid rgba(255,255,255,0.15); transition: var(--transition); }
+        .platform-feature:hover { background: rgba(255,255,255,0.14); transform: translateX(10px); border-color: var(--primary-accent); box-shadow: -5px 0 15px rgba(74, 144, 217, 0.2); }
+        .platform-feature i { font-size: 32px; margin-bottom: 12px; color: var(--primary-soft); }
+        .platform-feature h5 { color: var(--white); margin-bottom: 8px; font-size: 1.1rem; }
+        .platform-feature p { color: rgba(255,255,255,0.75); margin: 0; font-size: 0.95rem; }
+        .platform-dashboard { background: var(--white); border-radius: 20px; overflow: hidden; box-shadow: var(--shadow-lg); }
+        .dashboard-header { background: var(--secondary-color); padding: 15px 25px; display: flex; align-items: center; gap: 8px; }
+        .dashboard-dot { width: 12px; height: 12px; border-radius: 50%; }
+        .dot-red { background: #ff5f56; }
+        .dot-yellow { background: #ffbd2e; }
+        .dot-green { background: var(--primary-accent); }
+        .dashboard-content { padding: 25px; }
+        .mock-stat-row { display: flex; gap: 15px; margin-bottom: 20px; }
+        .mock-stat { flex: 1; background: var(--bg-light); border-radius: 10px; padding: 18px 15px; text-align: center; }
+        .mock-stat .num { font-family: 'Poppins', sans-serif; font-size: 1.5rem; font-weight: 700; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .mock-stat .lbl { font-size: 0.75rem; color: var(--text-gray); margin-top: 4px; }
+        .mock-chart { background: var(--bg-light); border-radius: 10px; padding: 20px; }
+        .chart-bar { height: 110px; display: flex; align-items: flex-end; justify-content: space-around; padding: 0 10px; }
+        .bar { width: 30px; background: var(--gradient-primary); border-radius: 5px 5px 0 0; animation: growBar 1.5s ease forwards; position: relative; }
+        .bar::after { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: #fff; opacity: 0.5; border-radius: 5px 5px 0 0; }
+        .bar-labels { display: flex; justify-content: space-around; padding: 10px 10px 0; }
+        .bar-labels span { font-size: 0.7rem; color: var(--text-gray); text-align: center; width: 30px; }
+        @keyframes growBar { from { height: 0; } }
+
+        /* ===== STATS ===== */
+        .stats-section { background: var(--white); }
+        .stat-item { text-align: center; padding: 30px 20px; }
+        .stat-number { font-family: 'Poppins', sans-serif; font-size: 3rem; font-weight: 700; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1.1; }
+        .stat-label { color: var(--text-gray); font-size: 1rem; margin-top: 8px; font-weight: 500; }
+        .stat-divider { width: 50px; height: 3px; background: var(--gradient-primary); border-radius: 2px; margin: 12px auto 0; }
+
+        /* ===== ENGAGEMENT MODELS ===== */
+        .engagement-section { background: var(--bg-light); }
+        .engagement-card { background: var(--white); border-radius: var(--border-radius); padding: 40px 30px; box-shadow: var(--shadow-sm); transition: var(--transition); height: 100%; position: relative; overflow: hidden; text-align: center; border: 2px solid transparent; }
+        .engagement-card.featured { border-color: var(--primary-accent); }
+        .engagement-card.featured::after { content: 'Most Popular'; position: absolute; top: 18px; right: -30px; background: var(--gradient-primary); color: var(--white); padding: 5px 40px; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; transform: rotate(45deg); }
+        .engagement-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-lg); }
+        .engagement-icon { width: 70px; height: 70px; background: var(--primary-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 22px; transition: var(--transition); }
+        .engagement-card:hover .engagement-icon { background: var(--gradient-primary); }
+        .engagement-icon i { font-size: 30px; color: var(--primary-color); transition: var(--transition); }
+        .engagement-card:hover .engagement-icon i { color: var(--white); }
+        .engagement-card h4 { font-size: 1.2rem; margin-bottom: 12px; }
+        .engagement-card p { color: var(--text-gray); font-size: 0.95rem; margin-bottom: 20px; }
+        .engagement-features { list-style: none; padding: 0; margin: 0 0 25px; text-align: left; }
+        .engagement-features li { padding: 8px 0; color: var(--text-gray); font-size: 0.9rem; display: flex; align-items: center; gap: 10px; border-bottom: 1px solid #f0f0f0; }
+        .engagement-features li:last-child { border-bottom: none; }
+        .engagement-features li i { color: var(--primary-accent); font-size: 0.9rem; flex-shrink: 0; }
+
+        /* ===== CASE STUDIES ===== */
+        .case-study-card { background: var(--white); border-radius: var(--border-radius); overflow: hidden; box-shadow: var(--shadow-sm); transition: var(--transition); height: 100%; }
+        .case-study-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-lg); }
+        .case-study-img { height: 200px; background: var(--gradient-primary); position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+        .case-study-img img { width: 100%; height: 100%; object-fit: cover; opacity: 0.35; }
+        .case-study-img > i { position: absolute; font-size: 56px; color: rgba(255,255,255,0.25); }
+        .case-category { position: absolute; top: 15px; left: 15px; background: var(--white); padding: 6px 15px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; color: var(--primary-color); z-index: 2; }
+        .case-study-body { padding: 28px; }
+        .case-study-body h4 { margin-bottom: 12px; font-size: 1.2rem; }
+        .case-study-body p { color: var(--text-gray); margin-bottom: 20px; font-size: 0.95rem; }
+        .case-metrics { display: flex; gap: 20px; padding-top: 18px; border-top: 1px solid #eee; }
+        .metric-item strong { display: block; font-size: 1.25rem; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .metric-item small { color: var(--text-gray); font-size: 0.85rem; }
+
+        /* ===== TESTIMONIALS ===== */
+        .testimonials-section { background: var(--bg-light); }
+        .testimonial-card { background: var(--white); border-radius: var(--border-radius); padding: 35px; box-shadow: var(--shadow-sm); transition: var(--transition); height: 100%; position: relative; border-top: 4px solid transparent; }
+        .testimonial-card:hover { border-top-color: var(--primary-accent); box-shadow: var(--shadow-md); transform: translateY(-5px); }
+        .testimonial-card .quote-icon { font-size: 2.5rem; color: var(--primary-light); margin-bottom: 15px; line-height: 1; }
+        .testimonial-card p { color: var(--text-gray); font-style: italic; margin-bottom: 20px; line-height: 1.7; }
+        .testimonial-author { display: flex; align-items: center; gap: 15px; }
+        .testimonial-avatar { width: 50px; height: 50px; background: var(--gradient-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--white); font-weight: 700; font-size: 1.1rem; flex-shrink: 0; }
+        .testimonial-author strong { display: block; color: var(--secondary-color); font-size: 0.95rem; }
+        .testimonial-author span { color: var(--text-gray); font-size: 0.85rem; }
+        .stars { color: #f0a500; font-size: 0.9rem; margin-bottom: 12px; }
+
+        /* ===== FAQ ===== */
+        .faq-section { background: var(--white); }
+        .accordion-item { border: none; margin-bottom: 15px; border-radius: var(--border-radius) !important; overflow: hidden; box-shadow: var(--shadow-sm); }
+        .accordion-button { background: var(--white); font-weight: 600; color: var(--secondary-color); padding: 20px 25px; font-size: 1.05rem; box-shadow: none; }
+        .accordion-button:not(.collapsed) { background: var(--gradient-primary); color: var(--white); }
+        .accordion-button:focus { box-shadow: none; border-color: var(--primary-color); }
+        .accordion-button::after { background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%231e3a5f'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3C/svg%3e"); }
+        .accordion-button:not(.collapsed)::after { background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3C/svg%3e"); }
+        .accordion-body { padding: 20px 25px; color: var(--text-gray); line-height: 1.7; }
+
+        /* ===== CTA ===== */
+        .cta-section { background: var(--gradient-primary); padding: 80px 0; position: relative; overflow: hidden; }
+        .cta-section::after { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.08'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E"); pointer-events: none; }
+        .cta-content h2 { color: var(--white); font-size: 2.5rem; margin-bottom: 15px; }
+        .cta-content p { color: rgba(255,255,255,0.9); font-size: 1.1rem; margin-bottom: 30px; }
+        .btn-white { background: var(--white); color: var(--primary-color) !important; border: none; padding: 14px 35px; border-radius: 50px; font-weight: 700; transition: var(--transition); display: inline-flex; align-items: center; gap: 10px; text-decoration: none; box-shadow: 0 4px 20px rgba(0,0,0,0.15); }
+        .btn-white:hover { transform: translateY(-3px); box-shadow: 0 8px 30px rgba(0,0,0,0.2); color: var(--primary-color) !important; }
+        .btn-ghost { background: transparent; color: var(--white) !important; border: 2px solid rgba(255,255,255,0.5); padding: 12px 30px; border-radius: 50px; font-weight: 600; transition: var(--transition); display: inline-flex; align-items: center; gap: 10px; text-decoration: none; }
+        .btn-ghost:hover { background: rgba(255,255,255,0.15); border-color: var(--white); color: var(--white) !important; }
+
+        /* ===== CONTACT FORM ===== */
+        .contact-section { background: var(--bg-light); }
+        .contact-form { background: var(--white); border-radius: var(--border-radius); padding: 45px; box-shadow: var(--shadow-lg); }
+        .form-label { font-weight: 600; color: var(--secondary-color); margin-bottom: 8px; }
+        .form-control, .form-select { border: 2px solid #e0e0e0; border-radius: 10px; padding: 12px 18px; font-size: 1rem; transition: var(--transition); }
+        .form-control:focus, .form-select:focus { border-color: var(--primary-color); box-shadow: 0 0 0 4px rgba(74, 144, 217, 0.1); }
+        .btn-submit { background: var(--gradient-primary); color: var(--white); border: none; padding: 14px 40px; border-radius: 50px; font-weight: 600; font-size: 1.05rem; width: 100%; transition: var(--transition); }
+        .btn-submit:hover { transform: translateY(-2px); box-shadow: 0 6px 25px rgba(74, 144, 217, 0.4); color: var(--white); }
+        .contact-info-card { background: var(--white); border-radius: var(--border-radius); padding: 28px; text-align: center; box-shadow: var(--shadow-sm); transition: var(--transition); height: 100%; }
+        .contact-info-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); }
+        .contact-icon { width: 60px; height: 60px; background: var(--primary-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; }
+        .contact-icon i { font-size: 24px; color: var(--primary-color); }
+        .contact-info-card h6 { margin-bottom: 6px; color: var(--secondary-color); }
+        .contact-info-card p { color: var(--text-gray); margin: 0; font-size: 0.93rem; }
+
+            /* ==================== FOOTER ==================== */
+        .footer {
+            background: var(--secondary-color);
+            color: rgba(255,255,255,0.8);
+            padding: 80px 0 30px;
+        }
+
+        .footer-brand {
+            font-family: 'Poppins', sans-serif;
+            font-size: 26px;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-brand i {
+            font-size: 28px;
+            color: var(--primary-accent);
+        }
+
+        .footer-desc {
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 25px;
+            line-height: 1.7;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 12px;
+        }
+
+        .social-links a {
+            width: 42px;
+            height: 42px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background: var(--gradient-primary);
+            transform: translateY(-3px);
+        }
+
+        .footer h5 {
+            color: var(--white);
+            font-size: 1.15rem;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 12px;
+        }
+
+        .footer h5::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: var(--gradient-primary);
+            border-radius: 2px;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-accent);
+            padding-left: 5px;
+        }
+
+        .footer-contact {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-contact li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 18px;
+        }
+
+        .footer-contact i {
+            color: var(--primary-accent);
+            margin-top: 4px;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 12px 18px;
+            border: none;
+            border-radius: 50px;
+            background: rgba(255,255,255,0.1);
+            color: var(--white);
+        }
+
+        .newsletter-form input::placeholder {
+            color: rgba(255,255,255,0.5);
+        }
+
+        .newsletter-form button {
+            background: var(--gradient-primary);
+            color: var(--white);
+            border: none;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .newsletter-form button:hover {
+            opacity: 0.9;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 30px;
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .footer-bottom p {
+            margin: 0;
+            color: rgba(255,255,255,0.6);
+        }
+
+        .footer-bottom a {
+            color: var(--primary-accent);
+            text-decoration: none;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 991px) {
+            .hero-content h1 { font-size: 2.5rem; }
+            .floating-card { display: none; }
+        }
+
+        @media (max-width: 767px) {
+            .hero-section { padding: 100px 0 60px; }
+            .hero-content h1 { font-size: 2rem; }
+            .section-title h2 { font-size: 2rem; }
+            .section-padding { padding: 60px 0; }
+            .contact-form { padding: 30px 20px; }
+            .client-feedback-card {
+                width: 300px;
+                padding: 20px;
+                margin: 0 10px;
+            }
+        }
+
+
+
+        /* ===== Industries Dropdown (Screenshot model) ===== */
+.dropdown-industry-header {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    color: #6b7c93;
+    text-transform: uppercase;
+    padding: 8px 20px 10px;
+    margin-bottom: 4px;
+}
+
+.industry-item {
+    display: flex !important;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 12px 20px !important;
+    border-radius: 0;
+}
+
+.industry-item i {
+    font-size: 1.25rem;
+    color: var(--primary-color);
+    margin-top: 2px;
+    width: 24px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.industry-label {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.industry-title {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--secondary-color);
+    line-height: 1.3;
+}
+
+.industry-desc {
+    font-size: 0.78rem;
+    color: #6b7c93;
+    line-height: 1.35;
+    font-weight: 400;
+}
+
+.industry-item:hover {
+    background: #f0f5fb !important;
+}
+
+.industry-item:hover .industry-title {
+    color: var(--primary-color);
+}
+
+.industry-item:hover i {
+    color: var(--primary-accent);
+}
+
+.dropdown-divider-custom {
+    height: 1px;
+    background: #e8eef5;
+    margin: 8px 16px;
+}
+
+         /* ==================== INDUSTRIES SECTION ==================== */
+        .industry-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            padding: 35px 25px;
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+
+        .industry-card:hover {
+            border-color: var(--primary-color);
+            box-shadow: 0 8px 25px rgba(74, 144, 217, 0.2);
+            transform: translateY(-8px);
+        }
+
+        .industry-icon {
+            width: 90px;
+            height: 90px;
+            background: var(--primary-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            transition: var(--transition);
+        }
+
+        .industry-card:hover .industry-icon {
+            background: var(--gradient-primary);
+            transform: scale(1.1);
+        }
+
+        .industry-icon i {
+            font-size: 38px;
+            color: var(--primary-color);
+            transition: var(--transition);
+        }
+
+        .industry-card:hover .industry-icon i {
+            color: var(--white);
+        }
+
+        .industry-card h5 {
+            margin-bottom: 10px;
+            color: var(--secondary-color);
+        }
+
+        .industry-card p {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        /* ===== TOAST & BACK-TO-TOP ===== */
+        .toast-container { position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%); z-index: 9999; }
+        .custom-toast { background: var(--secondary-color); color: var(--white); padding: 15px 25px; border-radius: 50px; box-shadow: var(--shadow-lg); display: flex; align-items: center; gap: 12px; opacity: 0; visibility: hidden; transform: translateY(20px); transition: all 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55); border-bottom: 3px solid var(--primary-accent); white-space: nowrap; }
+        .custom-toast.show { opacity: 1; visibility: visible; transform: translateY(0); }
+        .custom-toast i { color: var(--primary-accent); font-size: 1.2rem; }
+        .back-to-top { position: fixed; bottom: 30px; right: 30px; width: 50px; height: 50px; background: var(--gradient-primary); color: var(--white); border: none; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; cursor: pointer; opacity: 0; visibility: hidden; transition: var(--transition); z-index: 999; box-shadow: var(--shadow-md); }
+        .back-to-top.visible { opacity: 1; visibility: visible; }
+        .back-to-top:hover { transform: translateY(-5px); box-shadow: var(--glow-primary); }
+
+        /* ===== ANIMATIONS ===== */
+        .animate-on-scroll { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
+        .animate-on-scroll.animated { opacity: 1; transform: translateY(0); }
+        .animate-on-scroll.delay-1 { transition-delay: 0.1s; }
+        .animate-on-scroll.delay-2 { transition-delay: 0.2s; }
+      .animate-on-scroll.delay-3 { transition-delay: 0.3s; }
+.animate-on-scroll.delay-4 { transition-delay: 0.4s; }
+
+/* ===== MOBILE NAVBAR (solid white background – no transparency) ===== */
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        background: #ffffff !important;
+        background-color: #ffffff !important;
+        margin-top: 10px;
+        padding: 15px 20px 25px;
+        border-radius: 12px;
+        box-shadow: 0 15px 40px rgba(30, 58, 95, 0.18);
+        border: 1px solid #e6eef7;
+        max-height: 80vh;
+        overflow-y: auto;
+        z-index: 1050;
+    }
+
+    .navbar-nav {
+        align-items: stretch !important;
+        width: 100%;
+    }
+
+    .nav-item {
+        width: 100%;
+        border-bottom: 1px solid #f0f4f8;
+    }
+
+    .nav-item:last-child {
+        border-bottom: none;
+    }
+
+    .nav-link {
+        padding: 14px 10px !important;
+        width: 100%;
+        display: block;
+    }
+
+    .nav-link::after {
+        display: none; /* underline remove on mobile */
+    }
+
+    .dropdown-menu {
+        position: static !important;
+        float: none;
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 8px;
+        box-shadow: none;
+        border: none;
+        border-left: 3px solid var(--primary-light);
+        background: #f8fafc;
+        border-radius: 0 8px 8px 0;
+        padding: 8px 0;
+    }
+
+    .dropdown-item {
+        padding: 10px 18px;
+    }
+
+    /* Nested submenu (Payroll) */
+    .dropdown-submenu > .dropdown-menu {
+        position: static !important;
+        left: 0;
+        margin-left: 12px;
+        box-shadow: none;
+        border-left: 2px solid var(--primary-soft);
+        background: #f0f4f8;
+    }
+
+    .btn-primary-custom.ms-lg-3 {
+        margin: 15px 0 5px !important;
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+}
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1199px) {
+            .hero-content h1 { font-size: 3rem; }
+        }
+        @media (max-width: 991px) {
+            .hero-section { padding: 130px 0 80px; }
+            .hero-content h1 { font-size: 2.5rem; }
+            .floating-card { display: none; }
+            .hero-mobile-stats { display: flex; }
+            .process-connector { display: none; }
+            .section-title h2 { font-size: 2rem; }
+        }
+        @media (max-width: 767px) {
+            .hero-section { padding: 110px 0 60px; }
+            .hero-content h1 { font-size: 2rem; }
+            .section-padding { padding: 70px 0; }
+            .section-title h2 { font-size: 1.75rem; }
+            .contact-form { padding: 30px 20px; }
+            .stat-number { font-size: 2.2rem; }
+            .cta-content h2 { font-size: 1.8rem; }
+        }
+        @media (max-width: 575px) {
+            .hero-content { text-align: center; }
+            .hero-buttons { justify-content: center; }
+            .hero-buttons .btn { width: 100%; max-width: 280px; justify-content: center; }
+            .hero-image img { border-radius: 16px; max-height: 260px; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .floating-card, .hero-content h1, .hero-content p, .hero-buttons, .hero-image, .bar { animation: none !important; }
+            .animate-on-scroll { opacity: 1; transform: none; transition: none; }
+        }
+    </style>
+<!-- Favicon (Talennexus figure from tl.png) -->
+<link rel="icon" href="assets/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="512x512" href="assets/favicon-512.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<!-- Site components (header & footer) -->
+<script src="components/site-header.js?v=20261118"></script>
+<script src="components/site-footer.js?v=20261118"></script>
+<script src="components/site-contact.js?v=20261118"></script>
+</head>
+<body>
+    <!-- ==================== NAVIGATION ==================== -->
+    <site-header></site-header>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero-section" id="home">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="hero-content">
+                        <h1>Hire <span>Top Healthcare Talent</span> Faster & Smarter</h1>
+                        <p>From physicians, nurses, and allied health professionals to pharma scientists, clinical researchers, and healthcare IT specialists — we deliver pre-vetted, compliance-ready healthcare professionals who hit the ground running from day one.</p>
+                        <div class="hero-buttons">
+                            <a href="#contact" class="btn-primary-custom">Hire Healthcare Talent <i class="bi bi-arrow-right"></i></a>
+                            <a href="#domains" class="btn-outline-custom">Explore Specialties <i class="bi bi-grid-3x3-gap"></i></a>
+                        </div>
+                        <div class="hero-mobile-stats">
+                            <div class="floating-card" style="display:flex;align-items:center;gap:12px;">
+                                <i class="bi bi-heart-pulse"></i>
+                                <div><strong>4,500+</strong><br><small style="color:var(--text-gray)">Healthcare Hires Annually</small></div>
+                            </div>
+                            <div class="floating-card" style="display:flex;align-items:center;gap:12px;border-left-color:var(--primary-color);">
+                                <i class="bi bi-lightning-charge"></i>
+                                <div><strong>12 Days</strong><br><small style="color:var(--text-gray)">Avg. Time-to-Hire</small></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-image text-center">
+                        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=700&h=520&fit=crop&q=80" alt="Healthcare professionals collaborating in a modern hospital setting" style="max-height:520px;object-fit:cover;">
+                        <div class="floating-card card-1">
+                            <div style="display:flex;align-items:center;gap:12px;">
+                                <i class="bi bi-heart-pulse"></i>
+                                <div><strong>4,500+</strong><br><small style="color:var(--text-gray)">Healthcare Hires Annually</small></div>
+                            </div>
+                        </div>
+                        <div class="floating-card card-2">
+                            <div style="display:flex;align-items:center;gap:12px;">
+                                <i class="bi bi-lightning-charge"></i>
+                                <div><strong>12 Days</strong><br><small style="color:var(--text-gray)">Avg. Time-to-Hire</small></div>
+                            </div>
+                        </div>
+                        <div class="floating-card card-3">
+                            <div style="display:flex;align-items:center;gap:12px;">
+                                <i class="bi bi-check-circle-fill" style="-webkit-text-fill-color:#2ecc71;background:none;"></i>
+                                <div><strong>97%</strong><br><small style="color:var(--text-gray)">Offer Acceptance Rate</small></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== HEALTHCARE DOMAINS ===== -->
+    <section class="domains-section section-padding" id="domains">
+        <div class="container">
+            <div class="section-title animate-on-scroll">
+                <span class="label">Healthcare Specialties</span>
+                <h2>Hiring Across Every Healthcare Discipline</h2>
+                <p>We recruit specialized talent across the full spectrum of healthcare — from frontline clinical roles to pharma, medtech, and digital health innovation.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-4 col-sm-6 animate-on-scroll delay-1">
+                    <div class="domain-card">
+                        <div class="domain-icon"><i class="bi bi-heart-pulse"></i></div>
+                        <h4>Physicians & Specialists</h4>
+                        <p>Consultants, surgeons, and specialist doctors across disciplines</p>
+                        <div class="domain-tags">
+                            <span class="domain-tag">Cardiology</span>
+                            <span class="domain-tag">Oncology</span>
+                            <span class="domain-tag">Radiology</span>
+                            <span class="domain-tag">Orthopedics</span>
+                            <span class="domain-tag">General Medicine</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 animate-on-scroll delay-2">
+                    <div class="domain-card">
+                        <div class="domain-icon"><i class="bi bi-bandaid"></i></div>
+                        <h4>Nursing & Clinical Staff</h4>
+                        <p>Registered nurses, ICU staff, and critical care specialists</p>
+                        <div class="domain-tags">
+                            <span class="domain-tag">ICU</span>
+                            <span class="domain-tag">ER</span>
+                            <span class="domain-tag">OT Nursing</span>
+                            <span class="domain-tag">NICU</span>
+                            <span class="domain-tag">Home Care</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 animate-on-scroll delay-3">
+                    <div class="domain-card">
+                        <div class="domain-icon"><i class="bi bi-capsule"></i></div>
+                        <h4>Pharma & Life Sciences</h4>
+                        <p>Pharmacists, scientists, and regulatory affairs experts</p>
+                        <div class="domain-tags">
+                            <span class="domain-tag">R&D</span>
+                            <span class="domain-tag">Regulatory Affairs</span>
+                            <span class="domain-tag">Pharmacovigilance</span>
+                            <span class="domain-tag">QA/QC</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 animate-on-scroll delay-4">
+                    <div class="domain-card">
+                        <div class="domain-icon"><i class="bi bi-clipboard2-pulse"></i></div>
+                        <h4>Allied Health</h4>
+                        <p>Physiotherapists, lab technicians, and radiographers</p>
+                        <div class="domain-tags">
+                            <span class="domain-tag">Physiotherapy</span>
+                            <span class="domain-tag">Lab Technicians</span>
+                            <span class="domain-tag">Radiography</span>
+                            <span class="domain-tag">Dietetics</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 animate-on-scroll delay-1">
+                    <div class="domain-card">
+                        <div class="domain-icon"><i class="bi bi-clipboard-data"></i></div>
+                        <h4>Clinical Research</h4>
+                        <p>CRAs, clinical data managers, and biostatisticians</p>
+                        <div class="domain-tags">
+                            <span class="domain-tag">GCP</span>
+                            <span class="domain-tag">Clinical Trials</span>
+                            <span class="domain-tag">Biostatistics</span>
+                            <span class="domain-tag">Data Management</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 animate-on-scroll delay-2">
+                    <div class="domain-card">
+                        <div class="domain-icon"><i class="bi bi-hospital"></i></div>
+                        <h4>Hospital Administration</h4>
+                        <p>Hospital operations, quality, and facility management leaders</p>
+                        <div class="domain-tags">
+                            <span class="domain-tag">NABH</span>
+                            <span class="domain-tag">Operations</span>
+                            <span class="domain-tag">Quality Assurance</span>
+                            <span class="domain-tag">Patient Experience</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 animate-on-scroll delay-3">
+                    <div class="domain-card">
+                        <div class="domain-icon"><i class="bi bi-heart-pulse-fill"></i></div>
+                        <h4>MedTech & Devices</h4>
+                        <p>Biomedical engineers and medical device specialists</p>
+                        <div class="domain-tags">
+                            <span class="domain-tag">Biomedical Eng.</span>
+                            <span class="domain-tag">Device QA</span>
+                            <span class="domain-tag">Field Service</span>
+                            <span class="domain-tag">R&D</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 animate-on-scroll delay-4">
+                    <div class="domain-card">
+                        <div class="domain-icon"><i class="bi bi-laptop"></i></div>
+                        <h4>Digital Health & HealthIT</h4>
+                        <p>EHR specialists, health informaticians, and telehealth teams</p>
+                        <div class="domain-tags">
+                            <span class="domain-tag">EHR/EMR</span>
+                            <span class="domain-tag">Health Informatics</span>
+                            <span class="domain-tag">Telemedicine</span>
+                            <span class="domain-tag">HL7/FHIR</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== HIRING PROCESS ===== -->
+    <section class="process-section section-padding" id="process">
+        <div class="container">
+            <div class="section-title animate-on-scroll">
+                <span class="label">Our Process</span>
+                <h2>How We Deliver Healthcare Talent</h2>
+                <p>A structured, compliant, and accelerated hiring process designed specifically for healthcare roles — from requisition to onboarding in as little as 12 days.</p>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-2 col-md-4 col-6 animate-on-scroll delay-1">
+                    <div class="process-card">
+                        <div class="process-number">1</div>
+                        <h5>Requirement Analysis</h5>
+                        <p>Deep-dive into your specialty needs, department structure, and role specifics to build a precise candidate profile.</p>
+                    </div>
+                </div>
+                <div class="col-lg-1 col-md-1 col-1 d-none d-lg-block"><div class="process-connector"><i class="bi bi-arrow-right"></i></div></div>
+                <div class="col-lg-2 col-md-4 col-6 animate-on-scroll delay-2">
+                    <div class="process-card">
+                        <div class="process-number">2</div>
+                        <h5>Credential Sourcing</h5>
+                        <p>Targeted sourcing across medical registries, hospital networks, and our proprietary healthcare talent database.</p>
+                    </div>
+                </div>
+                <div class="col-lg-1 col-md-1 col-1 d-none d-lg-block"><div class="process-connector"><i class="bi bi-arrow-right"></i></div></div>
+                <div class="col-lg-2 col-md-4 col-6 animate-on-scroll delay-3">
+                    <div class="process-card">
+                        <div class="process-number">3</div>
+                        <h5>Clinical & Compliance Screening</h5>
+                        <p>Licensure verification, clinical skills assessment, and background checks led by healthcare domain experts.</p>
+                    </div>
+                </div>
+                <div class="col-lg-1 col-md-1 col-1 d-none d-lg-block"><div class="process-connector"><i class="bi bi-arrow-right"></i></div></div>
+                <div class="col-lg-2 col-md-4 col-6 animate-on-scroll delay-4">
+                    <div class="process-card">
+                        <div class="process-number">4</div>
+                        <h5>Cultural Fit & Offer</h5>
+                        <p>Behavioral assessment, reference checks, compensation alignment, and seamless offer rollout.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== KEY FEATURES ===== -->
+    <section class="features-section section-padding" id="features">
+        <div class="container">
+            <div class="section-title animate-on-scroll">
+                <span class="label">Why Talennexus</span>
+                <h2>What Sets Our Healthcare Hiring Apart</h2>
+                <p>We combine deep clinical expertise with scalable, compliant processes to consistently deliver candidates who exceed expectations.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 animate-on-scroll delay-1">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="bi bi-search"></i></div>
+                        <h4>AI-Powered Talent Matching</h4>
+                        <p>Our proprietary AI engine analyzes millions of data points — specialty, licensure, clinical experience, and career trajectory — to match you with the right caregiver, not just the right resume.</p>
+                        <ul class="feature-list">
+                            <li><i class="bi bi-check-circle-fill"></i> Specialty & credential matching</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Licensure and registry verification</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Predictive cultural fit scoring</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 animate-on-scroll delay-2">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="bi bi-person-check"></i></div>
+                        <h4>Clinical Vetting by Experts</h4>
+                        <p>Every candidate goes through rigorous clinical evaluation conducted by senior medical professionals with 10+ years of experience in the relevant specialty.</p>
+                        <ul class="feature-list">
+                            <li><i class="bi bi-check-circle-fill"></i> Clinical competency assessments</li>
+                            <li><i class="bi bi-check-circle-fill"></i> License & certification verification</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Peer-panel interviews</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 animate-on-scroll delay-3">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="bi bi-lightning-charge"></i></div>
+                        <h4>Speed at Scale</h4>
+                        <p>Our optimized pipeline and pre-built talent pools enable us to present shortlisted candidates within 48 hours of requisition — even for bulk hiring of 50+ positions.</p>
+                        <ul class="feature-list">
+                            <li><i class="bi bi-check-circle-fill"></i> 48-hour first shortlist</li>
+                            <li><i class="bi bi-check-circle-fill"></i> 12-day average time-to-hire</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Parallel pipeline processing</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 animate-on-scroll delay-1">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="bi bi-globe2"></i></div>
+                        <h4>Global Healthcare Network</h4>
+                        <p>Access to a curated network of 400,000+ healthcare professionals across India, the US, Europe, and the Middle East — ready for hospital, clinic, or remote-care roles.</p>
+                        <ul class="feature-list">
+                            <li><i class="bi bi-check-circle-fill"></i> 400K+ healthcare professionals</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Multi-geography sourcing</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Locum & travel-ready candidates</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 animate-on-scroll delay-2">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="bi bi-clipboard-data"></i></div>
+                        <h4>Data-Driven Insights</h4>
+                        <p>Real-time dashboards and analytics on hiring funnel, market compensation benchmarks, talent availability, and staff retention metrics to optimize your hiring strategy.</p>
+                        <ul class="feature-list">
+                            <li><i class="bi bi-check-circle-fill"></i> Real-time hiring dashboards</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Salary benchmarking reports</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Staff retention tracking</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 animate-on-scroll delay-3">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="bi bi-shield-check"></i></div>
+                        <h4>Quality Guarantee</h4>
+                        <p>We stand behind every placement with a comprehensive replacement guarantee. If a candidate leaves within the guarantee period, we find a replacement at no additional cost.</p>
+                        <ul class="feature-list">
+                            <li><i class="bi bi-check-circle-fill"></i> 90-day replacement guarantee</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Background & credential verification</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Post-placement follow-up</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PLATFORM SECTION ===== -->
+    <section class="platform-section section-padding" id="platform">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5 animate-on-scroll">
+                    <div class="section-title text-start" style="margin-bottom:35px;">
+                        <span class="label" style="background:rgba(255,255,255,0.15);color:var(--primary-soft);">Healthcare Hiring Platform</span>
+                        <h2>Your Command Center for Healthcare Recruitment</h2>
+                        <p style="color:rgba(255,255,255,0.7);">A purpose-built platform that gives you full visibility into every stage of your healthcare hiring pipeline.</p>
+                    </div>
+                    <div class="platform-feature">
+                        <i class="bi bi-funnel"></i>
+                        <h5>Smart Pipeline Management</h5>
+                        <p>Track every candidate from sourcing to offer with automated stage transitions, status updates, and bottleneck alerts.</p>
+                    </div>
+                    <div class="platform-feature">
+                        <i class="bi bi-clipboard2-check"></i>
+                        <h5>Integrated Credentialing Hub</h5>
+                        <p>Verify licenses, certifications, and clinical assessments — all from a single dashboard.</p>
+                    </div>
+                    <div class="platform-feature">
+                        <i class="bi bi-bar-chart-line"></i>
+                        <h5>Real-Time Analytics</h5>
+                        <p>Monitor source effectiveness, time-to-fill, offer acceptance rates, and cost-per-hire with live, actionable dashboards.</p>
+                    </div>
+                    <div class="platform-feature">
+                        <i class="bi bi-people-fill"></i>
+                        <h5>Collaborative Hiring</h5>
+                        <p>Enable department heads, hiring managers, and recruiters to share feedback, score candidates, and make decisions together.</p>
+                    </div>
+                </div>
+                <div class="col-lg-7 animate-on-scroll delay-2">
+                    <div class="platform-dashboard">
+                        <div class="dashboard-header">
+                            <div class="dashboard-dot dot-red"></div>
+                            <div class="dashboard-dot dot-yellow"></div>
+                            <div class="dashboard-dot dot-green"></div>
+                            <span style="color:rgba(255,255,255,0.7);font-size:0.85rem;margin-left:12px;font-weight:500;">Talennexus — Healthcare Hiring Dashboard</span>
+                        </div>
+                        <div class="dashboard-content">
+                            <div class="mock-stat-row">
+                                <div class="mock-stat">
+                                    <div class="num">213</div>
+                                    <div class="lbl">Active Requisitions</div>
+                                </div>
+                                <div class="mock-stat">
+                                    <div class="num">1,560</div>
+                                    <div class="lbl">Candidates in Pipeline</div>
+                                </div>
+                                <div class="mock-stat">
+                                    <div class="num">76</div>
+                                    <div class="lbl">Offers This Month</div>
+                                </div>
+                                <div class="mock-stat">
+                                    <div class="num">10d</div>
+                                    <div class="lbl">Avg. Time-to-Hire</div>
+                                </div>
+                            </div>
+                            <div class="mock-chart">
+                                <div style="font-weight:600;color:var(--secondary-color);margin-bottom:12px;font-size:0.9rem;">Monthly Healthcare Hires by Specialty</div>
+                                <div class="chart-bar">
+                                    <div class="bar" style="height:70%;"></div>
+                                    <div class="bar" style="height:90%;"></div>
+                                    <div class="bar" style="height:55%;"></div>
+                                    <div class="bar" style="height:80%;"></div>
+                                    <div class="bar" style="height:65%;"></div>
+                                    <div class="bar" style="height:45%;"></div>
+                                    <div class="bar" style="height:60%;"></div>
+                                    <div class="bar" style="height:75%;"></div>
+                                </div>
+                                <div class="bar-labels">
+                                    <span>Physicians</span>
+                                    <span>Nursing</span>
+                                    <span>Pharma</span>
+                                    <span>Allied</span>
+                                    <span>Research</span>
+                                    <span>Admin</span>
+                                    <span>MedTech</span>
+                                    <span>HealthIT</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== STATS ===== -->
+    <section class="stats-section section-padding" id="stats">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 animate-on-scroll delay-1">
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="4500">0</div>
+                        <div class="stat-label">Healthcare Professionals Hired Yearly</div>
+                        <div class="stat-divider"></div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 animate-on-scroll delay-2">
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="420">0</div>
+                        <div class="stat-label">Hospitals & Healthcare Clients Served</div>
+                        <div class="stat-divider"></div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 animate-on-scroll delay-3">
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="97">0</div>
+                        <div class="stat-label">% Offer Acceptance Rate</div>
+                        <div class="stat-divider"></div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 animate-on-scroll delay-4">
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="12">0</div>
+                        <div class="stat-label">Days Average Time-to-Hire</div>
+                        <div class="stat-divider"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ENGAGEMENT MODELS ===== -->
+    <section class="engagement-section section-padding" id="engagement">
+        <div class="container">
+            <div class="section-title animate-on-scroll">
+                <span class="label">Flexible Models</span>
+                <h2>Engagement Models That Fit Your Needs</h2>
+                <p>Whether you need a single specialist or an entire clinical team, our flexible engagement models adapt to your scale, timeline, and budget.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 animate-on-scroll delay-1">
+                    <div class="engagement-card">
+                        <div class="engagement-icon"><i class="bi bi-person"></i></div>
+                        <h4>Locum & Contract Staffing</h4>
+                        <p>Deploy pre-vetted clinical and non-clinical professionals on a project or time-bound basis with flexible contract terms.</p>
+                        <ul class="engagement-features">
+                            <li><i class="bi bi-check-circle-fill"></i> 3–24 month contracts</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Quick deployment in 5–7 days</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Pay-as-you-go pricing</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Seamless extension or conversion</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Full payroll & compliance handled</li>
+                        </ul>
+                        <a href="#contact" class="btn-outline-custom" style="width:100%;justify-content:center;"> Started</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 animate-on-scroll delay-2">
+                    <div class="engagement-card featured">
+                        <div class="engagement-icon"><i class="bi bi-people"></i></div>
+                        <h4>Permanent Placement</h4>
+                        <p>Find your long-term clinical leaders and core department heads through our executive-grade permanent hiring process.</p>
+                        <ul class="engagement-features">
+                            <li><i class="bi bi-check-circle-fill"></i> Deep clinical vetting</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Cultural fit assessment</li>
+                            <li><i class="bi bi-check-circle-fill"></i> 90-day replacement guarantee</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Compensation negotiation support</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Post-placement onboarding aid</li>
+                        </ul>
+                        <a href="#contact" class="btn-primary-custom" style="width:100%;justify-content:center;">Start</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 animate-on-scroll delay-3">
+                    <div class="engagement-card">
+                        <div class="engagement-icon"><i class="bi bi-buildings"></i></div>
+                        <h4>Managed Care Teams</h4>
+                        <p>Outsource entire clinical or administrative functions — we recruit, manage, and deliver outcomes.</p>
+                        <ul class="engagement-features">
+                            <li><i class="bi bi-check-circle-fill"></i> Dedicated team of 5–200+</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Project management included</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Performance monitoring & KPIs</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Scalable up or down on demand</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Single point of accountability</li>
+                        </ul>
+                        <a href="#contact" class="btn-outline-custom" style="width:100%;justify-content:center;">Started</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CASE STUDIES ===== -->
+    <section class="features-section section-padding" id="cases">
+        <div class="container">
+            <div class="section-title animate-on-scroll">
+                <span class="label">Success Stories</span>
+                <h2>Healthcare Hiring in Action</h2>
+                <p>Real results from real engagements — see how we've helped leading healthcare organizations solve their toughest hiring challenges.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 animate-on-scroll delay-1">
+                    <div class="case-study-card">
+                        <div class="case-study-img">
+                            <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=500&h=300&fit=crop&q=80" alt="Hospital network case study">
+                            <i class="bi bi-hospital"></i>
+                            <span class="case-category">Hospital Network</span>
+                        </div>
+                        <div class="case-study-body">
+                            <h4>Staffing a Multi-Specialty Hospital Wing</h4>
+                            <p>Built a 60-member clinical team spanning nursing, critical care, and diagnostics for a new hospital wing — in just 8 weeks.</p>
+                            <div class="case-metrics">
+                                <div class="metric-item">
+                                    <strong>60</strong>
+                                    <small>Hires in 8 Weeks</small>
+                                </div>
+                                <div class="metric-item">
+                                    <strong>94%</strong>
+                                    <small>Retention at 12 Mo.</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 animate-on-scroll delay-2">
+                    <div class="case-study-card">
+                        <div class="case-study-img">
+                            <img src="https://images.unsplash.com/photo-1576671081837-49000212a370?w=500&h=300&fit=crop&q=80" alt="Pharma clinical trials case study">
+                            <i class="bi bi-capsule"></i>
+                            <span class="case-category">Pharma</span>
+                        </div>
+                        <div class="case-study-body">
+                            <h4>Scaling a Clinical Trials Team</h4>
+                            <p>Recruited CRAs, data managers, and biostatisticians to support a Phase III trial rollout across five countries.</p>
+                            <div class="case-metrics">
+                                <div class="metric-item">
+                                    <strong>22</strong>
+                                    <small>Clinical Research Hires</small>
+                                </div>
+                                <div class="metric-item">
+                                    <strong>35%</strong>
+                                    <small>Faster Trial Start</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 animate-on-scroll delay-3">
+                    <div class="case-study-card">
+                        <div class="case-study-img">
+                            <img src="https://images.unsplash.com/photo-1551190822-a9333d879b1f?w=500&h=300&fit=crop&q=80" alt="Digital health case study">
+                            <i class="bi bi-laptop"></i>
+                            <span class="case-category">Digital Health</span>
+                        </div>
+                        <div class="case-study-body">
+                            <h4>Building a Telehealth Care Team</h4>
+                            <p>Staffed a fast-growing telehealth platform with physicians, nurse practitioners, and health informaticians from scratch.</p>
+                            <div class="case-metrics">
+                                <div class="metric-item">
+                                    <strong>28</strong>
+                                    <small>Care Team Members</small>
+                                </div>
+                                <div class="metric-item">
+                                    <strong>97%</strong>
+                                    <small>Offer Acceptance</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS ===== -->
+    <section class="testimonials-section section-padding" id="testimonials">
+        <div class="container">
+            <div class="section-title animate-on-scroll">
+                <span class="label">Client Voices</span>
+                <h2>Trusted by Healthcare Leaders</h2>
+                <p>Hear from CMOs, Directors of Nursing, and healthcare leaders who've transformed their hiring with Talennexus.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 animate-on-scroll delay-1">
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                        </div>
+                        <div class="quote-icon"><i class="bi bi-quote"></i></div>
+                        <p>"Talennexus filled 25 ICU nursing positions in under 3 weeks. The clinical quality of candidates was significantly better than what we'd seen from other agencies. Their credentialing process saved us hundreds of hours."</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">DN</div>
+                            <div>
+                                <strong>Dr. Nandini Rao</strong>
+                                <span>Director of Nursing, Multi-Specialty Hospital</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 animate-on-scroll delay-2">
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                        </div>
+                        <div class="quote-icon"><i class="bi bi-quote"></i></div>
+                        <p>"We needed 10 senior consultants across specialties — roles that are notoriously hard to fill. Talennexus delivered all 10 in 4 weeks, and every single one cleared our internal clinical panel on the first attempt."</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">SV</div>
+                            <div>
+                                <strong>Dr. Sanjay Verma</strong>
+                                <span>Chief Medical Officer, Healthcare Group</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 animate-on-scroll delay-3">
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+                        </div>
+                        <div class="quote-icon"><i class="bi bi-quote"></i></div>
+                        <p>"Their managed team model is a game-changer. We outsourced our entire diagnostics staffing — 20 technicians — and saw turnaround times drop by 55% in the first quarter. Truly outcome-driven."</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">AM</div>
+                            <div>
+                                <strong>Anita Menon</strong>
+                                <span>Head of Operations, Diagnostics Chain</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="faq-section section-padding" id="faq">
+        <div class="container">
+            <div class="section-title animate-on-scroll">
+                <span class="label">FAQs</span>
+                <h2>Frequently Asked Questions</h2>
+                <p>Everything you need to know about our Healthcare Hiring services.</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-9">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item animate-on-scroll delay-1">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">What healthcare roles do you hire for?</button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">We hire across all major healthcare disciplines including Physicians & Specialists (Cardiology, Oncology, Radiology, Orthopedics), Nursing & Clinical Staff (ICU, ER, OT, NICU, Home Care), Pharma & Life Sciences (R&D, Regulatory Affairs, Pharmacovigilance, QA/QC), Allied Health (Physiotherapy, Lab Technicians, Radiography, Dietetics), Clinical Research (CRAs, Biostatisticians, Data Managers), Hospital Administration, MedTech & Devices, and Digital Health & HealthIT.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item animate-on-scroll delay-2">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">How do you verify clinical credentials?</button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">Our credentialing process is multi-layered. It starts with license and registration verification against relevant medical councils and registries, followed by a domain-specific clinical competency assessment. Shortlisted candidates then go through a panel interview conducted by our in-house senior clinicians with 10+ years of experience. For senior roles, we also conduct case-based evaluations and background verification through certified agencies. Every candidate receives a detailed credentialing scorecard.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item animate-on-scroll delay-3">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">What is your typical time-to-hire for healthcare roles?</button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">Our average time-to-hire is 12 working days from requisition to offer acceptance. For locum and contract staffing roles, we can deploy candidates in as little as 5–7 days from our pre-vetted talent pool. For niche or senior specialist roles, the timeline may extend to 20–30 days depending on market availability and interview schedules.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item animate-on-scroll delay-4">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">Do you offer a replacement guarantee?</button>
+                            </h2>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">Yes, all our permanent placements come with a 90-day replacement guarantee. If a candidate leaves or is terminated for performance reasons within 90 days of joining, we will find a replacement candidate at no additional recruitment fee. For contract and locum staffing, we offer immediate replacement if a professional exits during the engagement period.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item animate-on-scroll delay-1">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">Can you handle bulk hiring for new facilities or expansions?</button>
+                            </h2>
+                            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">Absolutely. Bulk hiring for hospital launches and expansions is one of our core strengths. We have dedicated account teams and scalable sourcing infrastructure to handle volumes of 50–500+ positions simultaneously. We use parallel pipeline processing, pre-built talent communities, and credentialing bootcamps to maintain quality even at scale. Our largest single engagement involved staffing 250+ clinical and support roles for a new hospital launch in 10 weeks.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item animate-on-scroll delay-2">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">Do you support remote, locum, and international hiring?</button>
+                            </h2>
+                            <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">Yes, we support locum, remote-care, and on-site hiring models across multiple geographies. Our talent network spans India, the United States, the United Kingdom, Europe, and the Middle East. For international placements, we handle compliance, credentialing, payroll, and contractor management through our global employer-of-record partners, so you can hire globally without setting up local entities.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CTA SECTION ===== -->
+    <section class="cta-section" id="cta">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7 animate-on-scroll">
+                    <div class="cta-content">
+                        <h2>Ready to Build Your Dream Healthcare Team?</h2>
+                        <p>Whether you need one senior consultant or 100 nursing staff, our healthcare hiring experts are ready to deliver. Let's talk about your hiring needs.</p>
+                        <div style="display:flex;gap:15px;flex-wrap:wrap;">
+                            <a href="#contact" class="btn-white">Start Hiring Now <i class="bi bi-arrow-right"></i></a>
+                            <a href="#process" class="btn-ghost">See How It Works <i class="bi bi-play-circle"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 text-end animate-on-scroll delay-2 d-none d-lg-block">
+                    <img src="https://images.unsplash.com/photo-1584982751601-97dcc096659c?w=450&h=320&fit=crop&q=80" alt="Healthcare team celebrating successful hiring" style="border-radius:20px;box-shadow:0 20px 60px rgba(0,0,0,0.3);max-width:100%;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT SECTION ===== -->
+    <section class="contact-section section-padding" id="contact">
+        <div class="container">
+            <div class="section-title animate-on-scroll">
+                <span class="label">Get in Touch</span>
+                <h2>Tell Us About Your Healthcare Hiring Needs</h2>
+                <p>Fill out the form below and one of our healthcare hiring specialists will reach out within 4 business hours.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-8 animate-on-scroll delay-1">
+                    <div class="contact-form">
+                        <form id="healthcareHiringForm">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label">Full Name *</label>
+                                    <input type="text" class="form-control" placeholder="John Doe" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Organization Name *</label>
+                                    <input type="text" class="form-control" placeholder="Acme Hospital Group" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Work Email *</label>
+                                    <input type="email" class="form-control" placeholder="john@hospital.com" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Phone Number</label>
+                                    <input type="tel" class="form-control" placeholder="+91 98765 43210">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Healthcare Specialty *</label>
+                                    <select class="form-select" required>
+                                        <option value="" disabled selected>Select a specialty</option>
+                                        <option>Physicians & Specialists</option>
+                                        <option>Nursing & Clinical Staff</option>
+                                        <option>Pharma & Life Sciences</option>
+                                        <option>Allied Health</option>
+                                        <option>Clinical Research</option>
+                                        <option>Hospital Administration</option>
+                                        <option>MedTech & Devices</option>
+                                        <option>Digital Health & HealthIT</option>
+                                        <option>Other</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Engagement Model *</label>
+                                    <select class="form-select" required>
+                                        <option value="" disabled selected>Select a model</option>
+                                        <option>Locum & Contract Staffing</option>
+                                        <option>Permanent Placement</option>
+                                        <option>Managed Care Teams</option>
+                                        <option>Not Sure Yet</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Number of Positions</label>
+                                    <select class="form-select">
+                                        <option value="" disabled selected>Select range</option>
+                                        <option>1–5</option>
+                                        <option>6–15</option>
+                                        <option>16–50</option>
+                                        <option>51–100</option>
+                                        <option>100+</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Urgency</label>
+                                    <select class="form-select">
+                                        <option value="" disabled selected>How soon do you need them?</option>
+                                        <option>Immediately (within 1 week)</option>
+                                        <option>Urgent (1–2 weeks)</option>
+                                        <option>Standard (2–4 weeks)</option>
+                                        <option>Flexible (1–3 months)</option>
+                                        <option>Just exploring options</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label">Tell Us More About Your Requirements</label>
+                                    <textarea class="form-control" rows="4" placeholder="Describe the roles, specialties, experience levels, and any specific requirements..."></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn-submit">Submit Hiring Request <i class="bi bi-send ms-2"></i></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-4 animate-on-scroll delay-2">
+                    <div class="row g-4">
+                        <div class="col-12">
+                            <div class="contact-info-card">
+                                <div class="contact-icon"><i class="bi bi-envelope"></i></div>
+                                <h6>Email Us</h6>
+                                <p>connect@talennexus.com</p>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="contact-info-card">
+                                <div class="contact-icon"><i class="bi bi-telephone"></i></div>
+                                <h6>Call Us</h6>
+                                <p>+91 995 297 8818</p>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="contact-info-card">
+                                <div class="contact-icon"><i class="bi bi-geo-alt"></i></div>
+                                <h6>Office</h6>
+                                <p>Bangalore | Mumbai | Hyderabad | Pune</p>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="contact-info-card" style="background:var(--secondary-color);">
+                                <div class="contact-icon" style="background:rgba(255,255,255,0.15);"><i class="bi bi-clock" style="color:var(--primary-soft);"></i></div>
+                                <h6 style="color:var(--white);">Response Time</h6>
+                                <p style="color:rgba(255,255,255,0.8);">We respond within 4 business hours</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <!-- Contact form (Business / Individual → Zoho) -->
+    <site-contact id="contact-form"></site-contact>
+
+    <site-footer></site-footer>
+
+    <!-- ===== TOAST ===== -->
+    <div class="toast-container">
+        <div class="custom-toast" id="customToast">
+            <i class="bi bi-check-circle-fill"></i>
+            <span id="toastMessage">Message sent successfully!</span>
+        </div>
+    </div>
+
+    <!-- ===== BACK TO TOP ===== -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // ===== Navbar scroll effect =====
+        const navbar = document.querySelector('.navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // ===== Back to top =====
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            backToTop.classList.toggle('visible', window.scrollY > 400);
+        });
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // ===== Scroll animations =====
+        const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animated');
+                }
+            });
+        }, observerOptions);
+        document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+
+        // ===== Counter animation =====
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const el = entry.target;
+                    const target = parseInt(el.getAttribute('data-target'));
+                    const duration = 2000;
+                    const start = performance.now();
+                    const animate = (now) => {
+                        const elapsed = now - start;
+                        const progress = Math.min(elapsed / duration, 1);
+                        const eased = 1 - Math.pow(1 - progress, 3);
+                        el.textContent = Math.floor(eased * target).toLocaleString() + (target === 97 ? '%' : target === 12 ? '' : '+');
+                        if (progress < 1) requestAnimationFrame(animate);
+                    };
+                    requestAnimationFrame(animate);
+                    counterObserver.unobserve(el);
+                }
+            });
+        }, { threshold: 0.5 });
+        document.querySelectorAll('.stat-number[data-target]').forEach(el => counterObserver.observe(el));
+
+        // ===== Form submission =====
+        document.getElementById('healthcareHiringForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const toast = document.getElementById('customToast');
+            toast.classList.add('show');
+            this.reset();
+            setTimeout(() => toast.classList.remove('show'), 4000);
+        });
+
+        // ===== Dropdown submenu for mobile =====
+        if (window.innerWidth < 992) {
+            document.querySelectorAll('.dropdown-submenu > .submenu-toggle').forEach(toggle => {
+                toggle.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    this.closest('.dropdown-submenu').classList.toggle('show-submenu');
+                });
+            });
+        }
+    </script>
+</body>
+</html>

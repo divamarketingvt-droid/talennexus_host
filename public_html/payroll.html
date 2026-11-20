@@ -1,0 +1,2037 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script src="components/site-gtm.js?v=20261118"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Talennexus Payroll Services — Accurate, compliant, and hassle-free payroll management for enterprises.">
+    <title>Payroll Services | Talennexus</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-color: #1e3a5f;
+            --primary-accent: #4a90d9;
+            --secondary-color: #2c3e50;
+            --gradient-primary: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-accent) 100%);
+            --text-dark: #1a1a2e;
+            --text-gray: #5a6a7a;
+            --bg-light: #f0f4f8;
+            --bg-subtle: #e6eef7;
+            --white: #FFFFFF;
+            --shadow-sm: 0 4px 15px rgba(30, 58, 95, 0.06);
+            --shadow-md: 0 8px 25px rgba(30, 58, 95, 0.1);
+            --shadow-lg: 0 15px 40px rgba(30, 58, 95, 0.15);
+            --shadow-blue: 0 8px 25px rgba(74, 144, 217, 0.15);
+            --border-radius: 16px;
+            --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.7;
+            overflow-x: hidden;
+            background: var(--white);
+        }
+
+        h1, h2, h3, h4 { font-family: 'Poppins', sans-serif; font-weight: 700; }
+
+ /* ===== NAV ===== */
+
+/* Fixed Header — exact same as Home page (90px) */
+.navbar {
+    background: var(--white);
+    box-shadow: var(--shadow-sm);
+    height: 90px;
+    padding: 0 !important;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+}
+
+/* Keep same header height after scrolling — same as Home page */
+.navbar.scrolled {
+    height: 90px;
+    padding: 0 !important;
+    box-shadow: var(--shadow-md);
+}
+
+/* Bootstrap container alignment */
+.navbar > .container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+/* Logo container — same as Home page */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    padding: 0 !important;
+    margin-right: 25px;
+}
+
+/* Logo — EXACT size from Home page */
+.navbar-brand img,
+.logo-img {
+    width: auto !important;
+    height: 160px !important;
+    max-width: none !important;
+    object-fit: contain;
+    display: block;
+}
+
+/* Do NOT shrink logo on scroll — same as Home page */
+.navbar.scrolled .navbar-brand img,
+.navbar.scrolled .logo-img {
+    height: 160px !important;
+}
+
+/* Navigation */
+.navbar-nav {
+    display: flex;
+    align-items: center;
+}
+
+/* Navigation links */
+.nav-link {
+    font-weight: 500;
+    color: var(--secondary-color) !important;
+    padding: 10px 18px !important;
+    transition: var(--transition);
+    position: relative;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+/* Hover / Active */
+.nav-link:hover,
+.nav-link.active {
+    color: var(--primary-color) !important;
+}
+
+/* Active underline */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 18px;
+    right: 18px;
+    height: 2px;
+    background: var(--gradient-primary);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    transform: scaleX(1);
+}
+
+/* Dropdown arrow */
+.dropdown-toggle::after {
+    margin-left: 6px;
+    vertical-align: middle;
+    transition: transform 0.3s ease;
+}
+
+.dropdown.show .dropdown-toggle::after {
+    transform: rotate(180deg);
+}
+
+/* Dropdown */
+.dropdown-menu {
+    border: none;
+    box-shadow: var(--shadow-lg);
+    border-radius: var(--border-radius);
+    padding: 15px;
+    margin-top: 15px;
+    animation: dropdownFadeIn 0.25s ease;
+}
+
+@keyframes dropdownFadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Dropdown items */
+.dropdown-item {
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: var(--transition);
+    font-weight: 500;
+    color: var(--text-gray);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.dropdown-item i {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    width: 22px;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.dropdown-item:hover {
+    background: var(--primary-light);
+    color: var(--primary-color);
+}
+
+.dropdown-item:hover i {
+    color: var(--primary-accent);
+    transform: scale(1.15);
+}
+
+/* Active dropdown item */
+.dropdown-item.active-item {
+    background: var(--primary-light);
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.dropdown-item.active-item i {
+    color: var(--primary-accent);
+}
+
+/* Nested submenu */
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu > .dropdown-item.submenu-toggle {
+    justify-content: space-between;
+}
+
+.dropdown-submenu > .dropdown-item.submenu-toggle::after {
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-left: 5px solid currentColor;
+    margin-left: auto;
+}
+
+.dropdown-submenu .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: 0;
+    margin-left: 6px;
+    display: none;
+    min-width: 260px;
+}
+
+.dropdown-submenu.show-submenu > .dropdown-menu {
+    display: block;
+    animation: dropdownFadeIn 0.2s ease;
+}
+
+/* Desktop submenu */
+@media (min-width: 992px) {
+    .dropdown-submenu:hover > .dropdown-menu {
+        display: block;
+    }
+}
+
+       /* Mobile */
+        @media (max-width: 991px) {
+            .navbar {
+                height: 90px;
+                padding: 0 !important;
+            }
+
+            .navbar.scrolled {
+                height: 90px;
+            }
+
+            .navbar-brand {
+                margin-right: 10px;
+            }
+
+            .navbar-brand img {
+                height: 78px !important;
+                width: auto !important;
+                max-height: 78px !important;
+                object-fit: contain;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .navbar {
+                height: 85px;
+                padding: 0 !important;
+            }
+
+            .navbar.scrolled {
+                height: 85px;
+            }
+
+            .navbar-brand img {
+                height: 90px !important;
+                width: auto !important;
+                max-height: 120px !important;
+                object-fit: contain;
+               
+            }
+        }
+
+
+        /* ==================== BUTTONS ==================== */
+        .btn-primary-custom {
+            background: var(--gradient-primary);
+            color: var(--white) !important;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(30, 58, 95, 0.3);
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .btn-primary-custom::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(135deg, var(--primary-accent) 0%, var(--primary-color) 100%);
+            z-index: -1;
+            transition: opacity 0.3s ease;
+            opacity: 0;
+        }
+
+        .btn-primary-custom:hover { transform: translateY(-2px); box-shadow: var(--shadow-blue); }
+        .btn-primary-custom:hover::before { opacity: 1; }
+
+        .btn-outline-custom {
+            background: transparent;
+            color: var(--primary-color) !important;
+            border: 2px solid var(--primary-color);
+            padding: 10px 28px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .btn-outline-custom:hover {
+            background: var(--gradient-primary);
+            border-color: transparent;
+            color: var(--white) !important;
+            box-shadow: var(--shadow-blue);
+        }
+
+        /* ========== HERO ========== */
+        .payroll-hero {
+            background: linear-gradient(165deg, #f5f8fc 0%, #eaf0f7 40%, #e2ecf5 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding-top: 100px;
+            overflow: hidden;
+        }
+
+        .payroll-hero::before {
+            content: '';
+            position: absolute;
+            top: -15%;
+            right: -8%;
+            width: 700px;
+            height: 700px;
+            background: radial-gradient(circle, rgba(74, 144, 217, 0.1) 0%, transparent 60%);
+            border-radius: 50%;
+            filter: blur(40px);
+        }
+
+        .payroll-hero::after {
+            content: '';
+            position: absolute;
+            bottom: -15%;
+            left: -8%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(30, 58, 95, 0.08) 0%, transparent 60%);
+            border-radius: 50%;
+            filter: blur(40px);
+        }
+
+        .hero-content { position: relative; z-index: 1; }
+
+        .hero-badge {
+            background: rgba(74, 144, 217, 0.1);
+            color: var(--primary-accent);
+            padding: 8px 22px;
+            border-radius: 30px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 28px;
+            border: 1px solid rgba(74, 144, 217, 0.2);
+            font-size: 0.88rem;
+        }
+
+        .payroll-hero h1 {
+            font-size: 3.5rem;
+            line-height: 1.12;
+            color: var(--primary-color);
+            margin-bottom: 25px;
+        }
+
+        .payroll-hero h1 span {
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .payroll-hero p {
+            font-size: 1.15rem;
+            color: var(--text-gray);
+            margin-bottom: 40px;
+            max-width: 540px;
+            line-height: 1.8;
+        }
+
+        .hero-img-container { position: relative; z-index: 1; }
+
+        .hero-img {
+            width: 100%;
+            border-radius: 24px 0 24px 0;
+            box-shadow: var(--shadow-lg);
+            object-fit: cover;
+            height: 540px;
+        }
+
+        .floating-stat {
+            position: absolute;
+            background: var(--white);
+            padding: 20px 24px;
+            border-radius: 16px;
+            box-shadow: var(--shadow-lg);
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            animation: floatY 3.5s ease-in-out infinite;
+        }
+
+        .floating-stat-1 {
+            bottom: 40px;
+            left: -35px;
+            border-left: 5px solid var(--primary-accent);
+        }
+
+        .floating-stat-2 {
+            top: 30px;
+            right: -30px;
+            border-bottom: 5px solid var(--primary-color);
+            animation-delay: 1.2s;
+        }
+
+        .floating-stat-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-primary);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 22px;
+            flex-shrink: 0;
+        }
+
+        @keyframes floatY {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-12px); }
+        }
+
+        .btn-hero-fill {
+            background: var(--primary-color);
+            color: var(--white) !important;
+            border: none;
+            padding: 14px 36px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.05rem;
+            transition: var(--transition);
+        }
+
+        .btn-hero-fill:hover {
+            background: var(--primary-accent);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-blue);
+        }
+
+        .btn-hero-outline {
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color) !important;
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.05rem;
+            transition: var(--transition);
+            background: transparent;
+        }
+
+        .btn-hero-outline:hover {
+            background: var(--primary-color);
+            color: var(--white) !important;
+        }
+
+        /* ========== PAIN POINTS ========== */
+        .pain-strip { padding: 80px 0; background: var(--white); }
+
+        .pain-card {
+            background: var(--bg-light);
+            border-radius: var(--border-radius);
+            padding: 35px 28px;
+            text-align: center;
+            height: 100%;
+            border: 1px solid transparent;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pain-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 4px;
+            background: var(--gradient-primary);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .pain-card:hover::before { transform: scaleX(1); }
+
+        .pain-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-blue);
+            border-color: rgba(74, 144, 217, 0.15);
+            background: var(--white);
+        }
+
+        .pain-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(74, 144, 217, 0.08);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: var(--primary-color);
+            font-size: 26px;
+            transition: var(--transition);
+        }
+
+        .pain-card:hover .pain-icon { background: var(--gradient-primary); color: var(--white); }
+        .pain-card h5 { color: var(--secondary-color); font-weight: 700; margin-bottom: 10px; font-size: 1.1rem; }
+        .pain-card p { color: var(--text-gray); font-size: 0.93rem; margin: 0; }
+
+        /* ========== WHAT'S INCLUDED (NEW SECTION FROM IMAGE) ========== */
+        .whats-included-section {
+            padding: 90px 0;
+            background: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .whats-included-section::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--bg-subtle), transparent);
+        }
+
+        .included-header {
+            text-align: center;
+            max-width: 680px;
+            margin: 0 auto 60px;
+        }
+
+        .included-header h2 {
+            font-size: 2.6rem;
+            color: var(--primary-color);
+            margin-bottom: 16px;
+        }
+
+        .included-header .divider {
+            height: 4px;
+            width: 80px;
+            background: var(--gradient-primary);
+            margin: 0 auto;
+            border-radius: 2px;
+        }
+
+        .included-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .included-card {
+            background: var(--bg-light);
+            border-radius: var(--border-radius);
+            padding: 36px 30px;
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            border: 1px solid transparent;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .included-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            height: 3px;
+            background: var(--gradient-primary);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+            transform-origin: left;
+        }
+
+        .included-card:hover::after { transform: scaleX(1); }
+
+        .included-card:hover {
+            background: var(--white);
+            border-color: rgba(74, 144, 217, 0.15);
+            box-shadow: var(--shadow-blue);
+            transform: translateY(-5px);
+        }
+
+        .included-card.span-full {
+            grid-column: 1 / -1;
+            max-width: 480px;
+            justify-self: center;
+            width: 100%;
+        }
+
+        .included-check {
+            width: 48px;
+            height: 48px;
+            min-width: 48px;
+            background: var(--gradient-primary);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 22px;
+            transition: var(--transition);
+            box-shadow: 0 4px 12px rgba(74, 144, 217, 0.2);
+        }
+
+        .included-card:hover .included-check {
+            transform: scale(1.08) rotate(-3deg);
+            box-shadow: 0 6px 20px rgba(74, 144, 217, 0.3);
+        }
+
+        .included-card h5 {
+            color: var(--primary-color);
+            font-weight: 700;
+            font-size: 1.05rem;
+            margin-bottom: 6px;
+            line-height: 1.35;
+        }
+
+        .included-card p {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+            margin: 0;
+            line-height: 1.65;
+        }
+
+        /* ========== SERVICES ZIG-ZAG ========== */
+        .services-payroll {
+            background: var(--bg-light);
+            padding: 100px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 80px;
+        }
+
+        .section-header h2 {
+            font-size: 2.8rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .section-header .divider {
+            height: 4px;
+            width: 80px;
+            background: var(--gradient-primary);
+            margin: 0 auto;
+            border-radius: 2px;
+        }
+
+        .zig-zag-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 120px;
+        }
+
+        .zig-zag-row:last-child { margin-bottom: 0; }
+        .zig-zag-row.reverse { flex-direction: row-reverse; }
+
+        .zz-text { flex: 1; padding-right: 60px; }
+        .zig-zag-row.reverse .zz-text { padding-right: 0; padding-left: 60px; }
+        .zz-image { flex: 1; position: relative; }
+
+        .zz-img-bg {
+            width: 100%;
+            height: 420px;
+            object-fit: cover;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-lg);
+            transition: var(--transition);
+        }
+
+        .zz-image:hover .zz-img-bg { transform: scale(1.02); }
+
+        .zz-blob {
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient-primary);
+            border-radius: var(--border-radius);
+            z-index: -1;
+            opacity: 0.08;
+        }
+
+        .zig-zag-row.reverse .zz-blob { right: auto; left: -20px; }
+
+        .zz-label {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(30, 58, 95, 0.92);
+            color: white;
+            padding: 8px 18px;
+            border-radius: 10px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            backdrop-filter: blur(6px);
+            z-index: 2;
+        }
+
+        .zz-label i { color: var(--primary-accent); margin-right: 6px; }
+
+        .service-icon-lg {
+            width: 70px;
+            height: 70px;
+            background: var(--gradient-primary);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 32px;
+            margin-bottom: 30px;
+            box-shadow: var(--shadow-blue);
+        }
+
+        .service-tag {
+            display: inline-block;
+            background: rgba(74, 144, 217, 0.1);
+            color: var(--primary-accent);
+            padding: 5px 14px;
+            border-radius: 8px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 18px;
+        }
+
+        .check-list li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            color: var(--text-gray);
+        }
+
+        .check-list i {
+            color: var(--primary-accent);
+            background: rgba(74, 144, 217, 0.1);
+            padding: 5px;
+            border-radius: 50%;
+            font-size: 14px;
+            flex-shrink: 0;
+            margin-top: 3px;
+        }
+
+        /* ========== PROCESS ========== */
+        .process-section { padding: 100px 0; background: var(--white); }
+
+        .timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0; bottom: 0;
+            left: 50%;
+            width: 3px;
+            background: linear-gradient(to bottom, var(--primary-color), var(--primary-accent));
+            opacity: 0.15;
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            display: flex;
+            justify-content: flex-end;
+            padding-bottom: 60px;
+            position: relative;
+        }
+
+        .timeline-item:nth-child(even) { flex-direction: row-reverse; }
+        .timeline-item:last-child { padding-bottom: 0; }
+
+        .timeline-content {
+            width: 45%;
+            background: var(--white);
+            padding: 40px;
+            border-radius: var(--border-radius);
+            position: relative;
+            transition: var(--transition);
+            border: 1px solid var(--bg-subtle);
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-blue);
+            border-color: var(--primary-accent);
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            top: 40px;
+            width: 22px;
+            height: 22px;
+            background: var(--primary-accent);
+            border: 4px solid var(--white);
+            border-radius: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0 0 0 4px rgba(74, 144, 217, 0.2);
+            z-index: 2;
+        }
+
+        .timeline-number {
+            font-size: 4rem;
+            font-weight: 800;ebtc jpft kgib bozd
+            color: rgba(30, 58, 95, 0.06);
+            line-height: 1;
+            position: absolute;
+            top: 10px;
+            right: 20px;
+        }
+
+        .step-label {
+            color: var(--primary-accent);
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1.5px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .timeline-content h3 { font-size: 1.4rem; color: var(--primary-color); margin-bottom: 12px; }
+
+        /* ========== WHY US ========== */
+        .why-section { padding: 100px 0; background: var(--bg-light); }
+
+        .why-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            padding: 40px 28px;
+            height: 100%;
+            border: 1px solid transparent;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .why-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 4px;
+            height: 0;
+            background: var(--gradient-primary);
+            transition: var(--transition);
+        }
+
+        .why-card:hover::before { height: 100%; }
+
+        .why-card:hover {
+            box-shadow: var(--shadow-blue);
+            border-color: rgba(74, 144, 217, 0.12);
+            transform: translateY(-4px);
+        }
+
+        .why-icon {
+            width: 56px;
+            height: 56px;
+            background: var(--gradient-primary);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 24px;
+            margin-bottom: 24px;
+        }
+
+        .why-card h5 { color: var(--primary-color); font-weight: 700; margin-bottom: 12px; }
+        .why-card p { color: var(--text-gray); font-size: 0.95rem; margin: 0; }
+
+        /* ========== METRICS ========== */
+        .metrics-section {
+            padding: 80px 0;
+            background: var(--primary-color);
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .metrics-section::before {
+            content: '';
+            position: absolute;
+            top: -40%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: rgba(74, 144, 217, 0.1);
+            border-radius: 50%;
+            filter: blur(60px);
+        }
+
+        .metric-card { text-align: center; padding: 35px 15px; position: relative; z-index: 2; }
+
+        .metric-card h3 {
+            font-size: 3rem;
+            background: linear-gradient(135deg, #7bb8f0, #a4d0f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 8px;
+        }
+
+        .metric-card p { font-size: 0.95rem; opacity: 0.8; font-weight: 500; }
+
+        /* ========== FAQ ========== */
+        .faq-section { padding: 100px 0; background: var(--white); }
+
+        .faq-accordion .accordion-item {
+            border: 1px solid var(--bg-subtle);
+            border-radius: var(--border-radius) !important;
+            margin-bottom: 14px;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .faq-accordion .accordion-item:hover {
+            border-color: var(--primary-accent);
+            box-shadow: 0 4px 20px rgba(74, 144, 217, 0.08);
+        }
+
+        .faq-accordion .accordion-button {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 1.02rem;
+            color: var(--primary-color);
+            background: var(--white);
+            padding: 22px 28px;
+            box-shadow: none !important;
+        }
+
+        .faq-accordion .accordion-button:not(.collapsed) {
+            background: rgba(74, 144, 217, 0.04);
+            color: var(--primary-accent);
+        }
+
+        .faq-accordion .accordion-button::after {
+            background-image: none;
+            content: '\F282';
+            font-family: 'bootstrap-icons';
+            font-size: 1rem;
+            color: var(--primary-accent);
+            width: auto;
+            height: auto;
+            transition: var(--transition);
+        }
+
+        .faq-accordion .accordion-button:not(.collapsed)::after { transform: rotate(180deg); }
+
+        .faq-accordion .accordion-body {
+            color: var(--text-gray);
+            padding: 0 28px 22px;
+            line-height: 1.8;
+            font-size: 0.97rem;
+        }
+
+        /* ========== TESTIMONIALS ========== */
+        .testimonial-section { padding: 80px 0; background: var(--bg-light); }
+
+        .testimonial-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            padding: 40px 35px;
+            border: 1px solid var(--bg-subtle);
+            transition: var(--transition);
+            height: 100%;
+            position: relative;
+        }
+
+        .testimonial-card:hover {
+            box-shadow: var(--shadow-blue);
+            border-color: var(--primary-accent);
+            transform: translateY(-4px);
+        }
+
+        .testimonial-card .quote-icon {
+            font-size: 48px;
+            color: rgba(74, 144, 217, 0.08);
+            position: absolute;
+            top: 20px;
+            right: 30px;
+        }
+
+        .testimonial-text {
+            color: var(--text-gray);
+            font-size: 1rem;
+            font-style: italic;
+            margin-bottom: 25px;
+            line-height: 1.8;
+        }
+
+        .testimonial-author { display: flex; align-items: center; gap: 15px; }
+
+        .testimonial-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--primary-accent);
+        }
+
+        .testimonial-name { font-weight: 700; color: var(--primary-color); font-size: 1rem; }
+        .testimonial-role { font-size: 0.85rem; color: var(--text-gray); }
+
+        .testimonial-tag {
+            display: inline-block;
+            background: rgba(74, 144, 217, 0.08);
+            color: var(--primary-accent);
+            padding: 3px 10px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-top: 6px;
+        }
+
+        /* ========== CTA ========== */
+        .cta-section {
+            padding: 120px 0;
+            background: var(--bg-light);
+            text-align: center;
+        }
+
+        .cta-box {
+            background: var(--white);
+            border-radius: 28px;
+            padding: 80px 50px;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(74, 144, 217, 0.1);
+        }
+
+        .cta-circle {
+            position: absolute;
+            border-radius: 50%;
+            background: var(--gradient-primary);
+            opacity: 0.06;
+        }
+
+        .c1 { top: -60px; left: -60px; width: 220px; height: 220px; }
+        .c2 { bottom: -60px; right: -60px; width: 320px; height: 320px; }
+
+        .form-control-custom {
+            background: var(--bg-light);
+            border: 2px solid var(--bg-subtle);
+            padding: 16px 18px;
+            border-radius: 12px;
+            margin-bottom: 18px;
+            transition: var(--transition);
+            font-size: 0.97rem;
+            color: var(--text-dark);
+        }
+
+        .form-control-custom::placeholder { color: #8a9bb0; }
+
+        .form-control-custom:focus {
+            border-color: var(--primary-accent);
+            box-shadow: 0 0 0 4px rgba(74, 144, 217, 0.1);
+            outline: none;
+            background: var(--white);
+        }
+
+        .btn-submit {
+            background: var(--primary-color);
+            color: var(--white);
+            border: none;
+            padding: 16px 50px;
+            border-radius: 12px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            width: 100%;
+            transition: var(--transition);
+        }
+
+        .btn-submit:hover {
+            background: var(--primary-accent);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-blue);
+        }
+
+            /* ==================== FOOTER ==================== */
+        .footer {
+            background: var(--secondary-color);
+            color: rgba(255,255,255,0.8);
+            padding: 80px 0 30px;
+        }
+
+        .footer-brand {
+            font-family: 'Poppins', sans-serif;
+            font-size: 26px;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-brand i {
+            font-size: 28px;
+            color: var(--primary-accent);
+        }
+
+        .footer-desc {
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 25px;
+            line-height: 1.7;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 12px;
+        }
+
+        .social-links a {
+            width: 42px;
+            height: 42px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background: var(--gradient-primary);
+            transform: translateY(-3px);
+        }
+
+        .footer h5 {
+            color: var(--white);
+            font-size: 1.15rem;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 12px;
+        }
+
+        .footer h5::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: var(--gradient-primary);
+            border-radius: 2px;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-accent);
+            padding-left: 5px;
+        }
+
+        .footer-contact {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-contact li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 18px;
+        }
+
+        .footer-contact i {
+            color: var(--primary-accent);
+            margin-top: 4px;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 12px 18px;
+            border: none;
+            border-radius: 50px;
+            background: rgba(255,255,255,0.1);
+            color: var(--white);
+        }
+
+        .newsletter-form input::placeholder {
+            color: rgba(255,255,255,0.5);
+        }
+
+        .newsletter-form button {
+            background: var(--gradient-primary);
+            color: var(--white);
+            border: none;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .newsletter-form button:hover {
+            opacity: 0.9;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 30px;
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .footer-bottom p {
+            margin: 0;
+            color: rgba(255,255,255,0.6);
+        }
+
+        .footer-bottom a {
+            color: var(--primary-accent);
+            text-decoration: none;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 991px) {
+            .hero-content h1 { font-size: 2.5rem; }
+            .floating-card { display: none; }
+        }
+
+        @media (max-width: 767px) {
+            .hero-section { padding: 100px 0 60px; }
+            .hero-content h1 { font-size: 2rem; }
+            .section-title h2 { font-size: 2rem; }
+            .section-padding { padding: 60px 0; }
+            .contact-form { padding: 30px 20px; }
+            .client-feedback-card {
+                width: 300px;
+                padding: 20px;
+                margin: 0 10px;
+            }
+        }
+
+
+        /* ADD THIS */
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        background: #ffffff;
+        margin-top: 10px;
+        padding: 15px 20px 25px;
+        border-radius: 12px;
+        box-shadow: 0 15px 40px rgba(30, 58, 95, 0.18);
+        border: 1px solid #e6eef7;
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+
+    .navbar-nav {
+        align-items: stretch !important;
+        width: 100%;
+    }
+
+    .nav-item {
+        width: 100%;
+        border-bottom: 1px solid #f0f4f8;
+    }
+
+    .nav-item:last-child {
+        border-bottom: none;
+    }
+
+    .nav-link {
+        padding: 14px 10px !important;
+        width: 100%;
+        display: block;
+    }
+
+    .nav-link::after {
+        display: none;                 /* underline remove on mobile */
+    }
+
+    .dropdown-menu {
+        position: static !important;
+        float: none;
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 8px;
+        box-shadow: none;
+        border: none;
+        border-left: 3px solid var(--primary-light);
+        background: #f8fafc;
+        border-radius: 0 8px 8px 0;
+        padding: 8px 0;
+    }
+
+    .dropdown-item {
+        padding: 10px 18px;
+    }
+
+    /* Nested submenu (Payroll) */
+    .dropdown-submenu > .dropdown-menu {
+        position: static !important;
+        left: 0;
+        margin-left: 12px;
+        box-shadow: none;
+        border-left: 2px solid var(--primary-soft);
+        background: #f0f4f8;
+    }
+
+    .btn-primary-custom.ms-lg-3 {
+        margin: 15px 0 5px !important;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 991px) {
+            .payroll-hero { padding-top: 100px; text-align: center; }
+            .payroll-hero h1 { font-size: 2.5rem; }
+            .payroll-hero p { margin-left: auto; margin-right: auto; }
+            .hero-img-container { margin-top: 50px; }
+            .hero-img { height: 400px; }
+            .floating-stat-1 { left: 50%; transform: translateX(-50%); bottom: -30px; width: 85%; }
+            .floating-stat-2 { right: 50%; transform: translateX(50%); top: -25px; }
+
+            .included-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+            .included-card.span-full { grid-column: auto; max-width: none; }
+
+            .timeline::before { left: 20px; }
+            .timeline-dot { left: 20px; }
+            .timeline-item, .timeline-item:nth-child(even) {
+                flex-direction: column;
+                padding-left: 50px;
+                justify-content: flex-start;
+            }
+            .timeline-content { width: 100%; }
+
+            .zig-zag-row, .zig-zag-row.reverse {
+                flex-direction: column;
+                margin-bottom: 60px;
+            }
+            .zz-text { padding: 0 0 30px 0 !important; }
+            .zz-img-bg { height: 280px; }
+
+            .cta-box { padding: 50px 25px; }
+        }
+
+        @media (max-width: 575px) {
+            .payroll-hero h1 { font-size: 2rem; }
+            .section-header h2 { font-size: 2rem; }
+            .included-header h2 { font-size: 1.8rem; }
+            .metric-card h3 { font-size: 2.2rem; }
+
+            .included-grid { grid-template-columns: 1fr; }
+            .included-card.span-full { max-width: none; }
+        }
+    </style>
+<!-- Favicon (Talennexus figure from tl.png) -->
+<link rel="icon" href="assets/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="512x512" href="assets/favicon-512.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<!-- Site components (header & footer) -->
+<script src="components/site-header.js?v=20261118"></script>
+<script src="components/site-footer.js?v=20261118"></script>
+<script src="components/site-contact.js?v=20261118"></script>
+</head>
+<body>
+
+    <!-- ==================== NAVIGATION ==================== -->
+
+
+    <!-- ==================== NAVIGATION ==================== -->
+    <site-header></site-header>
+
+
+
+    <!-- ==================== HERO ==================== -->
+    <section class="payroll-hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 hero-content">
+                    <span class="hero-badge"><i class="bi bi-calculator"></i> Payroll Services</span>
+                    <h1>Payroll Done Right. <span>Every Time.</span></h1>
+                    <p>Accurate and timely compensation is foundational to employee satisfaction and legal compliance. Talennexus takes the complexity out of payroll management so companies can focus on their core business.</p>
+                    <div class="d-flex gap-3 flex-wrap justify-content-lg-start justify-content-center">
+                        <a href="#contact" class="btn btn-hero-fill">Request a Demo</a>
+                        <a href="#services" class="btn btn-hero-outline">Explore Services</a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-img-container">
+                        <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&h=900&fit=crop" alt="Payroll processing and financial management" class="hero-img">
+                        <div class="floating-stat floating-stat-1">
+                            <div class="floating-stat-icon"><i class="bi bi-shield-check"></i></div>
+                            <div>
+                                <strong style="display:block; font-size: 1.3rem; color: var(--primary-color);">100%</strong>
+                                <small style="color: var(--text-gray);">Compliance Accuracy</small>
+                            </div>
+                        </div>
+                        <div class="floating-stat floating-stat-2">
+                            <div class="floating-stat-icon"><i class="bi bi-clock-history"></i></div>
+                            <div>
+                                <strong style="display:block; font-size: 1.3rem; color: var(--primary-color);">Zero</strong>
+                                <small style="color: var(--text-gray);">Processing Delays</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PAIN POINTS ==================== -->
+    <section class="pain-strip">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 style="color: var(--primary-color); font-size: 2.2rem; margin-bottom: 12px;">Payroll Challenges We Solve</h2>
+                <p class="text-muted mx-auto" style="max-width: 600px;">If any of these sound familiar, it's time to hand over payroll to the experts.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="pain-card">
+                        <div class="pain-icon"><i class="bi bi-exclamation-triangle"></i></div>
+                        <h5>Compliance Errors</h5>
+                        <p>Missing tax deadlines, incorrect deductions, or outdated labor law knowledge that exposes your company to penalties.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="pain-card">
+                        <div class="pain-icon"><i class="bi bi-clock"></i></div>
+                        <h5>Processing Delays</h5>
+                        <p>Manual calculations and scattered systems causing late salary disbursements and frustrated employees every month.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="pain-card">
+                        <div class="pain-icon"><i class="bi bi-puzzle"></i></div>
+                        <h5>Disconnected Systems</h5>
+                        <p>Leave, benefits, reimbursements, and payroll living in separate spreadsheets — creating data silos and reconciliation nightmares.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== WHAT'S INCLUDED (NEW — FROM IMAGE) ==================== -->
+    <section class="whats-included-section" id="included">
+        <div class="container">
+            <div class="included-header">
+                <h2>Attendance & Payroll Management</h2>
+                <div class="divider"></div>
+                <p class="mt-4 text-muted">Everything you need for seamless payroll operations — from timesheet tracking to tax documentation, all under one roof.</p>
+            </div>
+
+            <div class="included-grid">
+                <!-- Item 1 -->
+                <div class="included-card">
+                    <div class="included-check"><i class="bi bi-check-lg"></i></div>
+                    <div>
+                        <h5>Leave & Timesheet Tracking</h5>
+                        <p>Real-time attendance monitoring with automated leave balance calculations, timesheet approvals, and seamless integration into payroll processing.</p>
+                    </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="included-card">
+                    <div class="included-check"><i class="bi bi-check-lg"></i></div>
+                    <div>
+                        <h5>Online Tax Reports & IT Declaration</h5>
+                        <p>Generate statutory tax reports instantly and enable employees to submit investment declarations online for accurate TDS computation.</p>
+                    </div>
+                </div>
+                <!-- Item 3 -->
+                <div class="included-card">
+                    <div class="included-check"><i class="bi bi-check-lg"></i></div>
+                    <div>
+                        <h5>Online Salary Slip & Form 16</h5>
+                        <p>Employees access detailed salary slips digitally every month, with automated Form 16 generation at year-end for hassle-free tax filing.</p>
+                    </div>
+                </div>
+                <!-- Item 4 -->
+                <div class="included-card">
+                    <div class="included-check"><i class="bi bi-check-lg"></i></div>
+                    <div>
+                        <h5>On-Time Payment Disbursement</h5>
+                        <p>Guaranteed salary payouts on schedule through direct bank transfers, with multi-bank support and real-time disbursement status tracking.</p>
+                    </div>
+                </div>
+                <!-- Item 5 -->
+                <div class="included-card">
+                    <div class="included-check"><i class="bi bi-check-lg"></i></div>
+                    <div>
+                        <h5>Handling Payroll & Tax Queries</h5>
+                        <p>Dedicated support team to resolve employee queries on salary breakdowns, tax deductions, reimbursements, and compliance documentation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SERVICES ==================== -->
+    <section id="services" class="services-payroll">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Payroll Services</h2>
+                <div class="divider"></div>
+                <p class="mt-4 text-muted">Comprehensive payroll management that covers every calculation, every compliance requirement, every payday.</p>
+            </div>
+
+            <!-- Service 1: End-to-End Processing -->
+            <div class="zig-zag-row">
+                <div class="zz-text">
+                    <div class="service-icon-lg"><i class="bi bi-gear-wide-connected"></i></div>
+                    <span class="service-tag">Core Service</span>
+                    <h3>End-to-End Processing</h3>
+                    <p class="text-muted mb-4">Managing salary calculations, deductions, bonuses, and expense reimbursements with precision.</p>
+                    <ul class="list-unstyled check-list">
+                        <li><i class="bi bi-check-lg"></i> Automated salary computation with variable pay components</li>
+                        <li><i class="bi bi-check-lg"></i> Statutory deductions (PF, ESI, TDS, PT) auto-calculated</li>
+                        <li><i class="bi bi-check-lg"></i> Bonus, overtime, and incentive processing</li>
+                        <li><i class="bi bi-check-lg"></i> Expense reimbursement integration and tracking</li>
+                        <li><i class="bi bi-check-lg"></i> Multi-state and multi-entity payroll in a single cycle</li>
+                    </ul>
+                </div>
+                <div class="zz-image">
+                    <div class="zz-blob"></div>
+                    <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&h=600&fit=crop" alt="Salary calculations and payroll processing" class="zz-img-bg">
+                    <div class="zz-label"><i class="bi bi-calculator"></i> Salary & Deductions</div>
+                </div>
+            </div>
+
+            <!-- Service 2: Regulatory Compliance -->
+            <div class="zig-zag-row reverse">
+                <div class="zz-text">
+                    <div class="service-icon-lg"><i class="bi bi-shield-lock"></i></div>
+                    <span class="service-tag">Risk Mitigation</span>
+                    <h3>Regulatory Compliance</h3>
+                    <p class="text-muted mb-4">Ensuring all payroll operations adhere to local labor laws, tax regulations, and statutory compliance requirements, mitigating legal risks.</p>
+                    <ul class="list-unstyled check-list">
+                        <li><i class="bi bi-check-lg"></i> Real-time tracking of changing labor laws and tax slabs</li>
+                        <li><i class="bi bi-check-lg"></i> Automated PF, ESI, TDS, and LWF filings</li>
+                        <li><i class="bi bi-check-lg"></i> Year-end compliance: Form 16, 24Q, 26Q generation</li>
+                        <li><i class="bi bi-check-lg"></i> Audit-ready documentation and reports</li>
+                        <li><i class="bi bi-check-lg"></i> Proactive alerts for upcoming compliance deadlines</li>
+                    </ul>
+                </div>
+                <div class="zz-image">
+                    <div class="zz-blob"></div>
+                    <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&h=600&fit=crop" alt="Legal compliance and regulatory documentation" class="zz-img-bg">
+                    <div class="zz-label"><i class="bi bi-shield-check"></i> Laws & Tax Regulations</div>
+                </div>
+            </div>
+
+            <!-- Service 3: Benefits & Leave Management -->
+            <div class="zig-zag-row">
+                <div class="zz-text">
+                    <div class="service-icon-lg"><i class="bi bi-heart-pulse"></i></div>
+                    <span class="service-tag">Employee Experience</span>
+                    <h3>Benefits & Leave Management</h3>
+                    <p class="text-muted mb-4">Integrating employee benefits, health insurance, and paid time off (PTO) tracking seamlessly into the payroll cycle.</p>
+                    <ul class="list-unstyled check-list">
+                        <li><i class="bi bi-check-lg"></i> Health insurance, GPA, and superannuation administration</li>
+                        <li><i class="bi bi-check-lg"></i> Leave balance tracking (CL, SL, PL, LWP) with auto-encashment</li>
+                        <li><i class="bi bi-check-lg"></i> Benefits deduction and employer contribution management</li>
+                        <li><i class="bi bi-check-lg"></i> Employee self-service portal for leave and benefit queries</li>
+                        <li><i class="bi bi-check-lg"></i> FSA, HRA, and LTA computation and payouts</li>
+                    </ul>
+                </div>
+                <div class="zz-image">
+                    <div class="zz-blob"></div>
+                    <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=800&h=600&fit=crop" alt="Employee benefits and wellness management" class="zz-img-bg">
+                    <div class="zz-label"><i class="bi bi-people"></i> Benefits & PTO</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PROCESS ==================== -->
+    <section id="process" class="process-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Payroll Process</h2>
+                <div class="divider"></div>
+                <p class="mt-4 text-muted">A systematic, error-proof workflow that ensures every payday is flawless.</p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-number">01</div>
+                        <div class="step-label">Setup</div>
+                        <h3>Data Onboarding & Configuration</h3>
+                        <p class="text-muted">We collect your employee master data, salary structures, statutory registrations, and configure your payroll rules, pay components, and approval workflows.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-number">02</div>
+                        <div class="step-label">Input</div>
+                        <h3>Monthly Data Collection</h3>
+                        <p class="text-muted">Attendance, leave, overtime, new joinees, exits, arrears, and variable pay inputs are gathered through automated feeds or a simple upload interface.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-number">03</div>
+                        <div class="step-label">Process</div>
+                        <h3>Payroll Computation & Validation</h3>
+                        <p class="text-muted">Salary is computed with all statutory deductions, variable pay, and reimbursements. Multi-level validation checks catch discrepancies before payout.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-number">04</div>
+                        <div class="step-label">Disburse</div>
+                        <h3>Salary Disbursement & Reporting</h3>
+                        <p class="text-muted">Approved payroll is disbursed via direct bank transfer. Salary slips, tax reports, and compliance filings are generated and distributed automatically.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-number">05</div>
+                        <div class="step-label">Support</div>
+                        <h3>Post-Payroll Support & Reconciliation</h3>
+                        <p class="text-muted">We handle employee queries, bank reconciliation, corrections if any, and prepare audit-ready documentation for the cycle.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== WHY US ==================== -->
+    <section class="why-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose Talennexus</h2>
+                <div class="divider"></div>
+                <p class="mt-4 text-muted">We don't just process payroll — we become your strategic payroll partner.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="why-card">
+                        <div class="why-icon"><i class="bi bi-bullseye"></i></div>
+                        <h5>Zero-Error Guarantee</h5>
+                        <p>Triple-validated processing with automated checks ensures your employees are paid accurately, every single time.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="why-card">
+                        <div class="why-icon"><i class="bi bi-lock"></i></div>
+                        <h5>Data Security First</h5>
+                        <p>Bank-grade encryption, role-based access controls, and ISO-compliant infrastructure to protect sensitive payroll data.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="why-card">
+                        <div class="why-icon"><i class="bi bi-lightning-charge"></i></div>
+                        <h5>Scalable Architecture</h5>
+                        <p>From 50 to 50,000 employees, our systems and processes scale seamlessly without compromising speed or accuracy.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="why-card">
+                        <div class="why-icon"><i class="bi bi-headset"></i></div>
+                        <h5>Dedicated Payroll Manager</h5>
+                        <p>A single point of contact who understands your business, your payroll rules, and your team's needs.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="why-card">
+                        <div class="why-icon"><i class="bi bi-graph-up-arrow"></i></div>
+                        <h5>Analytics & Insights</h5>
+                        <p>Monthly payroll dashboards with cost trends, headcount analytics, and compliance health scores for informed decision-making.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="why-card">
+                        <div class="why-icon"><i class="bi bi-puzzle"></i></div>
+                        <h5>Seamless Integration</h5>
+                        <p>Connects with your existing HRMS, accounting software, attendance systems, and banking platforms effortlessly.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== METRICS ==================== -->
+    <section class="metrics-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-6 col-md-3">
+                    <div class="metric-card">
+                        <h3>500+</h3>
+                        <p>Payroll Cycles Managed Monthly</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="metric-card">
+                        <h3>99.9%</h3>
+                        <p>On-Time Disbursement Rate</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="metric-card">
+                        <h3>50K+</h3>
+                        <p>Employees Paid Accurately</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="metric-card">
+                        <h3>Zero</h3>
+                        <p>Compliance Penalties Incurred</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FAQ ==================== -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-9">
+                    <div class="accordion faq-accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">How quickly can Talennexus set up our payroll?</button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">Our standard onboarding takes 5–7 working days. This includes data collection, salary structure configuration, statutory registration mapping, and a test run before going live. For complex multi-entity setups, it may take up to 10 days.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">What happens if there's an error in a payroll cycle?</button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">Our triple-validation process catches errors before disbursement. In the rare case of a post-disbursement discrepancy, we initiate a correction payout in the next cycle or arrange an immediate supplementary transfer, depending on severity.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">Do you handle payroll for contract and temporary staff?</button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">Yes. We manage payroll for full-time, part-time, contract, and temporary workers — each with their own pay structures, compliance rules, and reporting requirements handled separately.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">Can employees access their salary slips and tax documents?</button>
+                            </h2>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">Absolutely. Employees get a self-service portal to download monthly salary slips, submit IT declarations, view tax deduction summaries, and download Form 16 at year-end — all digitally.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">How do you stay updated on changing tax and labor laws?</button>
+                            </h2>
+                            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">We have a dedicated compliance research team that monitors changes from EPFO, ESIC, Income Tax Department, and state labor departments. System updates are deployed proactively before deadlines, so your payroll is always compliant.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== TESTIMONIALS ==================== -->
+    <section class="testimonial-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Clients Say</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="testimonial-card">
+                        <i class="bi bi-quote quote-icon"></i>
+                        <p class="testimonial-text">"We moved from a manual Excel-based payroll to Talennexus and the difference is night and day. Zero delays, zero compliance issues, and our HR team finally has time for strategic work."</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face" alt="Client" class="testimonial-avatar">
+                            <div>
+                                <div class="testimonial-name">Rajesh Mehta</div>
+                                <div class="testimonial-role">CHRO, TechVista Solutions</div>
+                                <span class="testimonial-tag">IT Services · 2,500 Employees</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="testimonial-card">
+                        <i class="bi bi-quote quote-icon"></i>
+                        <p class="testimonial-text">"Managing payroll across 8 states with different labor laws was a nightmare. Talennexus unified everything into one seamless process. Their compliance team is exceptional."</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&h=100&fit=crop&crop=face" alt="Client" class="testimonial-avatar">
+                            <div>
+                                <div class="testimonial-name">Priya Sharma</div>
+                                <div class="testimonial-role">VP Finance, HealthFirst Hospitals</div>
+                                <span class="testimonial-tag">Healthcare · 4,200 Employees</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="testimonial-card">
+                        <i class="bi bi-quote quote-icon"></i>
+                        <p class="testimonial-text">"The employee self-service portal alone saved us hundreds of payroll-related queries every month. Talennexus doesn't just process payroll — they transform the employee experience."</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face" alt="Client" class="testimonial-avatar">
+                            <div>
+                                <div class="testimonial-name">Arjun Kapoor</div>
+                                <div class="testimonial-role">CEO, RetailEdge India</div>
+                                <span class="testimonial-tag">Retail · 1,800 Employees</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CTA ==================== -->
+    <section id="contact" class="cta-section">
+        <div class="container">
+            <div class="cta-box">
+                <div class="cta-circle c1"></div>
+                <div class="cta-circle c2"></div>
+                <div class="row align-items-center">
+                    <div class="col-lg-5 mb-4 mb-lg-0 text-lg-start text-center" style="position:relative; z-index:2;">
+                        <h2 style="color: var(--primary-color); font-size: 2.4rem; margin-bottom: 16px;">Ready to Simplify Your Payroll?</h2>
+                        <p class="text-muted">Get a free payroll audit and see how much time and money you're leaving on the table with your current process.</p>
+                    </div>
+                    <div class="col-lg-6 offset-lg-1" style="position:relative; z-index:2;">
+                        <form id="ctaForm">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control form-control-custom" placeholder="Full Name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="email" class="form-control form-control-custom" placeholder="Work Email" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="tel" class="form-control form-control-custom" placeholder="Phone Number">
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control form-control-custom" placeholder="Company Name">
+                                </div>
+                                <div class="col-12">
+                                    <select class="form-control form-control-custom">
+                                        <option value="" disabled selected>Employee Count</option>
+                                        <option>50 – 200</option>
+                                        <option>200 – 500</option>
+                                        <option>500 – 2,000</option>
+                                        <option>2,000 – 10,000</option>
+                                        <option>10,000+</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-submit">Request Free Payroll Audit <i class="bi bi-arrow-right ms-2"></i></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ==================== FOOTER ==================== -->
+    <!-- Contact form (Business / Individual → Zoho) -->
+    <site-contact id="contact-form"></site-contact>
+
+    <site-footer></site-footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function () {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    const offset = 80;
+                    const position = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                    window.scrollTo({ top: position, behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Intersection Observer for scroll animations
+        const observerOptions = { threshold: 0.15, rootMargin: '0px 0px -50px 0px' };
+
+        const animateOnScroll = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.pain-card, .included-card, .why-card, .testimonial-card, .timeline-content').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            animateOnScroll.observe(el);
+        });
+
+        // Counter animation for metrics
+        const metricObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counters = entry.target.querySelectorAll('.metric-card h3');
+                    counters.forEach(counter => {
+                        const text = counter.textContent;
+                        const numMatch = text.match(/[\d,]+/);
+                        if (numMatch) {
+                            const target = parseInt(numMatch[0].replace(/,/g, ''));
+                            const suffix = text.replace(numMatch[0], '');
+                            let current = 0;
+                            const increment = target / 60;
+                            const timer = setInterval(() => {
+                                current += increment;
+                                if (current >= target) {
+                                    current = target;
+                                    clearInterval(timer);
+                                }
+                                counter.textContent = Math.floor(current).toLocaleString() + suffix;
+                            }, 25);
+                        }
+                    });
+                    metricObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        const metricsSection = document.querySelector('.metrics-section');
+        if (metricsSection) metricObserver.observe(metricsSection);
+
+        // Form submission feedback
+        document.getElementById('ctaForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const btn = this.querySelector('.btn-submit');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<i class="bi bi-check-circle me-2"></i> Request Submitted!';
+            btn.style.background = '#27ae60';
+            btn.disabled = true;
+            setTimeout(() => {
+                btn.innerHTML = originalText;
+                btn.style.background = '';
+                btn.disabled = false;
+                this.reset();
+            }, 3000);
+        });
+    </script>
+</body>
+</html>

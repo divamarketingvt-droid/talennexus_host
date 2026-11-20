@@ -1,0 +1,16 @@
+# Dependencies (re-created with "npm install")
+node_modules/
+
+# Blog admin secrets - NEVER commit (login + cookie signing key)
+public_html/blog/data/admin.json
+public_html/blog/data/.secret
+
+# Build output (re-create the upload zip when needed)
+talennexus-hostinger.zip
+*.zip
+
+# Editor / OS files
+.vscode/
+.DS_Store
+Thumbs.db
+*.log

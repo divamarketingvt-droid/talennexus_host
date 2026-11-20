@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script src="components/site-gtm.js?v=20261118"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Expert HR Consulting Services - Transform your workforce strategy today.">
+    <title>HR Consulting Services | Strategic People Management</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            /* USER REQUESTED COLOR PALETTE */
+            --primary-color: #4B857D;       /* Teal */
+            --primary-accent: #3cf680;      /* Neon Green */
+            --secondary-color: #2F3E52;     /* Dark Slate */
+            
+            /* Gradients */
+            --gradient-primary: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-accent) 100%);
+            --gradient-text: linear-gradient(to right, #4B857D, #3cf680);
+            
+            /* Utils */
+            --text-dark: #1a1a1a;
+            --text-gray: #666666;
+            --bg-light: #f4f6f8;
+            --white: #FFFFFF;
+            
+            --shadow-lg: 0 20px 50px rgba(47, 62, 82, 0.15);
+            --shadow-glow: 0 10px 30px rgba(60, 246, 128, 0.2);
+            
+            --border-radius: 16px;
+            --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+        }
+
+        /* ==================== NAVBAR (Transparent Style) ==================== */
+        .navbar-consulting {
+            background: rgba(47, 62, 82, 0.95); /* Secondary Dark */
+            backdrop-filter: blur(10px);
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .navbar-brand {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 800;
+            color: var(--white) !important;
+            font-size: 26px;
+        }
+
+        .navbar-brand span {
+            color: var(--primary-accent);
+        }
+
+        .nav-link {
+            color: rgba(255,255,255,0.8) !important;
+            font-weight: 500;
+            padding: 10px 20px !important;
+            transition: var(--transition);
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--primary-accent) !important;
+        }
+
+        .btn-consulting {
+            background: var(--primary-accent);
+            color: var(--secondary-color) !important;
+            border: none;
+            padding: 10px 30px;
+            border-radius: 50px;
+            font-weight: 700;
+            transition: var(--transition);
+        }
+
+        .btn-consulting:hover {
+            background: var(--white);
+            color: var(--secondary-color) !important;
+            box-shadow: 0 0 20px rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+        }
+
+        /* ==================== HERO SECTION (Dark Premium UI) ==================== */
+        .consulting-hero {
+            background-color: var(--secondary-color);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding-top: 80px;
+            overflow: hidden;
+        }
+
+        /* Abstract background shapes */
+        .hero-shape {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            z-index: 0;
+        }
+
+        .shape-1 {
+            top: -10%;
+            left: -10%;
+            width: 600px;
+            height: 600px;
+            background: rgba(75, 133, 125, 0.2);
+        }
+
+        .shape-2 {
+            bottom: -10%;
+            right: -5%;
+            width: 500px;
+            height: 500px;
+            background: rgba(60, 246, 128, 0.15);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-badge {
+            background: rgba(60, 246, 128, 0.15);
+            color: var(--primary-accent);
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 25px;
+            border: 1px solid rgba(60, 246, 128, 0.3);
+            letter-spacing: 1px;
+        }
+
+        .consulting-hero h1 {
+            font-size: 4rem;
+            line-height: 1.1;
+            color: var(--white);
+            margin-bottom: 25px;
+        }
+
+        .consulting-hero h1 span {
+            /* Gradient Text on Dark Background */
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .consulting-hero p {
+            font-size: 1.25rem;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 40px;
+            max-width: 550px;
+        }
+
+        .hero-img-container {
+            position: relative;
+        }
+
+        .hero-img {
+            width: 100%;
+            border-radius: 30px 0 30px 0;
+            box-shadow: var(--shadow-lg);
+            border: 2px solid rgba(255,255,255,0.1);
+        }
+
+        /* Floating Card on Hero Image */
+        .floating-stat {
+            position: absolute;
+            bottom: 40px;
+            left: -40px;
+            background: var(--white);
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: var(--shadow-lg);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            border-bottom: 5px solid var(--primary-accent);
+        }
+
+        .floating-stat-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 24px;
+        }
+
+        /* ==================== PROCESS TIMELINE SECTION ==================== */
+        .process-section {
+            padding: 100px 0;
+            background: var(--white);
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 80px;
+        }
+
+        .section-header h2 {
+            font-size: 2.8rem;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+
+        .section-header .divider {
+            height: 4px;
+            width: 80px;
+            background: var(--gradient-primary);
+            margin: 0 auto;
+            border-radius: 2px;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* The vertical line */
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 4px;
+            background: rgba(75, 133, 125, 0.2);
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            display: flex;
+            justify-content: flex-end;
+            padding-bottom: 60px;
+            position: relative;
+        }
+
+        /* Alternate sides */
+        .timeline-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .timeline-content {
+            width: 45%;
+            background: var(--white);
+            padding: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+            position: relative;
+            transition: var(--transition);
+            border: 1px solid #eee;
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-glow);
+            border-color: var(--primary-accent);
+        }
+
+        /* The dots on the timeline */
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            top: 40px;
+            width: 24px;
+            height: 24px;
+            background: var(--primary-accent);
+            border: 4px solid var(--white);
+            border-radius: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0 0 0 4px rgba(60, 246, 128, 0.2);
+            z-index: 2;
+        }
+
+        .timeline-number {
+            font-size: 4rem;
+            font-weight: 800;
+            color: rgba(75, 133, 125, 0.1);
+            line-height: 1;
+            position: absolute;
+            top: 10px;
+            right: 20px;
+        }
+
+        .step-title {
+            color: var(--primary-color);
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .timeline-content h3 {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+
+        /* ==================== ZIG-ZAG SERVICES SECTION ==================== */
+        .services-consulting {
+            background: var(--bg-light);
+            padding: 100px 0;
+        }
+
+        .zig-zag-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 120px;
+        }
+
+        .zig-zag-row.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .zz-text {
+            flex: 1;
+            padding-right: 60px;
+        }
+
+        .zig-zag-row.reverse .zz-text {
+            padding-right: 0;
+            padding-left: 60px;
+        }
+
+        .zz-image {
+            flex: 1;
+            position: relative;
+        }
+
+        .zz-img-bg {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-lg);
+            transition: var(--transition);
+        }
+
+        .zz-image:hover .zz-img-bg {
+            transform: scale(1.02);
+        }
+
+        /* Decorative blob behind image */
+        .zz-blob {
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient-primary);
+            border-radius: var(--border-radius);
+            z-index: -1;
+            opacity: 0.1;
+        }
+        
+        .zig-zag-row.reverse .zz-blob {
+            right: auto;
+            left: -20px;
+        }
+
+        .service-icon-large {
+            width: 70px;
+            height: 70px;
+            background: var(--gradient-primary);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 32px;
+            margin-bottom: 30px;
+            box-shadow: var(--shadow-glow);
+        }
+
+        .check-list li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            color: var(--text-gray);
+        }
+
+        .check-list i {
+            color: var(--primary-accent);
+            background: rgba(60, 246, 128, 0.1);
+            padding: 5px;
+            border-radius: 50%;
+            font-size: 14px;
+        }
+
+        /* ==================== METRICS GRID (UI Difference) ==================== */
+        .metrics-section {
+            padding: 80px 0;
+            background: var(--secondary-color);
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .metric-card {
+            text-align: center;
+            padding: 40px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .metric-card h3 {
+            font-size: 3.5rem;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+
+        .metric-card p {
+            font-size: 1.1rem;
+            opacity: 0.8;
+            font-weight: 500;
+        }
+
+        /* ==================== CTA SECTION ==================== */
+        .cta-section-consulting {
+            padding: 120px 0;
+            background: var(--white);
+            text-align: center;
+        }
+
+        .cta-box {
+            background: var(--bg-light);
+            border-radius: 30px;
+            padding: 80px 50px;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(75, 133, 125, 0.1);
+        }
+
+        /* Decorative circles */
+        .cta-circle {
+            position: absolute;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-accent));
+            opacity: 0.1;
+        }
+        .c1 { top: -50px; left: -50px; width: 200px; height: 200px; }
+        .c2 { bottom: -50px; right: -50px; width: 300px; height: 300px; }
+
+        .form-control-custom {
+            background: var(--white);
+            border: 2px solid #e0e0e0;
+            padding: 18px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            transition: var(--transition);
+        }
+
+        .form-control-custom:focus {
+            border-color: var(--primary-color);
+            box-shadow: none;
+            outline: none;
+        }
+
+        .btn-submit-consulting {
+            background: var(--secondary-color);
+            color: var(--white);
+            border: none;
+            padding: 18px 50px;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            width: 100%;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-submit-consulting:hover {
+            background: var(--primary-color);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-glow);
+        }
+
+        /* Footer */
+        .footer-consulting {
+            background: #1a2533;
+            color: rgba(255,255,255,0.6);
+            padding: 60px 0 30px;
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+
+        /* ADD THIS */
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        background: #ffffff;
+        margin-top: 10px;
+        padding: 15px 20px 25px;
+        border-radius: 12px;
+        box-shadow: 0 15px 40px rgba(30, 58, 95, 0.18);
+        border: 1px solid #e6eef7;
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+
+    .navbar-nav {
+        align-items: stretch !important;
+        width: 100%;
+    }
+
+    .nav-item {
+        width: 100%;
+        border-bottom: 1px solid #f0f4f8;
+    }
+
+    .nav-item:last-child {
+        border-bottom: none;
+    }
+
+    .nav-link {
+        padding: 14px 10px !important;
+        width: 100%;
+        display: block;
+    }
+
+    .nav-link::after {
+        display: none;                 /* underline remove on mobile */
+    }
+
+    .dropdown-menu {
+        position: static !important;
+        float: none;
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 8px;
+        box-shadow: none;
+        border: none;
+        border-left: 3px solid var(--primary-light);
+        background: #f8fafc;
+        border-radius: 0 8px 8px 0;
+        padding: 8px 0;
+    }
+
+    .dropdown-item {
+        padding: 10px 18px;
+    }
+
+    /* Nested submenu (Payroll) */
+    .dropdown-submenu > .dropdown-menu {
+        position: static !important;
+        left: 0;
+        margin-left: 12px;
+        box-shadow: none;
+        border-left: 2px solid var(--primary-soft);
+        background: #f0f4f8;
+    }
+
+    .btn-primary-custom.ms-lg-3 {
+        margin: 15px 0 5px !important;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+        /* Responsive */
+        @media (max-width: 991px) {
+            .consulting-hero { padding-top: 100px; text-align: center; }
+            .consulting-hero h1 { font-size: 2.5rem; }
+            .hero-img-container { margin-top: 50px; }
+            .floating-stat { left: 50%; transform: translateX(-50%); bottom: -30px; width: 90%; }
+            
+            /* Timeline Mobile Fix */
+            .timeline::before { left: 20px; }
+            .timeline-dot { left: 20px; }
+            .timeline-item, .timeline-item:nth-child(even) { flex-direction: column; padding-left: 50px; justify-content: flex-start; }
+            .timeline-content { width: 100%; }
+            
+            /* ZigZag Mobile Fix */
+            .zig-zag-row, .zig-zag-row.reverse { flex-direction: column; margin-bottom: 60px; }
+            .zz-text { padding: 0 0 30px 0 !important; }
+            .zz-img-bg { height: 250px; }
+        }
+    </style>
+<!-- Favicon (Talennexus figure from tl.png) -->
+<link rel="icon" href="assets/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="512x512" href="assets/favicon-512.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<!-- Site components (header & footer) -->
+<script src="components/site-header.js?v=20261118"></script>
+<script src="components/site-footer.js?v=20261118"></script>
+<script src="components/site-contact.js?v=20261118"></script>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <site-header></site-header>
+
+    <!-- Hero Section -->
+    <section class="consulting-hero">
+        <div class="hero-shape shape-1"></div>
+        <div class="hero-shape shape-2"></div>
+        
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 hero-content">
+                    <span class="hero-badge">Strategic HR Advisory</span>
+                    <h1>Align Your <span>People Strategy</span> With Business Growth</h1>
+                    <p>We don't just give advice. We architect high-performance cultures. Our consulting experts help you navigate complex organizational challenges with data-driven strategies.</p>
+                    <div class="d-flex gap-3 flex-wrap justify-content-lg-start justify-content-center">
+                        <a href="#contact" class="btn btn-consulting btn-lg">Start Transformation</a>
+                        <a href="#process" class="btn btn-outline-light rounded-pill px-4 py-3 fw-bold" style="border: 2px solid rgba(255,255,255,0.3); color:white;">Our Process</a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-img-container">
+                        <img src="https://picsum.photos/seed/consulting/800/900" alt="Consulting Team Meeting" class="hero-img">
+                        <div class="floating-stat">
+                            <div class="floating-stat-icon">
+                                <i class="bi bi-graph-up-arrow"></i>
+                            </div>
+                            <div>
+                                <strong style="display:block; font-size: 1.5rem; color: var(--secondary-color);">45%</strong>
+                                <small style="color: var(--text-gray);">Avg. Efficiency Gain</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Timeline Section -->
+    <section id="process" class="process-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>The HRPro Methodology</h2>
+                <div class="divider"></div>
+                <p class="mt-4 text-muted">We follow a proven, systematic approach to diagnose issues and implement sustainable solutions.</p>
+            </div>
+
+            <div class="timeline">
+                <!-- Step 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-number">01</div>
+                        <div class="step-title">Discovery & Audit</div>
+                        <h3>Deep Dive Diagnostics</h3>
+                        <p class="text-muted">We conduct a comprehensive audit of your current HR infrastructure, culture, and compliance status. We identify bottlenecks and hidden opportunities.</p>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-number">02</div>
+                        <div class="step-title">Strategic Planning</div>
+                        <h3>Custom Roadmap Design</h3>
+                        <p class="text-muted">Based on data, we co-create a bespoke HR strategy aligned with your 3-5 year business goals. No cookie-cutter solutions.</p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-number">03</div>
+                        <div class="step-title">Implementation</div>
+                        <h3>Change Management</h3>
+                        <p class="text-muted">We work alongside your team to implement new policies, technologies, and cultural shifts, ensuring minimal disruption to daily operations.</p>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-number">04</div>
+                        <div class="step-title">Optimization</div>
+                        <h3>Continuous Improvement</h3>
+                        <p class="text-muted">We don't leave until you succeed. We provide ongoing analytics and quarterly reviews to ensure the strategy evolves with your company.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Zig-Zag Services Section -->
+    <section class="services-consulting">
+        <div class="container">
+            <div class="section-header mb-5">
+                <h2>Our Expertise</h2>
+                <div class="divider"></div>
+            </div>
+
+            <!-- Service 1 -->
+            <div class="zig-zag-row">
+                <div class="zz-text">
+                    <div class="service-icon-large">
+                        <i class="bi bi-diagram-3"></i>
+                    </div>
+                    <h3>Organization Design</h3>
+                    <p class="text-muted mb-4">Restructure your enterprise for agility. We analyze reporting lines, role definitions, and team composition to remove silos and improve communication flow.</p>
+                    <ul class="list-unstyled check-list">
+                        <li><i class="bi bi-check-lg"></i> Structural Gap Analysis</li>
+                        <li><i class="bi bi-check-lg"></i> Role & Responsibility Mapping</li>
+                        <li><i class="bi bi-check-lg"></i> M&A Integration Support</li>
+                    </ul>
+                </div>
+                <div class="zz-image">
+                    <div class="zz-blob"></div>
+                    <img src="https://picsum.photos/seed/structure/800/600" alt="Organization Structure" class="zz-img-bg">
+                </div>
+            </div>
+
+            <!-- Service 2 (Reverse) -->
+            <div class="zig-zag-row reverse">
+                <div class="zz-text">
+                    <div class="service-icon-large">
+                        <i class="bi bi-person-lines-fill"></i>
+                    </div>
+                    <h3>Recruitment Strategy</h3>
+                    <p class="text-muted mb-4">Stop competing on salary alone. We help you build an Employer Value Proposition (EVP) that attracts top-tier passive candidates in your industry.</p>
+                    <ul class="list-unstyled check-list">
+                        <li><i class="bi bi-check-lg"></i> Employer Branding</li>
+                        <li><i class="bi bi-check-lg"></i> Workforce Planning</li>
+                        <li><i class="bi bi-check-lg"></i> DE&I Initiatives</li>
+                    </ul>
+                </div>
+                <div class="zz-image">
+                    <div class="zz-blob"></div>
+                    <img src="https://picsum.photos/seed/talent/800/600" alt="Talent Strategy" class="zz-img-bg">
+                </div>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="zig-zag-row">
+                <div class="zz-text">
+                    <div class="service-icon-large">
+                        <i class="bi bi-clipboard-data"></i>
+                    </div>
+                    <h3>Performance Management</h3>
+                    <p class="text-muted mb-4">Move away from annual reviews. We implement continuous feedback loops and OKR frameworks that drive real performance improvements.</p>
+                    <ul class="list-unstyled check-list">
+                        <li><i class="bi bi-check-lg"></i> 360-Degree Feedback Systems</li>
+                        <li><i class="bi bi-check-lg"></i> OKR Implementation</li>
+                        <li><i class="bi bi-check-lg"></i> Leadership Coaching</li>
+                    </ul>
+                </div>
+                <div class="zz-image">
+                    <div class="zz-blob"></div>
+                    <img src="https://picsum.photos/seed/performance/800/600" alt="Performance Management" class="zz-img-bg">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Metrics Section (Dark UI) -->
+    <section class="metrics-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 metric-col">
+                    <div class="metric-card border-end border-secondary border-opacity-25 h-100 d-flex flex-column justify-content-center">
+                        <i class="bi bi-globe-americas fs-1 text-white-50 mb-3"></i>
+                        <h3>25+</h3>
+                        <p>Countries Operational</p>
+                    </div>
+                </div>
+                <div class="col-md-4 metric-col">
+                    <div class="metric-card border-end border-secondary border-opacity-25 h-100 d-flex flex-column justify-content-center">
+                        <i class="bi bi-award fs-1 text-white-50 mb-3"></i>
+                        <h3>98%</h3>
+                        <p>Client Retention Rate</p>
+                    </div>
+                </div>
+                <div class="col-md-4 metric-col">
+                    <div class="metric-card h-100 d-flex flex-column justify-content-center">
+                        <i class="bi bi-currency-dollar fs-1 text-white-50 mb-3"></i>
+                        <h3>$2.4B</h3>
+                        <p>Client Valuation Impact</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA / Contact Form -->
+    <section id="contact" class="cta-section-consulting">
+        <div class="container">
+            <div class="cta-box">
+                <div class="cta-circle c1"></div>
+                <div class="cta-circle c2"></div>
+                
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <h2 style="color: var(--secondary-color); margin-bottom: 15px;">Let's Discuss Your Challenges</h2>
+                        <p class="text-muted mb-5">Schedule a 30-minute discovery call with a Senior HR Consultant. No sales pitch, just strategy.</p>
+                        
+                        <form id="consultForm">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control form-control-custom" placeholder="Full Name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="email" class="form-control form-control-custom" placeholder="Work Email" required>
+                                </div>
+                                <div class="col-12">
+                                    <select class="form-control form-control-custom">
+                                        <option>What is your primary challenge?</option>
+                                        <option>High Turnover</option>
+                                        <option>Compliance Issues</option>
+                                        <option>Culture Transformation</option>
+                                        <option>M&A Integration</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <textarea class="form-control form-control-custom" rows="4" placeholder="Briefly describe your situation..."></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn-submit-consulting">
+                                        Request Strategy Call <i class="bi bi-arrow-right-short ms-2"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <!-- Contact form (Business / Individual → Zoho) -->
+    <site-contact id="contact-form"></site-contact>
+
+    <site-footer></site-footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Simple Form Handler
+        document.getElementById('consultForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = this.querySelector('button');
+            const originalText = btn.innerHTML;
+            
+            btn.innerHTML = 'Request Sent <i class="bi bi-check-circle-fill ms-2"></i>';
+            btn.style.background = '#3cf680';
+            btn.style.color = '#2F3E52';
+            
+            setTimeout(() => {
+                alert("Thank you! A senior consultant will contact you shortly.");
+                this.reset();
+                btn.innerHTML = originalText;
+                btn.style.background = '';
+                btn.style.color = '';
+            }, 1500);
+        });
+
+        // Scroll Animation for Timeline
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.2 });
+
+        document.querySelectorAll('.timeline-item').forEach(item => {
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(30px)';
+            item.style.transition = 'all 0.6s ease-out';
+            observer.observe(item);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog Editor | Talennexus</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="../../assets/favicon.ico" sizes="any">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<link href="admin.css?v=20261121" rel="stylesheet">
+</head>
+<body hidden>
+
+<header class="adm-top">
+  <div class="container-xl">
+    <a class="adm-brand" href="#" data-go="dashboard"><img src="../../assets/tl-logo.png" alt="Talennexus"> Blog <small>Admin</small></a>
+    <button class="btn btn-sm btn-outline-secondary" data-go="dashboard"><i class="bi bi-grid"></i> Posts</button>
+    <button class="btn btn-sm btn-primary" id="btnNew"><i class="bi bi-plus-lg"></i> New post</button>
+    <a class="btn btn-sm btn-outline-success" href="/blog/" target="_blank" rel="noopener"><i class="bi bi-globe"></i> View blog</a>
+    <button class="btn btn-sm btn-outline-secondary" data-go="settings" aria-label="Settings"><i class="bi bi-gear"></i></button>
+    <button class="btn btn-sm btn-outline-danger" id="btnLogout" aria-label="Log out"><i class="bi bi-box-arrow-right"></i></button>
+  </div>
+</header>
+
+<main class="adm-main">
+<div class="container-xl">
+
+  <!-- ============================ DASHBOARD ============================ -->
+  <section class="view active" id="view-dashboard">
+    <div class="row g-4">
+      <div class="col-lg-8">
+        <div class="adm-card">
+          <h2><i class="bi bi-journal-text"></i> All posts</h2>
+          <div id="loadNote"></div>
+          <div class="table-responsive">
+            <table class="table post-table mb-0">
+              <thead><tr><th>Title</th><th>Status</th><th>Date</th><th class="text-end">Actions</th></tr></thead>
+              <tbody id="postRows"></tbody>
+            </table>
+          </div>
+          <p class="text-center py-4 mb-0" id="noPosts" hidden>No posts yet. Click <strong>New post</strong> to write your first article.</p>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="adm-card">
+          <h2><i class="bi bi-info-circle"></i> How publishing works</h2>
+          <ol class="steps">
+            <li>Write your post and fill the SEO fields on the right.</li>
+            <li>Set <strong>Status → Published</strong> and click <strong>Save</strong>.</li>
+            <li>The post is <strong>live immediately</strong> at <code>/blog/your-url</code>, on the blog page and in the home page blog section.</li>
+            <li>Keep a post as <strong>Draft</strong> to save it without showing it to visitors.</li>
+          </ol>
+          <p class="small mt-3 mb-0 text-muted">Tip: submit <code>talennexus.com/blog/sitemap.xml</code> once in Google Search Console.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== EDITOR ============================== -->
+  <section class="view" id="view-editor">
+    <div class="row g-4">
+      <!-- Main column -->
+      <div class="col-lg-8">
+        <div class="adm-card">
+          <label class="form-label" for="f-title">Post title (H1)</label>
+          <input class="form-control title-input mb-3" id="f-title" placeholder="e.g. How to Hire IT Talent in Bangalore Faster" maxlength="150">
+
+          <label class="form-label" for="f-slug">URL (slug)</label>
+          <div class="input-group input-group-sm slug-row mb-1">
+            <span class="input-group-text">talennexus.com/blog/</span>
+            <input class="form-control code" id="f-slug" placeholder="how-to-hire-it-talent-bangalore">
+            <button class="btn btn-outline-secondary" type="button" id="btnSlugAuto" title="Create from title"><i class="bi bi-magic"></i></button>
+            <button class="btn btn-outline-primary" type="button" id="btnCopyLink" title="Copy the post link"><i class="bi bi-link-45deg"></i> Copy link</button>
+          </div>
+          <div class="form-text mb-3">Lowercase words joined with “-”. Changing it after publishing creates a new address.</div>
+
+          <label class="form-label" for="f-excerpt">Short summary <span class="text-muted fw-normal">(shown on blog cards)</span></label>
+          <textarea class="form-control" id="f-excerpt" rows="2" maxlength="300" placeholder="1–2 sentences. Leave empty to use the meta description."></textarea>
+        </div>
+
+        <div class="adm-card">
+          <h3><i class="bi bi-image"></i> Featured image</h3>
+          <div class="img-pick">
+            <img class="thumb" id="feat-thumb" alt="">
+            <div class="row g-2">
+              <div class="col-md-6">
+                <label class="form-label small" for="f-feat-file">Upload image</label>
+                <input class="form-control form-control-sm" type="file" id="f-feat-file" accept="image/*">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label small" for="f-feat-url">…or image URL / path</label>
+                <input class="form-control form-control-sm code" id="f-feat-url" placeholder="https://… or /assets/…">
+              </div>
+              <div class="col-12">
+                <label class="form-label small" for="f-feat-alt">Alt text <span class="text-danger">*</span></label>
+                <input class="form-control form-control-sm" id="f-feat-alt" maxlength="150" placeholder="Describe the image, e.g. Recruiter interviewing a candidate in Bangalore">
+              </div>
+            </div>
+            <button class="btn btn-sm btn-link text-danger px-0 mt-1" type="button" id="f-feat-remove" hidden><i class="bi bi-x-circle"></i> Remove image</button>
+          </div>
+          <div class="form-text">Uploads are resized to max 1600px and saved as WebP. Recommended: 1200 × 630.</div>
+        </div>
+
+        <div class="adm-card">
+          <h3><i class="bi bi-layout-text-sidebar"></i> Content</h3>
+          <div class="blocks" id="blocks"></div>
+          <div class="add-bar" id="addBar">
+            <button class="btn btn-outline-primary" data-add="h2"><i class="bi bi-type-h2"></i> Heading</button>
+            <button class="btn btn-outline-primary" data-add="h3"><i class="bi bi-type-h3"></i> Sub-heading</button>
+            <button class="btn btn-outline-primary" data-add="p"><i class="bi bi-text-paragraph"></i> Paragraph</button>
+            <button class="btn btn-outline-primary" data-add="img"><i class="bi bi-image"></i> Image</button>
+            <button class="btn btn-outline-primary" data-add="ul"><i class="bi bi-list-ul"></i> Bullet list</button>
+            <button class="btn btn-outline-primary" data-add="ol"><i class="bi bi-list-ol"></i> Numbered list</button>
+            <button class="btn btn-outline-primary" data-add="quote"><i class="bi bi-quote"></i> Quote</button>
+            <button class="btn btn-outline-primary" data-add="cta"><i class="bi bi-hand-index"></i> Button</button>
+            <button class="btn btn-outline-secondary" data-add="html"><i class="bi bi-code-slash"></i> HTML</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="col-lg-4">
+        <div class="adm-card">
+          <h3><i class="bi bi-sliders"></i> Post settings</h3>
+          <div class="mb-2">
+            <label class="form-label" for="f-status">Status</label>
+            <select class="form-select form-select-sm" id="f-status">
+              <option value="draft">Draft (not public)</option>
+              <option value="published">Published</option>
+            </select>
+          </div>
+          <div class="row g-2 mb-2">
+            <div class="col-6"><label class="form-label" for="f-date">Publish date</label><input class="form-control form-control-sm" type="date" id="f-date"></div>
+            <div class="col-6"><label class="form-label" for="f-author">Author</label><input class="form-control form-control-sm" id="f-author" placeholder="Talennexus"></div>
+          </div>
+          <div class="mb-2">
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="form-label mb-1">Categories <span class="text-muted fw-normal">(tick one or more)</span></span>
+              <button class="btn btn-sm btn-link p-0" type="button" id="btnAddCat" title="Add a new category"><i class="bi bi-plus-lg"></i> New</button>
+            </div>
+            <div class="cat-picks" id="f-categories" role="group" aria-label="Categories"></div>
+          </div>
+          <div>
+            <label class="form-label" for="f-tags">Tags</label>
+            <input class="form-control form-control-sm" id="f-tags" placeholder="hiring, bangalore, it jobs">
+            <div class="form-text">Separate with commas.</div>
+          </div>
+        </div>
+
+        <div class="adm-card">
+          <h3><i class="bi bi-graph-up-arrow"></i> SEO</h3>
+          <div class="seo-score"><div class="ring" id="seo-ring">0</div><div class="small" id="seo-label">Fill in the fields to see your SEO score.</div></div>
+
+          <div class="mb-2">
+            <label class="form-label" for="f-keyword">Focus keyword</label>
+            <input class="form-control form-control-sm" id="f-keyword" placeholder="e.g. it recruitment agency in bangalore">
+          </div>
+          <div class="mb-2">
+            <label class="form-label d-flex justify-content-between" for="f-metaTitle">Meta title <span class="counter" id="c-metaTitle"></span></label>
+            <input class="form-control form-control-sm" id="f-metaTitle" maxlength="90" placeholder="Leave empty to use: Post title | Talennexus Blog">
+          </div>
+          <div class="mb-2">
+            <label class="form-label d-flex justify-content-between" for="f-metaDesc">Meta description <span class="counter" id="c-metaDesc"></span></label>
+            <textarea class="form-control form-control-sm" id="f-metaDesc" rows="3" maxlength="320" placeholder="120–160 characters that make people click in Google."></textarea>
+          </div>
+          <div class="mb-3">
+            <label class="form-label small text-muted">Google preview</label>
+            <div class="serp"><div class="s-url" id="serp-url"></div><div class="s-title" id="serp-title"></div><div class="s-desc" id="serp-desc"></div></div>
+          </div>
+          <ul class="seo-checks" id="seo-checks"></ul>
+
+          <details class="mt-3">
+            <summary class="small fw-semibold">Advanced SEO</summary>
+            <div class="mt-2">
+              <label class="form-label small" for="f-keywords">Meta keywords</label>
+              <input class="form-control form-control-sm mb-2" id="f-keywords" placeholder="comma separated (optional)">
+              <label class="form-label small" for="f-robots">Robots</label>
+              <select class="form-select form-select-sm mb-2" id="f-robots">
+                <option value="index, follow">index, follow (recommended)</option>
+                <option value="noindex, follow">noindex, follow (hide from Google)</option>
+                <option value="index, nofollow">index, nofollow</option>
+                <option value="noindex, nofollow">noindex, nofollow</option>
+              </select>
+              <label class="form-label small d-flex justify-content-between" for="f-canonical">Canonical URL <span class="badge bg-success-subtle text-success" id="canonBadge">Automatic</span></label>
+              <input class="form-control form-control-sm code" id="f-canonical" placeholder="Automatic">
+              <div class="form-text mb-2" id="canonHelp"></div>
+            </div>
+          </details>
+        </div>
+
+        <div class="adm-card">
+          <h3><i class="bi bi-share"></i> Social sharing (Open Graph)</h3>
+          <label class="form-label small" for="f-ogTitle">Share title</label>
+          <input class="form-control form-control-sm mb-2" id="f-ogTitle" placeholder="Defaults to meta title">
+          <label class="form-label small" for="f-ogDesc">Share description</label>
+          <textarea class="form-control form-control-sm mb-2" id="f-ogDesc" rows="2" placeholder="Defaults to meta description"></textarea>
+          <label class="form-label small" for="f-ogImage">Share image URL</label>
+          <input class="form-control form-control-sm code" id="f-ogImage" placeholder="Defaults to featured image">
+        </div>
+
+        <div class="adm-card">
+          <h3><i class="bi bi-code-square"></i> Custom &lt;head&gt; tags</h3>
+          <textarea class="form-control form-control-sm code" id="f-headTags" rows="5" placeholder='&lt;meta name="..." content="..."&gt;&#10;&lt;script type="application/ld+json"&gt;{ FAQ schema… }&lt;/script&gt;'></textarea>
+          <div class="form-text">Added as-is inside &lt;head&gt; of this post only (extra meta, FAQ schema, hreflang…). Title, description, canonical, Open Graph and Article schema are already added for you.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= SETTINGS ============================= -->
+  <section class="view" id="view-settings">
+    <div class="row g-4">
+      <div class="col-lg-6">
+        <form class="adm-card" id="loginChange">
+          <h2><i class="bi bi-shield-lock"></i> Change login</h2>
+          <div class="mb-2"><label class="form-label" for="s-current">Current password</label><input class="form-control" id="s-current" type="password" autocomplete="current-password" required></div>
+          <div class="mb-2"><label class="form-label" for="s-user">New username</label><input class="form-control" id="s-user" autocomplete="username" required></div>
+          <div class="mb-2"><label class="form-label" for="s-pass">New password</label><input class="form-control" id="s-pass" type="password" autocomplete="new-password" minlength="8" required></div>
+          <div class="mb-3"><label class="form-label" for="s-pass2">Repeat new password</label><input class="form-control" id="s-pass2" type="password" autocomplete="new-password" required></div>
+          <button class="btn btn-primary" type="submit"><i class="bi bi-check2"></i> Update login</button>
+          <p class="form-text mt-2 mb-0">Saved on the server in <code>blog/data/admin.json</code> (password stored as a secure hash).</p>
+        </form>
+
+        <form class="adm-card" id="seoForm">
+          <h2><i class="bi bi-file-earmark-code"></i> SEO files</h2>
+          <p class="small mb-2">Both files are created automatically by the server and always list your latest pages and blog posts:</p>
+          <p class="small"><a href="/sitemap.xml" target="_blank" rel="noopener">/sitemap.xml</a> · <a href="/robots.txt" target="_blank" rel="noopener">/robots.txt</a></p>
+          <div class="form-check form-switch mb-3">
+            <input class="form-check-input" type="checkbox" role="switch" id="seoCanon" checked>
+            <label class="form-check-label small fw-semibold" for="seoCanon">Add canonical tags automatically</label>
+            <div class="form-text">Every page without its own canonical tag gets one pointing to its clean address (e.g. <code>https://talennexus.com/services/payroll</code>). Pages marked “noindex” are skipped.</div>
+          </div>
+          <label class="form-label" for="seoExclude">Leave these pages out of the sitemap</label>
+          <textarea class="form-control code mb-1" id="seoExclude" rows="4" placeholder="/job_search/&#10;/services/old-page&#10;/organization/*"></textarea>
+          <div class="form-text mb-3">One address per line. End with <code>*</code> to exclude a whole folder. Pages with “noindex”, drafts, 404 and thank-you pages are left out automatically.</div>
+          <label class="form-label" for="seoRobots">Extra robots.txt rules</label>
+          <textarea class="form-control code mb-1" id="seoRobots" rows="4" placeholder="Disallow: /thank-you&#10;&#10;User-agent: GPTBot&#10;Disallow: /"></textarea>
+          <div class="form-text mb-3">Added under the default rules (admin areas are already blocked).</div>
+          <button class="btn btn-primary" type="submit"><i class="bi bi-check2"></i> Save SEO settings</button>
+        </form>
+      </div>
+      <div class="col-lg-6">
+        <div class="adm-card">
+          <h2><i class="bi bi-tags"></i> Categories</h2>
+          <p class="small">Categories appear as filters on the blog page and in each post's sidebar.</p>
+          <form class="input-group input-group-sm mb-3" id="catForm">
+            <input class="form-control" id="catNew" maxlength="60" placeholder="New category, e.g. Leadership Hiring">
+            <button class="btn btn-primary" type="submit"><i class="bi bi-plus-lg"></i> Add</button>
+          </form>
+          <ul class="list-group list-group-flush mb-4" id="catManage"></ul>
+          <hr>
+          <h2><i class="bi bi-hdd"></i> Backup</h2>
+          <p class="small">All posts (including drafts) are stored in <code>blog/data/posts.json</code> in your blog folder. Download a copy from time to time.</p>
+          <button class="btn btn-outline-primary btn-sm" id="btnBackup"><i class="bi bi-download"></i> Download backup</button>
+          <hr>
+          <p class="small mb-2">Rebuild every blog page (use after changing the design or templates).</p>
+          <button class="btn btn-outline-secondary btn-sm" id="btnRebuild"><i class="bi bi-arrow-repeat"></i> Rebuild all pages</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+</main>
+
+<!-- Sticky action bar for the editor -->
+<div class="editor-actions" id="editorActions" hidden>
+  <div class="container-xl">
+    <span class="dirty-dot" id="dirtyDot"></span>
+    <button class="btn btn-outline-secondary btn-sm" id="btnBack"><i class="bi bi-arrow-left"></i> Back</button>
+    <button class="btn btn-outline-primary btn-sm" id="btnPreview"><i class="bi bi-eye"></i> Preview</button>
+    <button class="btn btn-primary btn-sm" id="btnSave"><i class="bi bi-check2"></i> Save &amp; go live</button>
+  </div>
+</div>
+
+<div class="toast-box" id="toasts" aria-live="polite"></div>
+
+<script src="templates.js?v=20261121b"></script>
+<script src="admin.js?v=20261121b"></script>
+</body>
+</html>

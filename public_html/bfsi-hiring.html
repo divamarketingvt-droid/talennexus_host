@@ -1,0 +1,1633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script src="components/site-gtm.js?v=20261118"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Talennexus BFSI Hiring — Specialized recruitment for banking, insurance, fintech, capital markets, NBFC, and financial services. Domain-expert recruiters delivering compliance-ready professionals.">
+    <meta name="keywords" content="BFSI Hiring, Banking Recruitment, Insurance Hiring, Fintech Staffing, Capital Markets Talent, NBFC Recruitment, Risk Management Hiring, Compliance Staffing, Financial Services Recruitment">
+    <title>BFSI Hiring | Talennexus</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #1e3a5f;
+            --primary-accent: #4a90d9;
+            --secondary-color: #14355d;
+            --primary-hover: #16304f;
+            --gradient-primary: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-accent) 100%);
+            --primary-light: #e6eef7;
+            --primary-soft: #a8c8e8;
+            --text-dark: #1a1a2e;
+            --text-gray: #5a6a7a;
+            --bg-light: #f0f4f8;
+            --white: #FFFFFF;
+            --shadow-sm: 0 4px 15px rgba(30, 58, 95, 0.08);
+            --shadow-md: 0 8px 25px rgba(30, 58, 95, 0.12);
+            --shadow-lg: 0 15px 40px rgba(30, 58, 95, 0.18);
+            --glow-primary: 0 0 20px rgba(74, 144, 217, 0.4);
+            --border-radius: 12px;
+            --transition: all 0.3s ease;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; color: var(--text-dark); line-height: 1.6; overflow-x: hidden; }
+        h1,h2,h3,h4,h5,h6 { font-family: 'Poppins', sans-serif; font-weight: 700; color: var(--secondary-color); }
+
+ /* ===== NAV ===== */
+
+/* Fixed Header — exact same as Home page (90px) */
+.navbar {
+    background: var(--white);
+    box-shadow: var(--shadow-sm);
+    height: 90px;
+    padding: 0 !important;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+}
+
+/* Keep same header height after scrolling — same as Home page */
+.navbar.scrolled {
+    height: 90px;
+    padding: 0 !important;
+    box-shadow: var(--shadow-md);
+}
+
+/* Bootstrap container alignment */
+.navbar > .container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+/* Logo container — same as Home page */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    padding: 0 !important;
+    margin-right: 25px;
+}
+
+/* Logo — EXACT size from Home page */
+.navbar-brand img,
+.logo-img {
+    width: auto !important;
+    height: 160px !important;
+    max-width: none !important;
+    object-fit: contain;
+    display: block;
+}
+
+/* Do NOT shrink logo on scroll — same as Home page */
+.navbar.scrolled .navbar-brand img,
+.navbar.scrolled .logo-img {
+    height: 160px !important;
+}
+
+/* Navigation */
+.navbar-nav {
+    display: flex;
+    align-items: center;
+}
+
+/* Navigation links */
+.nav-link {
+    font-weight: 500;
+    color: var(--secondary-color) !important;
+    padding: 10px 18px !important;
+    transition: var(--transition);
+    position: relative;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+/* Hover / Active */
+.nav-link:hover,
+.nav-link.active {
+    color: var(--primary-color) !important;
+}
+
+/* Active underline */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 18px;
+    right: 18px;
+    height: 2px;
+    background: var(--gradient-primary);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    transform: scaleX(1);
+}
+
+/* Dropdown arrow */
+.dropdown-toggle::after {
+    margin-left: 6px;
+    vertical-align: middle;
+    transition: transform 0.3s ease;
+}
+
+.dropdown.show .dropdown-toggle::after {
+    transform: rotate(180deg);
+}
+
+/* Dropdown */
+.dropdown-menu {
+    border: none;
+    box-shadow: var(--shadow-lg);
+    border-radius: var(--border-radius);
+    padding: 15px;
+    margin-top: 15px;
+    animation: dropdownFadeIn 0.25s ease;
+}
+
+@keyframes dropdownFadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Dropdown items */
+.dropdown-item {
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: var(--transition);
+    font-weight: 500;
+    color: var(--text-gray);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.dropdown-item i {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    width: 22px;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.dropdown-item:hover {
+    background: var(--primary-light);
+    color: var(--primary-color);
+}
+
+.dropdown-item:hover i {
+    color: var(--primary-accent);
+    transform: scale(1.15);
+}
+
+/* Active dropdown item */
+.dropdown-item.active-item {
+    background: var(--primary-light);
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.dropdown-item.active-item i {
+    color: var(--primary-accent);
+}
+
+/* Nested submenu */
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu > .dropdown-item.submenu-toggle {
+    justify-content: space-between;
+}
+
+.dropdown-submenu > .dropdown-item.submenu-toggle::after {
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-left: 5px solid currentColor;
+    margin-left: auto;
+}
+
+.dropdown-submenu .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: 0;
+    margin-left: 6px;
+    display: none;
+    min-width: 260px;
+}
+
+.dropdown-submenu.show-submenu > .dropdown-menu {
+    display: block;
+    animation: dropdownFadeIn 0.2s ease;
+}
+
+/* Desktop submenu */
+@media (min-width: 992px) {
+    .dropdown-submenu:hover > .dropdown-menu {
+        display: block;
+    }
+}
+
+       /* Mobile */
+        @media (max-width: 991px) {
+            .navbar {
+                height: 90px;
+                padding: 0 !important;
+            }
+
+            .navbar.scrolled {
+                height: 90px;
+            }
+
+            .navbar-brand {
+                margin-right: 10px;
+            }
+
+            .navbar-brand img {
+                height: 78px !important;
+                width: auto !important;
+                max-height: 78px !important;
+                object-fit: contain;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .navbar {
+                height: 85px;
+                padding: 0 !important;
+            }
+
+            .navbar.scrolled {
+                height: 85px;
+            }
+
+            .navbar-brand img {
+                height: 90px !important;
+                width: auto !important;
+                max-height: 120px !important;
+                object-fit: contain;
+               
+            }
+        }
+        /* ===== BUTTONS ===== */
+        .btn-primary-custom { background: var(--gradient-primary); color: var(--white) !important; border: none; padding: 12px 30px; border-radius: 50px; font-weight: 600; transition: var(--transition); box-shadow: 0 4px 15px rgba(30, 58, 95, 0.3); position: relative; z-index: 1; overflow: hidden; display: inline-flex; align-items: center; gap: 8px; text-decoration: none; }
+        .btn-primary-custom::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(135deg, var(--primary-hover) 0%, var(--primary-color) 100%); z-index: -1; transition: opacity 0.3s ease; opacity: 0; }
+        .btn-primary-custom:hover { transform: translateY(-2px); box-shadow: var(--glow-primary); color: var(--white) !important; }
+        .btn-primary-custom:hover::before { opacity: 1; }
+        .btn-outline-custom { background: transparent; color: var(--primary-color) !important; border: 2px solid var(--primary-color); padding: 10px 28px; border-radius: 50px; font-weight: 600; transition: var(--transition); display: inline-flex; align-items: center; gap: 8px; text-decoration: none; }
+        .btn-outline-custom:hover { background: var(--gradient-primary); border-color: transparent; color: var(--white) !important; box-shadow: var(--glow-primary); }
+
+        /* ===== HERO ===== */
+        .hero-section { background: linear-gradient(160deg, #f0f4f8 0%, #eef3f9 40%, #e6eef7 100%); padding: 150px 0 100px; position: relative; overflow: hidden; }
+        .hero-section::before { content: ''; position: absolute; top: -20%; right: -10%; width: 800px; height: 800px; background: radial-gradient(circle, rgba(74, 144, 217, 0.12) 0%, transparent 60%); border-radius: 50%; filter: blur(40px); }
+        .hero-section::after { content: ''; position: absolute; bottom: -20%; left: -10%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(30, 58, 95, 0.12) 0%, transparent 60%); border-radius: 50%; filter: blur(40px); }
+        .hero-content h1 { font-size: 3.5rem; line-height: 1.15; margin-bottom: 25px; animation: fadeInUp 0.8s ease; }
+        .hero-content h1 span { background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero-content p { font-size: 1.2rem; color: var(--text-gray); margin-bottom: 35px; animation: fadeInUp 0.8s ease 0.2s both; }
+        .hero-buttons { animation: fadeInUp 0.8s ease 0.4s both; display: flex; gap: 15px; flex-wrap: wrap; }
+        .hero-image { position: relative; animation: fadeInRight 1s ease 0.3s both; }
+        .hero-image img { max-width: 100%; border-radius: 20px; box-shadow: var(--shadow-lg); }
+        .floating-card { position: absolute; background: var(--white); padding: 20px 25px; border-radius: var(--border-radius); box-shadow: var(--shadow-md); animation: float 3s ease-in-out infinite; border-left: 4px solid var(--primary-accent); z-index: 2; }
+        .floating-card.card-1 { top: 20px; left: -40px; animation-delay: 0s; }
+        .floating-card.card-2 { bottom: 60px; right: -30px; animation-delay: 1s; border-left-color: var(--primary-color); }
+        .floating-card.card-3 { top: 55%; left: -50px; animation-delay: 1.8s; border-left-color: #2ecc71; }
+        .floating-card i { font-size: 24px; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-right: 10px; }
+        .floating-card strong { color: var(--secondary-color); }
+        .hero-mobile-stats { display: none; flex-direction: column; gap: 12px; margin-top: 16px; }
+        .hero-mobile-stats .floating-card { position: relative; top: auto; left: auto; right: auto; bottom: auto; animation: none; width: 100%; justify-content: center; }
+        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeInRight { from { opacity: 0; transform: translateX(50px); } to { opacity: 1; transform: translateX(0); } }
+
+        /* ===== SECTION COMMON ===== */
+        .section-padding { padding: 100px 0; }
+        .section-title { text-align: center; margin-bottom: 60px; }
+        .section-title .label { display: inline-block; background: var(--primary-light); color: var(--primary-color); padding: 6px 18px; border-radius: 50px; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 15px; }
+        .section-title h2 { font-size: 2.5rem; margin-bottom: 15px; }
+        .section-title p { color: var(--text-gray); font-size: 1.1rem; max-width: 700px; margin: 0 auto; }
+
+        /* ===== SECTOR CARDS ===== */
+        .domains-section { background: var(--white); position: relative; }
+        .domains-section::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--gradient-primary); }
+        .domain-card { background: var(--white); border-radius: var(--border-radius); padding: 35px 28px; box-shadow: var(--shadow-sm); transition: var(--transition); height: 100%; border: 1px solid transparent; position: relative; overflow: hidden; text-align: center; }
+        .domain-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--gradient-primary); transform: scaleX(0); transition: transform 0.4s ease; transform-origin: left; }
+        .domain-card:hover::before { transform: scaleX(1); }
+        .domain-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-lg); border-color: var(--primary-light); }
+        .domain-icon { width: 80px; height: 80px; background: var(--primary-light); border-radius: 20px; display: flex; align-items: center; justify-content: center; margin: 0 auto 22px; transition: var(--transition); }
+        .domain-card:hover .domain-icon { background: var(--gradient-primary); transform: scale(1.05); }
+        .domain-icon i { font-size: 34px; color: var(--primary-color); transition: var(--transition); }
+        .domain-card:hover .domain-icon i { color: var(--white); }
+        .domain-card h4 { font-size: 1.15rem; margin-bottom: 10px; }
+        .domain-card p { color: var(--text-gray); margin-bottom: 18px; font-size: 0.93rem; }
+        .domain-tags { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; }
+        .domain-tag { background: var(--bg-light); color: var(--text-gray); padding: 4px 12px; border-radius: 20px; font-size: 0.78rem; font-weight: 500; transition: var(--transition); }
+        .domain-card:hover .domain-tag { background: var(--primary-light); color: var(--primary-color); }
+
+        /* ===== PROCESS ===== */
+        .process-section { background: var(--bg-light); }
+        .process-card { background: var(--white); border-radius: var(--border-radius); padding: 35px 25px; text-align: center; box-shadow: var(--shadow-sm); transition: var(--transition); height: 100%; position: relative; }
+        .process-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-lg); }
+        .process-number { width: 55px; height: 55px; background: var(--gradient-primary); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Poppins', sans-serif; font-size: 1.3rem; font-weight: 700; margin: 0 auto 20px; }
+        .process-card h5 { margin-bottom: 12px; font-size: 1.1rem; }
+        .process-card p { color: var(--text-gray); font-size: 0.95rem; margin: 0; }
+        .process-connector { display: flex; align-items: center; justify-content: center; padding-top: 60px; color: var(--primary-accent); font-size: 1.8rem; }
+
+        /* ===== FEATURES GRID ===== */
+        .features-section { background: var(--white); }
+        .feature-card { background: var(--white); border-radius: var(--border-radius); padding: 40px 30px; box-shadow: var(--shadow-sm); transition: var(--transition); height: 100%; border: 1px solid transparent; position: relative; overflow: hidden; }
+        .feature-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--gradient-primary); transform: scaleX(0); transition: transform 0.4s ease; transform-origin: left; }
+        .feature-card:hover::before { transform: scaleX(1); }
+        .feature-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-lg); border-color: var(--primary-light); }
+        .feature-icon { width: 70px; height: 70px; background: var(--primary-light); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 22px; transition: var(--transition); }
+        .feature-card:hover .feature-icon { background: var(--gradient-primary); }
+        .feature-icon i { font-size: 30px; color: var(--primary-color); transition: var(--transition); }
+        .feature-card:hover .feature-icon i { color: var(--white); }
+        .feature-card h4 { font-size: 1.2rem; margin-bottom: 12px; }
+        .feature-card p { color: var(--text-gray); margin-bottom: 18px; font-size: 0.95rem; }
+        .feature-list { list-style: none; padding: 0; margin: 0; }
+        .feature-list li { padding: 6px 0; color: var(--text-gray); font-size: 0.9rem; display: flex; align-items: center; gap: 8px; }
+        .feature-list li i { color: var(--primary-accent); font-size: 0.85rem; }
+
+        /* ===== PLATFORM / DASHBOARD ===== */
+        .platform-section { background: var(--secondary-color); color: var(--white); position: relative; overflow: hidden; }
+        .platform-section::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
+        .platform-section h2 { color: var(--white); }
+        .platform-section .section-title p { color: rgba(255,255,255,0.7); }
+        .platform-feature { background: rgba(255,255,255,0.08); backdrop-filter: blur(10px); border-radius: var(--border-radius); padding: 30px; margin-bottom: 20px; border: 1px solid rgba(255,255,255,0.15); transition: var(--transition); }
+        .platform-feature:hover { background: rgba(255,255,255,0.14); transform: translateX(10px); border-color: var(--primary-accent); box-shadow: -5px 0 15px rgba(74, 144, 217, 0.2); }
+        .platform-feature i { font-size: 32px; margin-bottom: 12px; color: var(--primary-soft); }
+        .platform-feature h5 { color: var(--white); margin-bottom: 8px; font-size: 1.1rem; }
+        .platform-feature p { color: rgba(255,255,255,0.75); margin: 0; font-size: 0.95rem; }
+        .platform-dashboard { background: var(--white); border-radius: 20px; overflow: hidden; box-shadow: var(--shadow-lg); }
+        .dashboard-header { background: var(--secondary-color); padding: 15px 25px; display: flex; align-items: center; gap: 8px; }
+        .dashboard-dot { width: 12px; height: 12px; border-radius: 50%; }
+        .dot-red { background: #ff5f56; }
+        .dot-yellow { background: #ffbd2e; }
+        .dot-green { background: var(--primary-accent); }
+        .dashboard-content { padding: 25px; }
+        .mock-stat-row { display: flex; gap: 15px; margin-bottom: 20px; }
+        .mock-stat { flex: 1; background: var(--bg-light); border-radius: 10px; padding: 18px 15px; text-align: center; }
+        .mock-stat .num { font-family: 'Poppins', sans-serif; font-size: 1.5rem; font-weight: 700; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .mock-stat .lbl { font-size: 0.75rem; color: var(--text-gray); margin-top: 4px; }
+        .mock-chart { background: var(--bg-light); border-radius: 10px; padding: 20px; }
+        .chart-bar { height: 110px; display: flex; align-items: flex-end; justify-content: space-around; padding: 0 10px; }
+        .bar { width: 30px; background: var(--gradient-primary); border-radius: 5px 5px 0 0; animation: growBar 1.5s ease forwards; position: relative; }
+        .bar::after { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: #fff; opacity: 0.5; border-radius: 5px 5px 0 0; }
+        .bar-labels { display: flex; justify-content: space-around; padding: 10px 10px 0; }
+        .bar-labels span { font-size: 0.7rem; color: var(--text-gray); text-align: center; width: 40px; }
+        @keyframes growBar { from { height: 0; } }
+
+        /* ===== STATS ===== */
+        .stats-section { background: var(--white); }
+        .stat-item { text-align: center; padding: 30px 20px; }
+        .stat-number { font-family: 'Poppins', sans-serif; font-size: 3rem; font-weight: 700; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1.1; }
+        .stat-label { color: var(--text-gray); font-size: 1rem; margin-top: 8px; font-weight: 500; }
+        .stat-divider { width: 50px; height: 3px; background: var(--gradient-primary); border-radius: 2px; margin: 12px auto 0; }
+
+        /* ===== ENGAGEMENT MODELS ===== */
+        .engagement-section { background: var(--bg-light); }
+        .engagement-card { background: var(--white); border-radius: var(--border-radius); padding: 40px 30px; box-shadow: var(--shadow-sm); transition: var(--transition); height: 100%; position: relative; overflow: hidden; text-align: center; border: 2px solid transparent; }
+        .engagement-card.featured { border-color: var(--primary-accent); }
+        .engagement-card.featured::after { content: 'Most Popular'; position: absolute; top: 18px; right: -30px; background: var(--gradient-primary); color: var(--white); padding: 5px 40px; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; transform: rotate(45deg); }
+        .engagement-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-lg); }
+        .engagement-icon { width: 70px; height: 70px; background: var(--primary-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 22px; transition: var(--transition); }
+        .engagement-card:hover .engagement-icon { background: var(--gradient-primary); }
+        .engagement-icon i { font-size: 30px; color: var(--primary-color); transition: var(--transition); }
+        .engagement-card:hover .engagement-icon i { color: var(--white); }
+        .engagement-card h4 { font-size: 1.2rem; margin-bottom: 12px; }
+        .engagement-card p { color: var(--text-gray); font-size: 0.95rem; margin-bottom: 20px; }
+        .engagement-features { list-style: none; padding: 0; margin: 0 0 25px; text-align: left; }
+        .engagement-features li { padding: 8px 0; color: var(--text-gray); font-size: 0.9rem; display: flex; align-items: center; gap: 10px; border-bottom: 1px solid #f0f0f0; }
+        .engagement-features li:last-child { border-bottom: none; }
+        .engagement-features li i { color: var(--primary-accent); font-size: 0.9rem; flex-shrink: 0; }
+
+        /* ===== CASE STUDIES ===== */
+        .case-study-card { background: var(--white); border-radius: var(--border-radius); overflow: hidden; box-shadow: var(--shadow-sm); transition: var(--transition); height: 100%; }
+        .case-study-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-lg); }
+        .case-study-img { height: 200px; background: var(--gradient-primary); position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+        .case-study-img img { width: 100%; height: 100%; object-fit: cover; opacity: 0.35; }
+        .case-study-img > i { position: absolute; font-size: 56px; color: rgba(255,255,255,0.25); }
+        .case-category { position: absolute; top: 15px; left: 15px; background: var(--white); padding: 6px 15px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; color: var(--primary-color); z-index: 2; }
+        .case-study-body { padding: 28px; }
+        .case-study-body h4 { margin-bottom: 12px; font-size: 1.2rem; }
+        .case-study-body p { color: var(--text-gray); margin-bottom: 20px; font-size: 0.95rem; }
+        .case-metrics { display: flex; gap: 20px; padding-top: 18px; border-top: 1px solid #eee; }
+        .metric-item strong { display: block; font-size: 1.25rem; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .metric-item small { color: var(--text-gray); font-size: 0.85rem; }
+
+        /* ===== TESTIMONIALS ===== */
+        .testimonials-section { background: var(--bg-light); }
+        .testimonial-card { background: var(--white); border-radius: var(--border-radius); padding: 35px; box-shadow: var(--shadow-sm); transition: var(--transition); height: 100%; position: relative; border-top: 4px solid transparent; }
+        .testimonial-card:hover { border-top-color: var(--primary-accent); box-shadow: var(--shadow-md); transform: translateY(-5px); }
+        .testimonial-card .quote-icon { font-size: 2.5rem; color: var(--primary-light); margin-bottom: 15px; line-height: 1; }
+        .testimonial-card p { color: var(--text-gray); font-style: italic; margin-bottom: 20px; line-height: 1.7; }
+        .testimonial-author { display: flex; align-items: center; gap: 15px; }
+        .testimonial-avatar { width: 50px; height: 50px; background: var(--gradient-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--white); font-weight: 700; font-size: 1.1rem; flex-shrink: 0; }
+        .testimonial-author strong { display: block; color: var(--secondary-color); font-size: 0.95rem; }
+        .testimonial-author span { color: var(--text-gray); font-size: 0.85rem; }
+        .stars { color: #f0a500; font-size: 0.9rem; margin-bottom: 12px; }
+
+        /* ===== FAQ ===== */
+        .faq-section { background: var(--white); }
+        .accordion-item { border: none; margin-bottom: 15px; border-radius: var(--border-radius) !important; overflow: hidden; box-shadow: var(--shadow-sm); }
+        .accordion-button { background: var(--white); font-weight: 600; color: var(--secondary-color); padding: 20px 25px; font-size: 1.05rem; box-shadow: none; }
+        .accordion-button:not(.collapsed) { background: var(--gradient-primary); color: var(--white); }
+        .accordion-button:focus { box-shadow: none; border-color: var(--primary-color); }
+        .accordion-button::after { background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%231e3a5f'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3C/svg%3e"); }
+        .accordion-button:not(.collapsed)::after { background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3C/svg%3e"); }
+        .accordion-body { padding: 20px 25px; color: var(--text-gray); line-height: 1.7; }
+
+        /* ===== CTA ===== */
+        .cta-section { background: var(--gradient-primary); padding: 80px 0; position: relative; overflow: hidden; }
+        .cta-section::after { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.08'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E"); pointer-events: none; }
+        .cta-content h2 { color: var(--white); font-size: 2.5rem; margin-bottom: 15px; }
+        .cta-content p { color: rgba(255,255,255,0.9); font-size: 1.1rem; margin-bottom: 30px; }
+        .btn-white { background: var(--white); color: var(--primary-color) !important; border: none; padding: 14px 35px; border-radius: 50px; font-weight: 700; transition: var(--transition); display: inline-flex; align-items: center; gap: 10px; text-decoration: none; box-shadow: 0 4px 20px rgba(0,0,0,0.15); }
+        .btn-white:hover { transform: translateY(-3px); box-shadow: 0 8px 30px rgba(0,0,0,0.2); color: var(--primary-color) !important; }
+        .btn-ghost { background: transparent; color: var(--white) !important; border: 2px solid rgba(255,255,255,0.5); padding: 12px 30px; border-radius: 50px; font-weight: 600; transition: var(--transition); display: inline-flex; align-items: center; gap: 10px; text-decoration: none; }
+        .btn-ghost:hover { background: rgba(255,255,255,0.15); border-color: var(--white); color: var(--white) !important; }
+
+        /* ===== CONTACT FORM ===== */
+        .contact-section { background: var(--bg-light); }
+        .contact-form { background: var(--white); border-radius: var(--border-radius); padding: 45px; box-shadow: var(--shadow-lg); }
+        .form-label { font-weight: 600; color: var(--secondary-color); margin-bottom: 8px; }
+        .form-control, .form-select { border: 2px solid #e0e0e0; border-radius: 10px; padding: 12px 18px; font-size: 1rem; transition: var(--transition); }
+        .form-control:focus, .form-select:focus { border-color: var(--primary-color); box-shadow: 0 0 0 4px rgba(74, 144, 217, 0.1); }
+        .btn-submit { background: var(--gradient-primary); color: var(--white); border: none; padding: 14px 40px; border-radius: 50px; font-weight: 600; font-size: 1.05rem; width: 100%; transition: var(--transition); }
+        .btn-submit:hover { transform: translateY(-2px); box-shadow: 0 6px 25px rgba(74, 144, 217, 0.4); color: var(--white); }
+        .contact-info-card { background: var(--white); border-radius: var(--border-radius); padding: 28px; text-align: center; box-shadow: var(--shadow-sm); transition: var(--transition); height: 100%; }
+        .contact-info-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); }
+        .contact-icon { width: 60px; height: 60px; background: var(--primary-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; }
+        .contact-icon i { font-size: 24px; color: var(--primary-color); }
+        .contact-info-card h6 { margin-bottom: 6px; color: var(--secondary-color); }
+        .contact-info-card p { color: var(--text-gray); margin: 0; font-size: 0.93rem; }
+
+               /* ==================== FOOTER ==================== */
+        .footer {
+            background: var(--secondary-color);
+            color: rgba(255,255,255,0.8);
+            padding: 80px 0 30px;
+        }
+
+        .footer-brand {
+            font-family: 'Poppins', sans-serif;
+            font-size: 26px;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-brand i {
+            font-size: 28px;
+            color: var(--primary-accent);
+        }
+
+        .footer-desc {
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 25px;
+            line-height: 1.7;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 12px;
+        }
+
+        .social-links a {
+            width: 42px;
+            height: 42px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background: var(--gradient-primary);
+            transform: translateY(-3px);
+        }
+
+        .footer h5 {
+            color: var(--white);
+            font-size: 1.15rem;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 12px;
+        }
+
+        .footer h5::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: var(--gradient-primary);
+            border-radius: 2px;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-accent);
+            padding-left: 5px;
+        }
+
+        .footer-contact {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-contact li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 18px;
+        }
+
+        .footer-contact i {
+            color: var(--primary-accent);
+            margin-top: 4px;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 12px 18px;
+            border: none;
+            border-radius: 50px;
+            background: rgba(255,255,255,0.1);
+            color: var(--white);
+        }
+
+        .newsletter-form input::placeholder {
+            color: rgba(255,255,255,0.5);
+        }
+
+        .newsletter-form button {
+            background: var(--gradient-primary);
+            color: var(--white);
+            border: none;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .newsletter-form button:hover {
+            opacity: 0.9;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 30px;
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .footer-bottom p {
+            margin: 0;
+            color: rgba(255,255,255,0.6);
+        }
+
+        .footer-bottom a {
+            color: var(--primary-accent);
+            text-decoration: none;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 991px) {
+            .hero-content h1 { font-size: 2.5rem; }
+            .floating-card { display: none; }
+        }
+
+        @media (max-width: 767px) {
+            .hero-section { padding: 100px 0 60px; }
+            .hero-content h1 { font-size: 2rem; }
+            .section-title h2 { font-size: 2rem; }
+            .section-padding { padding: 60px 0; }
+            .contact-form { padding: 30px 20px; }
+            .client-feedback-card {
+                width: 300px;
+                padding: 20px;
+                margin: 0 10px;
+            }
+        }
+        /* ===== TOAST & BACK-TO-TOP ===== */
+        .toast-container { position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%); z-index: 9999; }
+        .custom-toast { background: var(--secondary-color); color: var(--white); padding: 15px 25px; border-radius: 50px; box-shadow: var(--shadow-lg); display: flex; align-items: center; gap: 12px; opacity: 0; visibility: hidden; transform: translateY(20px); transition: all 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55); border-bottom: 3px solid var(--primary-accent); white-space: nowrap; }
+        .custom-toast.show { opacity: 1; visibility: visible; transform: translateY(0); }
+        .custom-toast i { color: var(--primary-accent); font-size: 1.2rem; }
+        .back-to-top { position: fixed; bottom: 30px; right: 30px; width: 50px; height: 50px; background: var(--gradient-primary); color: var(--white); border: none; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; cursor: pointer; opacity: 0; visibility: hidden; transition: var(--transition); z-index: 999; box-shadow: var(--shadow-md); }
+        .back-to-top.visible { opacity: 1; visibility: visible; }
+        .back-to-top:hover { transform: translateY(-5px); box-shadow: var(--glow-primary); }
+
+        /* ===== ANIMATIONS ===== */
+        .animate-on-scroll { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
+        .animate-on-scroll.animated { opacity: 1; transform: translateY(0); }
+        .animate-on-scroll.delay-1 { transition-delay: 0.1s; }
+        .animate-on-scroll.delay-2 { transition-delay: 0.2s; }
+        .animate-on-scroll.delay-3 { transition-delay: 0.3s; }
+        .animate-on-scroll.delay-4 { transition-delay: 0.4s; }
+
+        /* ADD THIS */
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        background: #ffffff;
+        margin-top: 10px;
+        padding: 15px 20px 25px;
+        border-radius: 12px;
+        box-shadow: 0 15px 40px rgba(30, 58, 95, 0.18);
+        border: 1px solid #e6eef7;
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+
+    .navbar-nav {
+        align-items: stretch !important;
+        width: 100%;
+    }
+
+    .nav-item {
+        width: 100%;
+        border-bottom: 1px solid #f0f4f8;
+    }
+
+    .nav-item:last-child {
+        border-bottom: none;
+    }
+
+    .nav-link {
+        padding: 14px 10px !important;
+        width: 100%;
+        display: block;
+    }
+
+    .nav-link::after {
+        display: none;                 /* underline remove on mobile */
+    }
+
+    .dropdown-menu {
+        position: static !important;
+        float: none;
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 8px;
+        box-shadow: none;
+        border: none;
+        border-left: 3px solid var(--primary-light);
+        background: #f8fafc;
+        border-radius: 0 8px 8px 0;
+        padding: 8px 0;
+    }
+
+    .dropdown-item {
+        padding: 10px 18px;
+    }
+
+    /* Nested submenu (Payroll) */
+    .dropdown-submenu > .dropdown-menu {
+        position: static !important;
+        left: 0;
+        margin-left: 12px;
+        box-shadow: none;
+        border-left: 2px solid var(--primary-soft);
+        background: #f0f4f8;
+    }
+
+    .btn-primary-custom.ms-lg-3 {
+        margin: 15px 0 5px !important;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+
+/* ===== Industries Dropdown (Screenshot model) ===== */
+.dropdown-industry-header {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    color: #6b7c93;
+    text-transform: uppercase;
+    padding: 8px 20px 10px;
+    margin-bottom: 4px;
+}
+
+.industry-item {
+    display: flex !important;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 12px 20px !important;
+    border-radius: 0;
+}
+
+.industry-item i {
+    font-size: 1.25rem;
+    color: var(--primary-color);
+    margin-top: 2px;
+    width: 24px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.industry-label {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.industry-title {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--secondary-color);
+    line-height: 1.3;
+}
+
+.industry-desc {
+    font-size: 0.78rem;
+    color: #6b7c93;
+    line-height: 1.35;
+    font-weight: 400;
+}
+
+.industry-item:hover {
+    background: #f0f5fb !important;
+}
+
+.industry-item:hover .industry-title {
+    color: var(--primary-color);
+}
+
+.industry-item:hover i {
+    color: var(--primary-accent);
+}
+
+.dropdown-divider-custom {
+    height: 1px;
+    background: #e8eef5;
+    margin: 8px 16px;
+}
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1199px) {
+            .hero-content h1 { font-size: 3rem; }
+        }
+        @media (max-width: 991px) {
+            .hero-section { padding: 130px 0 80px; }
+            .hero-content h1 { font-size: 2.5rem; }
+            .floating-card { display: none; }
+            .hero-mobile-stats { display: flex; }
+            .process-connector { display: none; }
+            .section-title h2 { font-size: 2rem; }
+        }
+        @media (max-width: 767px) {
+            .hero-section { padding: 110px 0 60px; }
+            .hero-content h1 { font-size: 2rem; }
+            .section-padding { padding: 70px 0; }
+            .section-title h2 { font-size: 1.75rem; }
+            .contact-form { padding: 30px 20px; }
+            .stat-number { font-size: 2.2rem; }
+            .cta-content h2 { font-size: 1.8rem; }
+        }
+        @media (max-width: 575px) {
+            .hero-content { text-align: center; }
+            .hero-buttons { justify-content: center; }
+            .hero-buttons .btn { width: 100%; max-width: 280px; justify-content: center; }
+            .hero-image img { border-radius: 16px; max-height: 260px; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .floating-card, .hero-content h1, .hero-content p, .hero-buttons, .hero-image, .bar { animation: none !important; }
+            .animate-on-scroll { opacity: 1; transform: none; transition: none; }
+        }
+    </style>
+<!-- Favicon (Talennexus figure from tl.png) -->
+<link rel="icon" href="assets/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="512x512" href="assets/favicon-512.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<!-- Site components (header & footer) -->
+<script src="components/site-header.js?v=20261118"></script>
+<script src="components/site-footer.js?v=20261118"></script>
+<script src="components/site-contact.js?v=20261118"></script>
+</head>
+<body>
+
+    <!-- ==================== NAVIGATION ==================== -->
+    <site-header></site-header>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero-section" id="home">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="hero-content">
+                        <h1>Hire <span>BFSI Talent</span> That Drives Financial Growth</h1>
+                        <p>From relationship managers and credit analysts to risk officers and fintech product heads — we deliver compliance-ready, domain-proficient professionals for banks, NBFCs, insurance companies, and capital market firms.</p>
+                        <div class="hero-buttons">
+                            <a href="#contact-form" class="btn-primary-custom">Hire BFSI Talent <i class="bi bi-arrow-right"></i></a>
+                            <a href="#sectors" class="btn-outline-custom">Explore Sectors <i class="bi bi-grid-3x3-gap"></i></a>
+                        </div>
+                        <div class="hero-mobile-stats">
+                            <div class="floating-card" style="display:flex;align-items:center;gap:12px;">
+                                <i class="bi bi-bank2"></i>
+                                <div><strong>3,500+</strong><br><small style="color:var(--text-gray)">BFSI Hires Annually</small></div>
+                            </div>
+                            <div class="floating-card" style="display:flex;align-items:center;gap:12px;border-left-color:var(--primary-color);">
+                                <i class="bi bi-shield-check"></i>
+                                <div><strong>100%</strong><br><small style="color:var(--text-gray)">Compliance Verified</small></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-image text-center">
+                        <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=700&h=520&fit=crop&q=80" alt="Financial professionals analyzing data in a modern banking environment" style="max-height:520px;object-fit:cover;">
+                        <div class="floating-card card-1">
+                            <div style="display:flex;align-items:center;gap:12px;">
+                                <i class="bi bi-bank2"></i>
+                                <div><strong>3,500+</strong><br><small style="color:var(--text-gray)">BFSI Hires Annually</small></div>
+                            </div>
+                        </div>
+                        <div class="floating-card card-2">
+                            <div style="display:flex;align-items:center;gap:12px;">
+                                <i class="bi bi-shield-check"></i>
+                                <div><strong>100%</strong><br><small style="color:var(--text-gray)">Compliance Verified</small></div>
+                            </div>
+                        </div>
+                        <div class="floating-card card-3">
+                            <div style="display:flex;align-items:center;gap:12px;">
+                                <i class="bi bi-check-circle-fill" style="-webkit-text-fill-color:#2ecc71;background:none;"></i>
+                                <div><strong>94%</strong><br><small style="color:var(--text-gray)">Client Retention Rate</small></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== BFSI SECTORS ===== -->
+    <section class="domains-section section-padding" id="sectors">
+        <div class="container">
+            <div class="section-title animate-on-scroll">
+                <span class="label">BFSI Sectors</span>
+                <h2>Hiring Across the Entire Financial Services Spectrum</h2>
+                <p>We recruit specialized talent across every vertical of banking, financial services, and insurance — from traditional banking to emerging fintech.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-4 col-sm-6 animate-on-scroll delay-1">
+                    <div class="domain-card">
+                        <div class="domain-icon"><i class="bi bi-bank"></i></div>
+                        <h4>Commercial Banking</h4>
+                        <p>Retail, corporate, and branch banking professionals</p>
+                        <div class="domain-tags">
+                            <span class="domain-tag">Branch Manager</span>
+                            <span class="domain-tag">RM</span>
+                            <span class="domain-tag">Operations</span>
+                            <span class="domain-tag">Credit</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 animate-on-scroll delay-2">
+                    <div class="domain-card">
+                        <div class="domain-icon"><i class="bi bi-shield-lock"></i></div>
+                        <h4>Insurance</h4>
+                        <p>Life, general, and reinsurance domain experts</p>
+                        <div class="domain-tags">
+                            <span class="domain-tag">Underwriting</span>
+                            <span class="domain-tag">Claims</span>
+                            <span class="domain-tag">Actuarial</span>
+                            <span class="domain-tag">Sales</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 animate-on-scroll delay-3">
+                    <div class="domain-card">
+                        <div class="domain-icon"><i class="bi bi-currency-bitcoin"></i></div>
+                        <h4>Fintech & Payments</h4>
+                        <p>Digital lending, wallets, UPI, and payment gateway talent</p>
+                        <div class="domain-tags">
+                            <span class="domain-tag">Product</span>
+                            <span class="domain-tag">Risk</span>
+                            <span class="domain-tag">Compliance</span>
+                            <span class="domain-tag">AML/KYC</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 animate-on-scroll delay-4">
+                    <div class="domain-card">
+                        <div class="domain-icon"><i class="bi bi-graph-up-arrow"></i></div>
+                        <h4>Capital Markets</h4>
+                        <p>Equity, debt, derivatives, and investment banking</p>
+                        <div class="domain-tags">
+                            <span class="domain-tag">Research</span>
+                            <span class="domain-tag">Trading</span>
+                            <span class="domain-tag">IB</span>
+                            <span class="domain-tag">Equity</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 animate-on-scroll delay-1">
+                    <div class="domain-card">
+                        <div class="domain-icon"><i class="bi bi-building"></i></div>
+                        <h4>NBFC & Microfinance</h4>
+                        <p>Lending, collections, and credit operations specialists</p>
+                        <div class="domain-tags">
+                            <span class="domain-tag">Credit Appraisal</span>
+                            <span class="domain-tag">Collections</span>
+                            <span class="domain-tag">Field Officer</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 animate-on-scroll delay-2">
+                    <div class="domain-card">
+                        <div class="domain-icon"><i class="bi bi-piggy-bank"></i></div>
+                        <h4>Wealth & Asset Management</h4>
+                        <p>Advisory, portfolio management, and mutual fund experts</p>
+                        <div class="domain-tags">
+                            <span class="domain-tag">CFA</span>
+                            <span class="domain-tag">Advisory</span>
+                            <span class="domain-tag">Portfolio</span>
+                            <span class="domain-tag">AUM</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 animate-on-scroll delay-3">
+                    <div class="domain-card">
+                        <div class="domain-icon"><i class="bi bi-exclamation-triangle"></i></div>
+                        <h4>Risk & Compliance</h4>
+                        <p>Risk management, regulatory compliance, and audit professionals</p>
+                        <div class="domain-tags">
+                            <span class="domain-tag">RBI Compliance</span>
+                            <span class="domain-tag">IRDA</span>
+                            <span class="domain-tag">SEBI</span>
+                            <span class="domain-tag">Internal Audit</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 animate-on-scroll delay-4">
+                    <div class="domain-card">
+                        <div class="domain-icon"><i class="bi bi-calculator"></i></div>
+                        <h4>Accounting & Finance</h4>
+                        <p>CA, CFO, financial planning, and treasury professionals</p>
+                        <div class="domain-tags">
+                            <span class="domain-tag">CA/CPA</span>
+                            <span class="domain-tag">Treasury</span>
+                            <span class="domain-tag">FP&A</span>
+                            <span class="domain-tag">Taxation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== HIRING PROCESS ===== -->
+    <section class="process-section section-padding" id="process">
+        <div class="container">
+            <div class="section-title animate-on-scroll">
+                <span class="label">Our Process</span>
+                <h2>BFSI Hiring, Done Right</h2>
+                <p>A compliance-first, domain-deep hiring process tailored for the regulated world of banking and financial services — from mandate to onboarding in 18 days.</p>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-2 col-md-4 col-6 animate-on-scroll delay-1">
+                    <div class="process-card">
+                        <div class="process-number">1</div>
+                        <h5>Mandate & Compliance Mapping</h5>
+                        <p>Understand regulatory requirements (RBI, SEBI, IRDA), role specifications, and organizational culture fit criteria.</p>
+                    </div>
+                </div>
+                <div class="col-lg-1 col-md-1 col-1 d-none d-lg-block"><div class="process-connector"><i class="bi bi-arrow-right"></i></div></div>
+                <div class="col-lg-2 col-md-4 col-6 animate-on-scroll delay-2">
+                    <div class="process-card">
+                        <div class="process-number">2</div>
+                        <h5>Domain-Specific Sourcing</h5>
+                        <p>Targeted outreach through BFSI networks, industry referrals, LinkedIn, and our proprietary finance talent database.</p>
+                    </div>
+                </div>
+                <div class="col-lg-1 col-md-1 col-1 d-none d-lg-block"><div class="process-connector"><i class="bi bi-arrow-right"></i></div></div>
+                <div class="col-lg-2 col-md-4 col-6 animate-on-scroll delay-3">
+                    <div class="process-card">
+                        <div class="process-number">3</div>
+                        <h5>Dual-Layer Assessment</h5>
+                        <p>Domain knowledge evaluation by BFSI SMEs combined with behavioral and psychometric assessments for cultural alignment.</p>
+                    </div>
+                </div>
+                <div class="col-lg-1 col-md-1 col-1 d-none d-lg-block"><div class="process-connector"><i class="bi bi-arrow-right"></i></div></div>
+                <div class="col-lg-2 col-md-4 col-6 animate-on-scroll delay-4">
+                    <div class="process-card">
+                        <div class="process-number">4</div>
+                        <h5>Verification & Onboarding</h5>
+                        <p>Rigorous background checks, credit history verification, regulatory compliance clearance, and smooth onboarding.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== KEY FEATURES ===== -->
+    <section class="features-section section-padding" id="features">
+        <div class="container">
+            <div class="section-title animate-on-scroll">
+                <span class="label">Why Talennexus for BFSI</span>
+                <h2>What Sets Our BFSI Hiring Apart</h2>
+                <p>We combine deep financial domain knowledge with rigorous compliance processes to deliver candidates who are productive from day one and audit-ready always.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 animate-on-scroll delay-1">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="bi bi-shield-check"></i></div>
+                        <h4>Compliance-First Screening</h4>
+                        <p>Every candidate is pre-screened against RBI, SEBI, and IRDA regulatory guidelines — including KYC norms, FIT & PROPER requirements, and negative list checks.</p>
+                        <ul class="feature-list">
+                            <li><i class="bi bi-check-circle-fill"></i> RBI master direction compliance</li>
+                            <li><i class="bi bi-check-circle-fill"></i> FIT & PROPER criteria validation</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Negative list & blacklist screening</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 animate-on-scroll delay-2">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="bi bi-mortarboard"></i></div>
+                        <h4>Domain Expert Evaluators</h4>
+                        <p>Our assessment panels include former bankers, insurance leaders, and capital market professionals with 15+ years of hands-on industry experience.</p>
+                        <ul class="feature-list">
+                            <li><i class="bi bi-check-circle-fill"></i> Ex-banker interview panels</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Case study-based evaluations</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Regulatory scenario testing</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 animate-on-scroll delay-3">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="bi bi-database"></i></div>
+                        <h4>Proprietary BFSI Talent Pool</h4>
+                        <p>Access to a curated database of 200,000+ BFSI professionals — pre-segmented by sub-domain, experience level, certifications, and current employer.</p>
+                        <ul class="feature-list">
+                            <li><i class="bi bi-check-circle-fill"></i> 200K+ pre-vetted BFSI profiles</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Certification-filtered search (CA, CFA, FRM)</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Competitor mapping intelligence</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 animate-on-scroll delay-1">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="bi bi-speedometer2"></i></div>
+                        <h4>Rapid Deployment for Branch Rollouts</h4>
+                        <p>Specialized in high-volume branch hiring — we can staff 50–200+ branch positions simultaneously with zone-specific language and cultural fit matching.</p>
+                        <ul class="feature-list">
+                            <li><i class="bi bi-check-circle-fill"></i> 50–200+ branch staff in 30 days</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Regional language proficiency screening</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Geo-specific cultural fit mapping</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 animate-on-scroll delay-2">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="bi bi-search"></i></div>
+                        <h4>Deep Background Verification</h4>
+                        <p>Multi-layer verification including employment history, educational credentials, credit bureau checks, criminal records, and regulatory debarment list screening.</p>
+                        <ul class="feature-list">
+                            <li><i class="bi bi-check-circle-fill"></i> Credit bureau (CIBIL/Experian) checks</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Criminal & civil litigation screening</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Regulatory debarment list verification</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 animate-on-scroll delay-3">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="bi bi-arrow-repeat"></i></div>
+                        <h4>Replacement & Retention Support</h4>
+                        <p>Industry-leading 120-day replacement guarantee for BFSI roles — the longest in the segment — plus post-placement retention monitoring and support.</p>
+                        <ul class="feature-list">
+                            <li><i class="bi bi-check-circle-fill"></i> 120-day replacement guarantee</li>
+                            <li><i class="bi bi-check-circle-fill"></i> 30/60/90-day check-in calls</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Early attrition risk alerts</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PLATFORM SECTION ===== -->
+    <section class="platform-section section-padding" id="platform">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5 animate-on-scroll">
+                    <div class="section-title text-start" style="margin-bottom:35px;">
+                        <span class="label" style="background:rgba(255,255,255,0.15);color:var(--primary-soft);">BFSI Hiring Platform</span>
+                        <h2>Your Command Center for Financial Recruitment</h2>
+                        <p style="color:rgba(255,255,255,0.7);">A purpose-built platform that gives you full visibility into your BFSI hiring pipeline with compliance tracking baked in.</p>
+                    </div>
+                    <div class="platform-feature">
+                        <i class="bi bi-funnel"></i>
+                        <h5>Compliance-Integrated Pipeline</h5>
+                        <p>Track every candidate with mandatory compliance checkpoints — KYC clearance, background check status, and regulatory approval stages.</p>
+                    </div>
+                    <div class="platform-feature">
+                        <i class="bi bi-people-fill"></i>
+                        <h5>Zone-Wise Deployment Tracker</h5>
+                        <p>Monitor branch hiring progress by zone, region, and city with real-time fill-rate dashboards and linguistic fit scores.</p>
+                    </div>
+                    <div class="platform-feature">
+                        <i class="bi bi-bar-chart-line"></i>
+                        <h5>Compensation Benchmarking</h5>
+                        <p>Access real-time BFSI salary benchmarks by role, geography, and experience level to make competitive offers that close faster.</p>
+                    </div>
+                    <div class="platform-feature">
+                        <i class="bi bi-clipboard2-check"></i>
+                        <h5>Assessment & Credential Hub</h5>
+                        <p>Centralized hub for domain tests, certification verification (CA, CFA, FRM, NISM), and psychometric evaluation results.</p>
+                    </div>
+                </div>
+                <div class="col-lg-7 animate-on-scroll delay-2">
+                    <div class="platform-dashboard">
+                        <div class="dashboard-header">
+                            <div class="dashboard-dot dot-red"></div>
+                            <div class="dashboard-dot dot-yellow"></div>
+                            <div class="dashboard-dot dot-green"></div>
+                            <span style="color:rgba(255,255,255,0.7);font-size:0.85rem;margin-left:12px;font-weight:500;">Talennexus — BFSI Hiring Dashboard</span>
+                        </div>
+                        <div class="dashboard-content">
+                            <div class="mock-stat-row">
+                                <div class="mock-stat">
+                                    <div class="num">183</div>
+                                    <div class="lbl">Active Requisitions</div>
+                                </div>
+                                <div class="mock-stat">
+                                    <div class="num">1,245</div>
+                                    <div class="lbl">Candidates in Pipeline</div>
+                                </div>
+                                <div class="mock-stat">
+                                    <div class="num">67</div>
+                                    <div class="lbl">Offers This Month</div>
+                                </div>
+                                <div class="mock-stat">
+                                    <div class="num">18d</div>
+                                    <div class="lbl">Avg. Time-to-Hire</div>
+                                </div>
+                            </div>
+                            <div class="mock-chart">
+                                <div style="font-weight:600;color:var(--secondary-color);margin-bottom:12px;font-size:0.9rem;">Monthly BFSI Hires by Sector</div>
+                                <div class="chart-bar">
+                                    <div class="bar" style="height:90%;"></div>
+                                    <div class="bar" style="height:55%;"></div>
+                                    <div class="bar" style="height:70%;"></div>
+                                    <div class="bar" style="height:45%;"></div>
+                                    <div class="bar" style="height:80%;"></div>
+                                    <div class="bar" style="height:35%;"></div>
+                                    <div class="bar" style="height:62%;"></div>
+                                </div>
+                                <div class="bar-labels">
+                                    <span>Banking</span>
+                                    <span>Insurance</span>
+                                    <span>Fintech</span>
+                                    <span>Capital</span>
+                                    <span>NBFC</span>
+                                    <span>Wealth</span>
+                                    <span>Risk</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== STATS ===== -->
+    <section class="stats-section section-padding" id="stats">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 animate-on-scroll delay-1">
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="3500">0</div>
+                        <div class="stat-label">BFSI Professionals Hired Yearly</div>
+                        <div class="stat-divider"></div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 animate-on-scroll delay-2">
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="150">0</div>
+                        <div class="stat-label">BFSI Clients Served</div>
+                        <div class="stat-divider"></div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 animate-on-scroll delay-3">
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="120">0</div>
+                        <div class="stat-label">Day Replacement Guarantee</div>
+                        <div class="stat-divider"></div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 animate-on-scroll delay-4">
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="18">0</div>
+                        <div class="stat-label">Days Average Time-to-Hire</div>
+                        <div class="stat-divider"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ENGAGEMENT MODELS ===== -->
+    <section class="engagement-section section-padding" id="engagement">
+        <div class="container">
+            <div class="section-title animate-on-scroll">
+                <span class="label">Flexible Models</span>
+                <h2>Engagement Models for BFSI Hiring</h2>
+                <p>From filling a single branch manager position to staffing 200 branches simultaneously — our models are built for the scale and compliance demands of financial services.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 animate-on-scroll delay-1">
+                    <div class="engagement-card">
+                        <div class="engagement-icon"><i class="bi bi-person"></i></div>
+                        <h4>Contract Staffing</h4>
+                        <p>Deploy compliance-verified BFSI professionals for project-based, seasonal, or interim requirements — with full payroll management.</p>
+                        <ul class="engagement-features">
+                            <li><i class="bi bi-check-circle-fill"></i> 3–24 month contract terms</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Compliance documentation handled</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Payroll & statutory compliance included</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Quick ramp-up for peak seasons</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Convert-to-permanent option</li>
+                        </ul>
+                        <a href="#contact-form" class="btn-outline-custom" style="width:100%;justify-content:center;">Get Started</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 animate-on-scroll delay-2">
+                    <div class="engagement-card featured">
+                        <div class="engagement-icon"><i class="bi bi-people"></i></div>
+                        <h4>Permanent Placement</h4>
+                        <p>End-to-end recruitment for core BFSI roles — from entry-level relationship managers to CXO-level leadership positions.</p>
+                        <ul class="engagement-features">
+                            <li><i class="bi bi-check-circle-fill"></i> Domain SME-led assessments</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Multi-level background verification</li>
+                            <li><i class="bi bi-check-circle-fill"></i> 120-day replacement guarantee</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Salary negotiation & offer management</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Post-placement retention support</li>
+                        </ul>
+                        <a href="#contact-form" class="btn-primary-custom" style="width:100%;justify-content:center;">Get Started</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 animate-on-scroll delay-3">
+                    <div class="engagement-card">
+                        <div class="engagement-icon"><i class="bi bi-buildings"></i></div>
+                        <h4>Branch Staffing Programs</h4>
+                        <p>Dedicated branch rollout hiring — staff entire branches or zones with locally-relevant, language-proficient, compliance-cleared talent.</p>
+                        <ul class="engagement-features">
+                            <li><i class="bi bi-check-circle-fill"></i> 50–200+ positions per program</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Zone/region-level deployment</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Local language proficiency screening</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Single point of accountability</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Real-time fill-rate dashboards</li>
+                        </ul>
+                        <a href="#contact-form" class="btn-outline-custom" style="width:100%;justify-content:center;">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CASE STUDIES ===== -->
+    <section class="features-section section-padding" id="cases">
+        <div class="container">
+            <div class="section-title animate-on-scroll">
+                <span class="label">Success Stories</span>
+                <h2>BFSI Hiring in Action</h2>
+                <p>Real results from real engagements — see how we've helped leading banks, insurers, and fintech companies solve their toughest talent challenges.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 animate-on-scroll delay-1">
+                    <div class="case-study-card">
+                        <div class="case-study-img">
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&h=300&fit=crop&q=80" alt="Private sector bank branch expansion">
+                            <i class="bi bi-bank"></i>
+                            <span class="case-category">Private Bank</span>
+                        </div>
+                        <div class="case-study-body">
+                            <h4>Pan-India Branch Expansion Hiring</h4>
+                            <p>Staffed 180 new branches across 12 states in 45 days — including branch managers, RMs, operations staff, and security personnel with full compliance clearance.</p>
+                            <div class="case-metrics">
+                                <div class="metric-item">
+                                    <strong>540</strong>
+                                    <small>Hires in 45 Days</small>
+                                </div>
+                                <div class="metric-item">
+                                    <strong>97%</strong>
+                                    <small>Compliance Pass Rate</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 animate-on-scroll delay-2">
+                    <div class="case-study-card">
+                        <div class="case-study-img">
+                            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=500&h=300&fit=crop&q=80" alt="Insurance company digital transformation">
+                            <i class="bi bi-shield-lock"></i>
+                            <span class="case-category">Insurance</span>
+                        </div>
+                        <div class="case-study-body">
+                            <h4>Digital Transformation Team for Insurer</h4>
+                            <p>Built a 35-member digital team for a leading life insurer — including product managers, data analysts, and claims automation specialists.</p>
+                            <div class="case-metrics">
+                                <div class="metric-item">
+                                    <strong>35</strong>
+                                    <small>Digital Specialists</small>
+                                </div>
+                                <div class="metric-item">
+                                    <strong>60%</strong>
+                                    <small>Faster Claims Processing</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 animate-on-scroll delay-3">
+                    <div class="case-study-card">
+                        <div class="case-study-img">
+                            <img src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=500&h=300&fit=crop&q=80" alt="Fintech startup scaling">
+                            <i class="bi bi-currency-bitcoin"></i>
+                            <span class="case-category">Fintech</span>
+                        </div>
+                        <div class="case-study-body">
+                            <h4>Risk & Compliance Team for NBFC</h4>
+                            <p>Recruited a complete risk management and compliance team for a fast-growing digital NBFC — from CRO to credit analysts, all RBI-compliant.</p>
+                            <div class="case-metrics">
+                                <div class="metric-item">
+                                    <strong>22</strong>
+                                    <small>Risk & Compliance Hires</small>
+                                </div>
+                                <div class="metric-item">
+                                    <strong>100%</strong>
+                                    <small>RBI Audit Clearance</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS ===== -->
+    <section class="testimonials-section section-padding" id="testimonials">
+        <div class="container">
+            <div class="section-title animate-on-scroll">
+                <span class="label">Client Voices</span>
+                <h2>Trusted by BFSI Leaders</h2>
+                <p>Hear from CHROs, branch heads, and business leaders who've transformed their workforce with Talennexus.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 animate-on-scroll delay-1">
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                        </div>
+                        <div class="quote-icon"><i class="bi bi-quote"></i></div>
+                        <p>"We needed to open 100 branches in 6 months. Talennexus delivered 500+ staff — branch managers, RMs, and operations — with 97% compliance clearance. Their understanding of BFSI regulations is unmatched."</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">SG</div>
+                            <div>
+                                <strong>Sunil Gupta</strong>
+                                <span>CHRO, Leading Private Sector Bank</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 animate-on-scroll delay-2">
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                        </div>
+                        <div class="quote-icon"><i class="bi bi-quote"></i></div>
+                        <p>"Finding actuaries and underwriters with both technical depth and regulatory knowledge is incredibly hard. Talennexus's domain-expert panels ensured every candidate we interviewed was interview-ready from day one."</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">MV</div>
+                            <div>
+                                <strong>Meera Venkatesh</strong>
+                                <span>Head of HR, Top 5 Life Insurance Company</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 animate-on-scroll delay-3">
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+                        </div>
+                        <div class="quote-icon"><i class="bi bi-quote"></i></div>
+                        <p>"As a fintech, we needed people who understand both technology and finance. Talennexus found us a CRO, 8 risk analysts, and a compliance head in under 3 weeks — all cleared our RBI audit with zero observations."</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">NK</div>
+                            <div>
+                                <strong>Nikhil Kapoor</strong>
+                                <span>Co-Founder & CEO, Digital NBFC</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="faq-section section-padding" id="faq">
+        <div class="container">
+            <div class="section-title animate-on-scroll">
+                <span class="label">FAQs</span>
+                <h2>Frequently Asked Questions</h2>
+                <p>Everything you need to know about our BFSI Hiring services.</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-9">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item animate-on-scroll delay-1">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">What BFSI roles do you hire for?</button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">We hire across the entire BFSI spectrum: Commercial Banking (branch managers, relationship managers, credit officers, operations), Insurance (underwriters, claims managers, actuaries, agents), Fintech & Payments (product managers, risk analysts, AML/KYC specialists, compliance officers), Capital Markets (research analysts, traders, investment bankers), NBFC & Microfinance (credit appraisers, field officers, collection managers), Wealth & Asset Management (advisors, portfolio managers, CFA-holders), Risk & Compliance (CRO, internal auditors, regulatory compliance managers), and Accounting & Finance (CFO, CA, treasury managers, FP&A analysts).</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item animate-on-scroll delay-2">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">How do you handle compliance verification for BFSI candidates?</button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">Compliance verification is embedded at every stage of our BFSI hiring process. We conduct: (1) FIT & PROPER criteria validation as per RBI master directions, (2) Negative list and blacklist screening against RBI/SEBI/IRDA debarment lists, (3) Employment history verification with previous financial institutions, (4) Educational credential verification including professional certifications (CA, CFA, FRM, NISM), (5) Credit bureau checks (CIBIL/Experian/Equifax), (6) Criminal record and civil litigation screening, and (7) Address and identity verification. All checks are documented and audit-ready.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item animate-on-scroll delay-3">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">Can you handle large-scale branch staffing?</button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">Yes, branch staffing is one of our strongest capabilities. We have dedicated branch hiring teams with zone-level deployment experience across all Indian states. We handle everything from candidate sourcing and regional language proficiency screening to compliance clearance and onboarding documentation. Our largest single engagement involved staffing 180 branches (540+ positions) across 12 states in 45 days. We provide real-time fill-rate dashboards and zone-wise deployment tracking throughout the program.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item animate-on-scroll delay-4">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">What is your replacement guarantee for BFSI roles?</button>
+                            </h2>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">We offer an industry-leading 120-day replacement guarantee for all permanent BFSI placements — the longest in the segment. If a candidate leaves or is terminated for performance reasons within 120 days of joining, we find a replacement at no additional recruitment fee. For contract staffing, we provide immediate replacement if a contractor exits during the engagement period. We also conduct 30/60/90-day post-placement check-ins to proactively identify and address any retention risks.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item animate-on-scroll delay-1">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">Do you hire for senior BFSI leadership positions?</button>
+                            </h2>
+                            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">Absolutely. We have a dedicated BFSI Leadership Hiring practice that recruits C-suite and senior management positions including CEO, CFO, CRO, CTO, Head of Retail Banking, Head of Credit, Chief Risk Officer, Chief Compliance Officer, VP-Level positions, and Board-level independent directors. Our leadership hiring process includes executive search, discreet market mapping, psychometric assessments, detailed reference checks, and board-ready candidate dossiers.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item animate-on-scroll delay-2">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">How do you assess domain knowledge for BFSI candidates?</button>
+                            </h2>
+                            <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">Our domain assessment is a dual-layer process. Layer 1 is a standardized BFSI domain test covering regulatory knowledge, industry concepts, and role-specific technical questions (e.g., credit appraisal methodology, insurance underwriting principles, SEBI regulations). Layer 2 is a panel interview conducted by our in-house BFSI SMEs — former bankers, insurance leaders, or capital market professionals with 15+ years experience. For senior roles, we also use case study-based evaluations simulating real-world scenarios like loan portfolio stress testing, claims fraud detection, or regulatory response planning.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CTA SECTION ===== -->
+    <section class="cta-section" id="cta">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7 animate-on-scroll">
+                    <div class="cta-content">
+                        <h2>Ready to Strengthen Your BFSI Workforce?</h2>
+                        <p>Whether you're opening branches, building a risk team, or digitizing your insurance operations — our BFSI hiring specialists are ready to deliver compliance-ready talent at scale.</p>
+                        <div style="display:flex;gap:15px;flex-wrap:wrap;">
+                            <a href="#contact-form" class="btn-white">Start Hiring Now <i class="bi bi-arrow-right"></i></a>
+                            <a href="#process" class="btn-ghost">See How It Works <i class="bi bi-play-circle"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 text-end animate-on-scroll delay-2 d-none d-lg-block">
+                    <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=450&h=320&fit=crop&q=80" alt="Banking team collaborating on financial strategy" style="border-radius:20px;box-shadow:0 20px 60px rgba(0,0,0,0.3);max-width:100%;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- ==================== FOOTER ==================== -->
+    <!-- Contact form (Business / Individual → Zoho) -->
+    <site-contact id="contact-form"></site-contact>
+
+    <site-footer></site-footer>
+
+
+    <!-- ===== BACK TO TOP ===== -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // ===== Back to top =====
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            backToTop.classList.toggle('visible', window.scrollY > 400);
+        });
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // ===== Scroll animations =====
+        const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animated');
+                }
+            });
+        }, observerOptions);
+        document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+
+        // ===== Counter animation =====
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const el = entry.target;
+                    const target = parseInt(el.getAttribute('data-target'));
+                    const duration = 2000;
+                    const start = performance.now();
+                    const animate = (now) => {
+                        const elapsed = now - start;
+                        const progress = Math.min(elapsed / duration, 1);
+                        const eased = 1 - Math.pow(1 - progress, 3);
+                        let suffix = '+';
+                        if (target === 120) suffix = '-day';
+                        else if (target === 18) suffix = ' days';
+                        el.textContent = Math.floor(eased * target).toLocaleString() + suffix;
+                        if (progress < 1) requestAnimationFrame(animate);
+                    };
+                    requestAnimationFrame(animate);
+                    counterObserver.unobserve(el);
+                }
+            });
+        }, { threshold: 0.5 });
+        document.querySelectorAll('.stat-number[data-target]').forEach(el => counterObserver.observe(el));
+
+
+        // ===== Dropdown submenu for mobile =====
+        if (window.innerWidth < 992) {
+            document.querySelectorAll('.dropdown-submenu > .submenu-toggle').forEach(toggle => {
+                toggle.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    this.closest('.dropdown-submenu').classList.toggle('show-submenu');
+                });
+            });
+        }
+    </script>
+</body>
+</html>

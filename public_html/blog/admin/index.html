@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog Admin Login | Talennexus</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="../../assets/favicon.ico" sizes="any">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<link href="admin.css?v=20261120" rel="stylesheet">
+</head>
+<body>
+<div class="login-wrap">
+  <form class="login-card" id="loginForm" autocomplete="on" novalidate>
+    <img src="../../assets/tl-logo.png" alt="Talennexus">
+    <h1>Blog Admin</h1>
+    <p class="sub">Sign in to create and manage blog posts.</p>
+
+    <div class="alert alert-danger py-2 small login-error" id="loginError" role="alert"></div>
+
+    <div class="mb-3">
+      <label class="form-label" for="user">Username</label>
+      <div class="input-group">
+        <span class="input-group-text"><i class="bi bi-person"></i></span>
+        <input class="form-control" id="user" name="username" autocomplete="username" required autofocus>
+      </div>
+    </div>
+    <div class="mb-4">
+      <label class="form-label" for="pass">Password</label>
+      <div class="input-group">
+        <span class="input-group-text"><i class="bi bi-lock"></i></span>
+        <input class="form-control" id="pass" name="password" type="password" autocomplete="current-password" required>
+        <button class="btn btn-outline-secondary" type="button" id="togglePass" aria-label="Show password"><i class="bi bi-eye"></i></button>
+      </div>
+    </div>
+    <button class="btn btn-primary w-100 py-2 fw-semibold" type="submit" id="loginBtn">
+      <i class="bi bi-box-arrow-in-right me-1"></i> Sign in
+    </button>
+    <p class="text-center small mt-4 mb-0"><a href="../">← Back to blog</a></p>
+  </form>
+</div>
+
+<script>
+(function () {
+  var form = document.getElementById('loginForm');
+  var err = document.getElementById('loginError');
+  var btn = document.getElementById('loginBtn');
+  var pass = document.getElementById('pass');
+
+  document.getElementById('togglePass').addEventListener('click', function () {
+    var show = pass.type === 'password';
+    pass.type = show ? 'text' : 'password';
+    this.innerHTML = '<i class="bi bi-eye' + (show ? '-slash' : '') + '"></i>';
+  });
+
+  function fail(msg) { err.textContent = msg; err.classList.add('show'); btn.disabled = false; }
+
+  // Already logged in? Go straight to the editor.
+  fetch('/api/blog/status', { credentials: 'same-origin' })
+    .then(function (r) { return r.json(); })
+    .then(function (d) { if (d.loggedIn) location.replace('editor'); })
+    .catch(function () { /* shown on submit */ });
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    err.classList.remove('show');
+    var u = document.getElementById('user').value.trim();
+    var p = pass.value;
+    if (!u || !p) return fail('Enter your username and password.');
+    btn.disabled = true;
+    fetch('/api/blog/login', {
+      method: 'POST', credentials: 'same-origin',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ user: u, pass: p })
+    }).then(function (r) { return r.json(); }).then(function (d) {
+      if (d.ok) location.replace('editor');
+      else { pass.value = ''; fail(d.error || 'Login failed.'); }
+    }).catch(function () { fail('Cannot reach the server. Is the Node.js app running?'); });
+  });
+})();
+</script>
+</body>
+</html>

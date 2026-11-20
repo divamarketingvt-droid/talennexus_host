@@ -1,0 +1,1865 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script src="components/site-gtm.js?v=20261118"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Talennexus Retail & Telecom Hiring — Specialized staffing and recruitment for retail stores, e-commerce, telecom networks, customer experience, field operations, and technology roles across India.">
+    <meta name="keywords" content="Retail Hiring, Telecom Hiring, Retail Staffing, Telecom Recruitment, Store Manager Hiring, Network Engineer Recruitment, Customer Support Staffing, 5G Talent, E-commerce Hiring, Field Technician Recruitment">
+    <title>Retail & Telecom Hiring | Talennexus</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #1e3a5f;
+            --primary-accent: #4a90d9;
+            --secondary-color: #14355d;
+            --primary-hover: #16304f;
+            --gradient-primary: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-accent) 100%);
+            --primary-light: #e6eef7;
+            --primary-soft: #a8c8e8;
+            --text-dark: #1a1a2e;
+            --text-gray: #5a6a7a;
+            --bg-light: #f0f4f8;
+            --white: #FFFFFF;
+            --shadow-sm: 0 4px 15px rgba(30, 58, 95, 0.08);
+            --shadow-md: 0 8px 25px rgba(30, 58, 95, 0.12);
+            --shadow-lg: 0 15px 40px rgba(30, 58, 95, 0.18);
+            --glow-primary: 0 0 20px rgba(74, 144, 217, 0.4);
+            --border-radius: 12px;
+            --transition: all 0.3s ease;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; color: var(--text-dark); line-height: 1.6; overflow-x: hidden; }
+        h1,h2,h3,h4,h5,h6 { font-family: 'Poppins', sans-serif; font-weight: 700; color: var(--secondary-color); }
+
+      /* ==================== NAVIGATION ==================== */
+        .navbar {
+            background: var(--white);
+            box-shadow: var(--shadow-sm);
+            height: 90px;
+            padding: 0 !important;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar.scrolled {
+            height: 90px;
+            padding: 0 !important;
+            box-shadow: var(--shadow-md);
+        }
+
+        .navbar .container {
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            padding: 0 !important;
+            margin-right: 25px;
+        }
+
+        /* Keep logo visual size unchanged */
+        .navbar-brand img {
+            width: auto !important;
+            height: 160px !important;
+            max-width: none !important;
+            object-fit: contain;
+            display: block;
+        }
+
+        /* Keep logo from changing on scroll */
+        .navbar.scrolled .navbar-brand img {
+            height: 160px !important;
+        }
+
+        /* Desktop navigation */
+        .navbar-nav {
+            align-items: center;
+        }
+
+        /* Mobile */
+        @media (max-width: 991px) {
+            .navbar {
+                height: 90px;
+                padding: 0 !important;
+            }
+
+            .navbar.scrolled {
+                height: 90px;
+            }
+
+            .navbar-brand {
+                margin-right: 10px;
+            }
+
+            .navbar-brand img {
+                height: 78px !important;
+                width: auto !important;
+                max-height: 78px !important;
+                object-fit: contain;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .navbar {
+                height: 85px;
+                padding: 0 !important;
+            }
+
+            .navbar.scrolled {
+                height: 85px;
+            }
+
+            .navbar-brand img {
+                height: 90px !important;
+                width: auto !important;
+                max-height: 120px !important;
+                object-fit: contain;
+
+            }
+        }
+
+        .nav-link {
+            font-weight: 500;
+            color: var(--secondary-color) !important;
+            padding: 10px 18px !important;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--primary-color) !important;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 18px;
+            right: 18px;
+            height: 2px;
+            background: var(--gradient-primary);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            transform: scaleX(1);
+        }
+
+        .dropdown-toggle::after {
+            margin-left: 6px;
+            vertical-align: middle;
+            transition: transform 0.3s ease;
+        }
+
+        .dropdown.show .dropdown-toggle::after {
+            transform: rotate(180deg);
+        }
+
+        .dropdown-menu {
+            border: none;
+            box-shadow: var(--shadow-lg);
+            border-radius: var(--border-radius);
+            padding: 15px;
+            margin-top: 15px;
+            animation: dropdownFadeIn 0.25s ease;
+        }
+
+        @keyframes dropdownFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .dropdown-item {
+            padding: 10px 20px;
+            border-radius: 8px;
+            transition: var(--transition);
+            font-weight: 500;
+            color: var(--text-gray);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .dropdown-item i {
+            font-size: 1.1rem;
+            color: var(--primary-color);
+            width: 22px;
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .dropdown-item:hover {
+            background: var(--primary-light);
+            color: var(--primary-color);
+        }
+
+        .dropdown-item:hover i {
+            color: var(--primary-accent);
+            transform: scale(1.15);
+        }
+
+        .dropdown-industry-header {
+            padding: 8px 20px 12px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            color: var(--primary-color);
+            opacity: 0.7;
+        }
+
+        .dropdown-divider-custom {
+            height: 1px;
+            background: linear-gradient(to right, transparent, rgba(74, 144, 217, 0.2), transparent);
+            margin: 8px 15px;
+        }
+
+        .dropdown-item .industry-label {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.3;
+        }
+
+        .dropdown-item .industry-label span:first-child {
+            font-weight: 600;
+            color: var(--secondary-color);
+        }
+
+        .dropdown-item .industry-label span:last-child {
+            font-size: 0.8rem;
+            color: var(--text-gray);
+            font-weight: 400;
+        }
+
+        .dropdown-item:hover .industry-label span:first-child {
+            color: var(--primary-color);
+        }
+
+        .dropdown-item:hover .industry-label span:last-child {
+            color: var(--primary-hover);
+        }
+
+        .job-count-badge {
+            background: var(--gradient-primary);
+            color: var(--white);
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 2px 8px;
+            border-radius: 20px;
+            margin-left: auto;
+            flex-shrink: 0;
+            line-height: 1.5;
+        }
+
+        /* ==================== NESTED SUBMENU (Payroll Services) ==================== */
+        .dropdown-submenu {
+            position: relative;
+        }
+
+        .dropdown-submenu>.dropdown-item.submenu-toggle {
+            justify-content: space-between;
+        }
+
+        .dropdown-submenu>.dropdown-item.submenu-toggle::after {
+            content: '';
+            display: inline-block;
+            width: 0;
+            height: 0;
+            border-top: 4px solid transparent;
+            border-bottom: 4px solid transparent;
+            border-left: 5px solid currentColor;
+            margin-left: auto;
+        }
+
+        .dropdown-submenu .dropdown-menu {
+            top: 0;
+            left: 100%;
+            margin-top: 0;
+            margin-left: 6px;
+            display: none;
+            min-width: 260px;
+        }
+
+        .dropdown-submenu.show-submenu>.dropdown-menu {
+            display: block;
+            animation: dropdownFadeIn 0.2s ease;
+        }
+
+        @media (min-width: 992px) {
+            .dropdown-submenu:hover>.dropdown-menu {
+                display: block;
+            }
+        }
+
+        @media (max-width: 991px) {
+            .dropdown-submenu>.dropdown-menu {
+                position: static;
+                left: 0;
+                margin-left: 15px;
+                box-shadow: none;
+                border-left: 2px solid var(--primary-light);
+                border-radius: 0;
+            }
+        }
+
+         /* ==================== BUTTONS ==================== */
+        .btn-primary-custom {
+            background: var(--gradient-primary);
+            color: var(--white) !important;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(30, 58, 95, 0.3);
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .btn-primary-custom::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, var(--primary-hover) 0%, var(--primary-color) 100%);
+            z-index: -1;
+            transition: opacity 0.3s ease;
+            opacity: 0;
+        }
+
+        .btn-primary-custom:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--glow-primary);
+        }
+
+        .btn-primary-custom:hover::before {
+            opacity: 1;
+        }
+
+        .btn-outline-custom {
+            background: transparent;
+            color: var(--primary-color) !important;
+            border: 2px solid var(--primary-color);
+            padding: 10px 28px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .btn-outline-custom:hover {
+            background: var(--gradient-primary);
+            border-color: transparent;
+            color: var(--white) !important;
+            box-shadow: var(--glow-primary);
+        }
+
+        /* Mobile-only stacked cards below the image */
+        .hero-mobile-stats {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 16px;
+        }
+
+        .hero-mobile-stats .floating-card {
+            position: relative;
+            top: auto;
+            left: auto;
+            right: auto;
+            bottom: auto;
+            animation: none;
+            width: 100%;
+            justify-content: center;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+               /* ===== Hero responsive breakpoints ===== */
+
+        /* Phones (< 576px) */
+        @media (max-width: 575.98px) {
+            .hero-section {
+                padding: 110px 0 50px;
+                min-height: auto;
+            }
+
+            .hero-content {
+                text-align: center;
+                padding-bottom: 30px;
+            }
+
+            .hero-content p {
+                max-width: 100%;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .hero-buttons .btn {
+                width: 100%;
+                max-width: 280px;
+                justify-content: center;
+            }
+
+            .hero-image img {
+                border-radius: 16px;
+                max-height: 260px;
+            }
+        }
+
+        /* Large phones / small tablets (576–767px) */
+        @media (min-width: 576px) and (max-width: 767.98px) {
+            .hero-section {
+                padding: 120px 0 60px;
+                min-height: auto;
+            }
+
+            .hero-content {
+                text-align: center;
+                padding-bottom: 35px;
+            }
+
+            .hero-content p {
+                max-width: 100%;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .hero-image img {
+                border-radius: 18px;
+                max-height: 340px;
+            }
+        }
+
+        /* Tablets (768–991px) */
+        @media (min-width: 768px) and (max-width: 991.98px) {
+            .hero-section {
+                padding: 130px 0 70px;
+                min-height: auto;
+            }
+
+            .hero-image img {
+                max-height: 420px;
+            }
+
+            .floating-card.card-1 {
+                left: -25px;
+                padding: 12px 16px;
+            }
+
+            .floating-card.card-2 {
+                right: -20px;
+                padding: 12px 16px;
+            }
+        }
+
+        /* Small desktops (992–1199px) */
+        @media (min-width: 992px) and (max-width: 1199.98px) {
+            .hero-section {
+                min-height: 85vh;
+            }
+
+            .hero-image img {
+                max-height: 470px;
+            }
+        }
+
+        /* Large desktops (1200px+) */
+        @media (min-width: 1200px) {
+            .hero-section {
+                padding: 150px 0 100px;
+                min-height: 92vh;
+            }
+
+            .hero-image img {
+                max-height: 520px;
+            }
+        }
+
+        /* Respect reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+
+            .floating-card,
+            .hero-content h1,
+            .hero-content p,
+            .hero-buttons,
+            .hero-image {
+                animation: none !important;
+            }
+
+            .hero-content h1,
+            .hero-content p,
+            .hero-buttons,
+            .hero-image {
+                opacity: 1;
+                transform: none;
+            }
+        }
+
+        /* ===== HERO ===== */
+        .hero-section {
+            background: linear-gradient(160deg, #f0f4f8 0%, #eef3f9 40%, #e6eef7 100%);
+            padding: 150px 0 100px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: -20%; right: -10%;
+            width: 800px; height: 800px;
+            background: radial-gradient(circle, rgba(74, 144, 217, 0.12) 0%, transparent 60%);
+            border-radius: 50%;
+            filter: blur(40px);
+        }
+        .hero-section::after {
+            content: '';
+            position: absolute;
+            bottom: -20%; left: -10%;
+            width: 600px; height: 600px;
+            background: radial-gradient(circle, rgba(30, 58, 95, 0.12) 0%, transparent 60%);
+            border-radius: 50%;
+            filter: blur(40px);
+        }
+        .hero-content h1 {
+            font-size: 3.5rem;
+            line-height: 1.15;
+            margin-bottom: 25px;
+            animation: fadeInUp 0.8s ease;
+        }
+        .hero-content h1 span {
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-content p {
+            font-size: 1.2rem;
+            color: var(--text-gray);
+            margin-bottom: 35px;
+            animation: fadeInUp 0.8s ease 0.2s both;
+        }
+        .hero-buttons {
+            animation: fadeInUp 0.8s ease 0.4s both;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .hero-image {
+            position: relative;
+            animation: fadeInRight 1s ease 0.3s both;
+        }
+        .floating-card {
+            position: absolute;
+            background: var(--white);
+            padding: 20px 25px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-md);
+            animation: float 3s ease-in-out infinite;
+            border-left: 4px solid var(--primary-accent);
+            z-index: 2;
+        }
+        .floating-card.card-1 { top: 20px; left: -40px; animation-delay: 0s; }
+        .floating-card.card-2 { bottom: 60px; right: -30px; animation-delay: 1s; border-left-color: var(--primary-color); }
+        .floating-card.card-3 { top: 55%; left: -50px; animation-delay: 1.8s; border-left-color: #2ecc71; }
+        .floating-card i {
+            font-size: 24px;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-right: 10px;
+        }
+        .floating-card strong { color: var(--secondary-color); }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInRight {
+            from { opacity: 0; transform: translateX(50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        /* ===== SECTION COMMON ===== */
+        .section-padding { padding: 100px 0; }
+        .section-title { text-align: center; margin-bottom: 60px; }
+        .section-title .label {
+            display: inline-block;
+            background: var(--primary-light);
+            color: var(--primary-color);
+            padding: 6px 18px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 15px;
+        }
+        .section-title h2 { font-size: 2.5rem; margin-bottom: 15px; }
+        .section-title p { color: var(--text-gray); font-size: 1.1rem; max-width: 700px; margin: 0 auto; }
+
+        /* ===== DOMAIN CARDS ===== */
+        .domains-section { background: var(--white); position: relative; }
+        .domains-section::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 4px;
+            background: var(--gradient-primary);
+        }
+        .domain-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            padding: 35px 28px;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            height: 100%;
+            border: 1px solid transparent;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+        .domain-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 4px;
+            background: var(--gradient-primary);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+            transform-origin: left;
+        }
+        .domain-card:hover::before { transform: scaleX(1); }
+        .domain-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary-light);
+        }
+        .domain-icon {
+            width: 80px; height: 80px;
+            background: var(--primary-light);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 22px;
+            transition: var(--transition);
+        }
+        .domain-card:hover .domain-icon {
+            background: var(--gradient-primary);
+            transform: scale(1.05);
+        }
+        .domain-icon i {
+            font-size: 34px;
+            color: var(--primary-color);
+            transition: var(--transition);
+        }
+        .domain-card:hover .domain-icon i { color: var(--white); }
+        .domain-card h4 { font-size: 1.15rem; margin-bottom: 10px; }
+        .domain-card p { color: var(--text-gray); margin-bottom: 18px; font-size: 0.93rem; }
+        .domain-tags { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; }
+        .domain-tag {
+            background: var(--bg-light);
+            color: var(--text-gray);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.78rem;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+        .domain-card:hover .domain-tag {
+            background: var(--primary-light);
+            color: var(--primary-color);
+        }
+
+        /* ===== PROCESS ===== */
+        .process-section { background: var(--bg-light); }
+        .process-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            padding: 35px 25px;
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            height: 100%;
+            position: relative;
+        }
+        .process-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+        .process-number {
+            width: 55px; height: 55px;
+            background: var(--gradient-primary);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin: 0 auto 20px;
+        }
+        .process-card h5 { margin-bottom: 12px; font-size: 1.1rem; }
+        .process-card p { color: var(--text-gray); font-size: 0.95rem; margin: 0; }
+
+        /* ===== FEATURES ===== */
+        .features-section { background: var(--white); }
+        .feature-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            padding: 40px 30px;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            height: 100%;
+            border: 1px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 4px;
+            background: var(--gradient-primary);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+            transform-origin: left;
+        }
+        .feature-card:hover::before { transform: scaleX(1); }
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary-light);
+        }
+        .feature-icon {
+            width: 70px; height: 70px;
+            background: var(--primary-light);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 22px;
+            transition: var(--transition);
+        }
+        .feature-card:hover .feature-icon { background: var(--gradient-primary); }
+        .feature-icon i {
+            font-size: 30px;
+            color: var(--primary-color);
+            transition: var(--transition);
+        }
+        .feature-card:hover .feature-icon i { color: var(--white); }
+        .feature-card h4 { font-size: 1.2rem; margin-bottom: 12px; }
+        .feature-card p { color: var(--text-gray); margin-bottom: 18px; font-size: 0.95rem; }
+        .feature-list { list-style: none; padding: 0; margin: 0; }
+        .feature-list li {
+            padding: 6px 0;
+            color: var(--text-gray);
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .feature-list li i { color: var(--primary-accent); font-size: 0.85rem; }
+
+        /* ===== STATS ===== */
+        .stats-section { background: var(--white); }
+        .stat-item { text-align: center; padding: 30px 20px; }
+        .stat-number {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3rem;
+            font-weight: 700;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1.1;
+        }
+        .stat-label { color: var(--text-gray); font-size: 1rem; margin-top: 8px; font-weight: 500; }
+        .stat-divider {
+            width: 50px; height: 3px;
+            background: var(--gradient-primary);
+            border-radius: 2px;
+            margin: 12px auto 0;
+        }
+
+        /* ===== ENGAGEMENT ===== */
+        .engagement-section { background: var(--bg-light); }
+        .engagement-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            padding: 40px 30px;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+            border: 2px solid transparent;
+        }
+        .engagement-card.featured { border-color: var(--primary-accent); }
+        .engagement-card.featured::after {
+            content: 'Most Popular';
+            position: absolute;
+            top: 18px; right: -30px;
+            background: var(--gradient-primary);
+            color: var(--white);
+            padding: 5px 40px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transform: rotate(45deg);
+        }
+        .engagement-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+        .engagement-icon {
+            width: 70px; height: 70px;
+            background: var(--primary-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 22px;
+            transition: var(--transition);
+        }
+        .engagement-card:hover .engagement-icon { background: var(--gradient-primary); }
+        .engagement-icon i {
+            font-size: 30px;
+            color: var(--primary-color);
+            transition: var(--transition);
+        }
+        .engagement-card:hover .engagement-icon i { color: var(--white); }
+        .engagement-card h4 { font-size: 1.2rem; margin-bottom: 12px; }
+        .engagement-card p { color: var(--text-gray); font-size: 0.95rem; margin-bottom: 20px; }
+
+        /* ===== TESTIMONIALS ===== */
+        .testimonial-section { background: var(--white); }
+        .testimonial-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            padding: 35px 30px;
+            box-shadow: var(--shadow-sm);
+            height: 100%;
+            border: 1px solid var(--primary-light);
+            transition: var(--transition);
+        }
+        .testimonial-card:hover { box-shadow: var(--shadow-md); }
+        .testimonial-card .quote {
+            font-size: 1rem;
+            color: var(--text-dark);
+            line-height: 1.7;
+            margin-bottom: 25px;
+            font-style: italic;
+        }
+        .testimonial-author { display: flex; align-items: center; gap: 14px; }
+        .avatar {
+            width: 48px; height: 48px;
+            border-radius: 50%;
+            background: var(--gradient-primary);
+            color: var(--white);
+            font-size: 15px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .author-name { font-size: 1rem; font-weight: 700; color: var(--secondary-color); }
+        .author-role { font-size: 0.85rem; color: var(--text-gray); }
+
+        /* ===== FAQ ===== */
+        .faq-section { background: var(--bg-light); }
+        .accordion-item {
+            border: none;
+            margin-bottom: 12px;
+            border-radius: 12px !important;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+        .accordion-button {
+            font-weight: 600;
+            color: var(--secondary-color);
+            background: var(--white);
+            padding: 18px 24px;
+            box-shadow: none !important;
+        }
+        .accordion-button:not(.collapsed) {
+            background: var(--primary-light);
+            color: var(--primary-color);
+        }
+        .accordion-body {
+            padding: 0 24px 20px;
+            color: var(--text-gray);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* ===== CTA ===== */
+        .cta-section {
+            background: var(--gradient-primary);
+            padding: 90px 0;
+            text-align: center;
+        }
+        .cta-content h2 {
+            color: var(--white);
+            font-size: 2.4rem;
+            margin-bottom: 15px;
+        }
+        .cta-content p {
+            color: rgba(255,255,255,0.85);
+            font-size: 1.15rem;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .btn-white {
+            background: var(--white);
+            color: var(--primary-color) !important;
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transition);
+        }
+        .btn-white:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        .btn-ghost {
+            background: transparent;
+            color: var(--white) !important;
+            border: 2px solid rgba(255,255,255,0.5);
+            padding: 12px 28px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transition);
+        }
+        .btn-ghost:hover {
+            background: rgba(255,255,255,0.1);
+            border-color: var(--white);
+        }
+
+        /* ===== CONTACT ===== */
+        .contact-section { background: var(--white); }
+        .contact-form {
+            background: var(--bg-light);
+            padding: 40px;
+            border-radius: 16px;
+        }
+        .form-label { font-weight: 600; color: var(--secondary-color); margin-bottom: 6px; }
+        .form-control, .form-select {
+            border: 1px solid #d0d7e2;
+            border-radius: 10px;
+            padding: 12px 16px;
+            font-size: 0.95rem;
+        }
+        .form-control:focus, .form-select:focus {
+            border-color: var(--primary-accent);
+            box-shadow: 0 0 0 3px rgba(74,144,217,0.15);
+        }
+        .btn-submit {
+            background: var(--gradient-primary);
+            color: var(--white);
+            border: none;
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            width: 100%;
+            transition: var(--transition);
+        }
+        .btn-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--glow-primary);
+        }
+        .contact-info-card {
+            background: var(--bg-light);
+            padding: 25px;
+            border-radius: 14px;
+            display: flex;
+            gap: 18px;
+            align-items: flex-start;
+        }
+        .contact-icon {
+            width: 50px; height: 50px;
+            background: var(--primary-light);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .contact-icon i { font-size: 22px; color: var(--primary-color); }
+        .contact-info-card h6 { margin-bottom: 6px; font-size: 1rem; }
+        .contact-info-card p { margin: 0; color: var(--text-gray); font-size: 0.95rem; }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: var(--secondary-color);
+            color: rgba(255,255,255,0.8);
+            padding: 80px 0 30px;
+        }
+        .footer-brand {
+            font-family: 'Poppins', sans-serif;
+            font-size: 26px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+        .footer-desc {
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 25px;
+            line-height: 1.7;
+        }
+        .social-links { display: flex; gap: 12px; }
+        .social-links a {
+            width: 42px; height: 42px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            transition: var(--transition);
+        }
+        .social-links a:hover {
+            background: var(--gradient-primary);
+            transform: translateY(-3px);
+        }
+        .footer h5 {
+            color: #fff;
+            font-size: 1.15rem;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 12px;
+        }
+        .footer h5::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0;
+            width: 40px; height: 3px;
+            background: var(--gradient-primary);
+            border-radius: 2px;
+        }
+        .footer-links { list-style: none; padding: 0; margin: 0; }
+        .footer-links li { margin-bottom: 12px; }
+        .footer-links a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        .footer-links a:hover { color: var(--primary-accent); padding-left: 5px; }
+        .footer-contact { list-style: none; padding: 0; margin: 0; }
+        .footer-contact li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 18px;
+        }
+        .footer-contact i { color: var(--primary-accent); margin-top: 4px; }
+        .newsletter-form { display: flex; gap: 10px; margin-top: 20px; }
+        .newsletter-form input {
+            flex: 1;
+            padding: 12px 18px;
+            border: none;
+            border-radius: 50px;
+            background: rgba(255,255,255,0.1);
+            color: #fff;
+        }
+        .newsletter-form input::placeholder { color: rgba(255,255,255,0.5); }
+        .newsletter-form button {
+            background: var(--gradient-primary);
+            color: #fff;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        .newsletter-form button:hover { opacity: 0.9; }
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 30px;
+            margin-top: 50px;
+            text-align: center;
+        }
+        .footer-bottom p { margin: 0; color: rgba(255,255,255,0.6); }
+        .footer-bottom a { color: var(--primary-accent); text-decoration: none; }
+
+        /* ===== TOAST + BACK TO TOP ===== */
+        .toast-container {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 9999;
+        }
+        .custom-toast {
+            background: var(--secondary-color);
+            color: #fff;
+            padding: 15px 25px;
+            border-radius: 50px;
+            box-shadow: var(--shadow-lg);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            transition: all 0.4s cubic-bezier(0.68,-0.55,0.27,1.55);
+            border-bottom: 3px solid var(--primary-accent);
+        }
+        .custom-toast.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        .custom-toast i { color: var(--primary-accent); font-size: 1.2rem; }
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-primary);
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            z-index: 999;
+            box-shadow: var(--shadow-md);
+        }
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        .back-to-top:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--glow-primary);
+        }
+
+        /* Animation helpers */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.7s ease;
+        }
+        .animate-on-scroll.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .delay-1 { transition-delay: 0.1s; }
+        .delay-2 { transition-delay: 0.2s; }
+        .delay-3 { transition-delay: 0.3s; }
+        .delay-4 { transition-delay: 0.4s; }
+
+        @media (max-width: 991px) {
+            .hero-content h1 { font-size: 2.6rem; }
+            .section-title h2 { font-size: 2rem; }
+            .floating-card { display: none; }
+        }
+    </style>
+<!-- Favicon (Talennexus figure from tl.png) -->
+<link rel="icon" href="assets/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="512x512" href="assets/favicon-512.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<!-- Site components (header & footer) -->
+<script src="components/site-header.js?v=20261118"></script>
+<script src="components/site-footer.js?v=20261118"></script>
+<script src="components/site-contact.js?v=20261118"></script>
+</head>
+<body>
+
+<!-- ==================== NAVIGATION ==================== -->
+<site-header></site-header>
+
+<!-- ===== HERO ===== -->
+<section class="hero-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 hero-content">
+                <h1>Retail & Telecom Talent that <span>Drives Growth</span></h1>
+                <p>From store operations and e-commerce fulfilment to network engineers, field technicians and customer experience teams — we deliver ready-to-deploy talent for India’s fastest-moving retail and telecom brands.</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn-primary-custom">Hire Retail & Telecom Talent <i class="bi bi-arrow-right"></i></a>
+                    <a href="#roles" class="btn-outline-custom">Explore Roles</a>
+                </div>
+            </div>
+            <div class="col-lg-6 hero-image d-none d-lg-block">
+                <div style="height:420px; background:linear-gradient(150deg,var(--primary-color),var(--secondary-color)); border-radius:22px; position:relative; box-shadow:var(--shadow-lg);">
+                    <div class="floating-card card-1">
+                        <i class="bi bi-shop"></i>
+                        <div><strong>3,800+</strong><br><small style="color:var(--text-gray)">Retail Hires / Year</small></div>
+                    </div>
+                    <div class="floating-card card-2">
+                        <i class="bi bi-broadcast"></i>
+                        <div><strong>1,200+</strong><br><small style="color:var(--text-gray)">Telecom Placements</small></div>
+                    </div>
+                    <div class="floating-card card-3">
+                        <i class="bi bi-check-circle"></i>
+                        <div><strong>94%</strong><br><small style="color:var(--text-gray)">Client Retention</small></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== ROLES / DOMAINS ===== -->
+<section class="section-padding domains-section" id="roles">
+    <div class="container">
+        <div class="section-title animate-on-scroll">
+            <span class="label">What We Hire</span>
+            <h2>Roles Across Retail & Telecom</h2>
+            <p>We cover the full spectrum — from frontline customer-facing roles to specialised technical and leadership positions.</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4 animate-on-scroll delay-1">
+                <div class="domain-card">
+                    <div class="domain-icon"><i class="bi bi-shop-window"></i></div>
+                    <h4>Retail Store Operations</h4>
+                    <p>Store Managers, Assistant Managers, Sales Associates, Cashiers and Visual Merchandisers for modern trade and specialty retail.</p>
+                    <div class="domain-tags">
+                        <span class="domain-tag">Store Manager</span>
+                        <span class="domain-tag">Sales</span>
+                        <span class="domain-tag">VM</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 animate-on-scroll delay-2">
+                <div class="domain-card">
+                    <div class="domain-icon"><i class="bi bi-cart4"></i></div>
+                    <h4>E-commerce & Fulfilment</h4>
+                    <p>Warehouse Supervisors, Inventory Controllers, Last-mile Delivery Coordinators and Marketplace Operations specialists.</p>
+                    <div class="domain-tags">
+                        <span class="domain-tag">Warehouse</span>
+                        <span class="domain-tag">Inventory</span>
+                        <span class="domain-tag">Last-mile</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 animate-on-scroll delay-3">
+                <div class="domain-card">
+                    <div class="domain-icon"><i class="bi bi-headset"></i></div>
+                    <h4>Customer Experience</h4>
+                    <p>Call-centre executives, Chat & Email support, Quality analysts and Team leads for retail and telecom CX operations.</p>
+                    <div class="domain-tags">
+                        <span class="domain-tag">BPO</span>
+                        <span class="domain-tag">Quality</span>
+                        <span class="domain-tag">Team Lead</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 animate-on-scroll delay-1">
+                <div class="domain-card">
+                    <div class="domain-icon"><i class="bi bi-broadcast-pin"></i></div>
+                    <h4>Telecom Network & Field</h4>
+                    <p>RF Engineers, Transmission Engineers, Field Technicians, Tower Supervisors and OFC splicing teams.</p>
+                    <div class="domain-tags">
+                        <span class="domain-tag">RF</span>
+                        <span class="domain-tag">Field Tech</span>
+                        <span class="domain-tag">OFC</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 animate-on-scroll delay-2">
+                <div class="domain-card">
+                    <div class="domain-icon"><i class="bi bi-phone"></i></div>
+                    <h4>Telecom Sales & Channel</h4>
+                    <p>Territory Managers, Channel Partners, Retail Outlet Executives and Prepaid / Postpaid sales teams.</p>
+                    <div class="domain-tags">
+                        <span class="domain-tag">Territory</span>
+                        <span class="domain-tag">Channel</span>
+                        <span class="domain-tag">Retail Sales</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 animate-on-scroll delay-3">
+                <div class="domain-card">
+                    <div class="domain-icon"><i class="bi bi-gear"></i></div>
+                    <h4>Tech & Backend Support</h4>
+                    <p>IT Support, Network NOC engineers, CRM specialists and Digital transformation roles for both verticals.</p>
+                    <div class="domain-tags">
+                        <span class="domain-tag">NOC</span>
+                        <span class="domain-tag">CRM</span>
+                        <span class="domain-tag">IT Support</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== PROCESS ===== -->
+<section class="section-padding process-section">
+    <div class="container">
+        <div class="section-title animate-on-scroll">
+            <span class="label">How We Work</span>
+            <h2>Fast, Reliable Hiring Process</h2>
+            <p>Built for high-volume retail and time-critical telecom deployments.</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-3 animate-on-scroll delay-1">
+                <div class="process-card">
+                    <div class="process-number">01</div>
+                    <h5>Requirement Brief</h5>
+                    <p>We capture role, location, shift pattern, volume and any skill or language requirements within 24 hours.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 animate-on-scroll delay-2">
+                <div class="process-card">
+                    <div class="process-number">02</div>
+                    <h5>Sourcing & Screening</h5>
+                    <p>Candidates are sourced from our verified retail & telecom talent pools and screened for attitude + skills.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 animate-on-scroll delay-3">
+                <div class="process-card">
+                    <div class="process-number">03</div>
+                    <h5>Client Interviews</h5>
+                    <p>We coordinate interviews (in-person / virtual) and share shortlists with clear scorecards.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 animate-on-scroll delay-4">
+                <div class="process-card">
+                    <div class="process-number">04</div>
+                    <h5>Onboarding Support</h5>
+                    <p>Documentation, joining formalities and 30-day replacement guarantee included.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== WHY US / FEATURES ===== -->
+<section class="section-padding features-section">
+    <div class="container">
+        <div class="section-title animate-on-scroll">
+            <span class="label">Why Talennexus</span>
+            <h2>Built for High-Volume & High-Skill Needs</h2>
+            <p>Whether you need 50 store associates in 10 days or specialised RF engineers, we deliver.</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4 animate-on-scroll delay-1">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="bi bi-lightning-charge"></i></div>
+                    <h4>Speed at Scale</h4>
+                    <p>Average time-to-hire for retail frontline roles is under 8 days. Telecom specialised roles average 12–18 days.</p>
+                    <ul class="feature-list">
+                        <li><i class="bi bi-check-circle-fill"></i> Bulk hiring capability</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Pan-India coverage</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Shift & language flexibility</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 animate-on-scroll delay-2">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="bi bi-shield-check"></i></div>
+                    <h4>Quality Screening</h4>
+                    <p>Every candidate goes through background verification, skill assessment and cultural fit evaluation.</p>
+                    <ul class="feature-list">
+                        <li><i class="bi bi-check-circle-fill"></i> Background verification</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Domain skill tests</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Attitude & soft-skill checks</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 animate-on-scroll delay-3">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="bi bi-arrow-repeat"></i></div>
+                    <h4>Replacement Guarantee</h4>
+                    <p>Free replacement within the guarantee window if a candidate exits or underperforms.</p>
+                    <ul class="feature-list">
+                        <li><i class="bi bi-check-circle-fill"></i> 30–90 day guarantee</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Zero extra cost</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Priority backfill</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== STATS ===== -->
+<section class="section-padding stats-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-6 col-md-3">
+                <div class="stat-item animate-on-scroll">
+                    <div class="stat-number" data-target="3800">0</div>
+                    <div class="stat-label">Retail Placements / Year</div>
+                    <div class="stat-divider"></div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="stat-item animate-on-scroll delay-1">
+                    <div class="stat-number" data-target="1200">0</div>
+                    <div class="stat-label">Telecom Hires / Year</div>
+                    <div class="stat-divider"></div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="stat-item animate-on-scroll delay-2">
+                    <div class="stat-number" data-target="94">0</div>
+                    <div class="stat-label">Client Retention Rate</div>
+                    <div class="stat-divider"></div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="stat-item animate-on-scroll delay-3">
+                    <div class="stat-number" data-target="8">0</div>
+                    <div class="stat-label">Avg. Days to Hire (Retail)</div>
+                    <div class="stat-divider"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== ENGAGEMENT MODELS ===== -->
+<section class="section-padding engagement-section">
+    <div class="container">
+        <div class="section-title animate-on-scroll">
+            <span class="label">Engagement Models</span>
+            <h2>Flexible Hiring Models</h2>
+            <p>Choose the model that fits your volume, urgency and budget.</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4 animate-on-scroll delay-1">
+                <div class="engagement-card">
+                    <div class="engagement-icon"><i class="bi bi-people"></i></div>
+                    <h4>Contract Staffing</h4>
+                    <p>Ideal for seasonal peaks, new store launches and project-based telecom rollouts. Full payroll & compliance handled by us.</p>
+                </div>
+            </div>
+            <div class="col-md-4 animate-on-scroll delay-2">
+                <div class="engagement-card featured">
+                    <div class="engagement-icon"><i class="bi bi-arrow-left-right"></i></div>
+                    <h4>Contract-to-Hire</h4>
+                    <p>Try before you buy. Convert high performers to permanent after a defined period with zero extra fee.</p>
+                </div>
+            </div>
+            <div class="col-md-4 animate-on-scroll delay-3">
+                <div class="engagement-card">
+                    <div class="engagement-icon"><i class="bi bi-person-check"></i></div>
+                    <h4>Permanent Recruitment</h4>
+                    <p>End-to-end permanent hiring for store managers, network engineers, CX leaders and other critical roles.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section class="section-padding testimonial-section">
+    <div class="container">
+        <div class="section-title animate-on-scroll">
+            <span class="label">Client Stories</span>
+            <h2>What Our Partners Say</h2>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4 animate-on-scroll delay-1">
+                <div class="testimonial-card">
+                    <p class="quote">“Talennexus helped us staff 18 new stores in under three weeks. The quality of store managers and associates was consistently high.”</p>
+                    <div class="testimonial-author">
+                        <div class="avatar">RK</div>
+                        <div>
+                            <div class="author-name">Ravi Kumar</div>
+                            <div class="author-role">HR Head, National Fashion Retail Chain</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 animate-on-scroll delay-2">
+                <div class="testimonial-card">
+                    <p class="quote">“We needed RF and field engineers across four circles on a tight timeline. They delivered screened candidates within 12 days every time.”</p>
+                    <div class="testimonial-author">
+                        <div class="avatar">PS</div>
+                        <div>
+                            <div class="author-name">Priya Sharma</div>
+                            <div class="author-role">Talent Lead, Telecom Infrastructure Company</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 animate-on-scroll delay-3">
+                <div class="testimonial-card">
+                    <p class="quote">“The replacement guarantee gave us real confidence. When two hires didn’t work out, replacements were in place within a week.”</p>
+                    <div class="testimonial-author">
+                        <div class="avatar">AM</div>
+                        <div>
+                            <div class="author-name">Ankit Mehta</div>
+                            <div class="author-role">Operations Director, E-commerce Fulfilment</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="section-padding faq-section">
+    <div class="container">
+        <div class="section-title animate-on-scroll">
+            <span class="label">FAQ</span>
+            <h2>Frequently Asked Questions</h2>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="accordion" id="retailFaq">
+                    <div class="accordion-item animate-on-scroll">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                How quickly can you fill high-volume retail roles?
+                            </button>
+                        </h2>
+                        <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#retailFaq">
+                            <div class="accordion-body">
+                                For standard store associate and cashier roles we typically deliver shortlists within 5–8 days. For bulk requirements (50+ positions) we run parallel sourcing drives and can ramp up in phases.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item animate-on-scroll delay-1">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                Do you hire for both permanent and contractual positions?
+                            </button>
+                        </h2>
+                        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#retailFaq">
+                            <div class="accordion-body">
+                                Yes. We support pure contract staffing, contract-to-hire and permanent recruitment across retail and telecom roles.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item animate-on-scroll delay-2">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                Can you support multi-location / pan-India hiring?
+                            </button>
+                        </h2>
+                        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#retailFaq">
+                            <div class="accordion-body">
+                                Absolutely. We have active talent pools and local partners across major metros, Tier-2 cities and key telecom circles.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item animate-on-scroll delay-3">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                What is your replacement policy?
+                            </button>
+                        </h2>
+                        <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#retailFaq">
+                            <div class="accordion-body">
+                                Most engagements come with a 30 to 90-day free replacement guarantee depending on the role level and engagement model.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item animate-on-scroll delay-4">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                                Do you handle background verification and documentation?
+                            </button>
+                        </h2>
+                        <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#retailFaq">
+                            <div class="accordion-body">
+                                Yes. We manage standard background checks, address verification and joining formalities as part of the process.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="cta-section">
+    <div class="container">
+        <div class="cta-content animate-on-scroll">
+            <h2>Ready to Scale Your Retail or Telecom Team?</h2>
+            <p>Tell us your requirement and we’ll shortlist job-ready candidates within days.</p>
+            <div style="display:flex;gap:15px;justify-content:center;flex-wrap:wrap;">
+                <a href="#contact" class="btn-white">Start Hiring Now <i class="bi bi-arrow-right"></i></a>
+                <a href="tel:+919952978818" class="btn-ghost"><i class="bi bi-telephone"></i> Call Us</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="section-padding contact-section" id="contact">
+    <div class="container">
+        <div class="section-title animate-on-scroll">
+            <span class="label">Get in Touch</span>
+            <h2>Share Your Retail or Telecom Requirement</h2>
+            <p>Our team will respond within 24 hours with a tailored hiring plan.</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-7 animate-on-scroll delay-1">
+                <div class="contact-form">
+                    <form id="retailForm" novalidate>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label">Full Name *</label>
+                                <input type="text" class="form-control" placeholder="Your full name" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Email Address *</label>
+                                <input type="email" class="form-control" placeholder="you@company.com" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Phone Number *</label>
+                                <input type="tel" class="form-control" placeholder="+91 98765 43210" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Company Name *</label>
+                                <input type="text" class="form-control" placeholder="Your organization" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Industry Focus *</label>
+                                <select class="form-select" required>
+                                    <option value="" selected disabled>Select</option>
+                                    <option>Retail – Modern Trade / Specialty</option>
+                                    <option>E-commerce / Fulfilment</option>
+                                    <option>Telecom – Network & Field</option>
+                                    <option>Telecom – Sales & Channel</option>
+                                    <option>Customer Experience / BPO</option>
+                                    <option>Mixed / Multiple</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Hiring Volume</label>
+                                <select class="form-select">
+                                    <option value="" selected disabled>Select</option>
+                                    <option>1–10 positions</option>
+                                    <option>11–50 positions</option>
+                                    <option>51–200 positions</option>
+                                    <option>200+ positions</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">Role Details / Locations</label>
+                                <textarea class="form-control" rows="4" placeholder="Describe the roles, locations, shifts and any must-have skills..."></textarea>
+                            </div>
+                            <div class="col-12 mt-3">
+                                <button type="submit" class="btn-submit">Submit Requirement <i class="bi bi-send"></i></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-lg-5 animate-on-scroll delay-2">
+                <div class="row g-4">
+                    <div class="col-12">
+                        <div class="contact-info-card">
+                            <div class="contact-icon"><i class="bi bi-telephone-fill"></i></div>
+                            <div>
+                                <h6>Call Us</h6>
+                                <p>+91 995 297 8818<br><small>Mon–Sat, 9 AM – 7 PM IST</small></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="contact-info-card">
+                            <div class="contact-icon"><i class="bi bi-envelope-fill"></i></div>
+                            <div>
+                                <h6>Email</h6>
+                                <p>connect@talennexus.com<br><small>We respond within 24 hours</small></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="contact-info-card">
+                            <div class="contact-icon"><i class="bi bi-geo-alt-fill"></i></div>
+                            <div>
+                                <h6>Office</h6>
+                                <p>M/s. Talennexus, Module No.17, SDF-III, MEPZ SEZ, Tambaram, Chennai – 600045</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<!-- Contact form (Business / Individual → Zoho) -->
+<site-contact id="contact-form"></site-contact>
+
+<site-footer></site-footer>
+
+<!-- Toast -->
+<div class="toast-container">
+    <div class="custom-toast" id="formToast">
+        <i class="bi bi-check-circle-fill"></i>
+        <span>Request submitted! Our team will contact you within 24 hours.</span>
+    </div>
+</div>
+
+<!-- Back to Top -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="bi bi-arrow-up"></i>
+</button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    // Navbar scroll
+    const navbar = document.querySelector('.navbar');
+    window.addEventListener('scroll', () => {
+        navbar.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // Back to top
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+        backToTop.classList.toggle('visible', window.scrollY > 400);
+    });
+    backToTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Scroll animations
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animated');
+            }
+        });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+
+    // Stat counter
+    const statObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const el = entry.target;
+                const target = parseInt(el.getAttribute('data-target'));
+                const duration = 2000;
+                const step = target / (duration / 16);
+                let current = 0;
+                const timer = setInterval(() => {
+                    current += step;
+                    if (current >= target) {
+                        current = target;
+                        clearInterval(timer);
+                    }
+                    if (target >= 1000) {
+                        el.textContent = Math.floor(current).toLocaleString() + '+';
+                    } else if (target === 8) {
+                        el.textContent = Math.floor(current);
+                    } else {
+                        el.textContent = Math.floor(current) + '%';
+                    }
+                }, 16);
+                statObserver.unobserve(el);
+            }
+        });
+    }, { threshold: 0.5 });
+    document.querySelectorAll('.stat-number').forEach(el => statObserver.observe(el));
+
+    // Form
+    document.getElementById('retailForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const toast = document.getElementById('formToast');
+        toast.classList.add('show');
+        this.reset();
+        setTimeout(() => toast.classList.remove('show'), 4000);
+    });
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                e.preventDefault();
+                const offset = 80;
+                const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                window.scrollTo({ top, behavior: 'smooth' });
+                const navCollapse = document.getElementById('mainNav');
+                const bsCollapse = bootstrap.Collapse.getInstance(navCollapse);
+                if (bsCollapse) bsCollapse.hide();
+            }
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,1989 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script src="components/site-gtm.js?v=20261118"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Talennexus Organisation Development — Leadership, Change Management, and Employee Engagement programs for enterprise growth.">
+    <title>Organisation Development | Talennexus</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-color: #1e3a5f;
+            --primary-accent: #4a90d9;
+            --secondary-color: #2c3e50;
+            --gradient-primary: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-accent) 100%);
+            --text-dark: #1a1a2e;
+            --text-gray: #5a6a7a;
+            --bg-light: #f0f4f8;
+            --bg-subtle: #e6eef7;
+            --white: #FFFFFF;
+            --shadow-sm: 0 4px 15px rgba(30, 58, 95, 0.06);
+            --shadow-md: 0 8px 25px rgba(30, 58, 95, 0.1);
+            --shadow-lg: 0 15px 40px rgba(30, 58, 95, 0.15);
+            --shadow-blue: 0 8px 25px rgba(74, 144, 217, 0.15);
+            --border-radius: 16px;
+            --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.7;
+            overflow-x: hidden;
+            background: var(--white);
+        }
+
+        h1, h2, h3, h4 { font-family: 'Poppins', sans-serif; font-weight: 700; }
+
+       
+ /* ===== NAV ===== */
+
+/* Fixed Header — exact same as Home page (90px) */
+.navbar {
+    background: var(--white);
+    box-shadow: var(--shadow-sm);
+    height: 90px;
+    padding: 0 !important;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+}
+
+/* Keep same header height after scrolling — same as Home page */
+.navbar.scrolled {
+    height: 90px;
+    padding: 0 !important;
+    box-shadow: var(--shadow-md);
+}
+
+/* Bootstrap container alignment */
+.navbar > .container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+/* Logo container — same as Home page */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    padding: 0 !important;
+    margin-right: 25px;
+}
+
+/* Logo — EXACT size from Home page */
+.navbar-brand img,
+.logo-img {
+    width: auto !important;
+    height: 160px !important;
+    max-width: none !important;
+    object-fit: contain;
+    display: block;
+}
+
+/* Do NOT shrink logo on scroll — same as Home page */
+.navbar.scrolled .navbar-brand img,
+.navbar.scrolled .logo-img {
+    height: 160px !important;
+}
+
+/* Navigation */
+.navbar-nav {
+    display: flex;
+    align-items: center;
+}
+
+/* Navigation links */
+.nav-link {
+    font-weight: 500;
+    color: var(--secondary-color) !important;
+    padding: 10px 18px !important;
+    transition: var(--transition);
+    position: relative;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+/* Hover / Active */
+.nav-link:hover,
+.nav-link.active {
+    color: var(--primary-color) !important;
+}
+
+/* Active underline */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 18px;
+    right: 18px;
+    height: 2px;
+    background: var(--gradient-primary);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    transform: scaleX(1);
+}
+
+/* Dropdown arrow */
+.dropdown-toggle::after {
+    margin-left: 6px;
+    vertical-align: middle;
+    transition: transform 0.3s ease;
+}
+
+.dropdown.show .dropdown-toggle::after {
+    transform: rotate(180deg);
+}
+
+/* Dropdown */
+.dropdown-menu {
+    border: none;
+    box-shadow: var(--shadow-lg);
+    border-radius: var(--border-radius);
+    padding: 15px;
+    margin-top: 15px;
+    animation: dropdownFadeIn 0.25s ease;
+}
+
+@keyframes dropdownFadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Dropdown items */
+.dropdown-item {
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: var(--transition);
+    font-weight: 500;
+    color: var(--text-gray);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.dropdown-item i {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    width: 22px;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.dropdown-item:hover {
+    background: var(--primary-light);
+    color: var(--primary-color);
+}
+
+.dropdown-item:hover i {
+    color: var(--primary-accent);
+    transform: scale(1.15);
+}
+
+/* Active dropdown item */
+.dropdown-item.active-item {
+    background: var(--primary-light);
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.dropdown-item.active-item i {
+    color: var(--primary-accent);
+}
+
+/* Nested submenu */
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu > .dropdown-item.submenu-toggle {
+    justify-content: space-between;
+}
+
+.dropdown-submenu > .dropdown-item.submenu-toggle::after {
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-left: 5px solid currentColor;
+    margin-left: auto;
+}
+
+.dropdown-submenu .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: 0;
+    margin-left: 6px;
+    display: none;
+    min-width: 260px;
+}
+
+.dropdown-submenu.show-submenu > .dropdown-menu {
+    display: block;
+    animation: dropdownFadeIn 0.2s ease;
+}
+
+/* Desktop submenu */
+@media (min-width: 992px) {
+    .dropdown-submenu:hover > .dropdown-menu {
+        display: block;
+    }
+}
+
+       /* Mobile */
+        @media (max-width: 991px) {
+            .navbar {
+                height: 90px;
+                padding: 0 !important;
+            }
+
+            .navbar.scrolled {
+                height: 90px;
+            }
+
+            .navbar-brand {
+                margin-right: 10px;
+            }
+
+            .navbar-brand img {
+                height: 78px !important;
+                width: auto !important;
+                max-height: 78px !important;
+                object-fit: contain;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .navbar {
+                height: 85px;
+                padding: 0 !important;
+            }
+
+            .navbar.scrolled {
+                height: 85px;
+            }
+
+            .navbar-brand img {
+                height: 90px !important;
+                width: auto !important;
+                max-height: 120px !important;
+                object-fit: contain;
+               
+            }
+        }
+        /* ==================== BUTTONS ==================== */
+        .btn-primary-custom {
+            background: var(--gradient-primary);
+            color: var(--white) !important;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(30, 58, 95, 0.3);
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .btn-primary-custom::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(135deg, var(--primary-hover) 0%, var(--primary-color) 100%);
+            z-index: -1;
+            transition: opacity 0.3s ease;
+            opacity: 0;
+        }
+
+        .btn-primary-custom:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--glow-primary);
+        }
+
+        .btn-primary-custom:hover::before {
+            opacity: 1;
+        }
+
+        .btn-outline-custom {
+            background: transparent;
+            color: var(--primary-color) !important;
+            border: 2px solid var(--primary-color);
+            padding: 10px 28px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .btn-outline-custom:hover {
+            background: var(--gradient-primary);
+            border-color: transparent;
+            color: var(--white) !important;
+            box-shadow: var(--glow-primary);
+        }
+
+        /* ========== HERO ========== */
+        .od-hero {
+            background: linear-gradient(165deg, #f5f8fc 0%, #eaf0f7 40%, #e2ecf5 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding-top: 100px;
+            overflow: hidden;
+        }
+
+        .od-hero::before {
+            content: '';
+            position: absolute;
+            top: -15%;
+            right: -8%;
+            width: 700px;
+            height: 700px;
+            background: radial-gradient(circle, rgba(74, 144, 217, 0.1) 0%, transparent 60%);
+            border-radius: 50%;
+            filter: blur(40px);
+        }
+
+        .od-hero::after {
+            content: '';
+            position: absolute;
+            bottom: -15%;
+            left: -8%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(30, 58, 95, 0.08) 0%, transparent 60%);
+            border-radius: 50%;
+            filter: blur(40px);
+        }
+
+        .hero-content { position: relative; z-index: 1; }
+
+        .hero-badge {
+            background: rgba(74, 144, 217, 0.1);
+            color: var(--primary-accent);
+            padding: 8px 22px;
+            border-radius: 30px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 28px;
+            border: 1px solid rgba(74, 144, 217, 0.2);
+            font-size: 0.88rem;
+        }
+
+        .od-hero h1 {
+            font-size: 3.5rem;
+            line-height: 1.12;
+            color: var(--primary-color);
+            margin-bottom: 25px;
+        }
+
+        .od-hero h1 span {
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .od-hero p {
+            font-size: 1.15rem;
+            color: var(--text-gray);
+            margin-bottom: 40px;
+            max-width: 540px;
+            line-height: 1.8;
+        }
+
+        .hero-img-container { position: relative; z-index: 1; }
+
+        .hero-img {
+            width: 100%;
+            border-radius: 24px 0 24px 0;
+            box-shadow: var(--shadow-lg);
+            object-fit: cover;
+            height: 540px;
+        }
+
+        .floating-stat {
+            position: absolute;
+            background: var(--white);
+            padding: 20px 24px;
+            border-radius: 16px;
+            box-shadow: var(--shadow-lg);
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            animation: floatY 3.5s ease-in-out infinite;
+        }
+
+        .floating-stat-1 {
+            bottom: 40px;
+            left: -35px;
+            border-left: 5px solid var(--primary-accent);
+        }
+
+        .floating-stat-2 {
+            top: 30px;
+            right: -30px;
+            border-bottom: 5px solid var(--primary-color);
+            animation-delay: 1.2s;
+        }
+
+        .floating-stat-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-primary);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 22px;
+            flex-shrink: 0;
+        }
+
+        @keyframes floatY {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-12px); }
+        }
+
+        .btn-hero-fill {
+            background: var(--primary-color);
+            color: var(--white) !important;
+            border: none;
+            padding: 14px 36px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.05rem;
+            transition: var(--transition);
+        }
+
+        .btn-hero-fill:hover {
+            background: var(--primary-accent);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-blue);
+        }
+
+        .btn-hero-outline {
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color) !important;
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.05rem;
+            transition: var(--transition);
+            background: transparent;
+        }
+
+        .btn-hero-outline:hover {
+            background: var(--primary-color);
+            color: var(--white) !important;
+        }
+
+        /* ========== OD PILLARS STRIP ========== */
+        .pillars-strip {
+            padding: 80px 0;
+            background: var(--white);
+        }
+
+        .pillar-card {
+            background: var(--bg-light);
+            border-radius: var(--border-radius);
+            padding: 35px 28px;
+            text-align: center;
+            height: 100%;
+            border: 2px solid transparent;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pillar-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 4px;
+            background: var(--gradient-primary);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .pillar-card:hover::before { transform: scaleX(1); }
+
+        .pillar-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-blue);
+            border-color: rgba(74, 144, 217, 0.15);
+            background: var(--white);
+        }
+
+        .pillar-icon {
+            width: 72px;
+            height: 72px;
+            background: rgba(74, 144, 217, 0.08);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 22px;
+            color: var(--primary-color);
+            font-size: 30px;
+            transition: var(--transition);
+        }
+
+        .pillar-card:hover .pillar-icon {
+            background: var(--gradient-primary);
+            color: var(--white);
+            transform: scale(1.08);
+        }
+
+        .pillar-card h5 {
+            color: var(--secondary-color);
+            font-weight: 700;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .pillar-card p {
+            color: var(--text-gray);
+            font-size: 0.93rem;
+            margin: 0;
+        }
+
+        /* ========== SERVICES ZIG-ZAG ========== */
+        .services-od {
+            background: var(--bg-light);
+            padding: 100px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 80px;
+        }
+
+        .section-header h2 {
+            font-size: 2.8rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .section-header .divider {
+            height: 4px;
+            width: 80px;
+            background: var(--gradient-primary);
+            margin: 0 auto;
+            border-radius: 2px;
+        }
+
+        .zig-zag-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 120px;
+        }
+
+        .zig-zag-row:last-child { margin-bottom: 0; }
+        .zig-zag-row.reverse { flex-direction: row-reverse; }
+
+        .zz-text { flex: 1; padding-right: 60px; }
+        .zig-zag-row.reverse .zz-text { padding-right: 0; padding-left: 60px; }
+        .zz-image { flex: 1; position: relative; }
+
+        .zz-img-bg {
+            width: 100%;
+            height: 420px;
+            object-fit: cover;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-lg);
+            transition: var(--transition);
+        }
+
+        .zz-image:hover .zz-img-bg { transform: scale(1.02); }
+
+        .zz-blob {
+            position: absolute;
+            top: -20px; right: -20px;
+            width: 100%; height: 100%;
+            background: var(--gradient-primary);
+            border-radius: var(--border-radius);
+            z-index: -1;
+            opacity: 0.08;
+        }
+
+        .zig-zag-row.reverse .zz-blob { right: auto; left: -20px; }
+
+        .zz-label {
+            position: absolute;
+            bottom: 20px; left: 20px;
+            background: rgba(30, 58, 95, 0.92);
+            color: white;
+            padding: 8px 18px;
+            border-radius: 10px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            backdrop-filter: blur(6px);
+            z-index: 2;
+        }
+
+        .zz-label i { color: var(--primary-accent); margin-right: 6px; }
+
+        .service-icon-lg {
+            width: 70px; height: 70px;
+            background: var(--gradient-primary);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 32px;
+            margin-bottom: 30px;
+            box-shadow: var(--shadow-blue);
+        }
+
+        .service-tag {
+            display: inline-block;
+            background: rgba(74, 144, 217, 0.1);
+            color: var(--primary-accent);
+            padding: 5px 14px;
+            border-radius: 8px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 18px;
+        }
+
+        .check-list li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            color: var(--text-gray);
+        }
+
+        .check-list i {
+            color: var(--primary-accent);
+            background: rgba(74, 144, 217, 0.1);
+            padding: 5px;
+            border-radius: 50%;
+            font-size: 14px;
+            flex-shrink: 0;
+            margin-top: 3px;
+        }
+
+        /* ========== OD FRAMEWORK ========== */
+        .framework-section {
+            padding: 100px 0;
+            background: var(--white);
+        }
+
+        .framework-step {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 50px;
+            align-items: flex-start;
+        }
+
+        .framework-step:last-child { margin-bottom: 0; }
+
+        .step-number {
+            width: 64px; height: 64px;
+            min-width: 64px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.5rem;
+            font-weight: 800;
+            box-shadow: var(--shadow-blue);
+            position: relative;
+        }
+
+        .step-number::after {
+            content: '';
+            position: absolute;
+            width: 3px;
+            height: calc(100% + 50px);
+            background: linear-gradient(to bottom, var(--primary-accent), transparent);
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+            opacity: 0.2;
+        }
+
+        .framework-step:last-child .step-number::after { display: none; }
+
+        .step-content {
+            background: var(--bg-light);
+            border-radius: var(--border-radius);
+            padding: 32px;
+            flex: 1;
+            border: 1px solid transparent;
+            transition: var(--transition);
+        }
+
+        .step-content:hover {
+            border-color: rgba(74, 144, 217, 0.15);
+            box-shadow: var(--shadow-blue);
+            transform: translateX(6px);
+        }
+
+        .step-content h4 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-size: 1.25rem;
+        }
+
+        .step-content p {
+            color: var(--text-gray);
+            margin: 0;
+            font-size: 0.97rem;
+        }
+
+        /* ========== WHY US ========== */
+        .why-section {
+            padding: 100px 0;
+            background: var(--bg-light);
+        }
+
+        .why-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            padding: 40px 28px;
+            height: 100%;
+            border: 1px solid transparent;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .why-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 4px; height: 0;
+            background: var(--gradient-primary);
+            transition: var(--transition);
+        }
+
+        .why-card:hover::before { height: 100%; }
+
+        .why-card:hover {
+            box-shadow: var(--shadow-blue);
+            border-color: rgba(74, 144, 217, 0.12);
+            transform: translateY(-4px);
+        }
+
+        .why-icon {
+            width: 56px; height: 56px;
+            background: var(--gradient-primary);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 24px;
+            margin-bottom: 24px;
+        }
+
+        .why-card h5 {
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .why-card p {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        /* ========== METRICS ========== */
+        .metrics-section {
+            padding: 80px 0;
+            background: var(--primary-color);
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .metrics-section::before {
+            content: '';
+            position: absolute;
+            top: -40%; right: -10%;
+            width: 500px; height: 500px;
+            background: rgba(74, 144, 217, 0.1);
+            border-radius: 50%;
+            filter: blur(60px);
+        }
+
+        .metric-card {
+            text-align: center;
+            padding: 35px 15px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .metric-card h3 {
+            font-size: 3rem;
+            background: linear-gradient(135deg, #7bb8f0, #a4d0f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 8px;
+        }
+
+        .metric-card p {
+            font-size: 0.95rem;
+            opacity: 0.8;
+            font-weight: 500;
+        }
+
+        /* ========== FAQ ========== */
+        .faq-section {
+            padding: 100px 0;
+            background: var(--white);
+        }
+
+        .faq-accordion .accordion-item {
+            border: 1px solid var(--bg-subtle);
+            border-radius: var(--border-radius) !important;
+            margin-bottom: 14px;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .faq-accordion .accordion-item:hover {
+            border-color: var(--primary-accent);
+            box-shadow: 0 4px 20px rgba(74, 144, 217, 0.08);
+        }
+
+        .faq-accordion .accordion-button {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 1.02rem;
+            color: var(--primary-color);
+            background: var(--white);
+            padding: 22px 28px;
+            box-shadow: none !important;
+        }
+
+        .faq-accordion .accordion-button:not(.collapsed) {
+            background: rgba(74, 144, 217, 0.04);
+            color: var(--primary-accent);
+        }
+
+        .faq-accordion .accordion-button::after {
+            background-image: none;
+            content: '\F282';
+            font-family: 'bootstrap-icons';
+            font-size: 1rem;
+            color: var(--primary-accent);
+            width: auto; height: auto;
+            transition: var(--transition);
+        }
+
+        .faq-accordion .accordion-button:not(.collapsed)::after {
+            transform: rotate(180deg);
+        }
+
+        .faq-accordion .accordion-body {
+            color: var(--text-gray);
+            padding: 0 28px 22px;
+            line-height: 1.8;
+            font-size: 0.97rem;
+        }
+
+        /* ========== TESTIMONIALS ========== */
+        .testimonial-section {
+            padding: 80px 0;
+            background: var(--bg-light);
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            padding: 40px 35px;
+            border: 1px solid var(--bg-subtle);
+            transition: var(--transition);
+            height: 100%;
+            position: relative;
+        }
+
+        .testimonial-card:hover {
+            box-shadow: var(--shadow-blue);
+            border-color: var(--primary-accent);
+            transform: translateY(-4px);
+        }
+
+        .testimonial-card .quote-icon {
+            font-size: 48px;
+            color: rgba(74, 144, 217, 0.08);
+            position: absolute;
+            top: 20px; right: 30px;
+        }
+
+        .testimonial-text {
+            color: var(--text-gray);
+            font-size: 1rem;
+            font-style: italic;
+            margin-bottom: 25px;
+            line-height: 1.8;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .testimonial-avatar {
+            width: 50px; height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--primary-accent);
+        }
+
+        .testimonial-name { font-weight: 700; color: var(--primary-color); font-size: 1rem; }
+        .testimonial-role { font-size: 0.85rem; color: var(--text-gray); }
+
+        .testimonial-tag {
+            display: inline-block;
+            background: rgba(74, 144, 217, 0.08);
+            color: var(--primary-accent);
+            padding: 3px 10px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-top: 6px;
+        }
+
+        /* ========== CTA ========== */
+        .cta-section {
+            padding: 120px 0;
+            background: var(--bg-light);
+            text-align: center;
+        }
+
+        .cta-box {
+            background: var(--white);
+            border-radius: 28px;
+            padding: 80px 50px;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(74, 144, 217, 0.1);
+        }
+
+        .cta-circle {
+            position: absolute;
+            border-radius: 50%;
+            background: var(--gradient-primary);
+            opacity: 0.06;
+        }
+
+        .c1 { top: -60px; left: -60px; width: 220px; height: 220px; }
+        .c2 { bottom: -60px; right: -60px; width: 320px; height: 320px; }
+
+        .form-control-custom {
+            background: var(--bg-light);
+            border: 2px solid var(--bg-subtle);
+            padding: 16px 18px;
+            border-radius: 12px;
+            margin-bottom: 18px;
+            transition: var(--transition);
+            font-size: 0.97rem;
+            color: var(--text-dark);
+        }
+
+        .form-control-custom::placeholder { color: #8a9bb0; }
+
+        .form-control-custom:focus {
+            border-color: var(--primary-accent);
+            box-shadow: 0 0 0 4px rgba(74, 144, 217, 0.1);
+            outline: none;
+            background: var(--white);
+        }
+
+        .btn-submit {
+            background: var(--primary-color);
+            color: var(--white);
+            border: none;
+            padding: 16px 50px;
+            border-radius: 12px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            width: 100%;
+            transition: var(--transition);
+        }
+
+        .btn-submit:hover {
+            background: var(--primary-accent);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-blue);
+        }
+
+           /* ==================== FOOTER ==================== */
+        .footer {
+            background: var(--secondary-color);
+            color: rgba(255,255,255,0.8);
+            padding: 80px 0 30px;
+        }
+
+        .footer-brand {
+            font-family: 'Poppins', sans-serif;
+            font-size: 26px;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-brand i {
+            font-size: 28px;
+            color: var(--primary-accent);
+        }
+
+        .footer-desc {
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 25px;
+            line-height: 1.7;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 12px;
+        }
+
+        .social-links a {
+            width: 42px;
+            height: 42px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background: var(--gradient-primary);
+            transform: translateY(-3px);
+        }
+
+        .footer h5 {
+            color: var(--white);
+            font-size: 1.15rem;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 12px;
+        }
+
+        .footer h5::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: var(--gradient-primary);
+            border-radius: 2px;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-accent);
+            padding-left: 5px;
+        }
+
+        .footer-contact {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-contact li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 18px;
+        }
+
+        .footer-contact i {
+            color: var(--primary-accent);
+            margin-top: 4px;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 12px 18px;
+            border: none;
+            border-radius: 50px;
+            background: rgba(255,255,255,0.1);
+            color: var(--white);
+        }
+
+        .newsletter-form input::placeholder {
+            color: rgba(255,255,255,0.5);
+        }
+
+        .newsletter-form button {
+            background: var(--gradient-primary);
+            color: var(--white);
+            border: none;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .newsletter-form button:hover {
+            opacity: 0.9;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 30px;
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .footer-bottom p {
+            margin: 0;
+            color: rgba(255,255,255,0.6);
+        }
+
+        .footer-bottom a {
+            color: var(--primary-accent);
+            text-decoration: none;
+        }
+
+        /* ADD THIS */
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        background: #ffffff;
+        margin-top: 10px;
+        padding: 15px 20px 25px;
+        border-radius: 12px;
+        box-shadow: 0 15px 40px rgba(30, 58, 95, 0.18);
+        border: 1px solid #e6eef7;
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+
+    .navbar-nav {
+        align-items: stretch !important;
+        width: 100%;
+    }
+
+    .nav-item {
+        width: 100%;
+        border-bottom: 1px solid #f0f4f8;
+    }
+
+    .nav-item:last-child {
+        border-bottom: none;
+    }
+
+    .nav-link {
+        padding: 14px 10px !important;
+        width: 100%;
+        display: block;
+    }
+
+    .nav-link::after {
+        display: none;                 /* underline remove on mobile */
+    }
+
+    .dropdown-menu {
+        position: static !important;
+        float: none;
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 8px;
+        box-shadow: none;
+        border: none;
+        border-left: 3px solid var(--primary-light);
+        background: #f8fafc;
+        border-radius: 0 8px 8px 0;
+        padding: 8px 0;
+    }
+
+    .dropdown-item {
+        padding: 10px 18px;
+    }
+
+    /* Nested submenu (Payroll) */
+    .dropdown-submenu > .dropdown-menu {
+        position: static !important;
+        left: 0;
+        margin-left: 12px;
+        box-shadow: none;
+        border-left: 2px solid var(--primary-soft);
+        background: #f0f4f8;
+    }
+
+    .btn-primary-custom.ms-lg-3 {
+        margin: 15px 0 5px !important;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+        /* Responsive Adjustments */
+        @media (max-width: 991px) {
+            .hero-content h1 { font-size: 2.5rem; }
+            .floating-card { display: none; }
+        }
+
+        @media (max-width: 767px) {
+            .hero-section { padding: 100px 0 60px; }
+            .hero-content h1 { font-size: 2rem; }
+            .section-title h2 { font-size: 2rem; }
+            .section-padding { padding: 60px 0; }
+            .contact-form { padding: 30px 20px; }
+            .client-feedback-card {
+                width: 300px;
+                padding: 20px;
+                margin: 0 10px;
+            }
+        }
+
+        /* ===== Industries Dropdown (Screenshot model) ===== */
+.dropdown-industry-header {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    color: #6b7c93;
+    text-transform: uppercase;
+    padding: 8px 20px 10px;
+    margin-bottom: 4px;
+}
+
+.industry-item {
+    display: flex !important;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 12px 20px !important;
+    border-radius: 0;
+}
+
+.industry-item i {
+    font-size: 1.25rem;
+    color: var(--primary-color);
+    margin-top: 2px;
+    width: 24px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.industry-label {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.industry-title {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--secondary-color);
+    line-height: 1.3;
+}
+
+.industry-desc {
+    font-size: 0.78rem;
+    color: #6b7c93;
+    line-height: 1.35;
+    font-weight: 400;
+}
+
+.industry-item:hover {
+    background: #f0f5fb !important;
+}
+
+.industry-item:hover .industry-title {
+    color: var(--primary-color);
+}
+
+.industry-item:hover i {
+    color: var(--primary-accent);
+}
+
+.dropdown-divider-custom {
+    height: 1px;
+    background: #e8eef5;
+    margin: 8px 16px;
+}
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 991px) {
+            .od-hero { padding-top: 100px; text-align: center; }
+            .od-hero h1 { font-size: 2.5rem; }
+            .od-hero p { margin-left: auto; margin-right: auto; }
+            .hero-img-container { margin-top: 50px; }
+            .hero-img { height: 400px; }
+            .floating-stat-1 { left: 50%; transform: translateX(-50%); bottom: -30px; width: 85%; }
+            .floating-stat-2 { right: 50%; transform: translateX(50%); top: -25px; }
+
+            .zig-zag-row, .zig-zag-row.reverse {
+                flex-direction: column;
+                margin-bottom: 60px;
+            }
+            .zz-text { padding: 0 0 30px 0 !important; }
+            .zz-img-bg { height: 280px; }
+
+            .framework-step { flex-direction: column; align-items: center; text-align: center; }
+            .step-number::after { display: none; }
+            .step-content:hover { transform: translateY(-4px) translateX(0); }
+
+            .cta-box { padding: 50px 25px; }
+        }
+
+        @media (max-width: 575px) {
+            .od-hero h1 { font-size: 2rem; }
+            .section-header h2 { font-size: 2rem; }
+            .metric-card h3 { font-size: 2.2rem; }
+        }
+    </style>
+<!-- Favicon (Talennexus figure from tl.png) -->
+<link rel="icon" href="assets/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="512x512" href="assets/favicon-512.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<!-- Site components (header & footer) -->
+<script src="components/site-header.js?v=20261118"></script>
+<script src="components/site-footer.js?v=20261118"></script>
+<script src="components/site-contact.js?v=20261118"></script>
+</head>
+<body>
+
+
+    <!-- ==================== NAVIGATION ==================== -->
+    <site-header></site-header>
+    <!-- ==================== HERO ==================== -->
+    <section class="od-hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 hero-content">
+                    <span class="hero-badge"><i class="bi bi-diagram-3"></i> Organisation Development</span>
+                    <h1>Your People Grow, <span>Your Company Grows.</span></h1>
+                    <p>A company cannot grow if its people do not grow. Talennexus designs and implements Organisation Development programs aimed at enhancing overall corporate health, culture, and efficiency.</p>
+                    <div class="d-flex gap-3 flex-wrap justify-content-lg-start justify-content-center">
+                        <a href="#contact" class="btn btn-hero-fill">Start OD Assessment</a>
+                        <a href="#services" class="btn btn-hero-outline">Our Programs</a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-img-container">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=900&fit=crop" alt="Team collaboration and organisation development workshop" class="hero-img">
+                        <div class="floating-stat floating-stat-1">
+                            <div class="floating-stat-icon"><i class="bi bi-arrow-up-right"></i></div>
+                            <div>
+                                <strong style="display:block; font-size: 1.3rem; color: var(--primary-color);">38%</strong>
+                                <small style="color: var(--text-gray);">Avg. Engagement Uplift</small>
+                            </div>
+                        </div>
+                        <div class="floating-stat floating-stat-2">
+                            <div class="floating-stat-icon"><i class="bi bi-people-fill"></i></div>
+                            <div>
+                                <strong style="display:block; font-size: 1.3rem; color: var(--primary-color);">200+</strong>
+                                <small style="color: var(--text-gray);">Programs Delivered</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== OD PILLARS STRIP ==================== -->
+    <section id="pillars" class="pillars-strip">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 style="color: var(--primary-color); font-size: 2.2rem; margin-bottom: 12px;">Three Pillars of Our OD Approach</h2>
+                <p class="text-muted mx-auto" style="max-width: 650px;">Sustainable transformation requires aligned action across leadership, change readiness, and culture. We address all three.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="pillar-card">
+                        <div class="pillar-icon"><i class="bi bi-person-badge"></i></div>
+                        <h5>Leadership Capability</h5>
+                        <p>Building a pipeline of future-ready leaders who can navigate ambiguity and drive results.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="pillar-card">
+                        <div class="pillar-icon"><i class="bi bi-arrow-repeat"></i></div>
+                        <h5>Change Readiness</h5>
+                        <p>Equipping organizations to absorb disruption — structural, technological, or strategic — with minimal friction.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="pillar-card">
+                        <div class="pillar-icon"><i class="bi bi-heart-pulse"></i></div>
+                        <h5>Cultural Health</h5>
+                        <p>Fostering an environment where people are engaged, included, and motivated to perform at their best.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SERVICES ZIG-ZAG ==================== -->
+    <section id="services" class="services-od">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our OD Programs</h2>
+                <div class="divider"></div>
+                <p class="mt-4 text-muted">Three comprehensive programs designed to transform how your organization thinks, acts, and grows.</p>
+            </div>
+
+            <!-- Service 1: Leadership Development -->
+            <div class="zig-zag-row">
+                <div class="zz-text">
+                    <div class="service-icon-lg"><i class="bi bi-person-badge"></i></div>
+                    <span class="service-tag">Leadership Pipeline</span>
+                    <h3>Leadership Development</h3>
+                    <p class="text-muted mb-4">Training and mentoring high-potential employees to step into managerial and leadership roles.</p>
+                    <ul class="list-unstyled check-list">
+                        <li><i class="bi bi-check-lg"></i> Hi-Po identification through 9-box grid and psychometric assessment</li>
+                        <li><i class="bi bi-check-lg"></i> Executive coaching with certified leadership coaches</li>
+                        <li><i class="bi bi-check-lg"></i> Structured mentoring programs with senior leadership</li>
+                        <li><i class="bi bi-check-lg"></i> Business simulation exercises and action learning projects</li>
+                        <li><i class="bi bi-check-lg"></i> 360-degree feedback and personalized development plans</li>
+                    </ul>
+                </div>
+                <div class="zz-image">
+                    <div class="zz-blob"></div>
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=600&fit=crop" alt="Leadership development training session" class="zz-img-bg">
+                    <div class="zz-label"><i class="bi bi-star"></i> High-Potential Programs</div>
+                </div>
+            </div>
+
+            <!-- Service 2: Change Management -->
+            <div class="zig-zag-row reverse">
+                <div class="zz-text">
+                    <div class="service-icon-lg"><i class="bi bi-arrow-repeat"></i></div>
+                    <span class="service-tag">Transformation</span>
+                    <h3>Change Management</h3>
+                    <p class="text-muted mb-4">Guiding organizations through structural shifts, mergers, or technological adoptions to minimize disruption and employee resistance.</p>
+                    <ul class="list-unstyled check-list">
+                        <li><i class="bi bi-check-lg"></i> Stakeholder mapping and resistance analysis using ADKAR model</li>
+                        <li><i class="bi bi-check-lg"></i> Change impact assessment and communication planning</li>
+                        <li><i class="bi bi-check-lg"></i> Change champion network creation and training</li>
+                        <li><i class="bi bi-check-lg"></i> M&A cultural integration and alignment programs</li>
+                        <li><i class="bi bi-check-lg"></i> Digital transformation readiness workshops</li>
+                    </ul>
+                </div>
+                <div class="zz-image">
+                    <div class="zz-blob"></div>
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop" alt="Change management workshop with team" class="zz-img-bg">
+                    <div class="zz-label"><i class="bi bi-arrow-repeat"></i> Structural & Tech Shifts</div>
+                </div>
+            </div>
+
+            <!-- Service 3: Employee Engagement & Culture -->
+            <div class="zig-zag-row">
+                <div class="zz-text">
+                    <div class="service-icon-lg"><i class="bi bi-heart-pulse"></i></div>
+                    <span class="service-tag">Culture & Retention</span>
+                    <h3>Employee Engagement & Culture</h3>
+                    <p class="text-muted mb-4">Crafting initiatives that boost morale, improve retention rates, and foster an inclusive, high-performance workplace environment.</p>
+                    <ul class="list-unstyled check-list">
+                        <li><i class="bi bi-check-lg"></i> Organization-wide engagement surveys with actionable analytics</li>
+                        <li><i class="bi bi-check-lg"></i> DE&I strategy design and inclusive culture workshops</li>
+                        <li><i class="bi bi-check-lg"></i> Recognition and rewards program restructuring</li>
+                        <li><i class="bi bi-check-lg"></i> Manager effectiveness training for team engagement</li>
+                        <li><i class="bi bi-check-lg"></i> Pulse survey tools and real-time morale dashboards</li>
+                    </ul>
+                </div>
+                <div class="zz-image">
+                    <div class="zz-blob"></div>
+                    <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=800&h=600&fit=crop" alt="Employee engagement and team culture activities" class="zz-img-bg">
+                    <div class="zz-label"><i class="bi bi-heart"></i> Inclusive & High-Performance</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== OD FRAMEWORK ==================== -->
+    <section id="framework" class="framework-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our OD Framework</h2>
+                <div class="divider"></div>
+                <p class="mt-4 text-muted">A structured, evidence-based approach that moves from diagnosis to sustained transformation.</p>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-9">
+                    <div class="framework-step animate-on-scroll">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>Organisational Diagnosis</h4>
+                            <p>We conduct a comprehensive health check — analyzing leadership effectiveness, team dynamics, cultural norms, engagement levels, and structural inefficiencies using validated assessment tools, interviews, and data analytics.</p>
+                        </div>
+                    </div>
+                    <div class="framework-step animate-on-scroll">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>Strategy & Program Design</h4>
+                            <p>Based on diagnostic insights, we co-create a tailored OD intervention plan with clear objectives, KPIs, timelines, and stakeholder ownership — aligned to your business strategy and growth targets.</p>
+                        </div>
+                    </div>
+                    <div class="framework-step animate-on-scroll">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>Intervention & Facilitation</h4>
+                            <p>Our OD consultants and certified coaches deliver workshops, coaching sessions, culture labs, and change initiatives — working alongside your leaders to drive real behavioral and systemic change.</p>
+                        </div>
+                    </div>
+                    <div class="framework-step animate-on-scroll">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>Measurement & Sustenance</h4>
+                            <p>We measure impact against defined KPIs — engagement scores, retention rates, leadership readiness, and culture metrics — and build internal capability so improvements outlive our engagement.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== WHY US ==================== -->
+    <section id="why" class="why-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Talennexus OD</h2>
+                <div class="divider"></div>
+                <p class="mt-4 text-muted">Organisation development is not a workshop — it's a systemic transformation. Here's why companies trust us with it.</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="why-card">
+                        <div class="why-icon"><i class="bi bi-clipboard2-pulse"></i></div>
+                        <h5>Evidence-Based, Not Generic</h5>
+                        <p>Every program starts with real data from your organization — not off-the-shelf templates. We diagnose before we prescribe.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="why-card">
+                        <div class="why-icon"><i class="bi bi-puzzle"></i></div>
+                        <h5>Systemic Approach</h5>
+                        <p>We don't run isolated workshops. We address the interconnected system — leadership, structure, processes, and culture together.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="why-card">
+                        <div class="why-icon"><i class="bi bi-person-gear"></i></div>
+                        <h5>Certified Practitioners</h5>
+                        <p>Our OD consultants hold certifications in SHRM-SCP, CPC, ICF coaching, and change management methodologies.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="why-card">
+                        <div class="why-icon"><i class="bi bi-graph-up-arrow"></i></div>
+                        <h5>Measurable Outcomes</h5>
+                        <p>We tie every initiative to quantifiable KPIs — engagement scores, retention rates, leadership pipeline strength — and report progress monthly.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="why-card">
+                        <div class="why-icon"><i class="bi bi-mortarboard"></i></div>
+                        <h5>Internal Capability Building</h5>
+                        <p>We don't create dependency. We train your HR and line managers to sustain OD practices independently after our engagement ends.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="why-card">
+                        <div class="why-icon"><i class="bi bi-shield-check"></i></div>
+                        <h5>Confidential & Safe</h5>
+                        <p>Sensitive leadership assessments and culture diagnostics are handled with strict confidentiality protocols and NDAs at every level.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== METRICS ==================== -->
+    <section class="metrics-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-6">
+                    <div class="metric-card h-100 d-flex flex-column justify-content-center">
+                        <h3>200+</h3>
+                        <p>OD Programs<br>Delivered</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="metric-card border-start border-white border-opacity-10 h-100 d-flex flex-column justify-content-center">
+                        <h3>38%</h3>
+                        <p>Avg. Engagement<br>Score Uplift</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="metric-card border-start border-white border-opacity-10 h-100 d-flex flex-column justify-content-center">
+                        <h3>85%</h3>
+                        <p>Hi-Po Retention<br>After 12 Months</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="metric-card border-start border-white border-opacity-10 h-100 d-flex flex-column justify-content-center">
+                        <h3>4.8/5</h3>
+                        <p>Client NPS<br>Score</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FAQ ==================== -->
+    <section id="faq" class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <div class="divider"></div>
+                <p class="mt-4 text-muted">Common questions about our Organisation Development services.</p>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-9">
+                    <div class="accordion faq-accordion" id="faqAccordion">
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    How is OD different from standard training?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Standard training teaches skills. <strong>OD transforms systems</strong>. While training might teach a manager how to give feedback, OD addresses the entire performance management culture — the structure, the incentives, the leadership behaviors, and the norms that make feedback effective organization-wide. OD is about changing how the organization operates, not just what individuals know.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    How long does a typical OD engagement last?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    It depends on scope. A <strong>focused leadership development program</strong> might run 3–6 months. A <strong>full culture transformation</strong> typically takes 9–18 months. A <strong>change management intervention</strong> for a specific event (M&A, digital transformation) is usually 4–8 months. We always start with a diagnostic phase (2–4 weeks) to recommend the right timeline.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    Do you work with our existing HR team?
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <strong>Absolutely — that's our preferred model.</strong> We partner with your HR and L&D teams, building their capability to sustain OD practices. Our goal is to transfer knowledge, tools, and frameworks so your internal team can drive continuous improvement long after our formal engagement ends.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                    How do you measure OD success?
+                                </button>
+                            </h2>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    We define <strong>quantifiable KPIs upfront</strong> during the Strategy phase. Common metrics include: engagement survey scores (eNPS), voluntary attrition rate, leadership pipeline readiness %, 360-degree feedback score improvements, time-to-productivity for new managers, and inclusion index scores. We report monthly and conduct a formal impact assessment at program end.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                                    What if our leadership is resistant to change?
+                                </button>
+                            </h2>
+                            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <strong>Resistance is the most common challenge — and we're built for it.</strong> Our change management methodology (based on ADKAR and Kotter models) specifically addresses resistance at every level. We start with stakeholder mapping, build a change champion network, and create quick wins that demonstrate value before asking for larger commitments. We never force change — we create the conditions where people want to change.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">
+                                    Can you help with post-merger cultural integration?
+                                </button>
+                            </h2>
+                            <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <strong>Yes, this is one of our core strengths.</strong> We conduct cultural due diligence pre-merger, identify value gaps and alignment areas, design the integrated culture blueprint, and facilitate joint workshops to align leadership and teams. We typically run a 6–12 month integration program with milestone-based progress tracking.
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== TESTIMONIALS ==================== -->
+    <section class="testimonial-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Trusted by CHROs & Business Leaders</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="testimonial-card">
+                        <i class="bi bi-quote quote-icon"></i>
+                        <p class="testimonial-text">"Talennexus didn't just train our managers — they transformed how our leadership team operates. The 360-feedback program alone changed our meeting culture entirely."</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&h=100&fit=crop&crop=face" alt="Arun K." class="testimonial-avatar">
+                            <div>
+                                <div class="testimonial-name">Arun Kapoor</div>
+                                <div class="testimonial-role">CHRO, InfoTech Solutions</div>
+                                <span class="testimonial-tag"><i class="bi bi-person-badge me-1"></i>Leadership Development — IT</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="testimonial-card">
+                        <i class="bi bi-quote quote-icon"></i>
+                        <p class="testimonial-text">"Our merger was failing because of cultural clash. Talennexus designed and facilitated a 9-month integration program that turned two hostile teams into one cohesive unit."</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop&crop=face" alt="Meera S." class="testimonial-avatar">
+                            <div>
+                                <div class="testimonial-name">Meera Sharma</div>
+                                <div class="testimonial-role">CEO, FinEdge Group</div>
+                                <span class="testimonial-tag"><i class="bi bi-arrow-repeat me-1"></i>Change Management — M&A</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="testimonial-card">
+                        <i class="bi bi-quote quote-icon"></i>
+                        <p class="testimonial-text">"Our engagement score jumped from 3.2 to 4.6 in 8 months. The retention rate for top performers improved by 42%. Best OD investment we've ever made."</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face" alt="Ravi P." class="testimonial-avatar">
+                            <div>
+                                <div class="testimonial-name">Ravi Patil</div>
+                                <div class="testimonial-role">VP People, MedVista Healthcare</div>
+                                <span class="testimonial-tag"><i class="bi bi-heart-pulse me-1"></i>Engagement & Culture — Healthcare</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CTA ==================== -->
+    <section id="contact" class="cta-section">
+        <div class="container">
+            <div class="cta-box">
+                <div class="cta-circle c1"></div>
+                <div class="cta-circle c2"></div>
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <h2 style="color: var(--primary-color); margin-bottom: 15px;">Start Your OD Assessment</h2>
+                        <p class="text-muted mb-5">Tell us about your organization's challenges — we'll respond within 24 hours with a diagnostic plan tailored to your situation.</p>
+
+                        <form id="odForm">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control form-control-custom" placeholder="Full Name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="email" class="form-control form-control-custom" placeholder="Work Email" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control form-control-custom" placeholder="Company Name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control form-control-custom" placeholder="Employee Strength">
+                                </div>
+                                <div class="col-md-6">
+                                    <select class="form-control form-control-custom">
+                                        <option>Primary OD need?</option>
+                                        <option>Leadership Development</option>
+                                        <option>Change Management</option>
+                                        <option>Employee Engagement & Culture</option>
+                                        <option>Post-Merger Integration</option>
+                                        <option>Full OD Diagnostic</option>
+                                        <option>Not sure — need consultation</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <select class="form-control form-control-custom">
+                                        <option>Timeline?</option>
+                                        <option>Immediate (within 1 month)</option>
+                                        <option>1–3 months</option>
+                                        <option>3–6 months</option>
+                                        <option>6–12 months</option>
+                                        <option>Flexible</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <textarea class="form-control form-control-custom" rows="4" placeholder="Briefly describe the challenges you're facing — leadership gaps, cultural issues, upcoming changes, retention concerns..."></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn-submit">
+                                        Request OD Assessment <i class="bi bi-arrow-right-short ms-2"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- ==================== FOOTER ==================== -->
+    <!-- Contact form (Business / Individual → Zoho) -->
+    <site-contact id="contact-form"></site-contact>
+
+    <site-footer></site-footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offset = 80;
+                    const position = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                    window.scrollTo({ top: position, behavior: 'smooth' });
+                }
+                const navCollapse = document.getElementById('odNav');
+                if (navCollapse && navCollapse.classList.contains('show')) {
+                    new bootstrap.Collapse(navCollapse).hide();
+                }
+            });
+        });
+
+        // Active nav on scroll
+        const sections = document.querySelectorAll('section[id]');
+        window.addEventListener('scroll', () => {
+            const scrollY = window.pageYOffset + 120;
+            sections.forEach(section => {
+                const top = section.offsetTop;
+                const height = section.offsetHeight;
+                const id = section.getAttribute('id');
+                const link = document.querySelector(`.nav-link-white[href="#${id}"]`);
+                if (link) {
+                    if (scrollY >= top && scrollY < top + height) {
+                        document.querySelectorAll('.nav-link-white').forEach(l => l.classList.remove('active'));
+                        link.classList.add('active');
+                    }
+                }
+            });
+        });
+
+        // Form handler
+        document.getElementById('odForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = this.querySelector('button');
+            const originalText = btn.innerHTML;
+
+            btn.innerHTML = 'Assessment Requested <i class="bi bi-check-circle-fill ms-2"></i>';
+            btn.style.background = '#4a90d9';
+            btn.style.color = '#FFFFFF';
+
+            setTimeout(() => {
+                alert("Thank you! Our OD team will contact you within 24 hours with a diagnostic plan.");
+                this.reset();
+                btn.innerHTML = originalText;
+                btn.style.background = '';
+                btn.style.color = '';
+            }, 1500);
+        });
+
+        // Scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+        ['.framework-step', '.zig-zag-row', '.why-card', '.testimonial-card', '.accordion-item', '.pillar-card'].forEach(selector => {
+            document.querySelectorAll(selector).forEach((el, i) => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = `all 0.6s ease-out ${i * 0.1}s`;
+                observer.observe(el);
+            });
+        });
+
+        // White navbar scroll effect
+        const navbar = document.querySelector('.navbar-white');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>

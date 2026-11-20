@@ -1,0 +1,10 @@
+
+User-agent: *
+Allow: /
+
+Disallow: /wp/
+Disallow: /checks/lp-id%20verification
+Disallow: /checks/lp-reference
+
+Sitemap: https://www.verifitech.com/sitemap.xml
+

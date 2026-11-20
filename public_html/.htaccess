@@ -1,0 +1,97 @@
+RewriteEngine On
+
+# ------------------------------------------------------------------
+# Block private files: server code, package files and the blog database
+# (blog/data has the admin login). Visitors get the 404 page.
+# ------------------------------------------------------------------
+RewriteRule ^(server\.js|package(-lock)?\.json|node_modules(/.*)?|blog/data(/.*)?)$ - [R=404,L,NC]
+
+# ------------------------------------------------------------------
+# One official address: https://talennexus.com  (no "www", always https)
+# ------------------------------------------------------------------
+# 1) www.talennexus.com/...  ->  https://talennexus.com/...
+RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L,NE]
+
+# 2) http://talennexus.com/...  ->  https://talennexus.com/...
+#    (X-Forwarded-Proto check prevents a redirect loop behind Hostinger's CDN/proxy)
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L,NE]
+
+# ------------------------------------------------------------------
+# Old file names (capitals / spaces / misspellings) -> current names (301)
+# Keeps old links, bookmarks and search results working.
+# The first matching rule wins, so specific rules come first.
+# ------------------------------------------------------------------
+RedirectMatch 301 "^/[Cc]ontact/contact(\.html)?$"                   /contact
+RedirectMatch 301 "^/services/BFSI hiring(\.html)?$"                  /bfsi-hiring
+RedirectMatch 301 "^/services/Exit interview(\.html)?$"               /exit-interview
+RedirectMatch 301 "^/services/HR Consulting(\.html)?$"                /hr-consulting
+RedirectMatch 301 "^/services/Leadership(\.html)?$"                   /leadership
+RedirectMatch 301 "^/services/Technology hiring(\.html)?$"            /technology-hiring
+RedirectMatch 301 "^/services/self skill(\.html)?$"                   /self-skill
+RedirectMatch 301 "^/services/recuirtnmmet ?(\.html)?$"               /recruitment
+RedirectMatch 301 "^/services/complinace(\.html)?$"                   /compliance
+RedirectMatch 301 "^/services/it(-hiring)?(\.html)?$"                 /it
+RedirectMatch 301 "^/organization/oragnization[ -]development(\.html)?$" /organization-development
+RedirectMatch 301 "^/assest/TL\.png$"                                 /assets/tl.png
+RedirectMatch 301 "^/assest/TL-logo\.png$"                            /assets/tl-logo.png
+RedirectMatch 301 "^/assest/Talennexus OG\.png$"                      /assets/talennexus-og.png
+RedirectMatch 301 "^/assest/(.*)$"                                    /assets/$1
+
+# Service pages moved out of the /services/ and /organization/ folders:
+#   /services/staffingsupport  ->  /staffingsupport
+#   /organization/organization-development  ->  /organization-development
+RedirectMatch 301 "^/services/([^/]+?)(\.html)?$"                     /$1
+RedirectMatch 301 "^/organization/([^/]+?)(\.html)?$"                 /$1
+RedirectMatch 301 "^/(services|organization)/?$"                      /
+
+# Location pages and Contact moved from folders to single pages:
+#   /recruitment-agency-in-chennai/  ->  /recruitment-agency-in-chennai
+#   /contact/                        ->  /contact
+RedirectMatch 301 "^/Contact/?(index(\.html)?)?$"                    /contact
+RedirectMatch 301 "^/((?:it-)?recruitment-agency-in-[a-z]+|contact)/(index(\.html)?)?$"  /$1
+
+# Home page has one clean address: /index.html or /index  ->  /
+# (also inside folders: /job_search/index.html -> /job_search/)
+RewriteCond %{THE_REQUEST} \s/+((?:[^?\s]*/)?)index(?:\.html)?[\s?] [NC]
+RewriteRule ^ /%1 [R=301,L,NE]
+
+# No trailing slash on pages: /recruitment-agency-in-chennai/ -> /recruitment-agency-in-chennai
+# (only when it is not a real folder, e.g. /assets/ is left alone)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)/$ /$1 [R=301,L]
+
+# Recruitment Agency in India lives at /it/recruitment-agency-in-india
+# (file: recruitment-agency-in-india.html in the main folder - no /it/ folder needed, so /it keeps working)
+RewriteCond %{THE_REQUEST} \s/+(?:it-)?recruitment-agency-in-india(?:\.html)?/?[\s?] [NC]
+RewriteRule ^ /it/recruitment-agency-in-india [R=301,L]
+RewriteRule ^it/recruitment-agency-in-india$ recruitment-agency-in-india.html [L]
+
+# Redirect .html to extensionless URL
+RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
+RewriteRule ^(.+)\.html$ /$1 [R=301,L]
+
+# Serve .html when extension is omitted
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.+?)/?$ $1.html [L]
+
+# Custom 404 page
+ErrorDocument 404 /404.html
+
+# ------------------------------------------------------------------
+# Browser caching: pages, scripts and styles are always checked for a
+# newer version (so updates show without Ctrl+Shift+R).
+# Images, fonts and icons are cached for 30 days (faster site).
+# ------------------------------------------------------------------
+<IfModule mod_headers.c>
+  <FilesMatch "\.(html|js|css)$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+  <FilesMatch "\.(png|jpe?g|gif|webp|avif|svg|ico|woff2?)$">
+    Header set Cache-Control "public, max-age=2592000"
+  </FilesMatch>
+</IfModule>
