@@ -58,3 +58,4 @@ These are private and listed in `.gitignore`:
 - `node_modules/` and `.zip` files
 
 On a new server the blog admin login has to be set up again.
+# talennexus_host
