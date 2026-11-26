@@ -29,8 +29,14 @@ RedirectMatch 301 "^/services/BFSI hiring(\.html)?$"                  /bfsi-hiri
 RedirectMatch 301 "^/services/Exit interview(\.html)?$"               /exit-interview
 RedirectMatch 301 "^/services/HR Consulting(\.html)?$"                /hr-consulting
 RedirectMatch 301 "^/services/Leadership(\.html)?$"                   /leadership
-RedirectMatch 301 "^/services/Technology hiring(\.html)?$"            /technology-hiring
-RedirectMatch 301 "^/services/self skill(\.html)?$"                   /self-skill
+RedirectMatch 301 "^/services/Technology hiring(\.html)?$"            /it
+# Workforce Solutions page was removed (industries now have white/blue-collar tabs)
+RedirectMatch 301 "^/workforce_solutions(\.html)?/?$"                /#industries
+# Technology Hiring was merged into the IT page (white-collar + blue-collar IT jobs)
+RedirectMatch 301 "^/technology-hiring(\.html)?/?$"                  /it
+RedirectMatch 301 "^/services/self skill(\.html)?$"                   /soft-skill
+# Self Skill Training was renamed Soft Skill Training
+RedirectMatch 301 "^/self-skill(\.html)?/?$"                         /soft-skill
 RedirectMatch 301 "^/services/recuirtnmmet ?(\.html)?$"               /recruitment
 RedirectMatch 301 "^/services/complinace(\.html)?$"                   /compliance
 RedirectMatch 301 "^/services/it(-hiring)?(\.html)?$"                 /it

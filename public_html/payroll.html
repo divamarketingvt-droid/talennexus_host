@@ -5,8 +5,8 @@
 <script src="components/site-gtm.js?v=20261118"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Talennexus Payroll Services — Accurate, compliant, and hassle-free payroll management for enterprises.">
-    <title>Payroll Services | Talennexus</title>
+    <meta name="description" content="Outsourced payroll for Indian businesses — salary processing, PF, ESI, PT and TDS compliance, online payslips, Form 16, leave tracking and on-time salaries.">
+    <title>Payroll Services in India | PF, ESI &amp; TDS | Talennexus</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
@@ -30,6 +30,8 @@
             --border-radius: 16px;
             --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
         }
+
+        html { scroll-behavior: smooth; }
 
         body {
             font-family: 'Inter', sans-serif;
@@ -539,123 +541,67 @@
         .pain-card h5 { color: var(--secondary-color); font-weight: 700; margin-bottom: 10px; font-size: 1.1rem; }
         .pain-card p { color: var(--text-gray); font-size: 0.93rem; margin: 0; }
 
-        /* ========== WHAT'S INCLUDED (NEW SECTION FROM IMAGE) ========== */
-        .whats-included-section {
-            padding: 90px 0;
-            background: var(--white);
-            position: relative;
-            overflow: hidden;
+        /* ========== PAYROLL SERVICES EXPLORER (list left, detail panel right) ========== */
+        .px-section { padding: 90px 0; background: linear-gradient(180deg, #ffffff 0%, #f5f8fc 100%); }
+        .px-head { max-width: 760px; margin-bottom: 40px; }
+        .px-eyebrow { display: inline-flex; align-items: center; gap: 10px; font-size: .8rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--primary-accent); margin-bottom: 12px; }
+        .px-eyebrow::after { content: ''; width: 46px; height: 2px; background: var(--primary-accent); }
+        .px-head h2 { font-size: clamp(2rem, 3.6vw, 2.8rem); color: var(--text-dark); font-weight: 800; margin-bottom: 14px; }
+        .px-head p { color: var(--text-gray); font-size: 1.05rem; margin: 0; }
+        .px { display: grid; grid-template-columns: 360px 1fr; gap: 28px; align-items: stretch; }
+        .px-list { display: flex; flex-direction: column; gap: 10px; }
+        .px-tab { display: flex; align-items: center; gap: 16px; width: 100%; text-align: left; background: #fff; border: 1px solid #d9e5f2; border-radius: 18px;
+            padding: 16px 18px; cursor: pointer; font-family: inherit; transition: all .25s ease; }
+        .px-tab:hover { border-color: var(--primary-accent); transform: translateX(4px); }
+        .px-tab .n { font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 1.05rem; width: 46px; height: 46px; border-radius: 14px; display: flex; align-items: center; justify-content: center;
+            background: var(--bg-subtle); color: #2f6fb6; flex-shrink: 0; transition: all .25s ease; }
+        .px-tab .t b { display: block; font-family: 'Poppins', sans-serif; font-size: 1.02rem; color: #0f2440; line-height: 1.25; }
+        .px-tab .t small { color: var(--text-gray); font-size: .82rem; }
+        .px-tab .chev { margin-left: auto; color: #9fb3c8; transition: all .25s ease; }
+        .px-tab.active { background: #14355d; border-color: #14355d; box-shadow: 0 14px 30px rgba(20,53,93,.22); transform: translateX(6px); }
+        .px-tab.active .n { background: var(--gradient-primary); color: #fff; }
+        .px-tab.active .t b { color: #fff; }
+        .px-tab.active .t small { color: #b9cbe0; }
+        .px-tab.active .chev { color: #fff; }
+        .px-panel { position: relative; border-radius: 26px; overflow: hidden; color: #c9d7e8; padding: 40px 42px; scroll-margin-top: 110px;
+            background: radial-gradient(700px 360px at 100% 0%, rgba(74,144,217,.35) 0%, rgba(74,144,217,0) 60%), linear-gradient(150deg, #0d2442 0%, #14355d 100%);
+            box-shadow: 0 22px 50px rgba(20, 53, 93, 0.18); }
+        .px-panel[hidden] { display: none; }
+        .px-panel.show { animation: pxIn .35s ease; }
+        @keyframes pxIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+        .px-panel .big { position: absolute; right: 26px; bottom: -28px; font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 11rem; line-height: 1; color: rgba(255,255,255,.05); pointer-events: none; }
+        .px-panel .badge-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; position: relative; }
+        .px-panel .bdg { display: inline-flex; align-items: center; gap: 7px; padding: 6px 14px; border-radius: 50px; font-size: .78rem; font-weight: 700;
+            background: rgba(74,144,217,.18); border: 1px solid rgba(156,198,242,.35); color: #9cc6f2; }
+        .px-panel h3 { color: #fff; font-size: clamp(1.7rem, 3vw, 2.4rem); margin: 0 0 10px; position: relative; }
+        .px-panel .lead { font-size: 1.02rem; max-width: 640px; margin-bottom: 26px; position: relative; color: #c9d7e8; }
+        .px-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; margin-bottom: 30px; position: relative; }
+        .px-cols h4 { color: #fff; font-size: .82rem; letter-spacing: .12em; text-transform: uppercase; margin-bottom: 12px; font-family: 'Inter', sans-serif; font-weight: 700; }
+        .px-cols h4 i { color: #9cc6f2; margin-right: 6px; }
+        .px-cols ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 9px; }
+        .px-cols li { display: flex; align-items: flex-start; gap: 10px; font-size: .93rem; color: #e3ecf7; line-height: 1.5; }
+        .px-cols li i { color: #9cc6f2; margin-top: 2px; }
+        .px-actions { display: flex; flex-wrap: wrap; gap: 12px; position: relative; }
+        .px-actions a { display: inline-flex; align-items: center; gap: 9px; padding: 13px 24px; border-radius: 50px; font-weight: 600; text-decoration: none; transition: all .25s ease; }
+        .px-actions .p { background: #fff; color: #14355d; }
+        .px-actions .p:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(0,0,0,.25); color: #14355d; }
+        .px-actions .s { border: 1.5px solid rgba(255,255,255,.45); color: #fff; }
+        .px-actions .s:hover { background: rgba(255,255,255,.1); color: #fff; }
+        @media (max-width: 991.98px) {
+            .px { grid-template-columns: 1fr; }
+            .px-list { flex-direction: row; overflow-x: auto; padding-bottom: 6px; scrollbar-width: none; }
+            .px-list::-webkit-scrollbar { display: none; }
+            .px-tab { flex: 0 0 auto; width: auto; padding: 12px 16px; }
+            .px-tab:hover, .px-tab.active { transform: none; }
+            .px-tab .chev, .px-tab .t small { display: none; }
+            .px-tab .n { width: 36px; height: 36px; font-size: .9rem; border-radius: 10px; }
         }
-
-        .whats-included-section::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0;
-            height: 1px;
-            background: linear-gradient(to right, transparent, var(--bg-subtle), transparent);
-        }
-
-        .included-header {
-            text-align: center;
-            max-width: 680px;
-            margin: 0 auto 60px;
-        }
-
-        .included-header h2 {
-            font-size: 2.6rem;
-            color: var(--primary-color);
-            margin-bottom: 16px;
-        }
-
-        .included-header .divider {
-            height: 4px;
-            width: 80px;
-            background: var(--gradient-primary);
-            margin: 0 auto;
-            border-radius: 2px;
-        }
-
-        .included-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 28px;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .included-card {
-            background: var(--bg-light);
-            border-radius: var(--border-radius);
-            padding: 36px 30px;
-            display: flex;
-            align-items: flex-start;
-            gap: 20px;
-            border: 1px solid transparent;
-            transition: var(--transition);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .included-card::after {
-            content: '';
-            position: absolute;
-            bottom: 0; left: 0; right: 0;
-            height: 3px;
-            background: var(--gradient-primary);
-            transform: scaleX(0);
-            transition: transform 0.4s ease;
-            transform-origin: left;
-        }
-
-        .included-card:hover::after { transform: scaleX(1); }
-
-        .included-card:hover {
-            background: var(--white);
-            border-color: rgba(74, 144, 217, 0.15);
-            box-shadow: var(--shadow-blue);
-            transform: translateY(-5px);
-        }
-
-        .included-card.span-full {
-            grid-column: 1 / -1;
-            max-width: 480px;
-            justify-self: center;
-            width: 100%;
-        }
-
-        .included-check {
-            width: 48px;
-            height: 48px;
-            min-width: 48px;
-            background: var(--gradient-primary);
-            border-radius: 14px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--white);
-            font-size: 22px;
-            transition: var(--transition);
-            box-shadow: 0 4px 12px rgba(74, 144, 217, 0.2);
-        }
-
-        .included-card:hover .included-check {
-            transform: scale(1.08) rotate(-3deg);
-            box-shadow: 0 6px 20px rgba(74, 144, 217, 0.3);
-        }
-
-        .included-card h5 {
-            color: var(--primary-color);
-            font-weight: 700;
-            font-size: 1.05rem;
-            margin-bottom: 6px;
-            line-height: 1.35;
-        }
-
-        .included-card p {
-            color: var(--text-gray);
-            font-size: 0.9rem;
-            margin: 0;
-            line-height: 1.65;
+        @media (max-width: 575.98px) {
+            .px-section { padding: 64px 0; }
+            .px-panel { padding: 30px 22px; border-radius: 20px; }
+            .px-cols { grid-template-columns: 1fr; gap: 20px; }
+            .px-panel .big { font-size: 7rem; }
+            .px-actions a { width: 100%; justify-content: center; }
         }
 
         /* ========== SERVICES ZIG-ZAG ========== */
@@ -1383,8 +1329,6 @@
             .floating-stat-1 { left: 50%; transform: translateX(-50%); bottom: -30px; width: 85%; }
             .floating-stat-2 { right: 50%; transform: translateX(50%); top: -25px; }
 
-            .included-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
-            .included-card.span-full { grid-column: auto; max-width: none; }
 
             .timeline::before { left: 20px; }
             .timeline-dot { left: 20px; }
@@ -1408,11 +1352,8 @@
         @media (max-width: 575px) {
             .payroll-hero h1 { font-size: 2rem; }
             .section-header h2 { font-size: 2rem; }
-            .included-header h2 { font-size: 1.8rem; }
             .metric-card h3 { font-size: 2.2rem; }
 
-            .included-grid { grid-template-columns: 1fr; }
-            .included-card.span-full { max-width: none; }
         }
     </style>
 <!-- Favicon (Talennexus figure from tl.png) -->
@@ -1424,6 +1365,78 @@
 <script src="components/site-header.js?v=20261118"></script>
 <script src="components/site-footer.js?v=20261118"></script>
 <script src="components/site-contact.js?v=20261118"></script>
+<link rel="canonical" href="https://talennexus.com/payroll">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Talennexus">
+<meta property="og:title" content="Payroll Services in India | PF, ESI &amp; TDS | Talennexus">
+<meta property="og:description" content="Outsourced payroll for Indian businesses — salary processing, PF, ESI, PT and TDS compliance, online payslips, Form 16, leave tracking and on-time salaries.">
+<meta property="og:url" content="https://talennexus.com/payroll">
+<meta property="og:image" content="https://talennexus.com/assets/talennexus-og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Payroll Services in India | PF, ESI &amp; TDS | Talennexus">
+<meta name="twitter:description" content="Outsourced payroll for Indian businesses — salary processing, PF, ESI, PT and TDS compliance, online payslips, Form 16, leave tracking and on-time salaries.">
+<meta name="twitter:image" content="https://talennexus.com/assets/talennexus-og.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "Payroll Services",
+      "serviceType": "Payroll outsourcing",
+      "description": "Outsourced payroll for Indian businesses — salary processing, PF, ESI, PT and TDS compliance, online payslips, Form 16, leave tracking and on-time salaries.",
+      "url": "https://talennexus.com/payroll",
+      "provider": {
+        "@id": "https://talennexus.com/#organization"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "India"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://talennexus.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Payroll Services",
+          "item": "https://talennexus.com/payroll"
+        }
+      ]
+    },
+    {
+      "@type": "EmploymentAgency",
+      "@id": "https://talennexus.com/#organization",
+      "name": "Talennexus",
+      "url": "https://talennexus.com/",
+      "logo": "https://talennexus.com/assets/tl-logo.png",
+      "image": "https://talennexus.com/assets/talennexus-og.png",
+      "description": "HR partner for Indian businesses offering recruitment, contract staffing, payroll, campus hiring, training and Virtual HR.",
+      "telephone": "+91-99529-78818",
+      "email": "connect@talennexus.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Module No.17, SDF-III, MEPZ SEZ, Tambaram",
+        "addressLocality": "Chennai",
+        "addressRegion": "Tamil Nadu",
+        "postalCode": "600045",
+        "addressCountry": "IN"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "India"
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -1454,15 +1467,15 @@
                         <div class="floating-stat floating-stat-1">
                             <div class="floating-stat-icon"><i class="bi bi-shield-check"></i></div>
                             <div>
-                                <strong style="display:block; font-size: 1.3rem; color: var(--primary-color);">100%</strong>
-                                <small style="color: var(--text-gray);">Compliance Accuracy</small>
+                                <strong style="display:block; font-size: 1.3rem; color: var(--primary-color);">Compliant</strong>
+                                <small style="color: var(--text-gray);">PF, ESI, PT &amp; TDS handled</small>
                             </div>
                         </div>
                         <div class="floating-stat floating-stat-2">
                             <div class="floating-stat-icon"><i class="bi bi-clock-history"></i></div>
                             <div>
-                                <strong style="display:block; font-size: 1.3rem; color: var(--primary-color);">Zero</strong>
-                                <small style="color: var(--text-gray);">Processing Delays</small>
+                                <strong style="display:block; font-size: 1.3rem; color: var(--primary-color);">On-Time</strong>
+                                <small style="color: var(--text-gray);">Fixed monthly pay calendar</small>
                             </div>
                         </div>
                     </div>
@@ -1504,54 +1517,192 @@
         </div>
     </section>
 
-    <!-- ==================== WHAT'S INCLUDED (NEW — FROM IMAGE) ==================== -->
-    <section class="whats-included-section" id="included">
+    <!-- ==================== PAYROLL SERVICES EXPLORER ==================== -->
+    <section class="px-section" id="included">
         <div class="container">
-            <div class="included-header">
-                <h2>Attendance & Payroll Management</h2>
-                <div class="divider"></div>
-                <p class="mt-4 text-muted">Everything you need for seamless payroll operations — from timesheet tracking to tax documentation, all under one roof.</p>
+            <div class="px-head">
+                <div class="px-eyebrow">What's Included</div>
+                <h2>Attendance &amp; Payroll Management</h2>
+                <p>Choose a service to see what it covers and how it helps your business.</p>
             </div>
-
-            <div class="included-grid">
-                <!-- Item 1 -->
-                <div class="included-card">
-                    <div class="included-check"><i class="bi bi-check-lg"></i></div>
-                    <div>
-                        <h5>Leave & Timesheet Tracking</h5>
-                        <p>Real-time attendance monitoring with automated leave balance calculations, timesheet approvals, and seamless integration into payroll processing.</p>
-                    </div>
+            <div class="px">
+                <div class="px-list" role="tablist" aria-label="Payroll services">
+                    <button type="button" class="px-tab active" role="tab" id="px-tab-leave-time-tracking" aria-controls="leave-time-tracking" aria-selected="true" tabindex="0">
+                        <span class="n">01</span><span class="t"><b>Leave &amp; Timesheet Tracking</b><small>Attendance · Leave · Timesheets</small></span><i class="bi bi-chevron-right chev"></i>
+                    </button>
+                    <button type="button" class="px-tab" role="tab" id="px-tab-online-tax-reports" aria-controls="online-tax-reports" aria-selected="false" tabindex="-1">
+                        <span class="n">02</span><span class="t"><b>Online Tax Reports &amp; IT Declaration</b><small>TDS · IT Declaration · Returns</small></span><i class="bi bi-chevron-right chev"></i>
+                    </button>
+                    <button type="button" class="px-tab" role="tab" id="px-tab-salary-slip-form16" aria-controls="salary-slip-form16" aria-selected="false" tabindex="-1">
+                        <span class="n">03</span><span class="t"><b>Online Salary Slip &amp; Form 16</b><small>Payslips · Form 16 · Self-service</small></span><i class="bi bi-chevron-right chev"></i>
+                    </button>
+                    <button type="button" class="px-tab" role="tab" id="px-tab-on-time-disbursement" aria-controls="on-time-disbursement" aria-selected="false" tabindex="-1">
+                        <span class="n">04</span><span class="t"><b>On-Time Payment Disbursement</b><small>Bank Transfer · Statutory Dues</small></span><i class="bi bi-chevron-right chev"></i>
+                    </button>
+                    <button type="button" class="px-tab" role="tab" id="px-tab-payroll-tax-queries" aria-controls="payroll-tax-queries" aria-selected="false" tabindex="-1">
+                        <span class="n">05</span><span class="t"><b>Handling Payroll &amp; Tax Queries</b><small>Employee Helpdesk · Support</small></span><i class="bi bi-chevron-right chev"></i>
+                    </button>
                 </div>
-                <!-- Item 2 -->
-                <div class="included-card">
-                    <div class="included-check"><i class="bi bi-check-lg"></i></div>
-                    <div>
-                        <h5>Online Tax Reports & IT Declaration</h5>
-                        <p>Generate statutory tax reports instantly and enable employees to submit investment declarations online for accurate TDS computation.</p>
+                <div class="px-panels">
+                    <div class="px-panel show" role="tabpanel" id="leave-time-tracking" aria-labelledby="px-tab-leave-time-tracking">
+                        <span class="big" aria-hidden="true">01</span>
+                        <div class="badge-row"><span class="bdg"><i class="bi bi-clock-history"></i> Attendance</span><span class="bdg"><i class="bi bi-calendar-check"></i> Leave Policy</span></div>
+                        <h3>Leave &amp; Timesheet Tracking</h3>
+                        <p class="lead">Accurate payroll starts with accurate attendance. We track leave, working hours and timesheets in one place, so every salary is calculated on the right number of days and hours.</p>
+                        <div class="px-cols">
+                            <div>
+                                <h4><i class="bi bi-list-check"></i> What we cover</h4>
+                                <ul>
+                                    <li><i class="bi bi-check2-circle"></i>Daily attendance capture from biometric devices, mobile check-in or web login</li>
+                                    <li><i class="bi bi-check2-circle"></i>Leave policy setup: casual, sick, earned, maternity/paternity, comp-off and LOP</li>
+                                    <li><i class="bi bi-check2-circle"></i>Automatic leave balance calculation, carry-forward and encashment rules</li>
+                                    <li><i class="bi bi-check2-circle"></i>Online leave requests with manager approval workflow</li>
+                                    <li><i class="bi bi-check2-circle"></i>Timesheet entry and approval for hourly, shift and project-based staff</li>
+                                    <li><i class="bi bi-check2-circle"></i>Overtime, late-mark and half-day rules applied automatically</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4><i class="bi bi-graph-up-arrow"></i> How it helps you</h4>
+                                <ul>
+                                    <li><i class="bi bi-check2-circle"></i>Attendance flows straight into payroll — no manual re-entry</li>
+                                    <li><i class="bi bi-check2-circle"></i>Fewer salary errors and disputes over leave and LOP days</li>
+                                    <li><i class="bi bi-check2-circle"></i>Employees see their own leave balance anytime</li>
+                                    <li><i class="bi bi-check2-circle"></i>Month-end attendance reports ready for HR and managers</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="px-actions">
+                            <a class="p" href="contact">Talk to a Payroll Expert <i class="bi bi-arrow-right"></i></a>
+                            <a class="s" href="#process"><i class="bi bi-diagram-3"></i> See our payroll process</a>
+                        </div>
                     </div>
-                </div>
-                <!-- Item 3 -->
-                <div class="included-card">
-                    <div class="included-check"><i class="bi bi-check-lg"></i></div>
-                    <div>
-                        <h5>Online Salary Slip & Form 16</h5>
-                        <p>Employees access detailed salary slips digitally every month, with automated Form 16 generation at year-end for hassle-free tax filing.</p>
+                    <div class="px-panel" role="tabpanel" id="online-tax-reports" aria-labelledby="px-tab-online-tax-reports" hidden>
+                        <span class="big" aria-hidden="true">02</span>
+                        <div class="badge-row"><span class="bdg"><i class="bi bi-percent"></i> TDS</span><span class="bdg"><i class="bi bi-file-earmark-text"></i> Form 24Q</span></div>
+                        <h3>Online Tax Reports &amp; IT Declaration</h3>
+                        <p class="lead">We manage the full income-tax cycle for your employees — from investment declarations at the start of the year to proof verification and statutory tax reports.</p>
+                        <div class="px-cols">
+                            <div>
+                                <h4><i class="bi bi-list-check"></i> What we cover</h4>
+                                <ul>
+                                    <li><i class="bi bi-check2-circle"></i>Online investment declaration window for employees (80C, 80D, HRA, home loan, etc.)</li>
+                                    <li><i class="bi bi-check2-circle"></i>Old vs new tax regime comparison to help employees choose</li>
+                                    <li><i class="bi bi-check2-circle"></i>Investment proof submission and verification before year-end</li>
+                                    <li><i class="bi bi-check2-circle"></i>Monthly TDS computation based on declared and verified investments</li>
+                                    <li><i class="bi bi-check2-circle"></i>Quarterly TDS returns (24Q) and challan reconciliation</li>
+                                    <li><i class="bi bi-check2-circle"></i>Statutory reports for PF, ESI, Professional Tax and LWF</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4><i class="bi bi-graph-up-arrow"></i> How it helps you</h4>
+                                <ul>
+                                    <li><i class="bi bi-check2-circle"></i>Correct TDS every month — no big deductions at year-end</li>
+                                    <li><i class="bi bi-check2-circle"></i>Reduced risk of notices and penalties from late or wrong filing</li>
+                                    <li><i class="bi bi-check2-circle"></i>Employees declare investments online without paperwork</li>
+                                    <li><i class="bi bi-check2-circle"></i>All tax reports available for download whenever you need them</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="px-actions">
+                            <a class="p" href="contact">Talk to a Payroll Expert <i class="bi bi-arrow-right"></i></a>
+                            <a class="s" href="#process"><i class="bi bi-diagram-3"></i> See our payroll process</a>
+                        </div>
                     </div>
-                </div>
-                <!-- Item 4 -->
-                <div class="included-card">
-                    <div class="included-check"><i class="bi bi-check-lg"></i></div>
-                    <div>
-                        <h5>On-Time Payment Disbursement</h5>
-                        <p>Guaranteed salary payouts on schedule through direct bank transfers, with multi-bank support and real-time disbursement status tracking.</p>
+                    <div class="px-panel" role="tabpanel" id="salary-slip-form16" aria-labelledby="px-tab-salary-slip-form16" hidden>
+                        <span class="big" aria-hidden="true">03</span>
+                        <div class="badge-row"><span class="bdg"><i class="bi bi-phone"></i> Self-Service</span><span class="bdg"><i class="bi bi-file-earmark-check"></i> Form 16</span></div>
+                        <h3>Online Salary Slip &amp; Form 16</h3>
+                        <p class="lead">Employees get clear, detailed salary slips every month and their Form 16 at the end of the financial year — all available online, anytime.</p>
+                        <div class="px-cols">
+                            <div>
+                                <h4><i class="bi bi-list-check"></i> What we cover</h4>
+                                <ul>
+                                    <li><i class="bi bi-check2-circle"></i>Monthly salary slips with full breakdown of earnings and deductions</li>
+                                    <li><i class="bi bi-check2-circle"></i>Slips branded with your company name and logo</li>
+                                    <li><i class="bi bi-check2-circle"></i>Secure employee self-service access and email delivery</li>
+                                    <li><i class="bi bi-check2-circle"></i>Form 16 (Part A and Part B) generated after the year closes</li>
+                                    <li><i class="bi bi-check2-circle"></i>Year-to-date salary and tax summaries</li>
+                                    <li><i class="bi bi-check2-circle"></i>Past slips and Form 16 kept on record for easy download</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4><i class="bi bi-graph-up-arrow"></i> How it helps you</h4>
+                                <ul>
+                                    <li><i class="bi bi-check2-circle"></i>No more HR requests for duplicate slips</li>
+                                    <li><i class="bi bi-check2-circle"></i>Employees can easily apply for loans, visas and file returns</li>
+                                    <li><i class="bi bi-check2-circle"></i>Transparent pay builds trust with your team</li>
+                                    <li><i class="bi bi-check2-circle"></i>Fully paperless and secure</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="px-actions">
+                            <a class="p" href="contact">Talk to a Payroll Expert <i class="bi bi-arrow-right"></i></a>
+                            <a class="s" href="#process"><i class="bi bi-diagram-3"></i> See our payroll process</a>
+                        </div>
                     </div>
-                </div>
-                <!-- Item 5 -->
-                <div class="included-card">
-                    <div class="included-check"><i class="bi bi-check-lg"></i></div>
-                    <div>
-                        <h5>Handling Payroll & Tax Queries</h5>
-                        <p>Dedicated support team to resolve employee queries on salary breakdowns, tax deductions, reimbursements, and compliance documentation.</p>
+                    <div class="px-panel" role="tabpanel" id="on-time-disbursement" aria-labelledby="px-tab-on-time-disbursement" hidden>
+                        <span class="big" aria-hidden="true">04</span>
+                        <div class="badge-row"><span class="bdg"><i class="bi bi-bank"></i> Bank Transfer</span><span class="bdg"><i class="bi bi-calendar-event"></i> Fixed Pay Dates</span></div>
+                        <h3>On-Time Payment Disbursement</h3>
+                        <p class="lead">Your employees are paid on the right day, every month. We prepare the payment files, coordinate with your bank and confirm that every salary is credited.</p>
+                        <div class="px-cols">
+                            <div>
+                                <h4><i class="bi bi-list-check"></i> What we cover</h4>
+                                <ul>
+                                    <li><i class="bi bi-check2-circle"></i>Agreed monthly payroll calendar with fixed pay dates</li>
+                                    <li><i class="bi bi-check2-circle"></i>Bank transfer files ready for upload to your bank</li>
+                                    <li><i class="bi bi-check2-circle"></i>Support for multiple banks and payment modes</li>
+                                    <li><i class="bi bi-check2-circle"></i>Payment status tracking and failed-transfer follow-up</li>
+                                    <li><i class="bi bi-check2-circle"></i>Reimbursements, bonuses, arrears and full &amp; final settlements</li>
+                                    <li><i class="bi bi-check2-circle"></i>Statutory payments (PF, ESI, PT, TDS) made before their due dates</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4><i class="bi bi-graph-up-arrow"></i> How it helps you</h4>
+                                <ul>
+                                    <li><i class="bi bi-check2-circle"></i>Employees are paid on time, every time</li>
+                                    <li><i class="bi bi-check2-circle"></i>No late fees or interest on statutory dues</li>
+                                    <li><i class="bi bi-check2-circle"></i>Clear payment records for audits and accounts</li>
+                                    <li><i class="bi bi-check2-circle"></i>Your finance team saves hours every month</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="px-actions">
+                            <a class="p" href="contact">Talk to a Payroll Expert <i class="bi bi-arrow-right"></i></a>
+                            <a class="s" href="#process"><i class="bi bi-diagram-3"></i> See our payroll process</a>
+                        </div>
+                    </div>
+                    <div class="px-panel" role="tabpanel" id="payroll-tax-queries" aria-labelledby="px-tab-payroll-tax-queries" hidden>
+                        <span class="big" aria-hidden="true">05</span>
+                        <div class="badge-row"><span class="bdg"><i class="bi bi-envelope"></i> Email</span><span class="bdg"><i class="bi bi-telephone"></i> Phone</span></div>
+                        <h3>Handling Payroll &amp; Tax Queries</h3>
+                        <p class="lead">A dedicated payroll support team answers your employees’ salary and tax questions, so your HR team can focus on people instead of payslips.</p>
+                        <div class="px-cols">
+                            <div>
+                                <h4><i class="bi bi-list-check"></i> What we cover</h4>
+                                <ul>
+                                    <li><i class="bi bi-check2-circle"></i>Questions on salary breakup, deductions and net pay</li>
+                                    <li><i class="bi bi-check2-circle"></i>Tax and TDS queries, regime choice and investment proofs</li>
+                                    <li><i class="bi bi-check2-circle"></i>Reimbursement and claim status</li>
+                                    <li><i class="bi bi-check2-circle"></i>PF, ESI and UAN-related help</li>
+                                    <li><i class="bi bi-check2-circle"></i>Corrections and arrears when something needs fixing</li>
+                                    <li><i class="bi bi-check2-circle"></i>Support by email and phone during business hours</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4><i class="bi bi-graph-up-arrow"></i> How it helps you</h4>
+                                <ul>
+                                    <li><i class="bi bi-check2-circle"></i>Quick, clear answers for employees</li>
+                                    <li><i class="bi bi-check2-circle"></i>Less workload on your HR and finance teams</li>
+                                    <li><i class="bi bi-check2-circle"></i>Every query tracked until it is closed</li>
+                                    <li><i class="bi bi-check2-circle"></i>Common issues spotted early and fixed at the source</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="px-actions">
+                            <a class="p" href="contact">Talk to a Payroll Expert <i class="bi bi-arrow-right"></i></a>
+                            <a class="s" href="#process"><i class="bi bi-diagram-3"></i> See our payroll process</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1584,7 +1735,7 @@
                 </div>
                 <div class="zz-image">
                     <div class="zz-blob"></div>
-                    <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&h=600&fit=crop" alt="Salary calculations and payroll processing" class="zz-img-bg">
+                    <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&h=600&fit=crop" alt="Working on salary calculations at a desk" class="zz-img-bg">
                     <div class="zz-label"><i class="bi bi-calculator"></i> Salary & Deductions</div>
                 </div>
             </div>
@@ -1628,7 +1779,7 @@
                 </div>
                 <div class="zz-image">
                     <div class="zz-blob"></div>
-                    <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=800&h=600&fit=crop" alt="Employee benefits and wellness management" class="zz-img-bg">
+                    <img src="https://images.unsplash.com/photo-1590650153855-d9e808231d41?w=800&h=600&fit=crop" alt="Smiling employee in a modern office" class="zz-img-bg">
                     <div class="zz-label"><i class="bi bi-people"></i> Benefits & PTO</div>
                 </div>
             </div>
@@ -1706,7 +1857,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="why-card">
                         <div class="why-icon"><i class="bi bi-bullseye"></i></div>
-                        <h5>Zero-Error Guarantee</h5>
+                        <h5>Accuracy Checks</h5>
                         <p>Triple-validated processing with automated checks ensures your employees are paid accurately, every single time.</p>
                     </div>
                 </div>
@@ -1749,37 +1900,89 @@
         </div>
     </section>
 
-    <!-- ==================== METRICS ==================== -->
+    <!-- ==================== OUR PROMISE (service commitments, not past results) ==================== -->
     <section class="metrics-section">
         <div class="container">
             <div class="row">
                 <div class="col-6 col-md-3">
                     <div class="metric-card">
-                        <h3>500+</h3>
-                        <p>Payroll Cycles Managed Monthly</p>
+                        <h3>100%</h3>
+                        <p>Statutory Compliance</p>
                     </div>
                 </div>
                 <div class="col-6 col-md-3">
                     <div class="metric-card">
-                        <h3>99.9%</h3>
-                        <p>On-Time Disbursement Rate</p>
+                        <h3>On-Time</h3>
+                        <p>Salary Every Month</p>
                     </div>
                 </div>
                 <div class="col-6 col-md-3">
                     <div class="metric-card">
-                        <h3>50K+</h3>
-                        <p>Employees Paid Accurately</p>
+                        <h3>24 hr</h3>
+                        <p>Query Response</p>
                     </div>
                 </div>
                 <div class="col-6 col-md-3">
                     <div class="metric-card">
-                        <h3>Zero</h3>
-                        <p>Compliance Penalties Incurred</p>
+                        <h3>100%</h3>
+                        <p>Paperless Payslips &amp; Form 16</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+
+
+    <!-- ==================== CTA ==================== -->
+    <section id="contact" class="cta-section">
+        <div class="container">
+            <div class="cta-box">
+                <div class="cta-circle c1"></div>
+                <div class="cta-circle c2"></div>
+                <div class="row align-items-center">
+                    <div class="col-lg-5 mb-4 mb-lg-0 text-lg-start text-center" style="position:relative; z-index:2;">
+                        <h2 style="color: var(--primary-color); font-size: 2.4rem; margin-bottom: 16px;">Ready to Simplify Your Payroll?</h2>
+                        <p class="text-muted">Get a free payroll audit and see how much time and money you're leaving on the table with your current process.</p>
+                    </div>
+                    <div class="col-lg-6 offset-lg-1" style="position:relative; z-index:2;">
+                        <form id="ctaForm">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control form-control-custom" placeholder="Full Name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="email" class="form-control form-control-custom" placeholder="Work Email" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="tel" class="form-control form-control-custom" placeholder="Phone Number">
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control form-control-custom" placeholder="Company Name">
+                                </div>
+                                <div class="col-12">
+                                    <select class="form-control form-control-custom">
+                                        <option value="" disabled selected>Employee Count</option>
+                                        <option>50 – 200</option>
+                                        <option>200 – 500</option>
+                                        <option>500 – 2,000</option>
+                                        <option>2,000 – 10,000</option>
+                                        <option>10,000+</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-submit">Request Free Payroll Audit <i class="bi bi-arrow-right ms-2"></i></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ==================== FOOTER ==================== -->
+    <!-- Contact form (Business / Individual → Zoho) -->
+    <site-contact id="contact-form"></site-contact>
 
     <!-- ==================== FAQ ==================== -->
     <section class="faq-section">
@@ -1837,112 +2040,36 @@
         </div>
     </section>
 
-    <!-- ==================== TESTIMONIALS ==================== -->
-    <section class="testimonial-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>What Our Clients Say</h2>
-                <div class="divider"></div>
-            </div>
-            <div class="row g-4">
-                <div class="col-lg-4 col-md-6">
-                    <div class="testimonial-card">
-                        <i class="bi bi-quote quote-icon"></i>
-                        <p class="testimonial-text">"We moved from a manual Excel-based payroll to Talennexus and the difference is night and day. Zero delays, zero compliance issues, and our HR team finally has time for strategic work."</p>
-                        <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face" alt="Client" class="testimonial-avatar">
-                            <div>
-                                <div class="testimonial-name">Rajesh Mehta</div>
-                                <div class="testimonial-role">CHRO, TechVista Solutions</div>
-                                <span class="testimonial-tag">IT Services · 2,500 Employees</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="testimonial-card">
-                        <i class="bi bi-quote quote-icon"></i>
-                        <p class="testimonial-text">"Managing payroll across 8 states with different labor laws was a nightmare. Talennexus unified everything into one seamless process. Their compliance team is exceptional."</p>
-                        <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&h=100&fit=crop&crop=face" alt="Client" class="testimonial-avatar">
-                            <div>
-                                <div class="testimonial-name">Priya Sharma</div>
-                                <div class="testimonial-role">VP Finance, HealthFirst Hospitals</div>
-                                <span class="testimonial-tag">Healthcare · 4,200 Employees</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="testimonial-card">
-                        <i class="bi bi-quote quote-icon"></i>
-                        <p class="testimonial-text">"The employee self-service portal alone saved us hundreds of payroll-related queries every month. Talennexus doesn't just process payroll — they transform the employee experience."</p>
-                        <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face" alt="Client" class="testimonial-avatar">
-                            <div>
-                                <div class="testimonial-name">Arjun Kapoor</div>
-                                <div class="testimonial-role">CEO, RetailEdge India</div>
-                                <span class="testimonial-tag">Retail · 1,800 Employees</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ==================== CTA ==================== -->
-    <section id="contact" class="cta-section">
-        <div class="container">
-            <div class="cta-box">
-                <div class="cta-circle c1"></div>
-                <div class="cta-circle c2"></div>
-                <div class="row align-items-center">
-                    <div class="col-lg-5 mb-4 mb-lg-0 text-lg-start text-center" style="position:relative; z-index:2;">
-                        <h2 style="color: var(--primary-color); font-size: 2.4rem; margin-bottom: 16px;">Ready to Simplify Your Payroll?</h2>
-                        <p class="text-muted">Get a free payroll audit and see how much time and money you're leaving on the table with your current process.</p>
-                    </div>
-                    <div class="col-lg-6 offset-lg-1" style="position:relative; z-index:2;">
-                        <form id="ctaForm">
-                            <div class="row g-3">
-                                <div class="col-md-6">
-                                    <input type="text" class="form-control form-control-custom" placeholder="Full Name" required>
-                                </div>
-                                <div class="col-md-6">
-                                    <input type="email" class="form-control form-control-custom" placeholder="Work Email" required>
-                                </div>
-                                <div class="col-md-6">
-                                    <input type="tel" class="form-control form-control-custom" placeholder="Phone Number">
-                                </div>
-                                <div class="col-md-6">
-                                    <input type="text" class="form-control form-control-custom" placeholder="Company Name">
-                                </div>
-                                <div class="col-12">
-                                    <select class="form-control form-control-custom">
-                                        <option value="" disabled selected>Employee Count</option>
-                                        <option>50 – 200</option>
-                                        <option>200 – 500</option>
-                                        <option>500 – 2,000</option>
-                                        <option>2,000 – 10,000</option>
-                                        <option>10,000+</option>
-                                    </select>
-                                </div>
-                                <div class="col-12">
-                                    <button type="submit" class="btn btn-submit">Request Free Payroll Audit <i class="bi bi-arrow-right ms-2"></i></button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ==================== FOOTER ==================== -->
-    <!-- Contact form (Business / Individual → Zoho) -->
-    <site-contact id="contact-form"></site-contact>
-
     <site-footer></site-footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+    /* Payroll services explorer: click (or arrow keys) to switch service */
+    (function () {
+        var tabs = [].slice.call(document.querySelectorAll('.px-tab'));
+        if (!tabs.length) return;
+        function show(tab, focus) {
+            tabs.forEach(function (t) {
+                var on = t === tab, panel = document.getElementById(t.getAttribute('aria-controls'));
+                t.classList.toggle('active', on); t.setAttribute('aria-selected', on ? 'true' : 'false'); t.tabIndex = on ? 0 : -1;
+                panel.hidden = !on; panel.classList.toggle('show', on);
+            });
+            if (focus) tab.focus();
+            if (window.innerWidth < 992) tab.scrollIntoView({ block: 'nearest', inline: 'center', behavior: 'smooth' });
+        }
+        tabs.forEach(function (t, i) {
+            t.addEventListener('click', function () { show(t); });
+            t.addEventListener('keydown', function (e) {
+                var k = e.key, j = (k === 'ArrowDown' || k === 'ArrowRight') ? i + 1 : (k === 'ArrowUp' || k === 'ArrowLeft') ? i - 1 : null;
+                if (j === null) return; e.preventDefault(); show(tabs[(j + tabs.length) % tabs.length], true);
+            });
+        });
+        // Links like /payroll#online-tax-reports open that service
+        var hash = location.hash.replace('#', '');
+        var start = tabs.filter(function (t) { return t.getAttribute('aria-controls') === hash; })[0];
+        if (start) show(start);
+    })();
+    </script>
     <script>
         // Navbar scroll effect
         window.addEventListener('scroll', function () {
@@ -1979,7 +2106,7 @@
             });
         }, observerOptions);
 
-        document.querySelectorAll('.pain-card, .included-card, .why-card, .testimonial-card, .timeline-content').forEach(el => {
+        document.querySelectorAll('.pain-card, .why-card, .testimonial-card, .timeline-content').forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(30px)';
             el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';

@@ -6,11 +6,10 @@
 <script src="components/site-gtm.js?v=20261118"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description"
-content="Talennexus - Strategic HR Partner Bridging Organizational Goals and Workforce Potential">
+<meta name="description" content="Talennexus is an HR partner for Indian businesses — recruitment, contract staffing, payroll, campus hiring and Virtual HR for professional and field roles.">
 <meta name="keywords"
-content="Talennexus, HR Consulting, Staffing Support, Recruitment Services, Payroll Services, Organisation Development, Career Counselling">
-<title>Talennexus | Empowering Businesses and Talent for the Future</title>
+content="Talennexus, HR Consulting, Staffing Support, Recruitment Services, Payroll Services, Campus Hiring, Virtual HR, IT Recruitment">
+<title>Talennexus | Recruitment, Staffing &amp; Payroll Services in India</title>
 <link rel="canonical" href="https://talennexus.com/">
 
 <!-- Bootstrap 5 CSS -->
@@ -1800,6 +1799,54 @@ animation: preloaderSpin 0.8s linear infinite;
 animation: none;
 }
 }
+
+/* Hero: content centred vertically, no empty band at the bottom (desktop) */
+@media (min-width: 992px) {
+.hero-section { display: flex; align-items: center; }
+.hero-section > .container { width: 100%; }
+}
+@media (min-width: 1200px) {
+.hero-section { min-height: 80vh; padding: 130px 0 70px; }
+}
+
+/* Home: sub-links inside a service card (e.g. Campus Nexus) */
+.service-card .svc-sub { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin: -4px 0 16px; }
+.service-card .svc-sub a { font-size: .78rem; font-weight: 500; padding: 4px 10px; border-radius: 50px; background: var(--bg-light); color: var(--text-gray); text-decoration: none; }
+.service-card .svc-sub a:hover { background: var(--primary-color); color: #fff; }
+.industry-card:hover h5 { color: var(--primary-color); }
+
+/* Home: latest blog posts (filled from blog/posts.json) */
+.blog-img.has-photo { background-size: cover; background-position: center; }
+.blog-img.has-photo::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0) 50%, rgba(0,0,0,.45) 100%); }
+.blog-img.has-photo .blog-date { z-index: 1; }
+
+/* Home: Insights & Resources on a blue background */
+#blog { background: radial-gradient(700px 360px at 100% 0%, rgba(74,144,217,.35) 0%, rgba(74,144,217,0) 60%), linear-gradient(150deg, #0d2442 0%, #14355d 100%); }
+#blog .section-title h2 { color: #fff; }
+#blog .section-title p { color: #c9d7e8; }
+#blog .section-title h2::after { background: #9cc6f2; }
+#blog .btn-outline-custom {
+  background: linear-gradient(135deg, #4a90d9 0%, #2f6fb6 100%);
+  border: 0; color: #fff !important; padding: 13px 30px; border-radius: 50px; font-weight: 600;
+  box-shadow: 0 10px 24px rgba(74,144,217,.35); transition: all .25s ease;
+}
+#blog .btn-outline-custom:hover { background: #fff; color: #14355d !important; transform: translateY(-2px); box-shadow: 0 12px 28px rgba(0,0,0,.25); }
+#blog .blog-card { box-shadow: 0 14px 34px rgba(0,0,0,.25); }
+
+/* Home: our progress so far (real numbers) */
+.progress-strip { background: linear-gradient(150deg, #0d2442 0%, #14355d 100%); padding: 34px 0; }
+.progress-item { height: 100%; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 4px; padding: 14px 10px; border-radius: 16px; background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.1); }
+.progress-item i { font-size: 1.5rem; color: #9cc6f2; }
+.progress-item b { font-family: 'Poppins', sans-serif; font-size: 1.9rem; font-weight: 800; color: #fff; line-height: 1.1; }
+.progress-item span { color: #c9d7e8; font-size: .9rem; line-height: 1.35; }
+@media (max-width: 575.98px) { .progress-item b { font-size: 1.5rem; } .progress-item span { font-size: .82rem; } }
+.progress-item .progress-text { color: #fff; font-weight: 600; font-size: 1rem; margin-top: 4px; }
+.progress-item .progress-text { font-weight: 500; }
+.progress-item .progress-text strong { font-weight: 800; color: #fff; }
+.progress-strip { border-top: 1px solid rgba(255,255,255,.12); padding: 40px 0 46px; }
+/* Home services: 3 equal-height cards, "Learn More" lined up at the bottom */
+#services .service-card { height: 100%; display: flex; flex-direction: column; }
+#services .service-card > a:last-child { margin-top: auto; }
 </style>
 <!-- Favicon (Talennexus figure from tl.png) -->
 <link rel="icon" href="assets/favicon.ico" sizes="any">
@@ -1810,6 +1857,56 @@ animation: none;
 <script src="components/site-header.js?v=20261118"></script>
 <script src="components/site-footer.js?v=20261118"></script>
 <script src="components/site-contact.js?v=20261118"></script>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Talennexus">
+<meta property="og:title" content="Talennexus | Recruitment, Staffing &amp; Payroll Services in India">
+<meta property="og:description" content="Talennexus is an HR partner for Indian businesses — recruitment, contract staffing, payroll, campus hiring and Virtual HR for professional and field roles.">
+<meta property="og:url" content="https://talennexus.com/">
+<meta property="og:image" content="https://talennexus.com/assets/talennexus-og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Talennexus | Recruitment, Staffing &amp; Payroll Services in India">
+<meta name="twitter:description" content="Talennexus is an HR partner for Indian businesses — recruitment, contract staffing, payroll, campus hiring and Virtual HR for professional and field roles.">
+<meta name="twitter:image" content="https://talennexus.com/assets/talennexus-og.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "EmploymentAgency",
+      "@id": "https://talennexus.com/#organization",
+      "name": "Talennexus",
+      "url": "https://talennexus.com/",
+      "logo": "https://talennexus.com/assets/tl-logo.png",
+      "image": "https://talennexus.com/assets/talennexus-og.png",
+      "description": "HR partner for Indian businesses offering recruitment, contract staffing, payroll, campus hiring, training and Virtual HR.",
+      "telephone": "+91-99529-78818",
+      "email": "connect@talennexus.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Module No.17, SDF-III, MEPZ SEZ, Tambaram",
+        "addressLocality": "Chennai",
+        "addressRegion": "Tamil Nadu",
+        "postalCode": "600045",
+        "addressCountry": "IN"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "India"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://talennexus.com/#website",
+      "url": "https://talennexus.com/",
+      "name": "Talennexus",
+      "publisher": {
+        "@id": "https://talennexus.com/#organization"
+      },
+      "inLanguage": "en-IN"
+    }
+  ]
+}
+</script>
 </head>
 
 <body>
@@ -1846,17 +1943,17 @@ goals and workforce potential with a 360-degree suite of human resources solutio
 <!-- Mobile-only floating stats -->
 <div class="hero-mobile-stats d-lg-none">
 <div class="floating-card">
-<i class="bi bi-trophy"></i>
+<i class="bi bi-building"></i>
 <div>
-<strong>500+ Placements</strong>
-<small class="d-block text-muted">Across diverse industries</small>
+<strong>5+ Clients</strong>
+<small class="d-block text-muted">Companies hiring with us</small>
 </div>
 </div>
 <div class="floating-card">
-<i class="bi bi-building"></i>
+<i class="bi bi-person-lines-fill"></i>
 <div>
-<strong>50+ Clients</strong>
-<small class="d-block text-muted">Enterprises trust Talennexus</small>
+<strong>300+ Profiles Shared</strong>
+<small class="d-block text-muted">Screened candidates sent to clients</small>
 </div>
 </div>
 </div>
@@ -1867,17 +1964,17 @@ goals and workforce potential with a 360-degree suite of human resources solutio
 <img src="https://images.unsplash.com/photo-1573497620053-ea5300f94f21?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW50ZXJ2aWV3fGVufDB8fDB8fHww"
 alt="Talennexus - Strategic HR Partner">
 <div class="floating-card card-1 d-none d-lg-flex align-items-center">
-<i class="bi bi-trophy"></i>
+<i class="bi bi-building"></i>
 <div>
-<strong>500+ Placements</strong>
-<small class="d-block text-muted">Across diverse industries</small>
+<strong>5+ Clients</strong>
+<small class="d-block text-muted">Companies hiring with us</small>
 </div>
 </div>
 <div class="floating-card card-2 d-none d-lg-flex align-items-center">
-<i class="bi bi-building"></i>
+<i class="bi bi-person-lines-fill"></i>
 <div>
-<strong>50+ Clients</strong>
-<small class="d-block text-muted">Enterprises trust Talennexus</small>
+<strong>300+ Profiles Shared</strong>
+<small class="d-block text-muted">Screened candidates sent to clients</small>
 </div>
 </div>
 </div>
@@ -1894,79 +1991,37 @@ alt="Talennexus - Strategic HR Partner">
 <p>A comprehensive human resources and talent management partner offering end-to-end solutions to
 attract, manage, and retain top talent.</p>
 </div>
-<div class="row g-4">
-<!-- Staffing Support -->
+<div class="row g-4 justify-content-center">
 <div class="col-lg-4 col-md-6 animate-on-scroll">
 <div class="service-card">
 <div class="service-icon">
-<i class="bi bi-people-fill"></i>
+<i class="bi bi-person-workspace"></i>
 </div>
-<h4>Staffing Support</h4>
-<p>Agile staffing solutions tailored to seasonal demands, project-based requirements, and
-unexpected market shifts—keeping your workforce flexible without permanent hire overhead.
-</p>
-<a href="staffingsupport">Learn More <i class="bi bi-arrow-right"></i></a>
-</div>
-</div>
-<!-- Recruitment Services -->
-<div class="col-lg-4 col-md-6 animate-on-scroll">
-<div class="service-card">
-<div class="service-icon">
-<i class="bi bi-search"></i>
-</div>
-<h4>Recruitment Services</h4>
-<p>End-to-end Recruitment—from executive search for C-suite roles to volume hiring for
-expansion drives—aligning skills, cultural fit, and long-term vision.</p>
+<h4>Recruitment Management</h4>
+<p>End-to-end hiring and staffing — permanent and contract staff, interviews and assessments, and payroll — from one team.</p>
+<div class="svc-sub"><a href="staffingsupport">Staffing Support</a><a href="technical-interview">Technical Interview</a><a href="psychometric-assessment">Psychometric Assessment</a><a href="exit-interview">Exit Interview</a><a href="payroll">Payroll Services</a></div>
 <a href="recruitment">Learn More <i class="bi bi-arrow-right"></i></a>
 </div>
 </div>
-<!-- Payroll Services -->
-<div class="col-lg-4 col-md-6 animate-on-scroll">
-<div class="service-card">
-<div class="service-icon">
-<i class="bi bi-cash-stack"></i>
-</div>
-<h4>Payroll Services</h4>
-<p>Precision-driven salary processing, regulatory compliance, benefits integration, and leave
-management—so you can focus on your core business.</p>
-<a href="payroll">Learn More <i class="bi bi-arrow-right"></i></a>
-</div>
-</div>
-<!-- Organisation Development -->
-<div class="col-lg-4 col-md-6 animate-on-scroll">
-<div class="service-card">
-<div class="service-icon">
-<i class="bi bi-diagram-3-fill"></i>
-</div>
-<h4>Organisation Development</h4>
-<p>Leadership development, change management, employee engagement initiatives, and skills
-training programs that enhance corporate health, culture, and efficiency.</p>
-<a href="organization-development">Learn More <i
-class="bi bi-arrow-right"></i></a>
-</div>
-</div>
-<!-- Career Counselling -->
-<div class="col-lg-4 col-md-6 animate-on-scroll">
-<div class="service-card">
-<div class="service-icon">
-<i class="bi bi-compass"></i>
-</div>
-<h4>Career Counselling</h4>
-<p>Career mapping, skill gap analysis, resume building, and interview coaching to help
-professionals identify strengths, navigate pivots, and reach their desired roles.</p>
-<a href="#contact">Learn More <i class="bi bi-arrow-right"></i></a>
-</div>
-</div>
-<!-- Campus Nexus -->
 <div class="col-lg-4 col-md-6 animate-on-scroll">
 <div class="service-card">
 <div class="service-icon">
 <i class="bi bi-mortarboard-fill"></i>
 </div>
 <h4>Campus Nexus</h4>
-<p>End-to-end campus hiring support, Self Skill Training skills development, and tech training on
-demand to build a strong pipeline of future-ready talent.</p>
+<p>Campus hiring for freshers, plus training that makes students job-ready.</p>
+<div class="svc-sub"><a href="campushiring">Campus Hiring</a><a href="soft-skill">Soft Skill Training</a><a href="techtraining">Tech Training on Demand</a></div>
 <a href="campushiring">Learn More <i class="bi bi-arrow-right"></i></a>
+</div>
+</div>
+<div class="col-lg-4 col-md-6 animate-on-scroll">
+<div class="service-card">
+<div class="service-icon">
+<i class="bi bi-diagram-3-fill"></i>
+</div>
+<h4>Virtual HR</h4>
+<p>Your outsourced HR team — HR processes, policies, employee engagement and people development, without a full in-house HR department.</p>
+<a href="organization-development">Learn More <i class="bi bi-arrow-right"></i></a>
 </div>
 </div>
 </div>
@@ -1985,8 +2040,8 @@ business. Talennexus ensures you stay ahead with integrated, strategic workforce
 <div class="platform-feature">
 <i class="bi bi-link-45deg"></i>
 <h5>360-Degree HR Suite</h5>
-<p>From recruitment to payroll, from organisation development to career counselling—every HR
-function unified under one trusted partner.</p>
+<p>From recruitment and staffing to payroll, campus hiring and Virtual HR—every HR
+function with one partner.</p>
 </div>
 <div class="platform-feature">
 <i class="bi bi-bullseye"></i>
@@ -2019,7 +2074,7 @@ your business demands.</p>
 <div class="row mb-3">
 <div class="col-6">
 <div class="mock-chart">
-<small class="d-block mb-2 fw-bold text-muted">Placements This Quarter</small>
+<small class="d-block mb-2 fw-bold text-muted">Open Roles by Stage</small>
 <div class="chart-bar">
 <div class="bar" style="height:45%"></div>
 <div class="bar" style="height:65%"></div>
@@ -2032,7 +2087,7 @@ your business demands.</p>
 </div>
 <div class="col-6">
 <div class="mock-chart">
-<small class="d-block mb-2 fw-bold text-muted">Client Satisfaction</small>
+<small class="d-block mb-2 fw-bold text-muted">Interview Pipeline</small>
 <div class="chart-bar">
 <div class="bar" style="height:85%"></div>
 <div class="bar" style="height:90%"></div>
@@ -2047,20 +2102,20 @@ your business demands.</p>
 <div class="row g-3">
 <div class="col-4 text-center">
 <div class="p-3 rounded" style="background:var(--bg-light);">
-<strong style="font-size:1.4rem; color:var(--primary-color);">500+</strong>
-<small class="d-block text-muted">Placements</small>
+<strong style="font-size:1.4rem; color:var(--primary-color);"><i class="bi bi-person-check"></i></strong>
+<small class="d-block text-muted">Permanent</small>
 </div>
 </div>
 <div class="col-4 text-center">
 <div class="p-3 rounded" style="background:var(--bg-light);">
-<strong style="font-size:1.4rem; color:var(--primary-color);">50+</strong>
-<small class="d-block text-muted">Clients</small>
+<strong style="font-size:1.4rem; color:var(--primary-color);"><i class="bi bi-file-earmark-person"></i></strong>
+<small class="d-block text-muted">Contract</small>
 </div>
 </div>
 <div class="col-4 text-center">
 <div class="p-3 rounded" style="background:var(--bg-light);">
-<strong style="font-size:1.4rem; color:var(--primary-color);">98%</strong>
-<small class="d-block text-muted">Retention</small>
+<strong style="font-size:1.4rem; color:var(--primary-color);"><i class="bi bi-people"></i></strong>
+<small class="d-block text-muted">Bulk Hiring</small>
 </div>
 </div>
 </div>
@@ -2076,158 +2131,107 @@ your business demands.</p>
 <div class="container">
 <div class="section-title animate-on-scroll">
 <h2>Industries We Serve</h2>
-<p>Talennexus delivers specialized HR and talent solutions across sectors, understanding the unique
-workforce demands of each industry.</p>
+<p>We hire for both white-collar (professional) and blue-collar (field &amp; support) roles in these sectors.</p>
 </div>
 <div class="row g-4">
+<div class="col-lg-4 col-md-6 animate-on-scroll" id="industries-it">
+<a class="industry-card d-block text-decoration-none h-100" href="it">
+<div class="industry-icon">
+<i class="bi bi-cpu-fill"></i>
+</div>
+<h5>IT</h5>
+<p>Software, cloud, data, QA and cybersecurity professionals — plus IT support, network and field technicians.</p>
+</a>
+</div>
 <div class="col-lg-4 col-md-6 animate-on-scroll" id="industries-healthcare">
-<div class="industry-card">
+<a class="industry-card d-block text-decoration-none h-100" href="healthcare">
 <div class="industry-icon">
 <i class="bi bi-heart-pulse"></i>
 </div>
 <h5>Healthcare</h5>
-<p>Hospitals, Pharma, MedTech & Life Sciences—connecting clinical and administrative talent with
-leading healthcare organizations.</p>
-</div>
-</div>
-<div class="col-lg-4 col-md-6 animate-on-scroll" id="industries-telecom">
-<div class="industry-card">
-<div class="industry-icon">
-<i class="bi bi-broadcast-pin"></i>
-</div>
-<h5>Telecom</h5>
-<p>Telecommunications, ISP & 5G Networks—staffing for the rapidly evolving connectivity and
-communications landscape.</p>
-</div>
-</div>
-<div class="col-lg-4 col-md-6 animate-on-scroll" id="industries-retail">
-<div class="industry-card">
-<div class="industry-icon">
-<i class="bi bi-cart4"></i>
-</div>
-<h5>Retail</h5>
-<p>E-Commerce, Fashion, FMCG & D2C Brands—fulfilling workforce needs from supply chain to
-frontline retail operations.</p>
-</div>
+<p>Doctors, nurses, pharma and hospital admin roles — plus ward, patient-care and hospital support staff.</p>
+</a>
 </div>
 <div class="col-lg-4 col-md-6 animate-on-scroll" id="industries-banking">
-<div class="industry-card">
+<a class="industry-card d-block text-decoration-none h-100" href="bfsi-hiring">
 <div class="industry-icon">
 <i class="bi bi-bank2"></i>
 </div>
-<h5>Banking</h5>
-<p>Commercial Banks, NBFCs, Fintech & Insurance—specialized hiring for the highly regulated
-financial services sector.</p>
+<h5>Banking &amp; Finance</h5>
+<p>Banks, NBFCs, fintech and insurance roles — plus field collection, verification and branch support staff.</p>
+</a>
 </div>
+<div class="col-lg-4 col-md-6 animate-on-scroll" id="industries-retail"><span id="industries-telecom"></span>
+<a class="industry-card d-block text-decoration-none h-100" href="leadership">
+<div class="industry-icon">
+<i class="bi bi-broadcast-pin"></i>
+</div>
+<h5>Retail &amp; Telecom</h5>
+<p>Store, e-commerce and telecom network roles — plus store staff, delivery, tower and fibre technicians.</p>
+</a>
 </div>
 <div class="col-lg-4 col-md-6 animate-on-scroll" id="industries-FMCG">
-<div class="industry-card">
+<a class="industry-card d-block text-decoration-none h-100" href="#contact">
 <div class="industry-icon">
 <i class="bi bi-box-seam-fill"></i>
 </div>
 <h5>FMCG</h5>
-<p>Fast Moving Goods, Manufacturing & Supply Chain—delivering skilled talent for production,
-logistics, and operations.</p>
-</div>
-</div>
-<div class="col-lg-4 col-md-6 animate-on-scroll">
-<div class="industry-card">
-<div class="industry-icon">
-<i class="bi bi-cpu-fill"></i>
-</div>
-<h5>Technology</h5>
-<p>IT Services, SaaS, AI/ML & Product Companies—sourcing top engineering and product talent for
-innovation-driven teams.</p>
-</div>
+<p>Brand, plant, supply-chain and sales roles — plus machine operators, packers and warehouse staff.</p>
+</a>
 </div>
 </div>
 </div>
 </section>
 
-<!-- ==================== CASE STUDIES / SUCCESS STORIES ==================== -->
-<section class="section-padding" style="background:var(--bg-light);" id="case-studies">
+
+<!-- ==================== BLOG / INSIGHTS SECTION ==================== -->
+<section class="section-padding" id="blog">
 <div class="container">
 <div class="section-title animate-on-scroll">
-<h2>Success Stories</h2>
-<p>Real results from real partnerships—see how Talennexus has helped organizations optimize their
-workforce and achieve strategic goals.</p>
+<h2>Insights & Resources</h2>
+<p>Our latest articles on hiring, staffing, payroll and HR from the Talennexus team.</p>
 </div>
-<div class="row g-4">
-<div class="col-lg-4 animate-on-scroll">
-<div class="case-study-card">
-<div class="case-study-img">
-<i class="bi bi-bank"></i>
-<span class="case-category">Banking & Fintech</span>
+<div class="row g-4 justify-content-center" id="homeBlogGrid">
+<div class="col-lg-5 col-md-8 animate-on-scroll">
+<div class="blog-card">
+<div class="blog-img" style="background:linear-gradient(135deg, #1e3a5f 0%, #4a90d9 100%);">
+<span class="blog-date"><i class="bi bi-calendar3 me-1"></i>Nov 20, 2026</span>
 </div>
-<div class="case-study-body">
-<h4>Scaling a Fintech Startup's Engineering Team</h4>
-<p>Delivered 60+ specialized technology hires in 90 days for a fast-growing fintech company,
-from senior architects to junior developers, maintaining a 95% offer acceptance rate.
-</p>
-<div class="case-metrics">
-<div class="metric-item">
-<strong>60+</strong>
-<small>Hires in 90 Days</small>
+<div class="blog-body">
+<span class="blog-tag">Recruitment</span>
+<h5><a href="blog/how-to-choose-recruitment-agency-in-bangalore">How to Choose the Right Recruitment Agency in Bangalore</a></h5>
+<p>A practical checklist for picking a recruitment partner in Bangalore — from industry expertise and screening process to pricing, speed and compliance.</p>
+<div class="blog-author">
+<div class="author-name">
+<div class="author-avatar">TN</div>
+<small class="text-muted">Talennexus Team</small>
 </div>
-<div class="metric-item">
-<strong>95%</strong>
-<small>Acceptance Rate</small>
+<a href="blog/how-to-choose-recruitment-agency-in-bangalore" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="col-lg-4 animate-on-scroll">
-<div class="case-study-card">
-<div class="case-study-img"
-style="background:linear-gradient(135deg, #14355d 0%, #1e3a5f 100%);">
-<i class="bi bi-hospital"></i>
-<span class="case-category">Healthcare</span>
-</div>
-<div class="case-study-body">
-<h4>Payroll Compliance Overhaul for a Hospital Chain</h4>
-<p>Streamlined payroll processing for 3,000+ employees across 12 locations, achieving 100%
-statutory compliance and reducing processing time by 40%.</p>
-<div class="case-metrics">
-<div class="metric-item">
-<strong>3,000+</strong>
-<small>Employees Covered</small>
-</div>
-<div class="metric-item">
-<strong>40%</strong>
-<small>Time Saved</small>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="col-lg-4 animate-on-scroll">
-<div class="case-study-card">
-<div class="case-study-img"
-style="background:linear-gradient(135deg, #4a90d9 0%, #1e3a5f 100%);">
-<i class="bi bi-cart-check"></i>
-<span class="case-category">Retail & E-Commerce</span>
-</div>
-<div class="case-study-body">
-<h4>Seasonal Workforce Ramp-Up for a D2C Brand</h4>
-<p>Supplied 400+ temporary staff across warehousing and customer support during peak festive
-season, with full workforce management and compliance handling.</p>
-<div class="case-metrics">
-<div class="metric-item">
-<strong>400+</strong>
-<small>Temp Staff Deployed</small>
-</div>
-<div class="metric-item">
-<strong>100%</strong>
-<small>Compliance Rate</small>
-</div>
-</div>
-</div>
-</div>
-</div>
+<div class="text-center mt-4">
+<a href="blog/" class="btn btn-outline-custom">See more blogs <i class="bi bi-arrow-right ms-1"></i></a>
 </div>
 </div>
 </section>
+
+<!-- ==================== OUR PROGRESS (real numbers — update as you grow) ==================== -->
+<section class="progress-strip" aria-label="Our progress so far">
+<div class="container">
+<div class="row g-3 g-lg-4">
+<div class="col-6 col-lg-3"><div class="progress-item"><i class="bi bi-building"></i><b>5+</b><span>Clients</span></div></div>
+<div class="col-6 col-lg-3"><div class="progress-item"><i class="bi bi-person-lines-fill"></i><b>300+</b><span>Profiles Shared</span></div></div>
+<div class="col-6 col-lg-3"><div class="progress-item"><i class="bi bi-briefcase"></i><b>10+</b><span>Requirements Worked On</span></div></div>
+<div class="col-6 col-lg-3"><div class="progress-item"><i class="bi bi-patch-check"></i><span class="progress-text"><strong>Successfully</strong> placed suitable candidates at suitable positions</span></div></div>
+</div>
+</div>
+</section>
+
+<!-- ==================== CONTACT (Business / Individual → Zoho) ==================== -->
+<site-contact id="contact"></site-contact>
 
 <!-- ==================== FAQ SECTION ==================== -->
 <section class="faq-section section-padding" id="faq">
@@ -2255,8 +2259,8 @@ What makes Talennexus different from other HR consulting firms?
 <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqGeneral">
 <div class="accordion-body">
 Talennexus operates as a strategic HR partner—not just a service provider. We offer
-a 360-degree suite covering staffing, recruitment, Payroll Services,
-organisation development, and career counselling under one roof. Our approach is
+a 360-degree suite covering recruitment, staffing, interviews &amp; assessments, payroll,
+campus hiring and Virtual HR under one roof. Our approach is
 goal-aligned: we bridge the gap between your organizational objectives and workforce
 potential, rather than simply filling open positions.
 </div>
@@ -2347,7 +2351,7 @@ Can Talennexus help with organisation-wide change management?
 </h2>
 <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqServices">
 <div class="accordion-body">
-Absolutely. Our Organisation Development programs include dedicated change
+Yes. Our Virtual HR service includes change
 management support. We guide organizations through structural shifts, mergers, or
 technology adoptions with structured communication plans, stakeholder engagement,
 and resistance management strategies—minimizing disruption while maximizing employee
@@ -2355,104 +2359,11 @@ buy-in and productivity during transitions.
 </div>
 </div>
 </div>
-<div class="accordion-item">
-<h2 class="accordion-header">
-<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-data-bs-target="#faq7">
-Is career counselling available for individuals, or only for corporate clients?
-</button>
-</h2>
-<div id="faq7" class="accordion-collapse collapse" data-bs-parent="#faqServices">
-<div class="accordion-body">
-Talennexus is a partner to both businesses and individuals. Our career counselling
-services are available to professionals at any stage—whether you're navigating a
-career pivot, re-entering the workforce after a hiatus, or aiming for a leadership
-role. Services include career mapping, skill gap analysis, resume building, and
-interview coaching.
-</div>
-</div>
-</div>
 </div>
 </div>
 </div>
 </div>
 </section>
-
-<!-- ==================== BLOG / INSIGHTS SECTION ==================== -->
-<section class="section-padding" id="blog">
-<div class="container">
-<div class="section-title animate-on-scroll">
-<h2>Insights & Resources</h2>
-<p>Expert perspectives on talent strategy, workforce management, and the evolving HR landscape from the
-Talennexus team.</p>
-</div>
-<div class="row g-4">
-<div class="col-lg-4 animate-on-scroll">
-<div class="blog-card">
-<div class="blog-img" style="background:linear-gradient(135deg, #1e3a5f 0%, #4a90d9 100%);">
-<span class="blog-date"><i class="bi bi-calendar3 me-1"></i>Jan 15, 2025</span>
-</div>
-<div class="blog-body">
-<span class="blog-tag">Recruitment</span>
-<h5><a href="#">Why Cultural Fit Matters More Than Skills in Executive Hiring</a></h5>
-<p>Finding the right candidate goes beyond matching a resume to a job description. Learn how
-aligning values and vision leads to stronger leadership placements.</p>
-<div class="blog-author">
-<div class="author-name">
-<div class="author-avatar">TN</div>
-<small class="text-muted">Talennexus Team</small>
-</div>
-<a href="#" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
-</div>
-</div>
-</div>
-</div>
-<div class="col-lg-4 animate-on-scroll">
-<div class="blog-card">
-<div class="blog-img" style="background:linear-gradient(135deg, #14355d 0%, #1e3a5f 100%);">
-<span class="blog-date"><i class="bi bi-calendar3 me-1"></i>Dec 28, 2024</span>
-</div>
-<div class="blog-body">
-<span class="blog-tag">Payroll</span>
-<h5><a href="#">Payroll Compliance in 2025: What Every HR Leader Must Know</a></h5>
-<p>Regulatory landscapes are shifting rapidly. Stay ahead of the latest labor law updates,
-tax regulation changes, and statutory compliance requirements.</p>
-<div class="blog-author">
-<div class="author-name">
-<div class="author-avatar">TN</div>
-<small class="text-muted">Talennexus Team</small>
-</div>
-<a href="#" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
-</div>
-</div>
-</div>
-</div>
-<div class="col-lg-4 animate-on-scroll">
-<div class="blog-card">
-<div class="blog-img" style="background:linear-gradient(135deg, #4a90d9 0%, #14355d 100%);">
-<span class="blog-date"><i class="bi bi-calendar3 me-1"></i>Dec 10, 2024</span>
-</div>
-<div class="blog-body">
-<span class="blog-tag">Organisation Development</span>
-<h5><a href="#">Building Resilient Teams Through Change Management</a></h5>
-<p>Structural shifts and technology adoptions don't have to disrupt productivity. Discover
-how structured OD programs turn change into a competitive advantage.</p>
-<div class="blog-author">
-<div class="author-name">
-<div class="author-avatar">TN</div>
-<small class="text-muted">Talennexus Team</small>
-</div>
-<a href="#" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-
-<!-- ==================== CONTACT (Business / Individual → Zoho) ==================== -->
-<site-contact id="contact"></site-contact>
 
 <!-- ==================== FOOTER ==================== -->
 <site-footer></site-footer>
@@ -2670,6 +2581,50 @@ bootstrap.Collapse.getInstance(navCollapse)?.hide();
 }
 });
 });
+</script>
+<script>
+/* Insights & Resources: show the 3 newest published blog posts automatically.
+   New posts published from the blog admin appear here on their own.
+   If the list can't load, the post already in the HTML stays as it is. */
+(function () {
+  var grid = document.getElementById('homeBlogGrid');
+  if (!grid || !window.fetch) return;
+  function esc(t) { var d = document.createElement('div'); d.textContent = t == null ? '' : String(t); return d.innerHTML; }
+  function img(src) {
+    if (!src) return '';
+    if (/^(https?:)?\//.test(src)) return src;
+    return '/blog/' + src.replace(/^\.?\//, '');
+  }
+  function fmt(d) {
+    var x = new Date(d + 'T00:00:00');
+    return isNaN(x) ? '' : x.toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' });
+  }
+  var grads = ['#1e3a5f 0%, #4a90d9 100%', '#14355d 0%, #1e3a5f 100%', '#4a90d9 0%, #14355d 100%'];
+  fetch('/blog/posts.json', { cache: 'no-cache' })
+    .then(function (r) { if (!r.ok) throw 0; return r.json(); })
+    .then(function (posts) {
+      if (!Array.isArray(posts) || !posts.length) return;
+      posts = posts.slice().sort(function (a, b) { return String(b.date).localeCompare(String(a.date)); }).slice(0, 3);
+      grid.innerHTML = posts.map(function (p, i) {
+        var url = p.url || ('/blog/' + p.slug);
+        var im = img(p.image);
+        var bg = im ? 'background-image:url(\'' + encodeURI(im) + '\')' : 'background:linear-gradient(135deg, ' + grads[i % 3] + ')';
+        return '<div class="col-lg-4 col-md-6">' +
+          '<div class="blog-card">' +
+          '<a href="' + esc(url) + '" class="blog-img d-block' + (im ? ' has-photo' : '') + '" style="' + bg + '" aria-hidden="true" tabindex="-1">' +
+          '<span class="blog-date"><i class="bi bi-calendar3 me-1"></i>' + esc(fmt(p.date)) + '</span></a>' +
+          '<div class="blog-body">' +
+          (p.category ? '<span class="blog-tag">' + esc(p.category) + '</span>' : '') +
+          '<h5><a href="' + esc(url) + '">' + esc(p.title) + '</a></h5>' +
+          '<p>' + esc(p.excerpt) + '</p>' +
+          '<div class="blog-author"><div class="author-name"><div class="author-avatar">TN</div>' +
+          '<small class="text-muted">' + esc(p.author || 'Talennexus Team') + '</small></div>' +
+          '<a href="' + esc(url) + '" class="read-more">Read More <i class="bi bi-arrow-right"></i></a></div>' +
+          '</div></div></div>';
+      }).join('');
+    })
+    .catch(function () {});
+})();
 </script>
 </body>
 

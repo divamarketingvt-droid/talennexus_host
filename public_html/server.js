@@ -319,6 +319,11 @@ async function buildSitemap(blogOnly) {
   posts.forEach((p) => { if (p && p.slug) bySlug['/blog/' + p.slug] = p; });
 
   const pages = await scanPages(ROOT, '', []);
+  // Pages served at a different address (ALIASES) are listed under that address
+  pages.forEach((pg) => {
+    const alias = Object.keys(ALIASES).find((k) => '/' + ALIASES[k] === pg.url + '.html');
+    if (alias) pg.url = alias;
+  });
   const rows = [];
   for (const pg of pages) {
     if (excluded(pg.url)) continue;
@@ -381,8 +386,14 @@ const REDIRECTS = [
   [/^\/services\/Exit interview(\.html)?$/, '/exit-interview'],
   [/^\/services\/HR Consulting(\.html)?$/, '/hr-consulting'],
   [/^\/services\/Leadership(\.html)?$/, '/leadership'],
-  [/^\/services\/Technology hiring(\.html)?$/, '/technology-hiring'],
-  [/^\/services\/self skill(\.html)?$/, '/self-skill'],
+  [/^\/services\/Technology hiring(\.html)?$/, '/it'],
+  // Workforce Solutions page was removed (industries now have white/blue-collar tabs)
+  [/^\/workforce_solutions(\.html)?\/?$/, '/#industries'],
+  // Technology Hiring was merged into the IT page (white-collar + blue-collar IT jobs)
+  [/^\/technology-hiring(\.html)?\/?$/, '/it'],
+  [/^\/services\/self skill(\.html)?$/, '/soft-skill'],
+  // Self Skill Training was renamed Soft Skill Training
+  [/^\/self-skill(\.html)?\/?$/, '/soft-skill'],
   [/^\/services\/recuirtnmmet ?(\.html)?$/, '/recruitment'],
   [/^\/services\/complinace(\.html)?$/, '/compliance'],
   [/^\/services\/it(-hiring)?(\.html)?$/, '/it'],

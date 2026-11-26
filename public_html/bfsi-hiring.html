@@ -5,9 +5,9 @@
 <script src="components/site-gtm.js?v=20261118"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Talennexus BFSI Hiring — Specialized recruitment for banking, insurance, fintech, capital markets, NBFC, and financial services. Domain-expert recruiters delivering compliance-ready professionals.">
+    <meta name="description" content="Banking, NBFC, fintech and insurance hiring — relationship managers, credit, risk and compliance roles, plus field collection and branch staff.">
     <meta name="keywords" content="BFSI Hiring, Banking Recruitment, Insurance Hiring, Fintech Staffing, Capital Markets Talent, NBFC Recruitment, Risk Management Hiring, Compliance Staffing, Financial Services Recruitment">
-    <title>BFSI Hiring | Talennexus</title>
+    <title>BFSI Recruitment | Banking &amp; Finance Hiring | Talennexus</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -837,6 +837,19 @@
             .floating-card, .hero-content h1, .hero-content p, .hero-buttons, .hero-image, .bar { animation: none !important; }
             .animate-on-scroll { opacity: 1; transform: none; transition: none; }
         }
+            /* White-collar / Blue-collar job tabs (roles section) */
+        .collar-tabs { display: flex; justify-content: center; margin: -10px 0 36px; }
+        .collar-tabs .wrap { display: inline-flex; background: #fff; border: 1px solid #d9e5f2; border-radius: 60px; padding: 7px; box-shadow: 0 12px 32px rgba(20,53,93,.10); }
+        .collar-tab { display: inline-flex; align-items: center; gap: 10px; padding: 15px 34px; border: 0; background: transparent; border-radius: 60px; font-size: 1.15rem; font-weight: 600; color: #4a5b70; cursor: pointer; transition: all .25s ease; font-family: inherit; }
+        .collar-tab:hover { color: #14355d; background: #e6eef7; }
+        .collar-tab.active { background: #14355d; color: #fff; }
+        .collar-tab small { font-weight: 500; opacity: .75; font-size: .95rem; }
+        .collar-tab i { font-size: 1.25rem; }
+        .collar-pane[hidden] { display: none; }
+        .collar-pane.show { animation: collarIn .35s ease; }
+        @keyframes collarIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+        .collar-note { text-align: center; color: #5a6a7a; max-width: 760px; margin: 0 auto 30px; font-size: .98rem; }
+        @media (max-width: 575.98px) { .collar-tab { padding: 11px 16px; font-size: .95rem; } .collar-tab small { display: none; } }
     </style>
 <!-- Favicon (Talennexus figure from tl.png) -->
 <link rel="icon" href="assets/favicon.ico" sizes="any">
@@ -847,6 +860,78 @@
 <script src="components/site-header.js?v=20261118"></script>
 <script src="components/site-footer.js?v=20261118"></script>
 <script src="components/site-contact.js?v=20261118"></script>
+<link rel="canonical" href="https://talennexus.com/bfsi-hiring">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Talennexus">
+<meta property="og:title" content="BFSI Recruitment | Banking &amp; Finance Hiring | Talennexus">
+<meta property="og:description" content="Banking, NBFC, fintech and insurance hiring — relationship managers, credit, risk and compliance roles, plus field collection and branch staff.">
+<meta property="og:url" content="https://talennexus.com/bfsi-hiring">
+<meta property="og:image" content="https://talennexus.com/assets/talennexus-og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="BFSI Recruitment | Banking &amp; Finance Hiring | Talennexus">
+<meta name="twitter:description" content="Banking, NBFC, fintech and insurance hiring — relationship managers, credit, risk and compliance roles, plus field collection and branch staff.">
+<meta name="twitter:image" content="https://talennexus.com/assets/talennexus-og.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "BFSI Recruitment",
+      "serviceType": "Recruitment",
+      "description": "Banking, NBFC, fintech and insurance hiring — relationship managers, credit, risk and compliance roles, plus field collection and branch staff.",
+      "url": "https://talennexus.com/bfsi-hiring",
+      "provider": {
+        "@id": "https://talennexus.com/#organization"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "India"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://talennexus.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "BFSI Recruitment",
+          "item": "https://talennexus.com/bfsi-hiring"
+        }
+      ]
+    },
+    {
+      "@type": "EmploymentAgency",
+      "@id": "https://talennexus.com/#organization",
+      "name": "Talennexus",
+      "url": "https://talennexus.com/",
+      "logo": "https://talennexus.com/assets/tl-logo.png",
+      "image": "https://talennexus.com/assets/talennexus-og.png",
+      "description": "HR partner for Indian businesses offering recruitment, contract staffing, payroll, campus hiring, training and Virtual HR.",
+      "telephone": "+91-99529-78818",
+      "email": "connect@talennexus.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Module No.17, SDF-III, MEPZ SEZ, Tambaram",
+        "addressLocality": "Chennai",
+        "addressRegion": "Tamil Nadu",
+        "postalCode": "600045",
+        "addressCountry": "IN"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "India"
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -868,34 +953,34 @@
                         <div class="hero-mobile-stats">
                             <div class="floating-card" style="display:flex;align-items:center;gap:12px;">
                                 <i class="bi bi-bank2"></i>
-                                <div><strong>3,500+</strong><br><small style="color:var(--text-gray)">BFSI Hires Annually</small></div>
+                                <div><strong>BFSI</strong><br><small style="color:var(--text-gray)">Banking, NBFC &amp; insurance roles</small></div>
                             </div>
                             <div class="floating-card" style="display:flex;align-items:center;gap:12px;border-left-color:var(--primary-color);">
                                 <i class="bi bi-shield-check"></i>
-                                <div><strong>100%</strong><br><small style="color:var(--text-gray)">Compliance Verified</small></div>
+                                <div><strong>Verified</strong><br><small style="color:var(--text-gray)">Background &amp; compliance checks</small></div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="hero-image text-center">
-                        <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=700&h=520&fit=crop&q=80" alt="Financial professionals analyzing data in a modern banking environment" style="max-height:520px;object-fit:cover;">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=700&h=520&fit=crop&q=80" alt="Finance professionals reviewing reports on laptops" style="max-height:520px;object-fit:cover;">
                         <div class="floating-card card-1">
                             <div style="display:flex;align-items:center;gap:12px;">
                                 <i class="bi bi-bank2"></i>
-                                <div><strong>3,500+</strong><br><small style="color:var(--text-gray)">BFSI Hires Annually</small></div>
+                                <div><strong>BFSI</strong><br><small style="color:var(--text-gray)">Banking, NBFC &amp; insurance roles</small></div>
                             </div>
                         </div>
                         <div class="floating-card card-2">
                             <div style="display:flex;align-items:center;gap:12px;">
                                 <i class="bi bi-shield-check"></i>
-                                <div><strong>100%</strong><br><small style="color:var(--text-gray)">Compliance Verified</small></div>
+                                <div><strong>Verified</strong><br><small style="color:var(--text-gray)">Background &amp; compliance checks</small></div>
                             </div>
                         </div>
                         <div class="floating-card card-3">
                             <div style="display:flex;align-items:center;gap:12px;">
                                 <i class="bi bi-check-circle-fill" style="-webkit-text-fill-color:#2ecc71;background:none;"></i>
-                                <div><strong>94%</strong><br><small style="color:var(--text-gray)">Client Retention Rate</small></div>
+                                <div><strong>End-to-End</strong><br><small style="color:var(--text-gray)">Sourcing to onboarding</small></div>
                             </div>
                         </div>
                     </div>
@@ -909,9 +994,17 @@
         <div class="container">
             <div class="section-title animate-on-scroll">
                 <span class="label">BFSI Sectors</span>
-                <h2>Hiring Across the Entire Financial Services Spectrum</h2>
-                <p>We recruit specialized talent across every vertical of banking, financial services, and insurance — from traditional banking to emerging fintech.</p>
+                <h2>BFSI Jobs We Hire For</h2>
+                <p>From relationship managers in the branch to collection and verification staff in the field &mdash; we hire for both. Choose a job type to see the roles.</p>
             </div>
+            <div class="collar-tabs">
+                <div class="wrap" role="tablist" aria-label="Job type">
+                    <button type="button" class="collar-tab active" role="tab" id="tab-white" aria-controls="white-collar-jobs" aria-selected="true"><i class="bi bi-briefcase"></i> White-Collar <small>· Professional</small></button>
+                    <button type="button" class="collar-tab" role="tab" id="tab-blue" aria-controls="blue-collar-jobs" aria-selected="false" tabindex="-1"><i class="bi bi-tools"></i> Blue-Collar <small>· Field &amp; Support</small></button>
+                </div>
+            </div>
+            <div class="collar-pane show" role="tabpanel" id="white-collar-jobs" aria-labelledby="tab-white">
+                <p class="collar-note">Office-based banking, finance and insurance professionals &mdash; graduates and certified specialists, hired mostly on permanent roles.</p>
             <div class="row g-4">
                 <div class="col-lg-3 col-md-4 col-sm-6 animate-on-scroll delay-1">
                     <div class="domain-card">
@@ -1017,6 +1110,106 @@
                     </div>
                 </div>
             </div>
+            </div>
+            <div class="collar-pane" role="tabpanel" id="blue-collar-jobs" aria-labelledby="tab-blue" hidden>
+                <p class="collar-note">Field, cash-logistics and branch support staff &mdash; screened with document and police verification and hired individually, on contract or in bulk.</p>
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="domain-card">
+                            <div class="domain-icon"><i class="bi bi-cash-stack"></i></div>
+                            <h4>Field Collection Executives</h4>
+                            <p>Door-to-door EMI and dues collection with proper conduct</p>
+                            <div class="domain-tags">
+                            <span class="domain-tag">Collections</span>
+                            <span class="domain-tag">EMI</span>
+                            <span class="domain-tag">Recovery</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="domain-card">
+                            <div class="domain-icon"><i class="bi bi-geo"></i></div>
+                            <h4>Field Verification Executives</h4>
+                            <p>Address, residence and business verification for loans and KYC</p>
+                            <div class="domain-tags">
+                            <span class="domain-tag">KYC</span>
+                            <span class="domain-tag">Address check</span>
+                            <span class="domain-tag">FI</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="domain-card">
+                            <div class="domain-icon"><i class="bi bi-truck"></i></div>
+                            <h4>ATM Cash Loaders &amp; Cash Van Crew</h4>
+                            <p>Cash replenishment and secure cash movement teams</p>
+                            <div class="domain-tags">
+                            <span class="domain-tag">ATM</span>
+                            <span class="domain-tag">Cash van</span>
+                            <span class="domain-tag">Custodian</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="domain-card">
+                            <div class="domain-icon"><i class="bi bi-shield-lock"></i></div>
+                            <h4>Security Guards</h4>
+                            <p>Trained guards for branches, ATMs and cash centres</p>
+                            <div class="domain-tags">
+                            <span class="domain-tag">Branch</span>
+                            <span class="domain-tag">ATM</span>
+                            <span class="domain-tag">Cash centre</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="domain-card">
+                            <div class="domain-icon"><i class="bi bi-person-workspace"></i></div>
+                            <h4>Branch Support Staff</h4>
+                            <p>Office assistants, token desk and record-room support</p>
+                            <div class="domain-tags">
+                            <span class="domain-tag">Office assistant</span>
+                            <span class="domain-tag">Records</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="domain-card">
+                            <div class="domain-icon"><i class="bi bi-keyboard"></i></div>
+                            <h4>Data Entry Operators</h4>
+                            <p>Loan file, KYC and back-office data entry</p>
+                            <div class="domain-tags">
+                            <span class="domain-tag">Loan files</span>
+                            <span class="domain-tag">KYC</span>
+                            <span class="domain-tag">Back office</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="domain-card">
+                            <div class="domain-icon"><i class="bi bi-megaphone"></i></div>
+                            <h4>Field Sales Executives</h4>
+                            <p>Loan, card and insurance lead sourcing in the field</p>
+                            <div class="domain-tags">
+                            <span class="domain-tag">Loans</span>
+                            <span class="domain-tag">Cards</span>
+                            <span class="domain-tag">Insurance</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="domain-card">
+                            <div class="domain-icon"><i class="bi bi-archive"></i></div>
+                            <h4>Document Pickup &amp; Courier Staff</h4>
+                            <p>Collecting and delivering customer documents safely</p>
+                            <div class="domain-tags">
+                            <span class="domain-tag">Pickup</span>
+                            <span class="domain-tag">Delivery</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -1026,7 +1219,7 @@
             <div class="section-title animate-on-scroll">
                 <span class="label">Our Process</span>
                 <h2>BFSI Hiring, Done Right</h2>
-                <p>A compliance-first, domain-deep hiring process tailored for the regulated world of banking and financial services — from mandate to onboarding in 18 days.</p>
+                <p>A compliance-first, domain-deep hiring process tailored for the regulated world of banking and financial services — from mandate to onboarding, with clear timelines agreed up front.</p>
             </div>
             <div class="row align-items-center">
                 <div class="col-lg-2 col-md-4 col-6 animate-on-scroll delay-1">
@@ -1041,7 +1234,7 @@
                     <div class="process-card">
                         <div class="process-number">2</div>
                         <h5>Domain-Specific Sourcing</h5>
-                        <p>Targeted outreach through BFSI networks, industry referrals, LinkedIn, and our proprietary finance talent database.</p>
+                        <p>Targeted outreach through BFSI networks, industry referrals, LinkedIn and direct headhunting.</p>
                     </div>
                 </div>
                 <div class="col-lg-1 col-md-1 col-1 d-none d-lg-block"><div class="process-connector"><i class="bi bi-arrow-right"></i></div></div>
@@ -1089,9 +1282,9 @@
                     <div class="feature-card">
                         <div class="feature-icon"><i class="bi bi-mortarboard"></i></div>
                         <h4>Domain Expert Evaluators</h4>
-                        <p>Our assessment panels include former bankers, insurance leaders, and capital market professionals with 15+ years of hands-on industry experience.</p>
+                        <p>Candidates are assessed on role-specific BFSI knowledge — regulations, products and processes — not just their CV.</p>
                         <ul class="feature-list">
-                            <li><i class="bi bi-check-circle-fill"></i> Ex-banker interview panels</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Role-specific interview questions</li>
                             <li><i class="bi bi-check-circle-fill"></i> Case study-based evaluations</li>
                             <li><i class="bi bi-check-circle-fill"></i> Regulatory scenario testing</li>
                         </ul>
@@ -1100,10 +1293,10 @@
                 <div class="col-lg-4 col-md-6 animate-on-scroll delay-3">
                     <div class="feature-card">
                         <div class="feature-icon"><i class="bi bi-database"></i></div>
-                        <h4>Proprietary BFSI Talent Pool</h4>
-                        <p>Access to a curated database of 200,000+ BFSI professionals — pre-segmented by sub-domain, experience level, certifications, and current employer.</p>
+                        <h4>Targeted BFSI Sourcing</h4>
+                        <p>Targeted sourcing across job portals, LinkedIn, referrals and direct headhunting — focused on your sub-domain, experience level and certifications.</p>
                         <ul class="feature-list">
-                            <li><i class="bi bi-check-circle-fill"></i> 200K+ pre-vetted BFSI profiles</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Targeted BFSI sourcing</li>
                             <li><i class="bi bi-check-circle-fill"></i> Certification-filtered search (CA, CFA, FRM)</li>
                             <li><i class="bi bi-check-circle-fill"></i> Competitor mapping intelligence</li>
                         </ul>
@@ -1113,9 +1306,9 @@
                     <div class="feature-card">
                         <div class="feature-icon"><i class="bi bi-speedometer2"></i></div>
                         <h4>Rapid Deployment for Branch Rollouts</h4>
-                        <p>Specialized in high-volume branch hiring — we can staff 50–200+ branch positions simultaneously with zone-specific language and cultural fit matching.</p>
+                        <p>Branch and volume hiring planned with you — sourcing by zone, with local language and cultural fit in mind.</p>
                         <ul class="feature-list">
-                            <li><i class="bi bi-check-circle-fill"></i> 50–200+ branch staff in 30 days</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Branch &amp; volume hiring</li>
                             <li><i class="bi bi-check-circle-fill"></i> Regional language proficiency screening</li>
                             <li><i class="bi bi-check-circle-fill"></i> Geo-specific cultural fit mapping</li>
                         </ul>
@@ -1137,7 +1330,7 @@
                     <div class="feature-card">
                         <div class="feature-icon"><i class="bi bi-arrow-repeat"></i></div>
                         <h4>Replacement & Retention Support</h4>
-                        <p>Industry-leading 120-day replacement guarantee for BFSI roles — the longest in the segment — plus post-placement retention monitoring and support.</p>
+                        <p>A replacement guarantee for BFSI roles, with the period agreed in your contract, plus post-placement follow-up.</p>
                         <ul class="feature-list">
                             <li><i class="bi bi-check-circle-fill"></i> 120-day replacement guarantee</li>
                             <li><i class="bi bi-check-circle-fill"></i> 30/60/90-day check-in calls</li>
@@ -1235,41 +1428,6 @@
         </div>
     </section>
 
-    <!-- ===== STATS ===== -->
-    <section class="stats-section section-padding" id="stats">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-6 animate-on-scroll delay-1">
-                    <div class="stat-item">
-                        <div class="stat-number" data-target="3500">0</div>
-                        <div class="stat-label">BFSI Professionals Hired Yearly</div>
-                        <div class="stat-divider"></div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 animate-on-scroll delay-2">
-                    <div class="stat-item">
-                        <div class="stat-number" data-target="150">0</div>
-                        <div class="stat-label">BFSI Clients Served</div>
-                        <div class="stat-divider"></div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 animate-on-scroll delay-3">
-                    <div class="stat-item">
-                        <div class="stat-number" data-target="120">0</div>
-                        <div class="stat-label">Day Replacement Guarantee</div>
-                        <div class="stat-divider"></div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 animate-on-scroll delay-4">
-                    <div class="stat-item">
-                        <div class="stat-number" data-target="18">0</div>
-                        <div class="stat-label">Days Average Time-to-Hire</div>
-                        <div class="stat-divider"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- ===== ENGAGEMENT MODELS ===== -->
     <section class="engagement-section section-padding" id="engagement">
@@ -1316,7 +1474,7 @@
                         <h4>Branch Staffing Programs</h4>
                         <p>Dedicated branch rollout hiring — staff entire branches or zones with locally-relevant, language-proficient, compliance-cleared talent.</p>
                         <ul class="engagement-features">
-                            <li><i class="bi bi-check-circle-fill"></i> 50–200+ positions per program</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Bulk positions planned in phases</li>
                             <li><i class="bi bi-check-circle-fill"></i> Zone/region-level deployment</li>
                             <li><i class="bi bi-check-circle-fill"></i> Local language proficiency screening</li>
                             <li><i class="bi bi-check-circle-fill"></i> Single point of accountability</li>
@@ -1329,148 +1487,33 @@
         </div>
     </section>
 
-    <!-- ===== CASE STUDIES ===== -->
-    <section class="features-section section-padding" id="cases">
+
+
+
+    <!-- ===== CTA SECTION ===== -->
+    <section class="cta-section" id="cta">
         <div class="container">
-            <div class="section-title animate-on-scroll">
-                <span class="label">Success Stories</span>
-                <h2>BFSI Hiring in Action</h2>
-                <p>Real results from real engagements — see how we've helped leading banks, insurers, and fintech companies solve their toughest talent challenges.</p>
-            </div>
-            <div class="row g-4">
-                <div class="col-lg-4 col-md-6 animate-on-scroll delay-1">
-                    <div class="case-study-card">
-                        <div class="case-study-img">
-                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&h=300&fit=crop&q=80" alt="Private sector bank branch expansion">
-                            <i class="bi bi-bank"></i>
-                            <span class="case-category">Private Bank</span>
-                        </div>
-                        <div class="case-study-body">
-                            <h4>Pan-India Branch Expansion Hiring</h4>
-                            <p>Staffed 180 new branches across 12 states in 45 days — including branch managers, RMs, operations staff, and security personnel with full compliance clearance.</p>
-                            <div class="case-metrics">
-                                <div class="metric-item">
-                                    <strong>540</strong>
-                                    <small>Hires in 45 Days</small>
-                                </div>
-                                <div class="metric-item">
-                                    <strong>97%</strong>
-                                    <small>Compliance Pass Rate</small>
-                                </div>
-                            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-7 animate-on-scroll">
+                    <div class="cta-content">
+                        <h2>Ready to Strengthen Your BFSI Workforce?</h2>
+                        <p>Whether you're opening branches, building a risk team, or digitizing your insurance operations — our BFSI hiring specialists are ready to deliver compliance-ready talent at scale.</p>
+                        <div style="display:flex;gap:15px;flex-wrap:wrap;">
+                            <a href="#contact-form" class="btn-white">Start Hiring Now <i class="bi bi-arrow-right"></i></a>
+                            <a href="#process" class="btn-ghost">See How It Works <i class="bi bi-play-circle"></i></a>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 animate-on-scroll delay-2">
-                    <div class="case-study-card">
-                        <div class="case-study-img">
-                            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=500&h=300&fit=crop&q=80" alt="Insurance company digital transformation">
-                            <i class="bi bi-shield-lock"></i>
-                            <span class="case-category">Insurance</span>
-                        </div>
-                        <div class="case-study-body">
-                            <h4>Digital Transformation Team for Insurer</h4>
-                            <p>Built a 35-member digital team for a leading life insurer — including product managers, data analysts, and claims automation specialists.</p>
-                            <div class="case-metrics">
-                                <div class="metric-item">
-                                    <strong>35</strong>
-                                    <small>Digital Specialists</small>
-                                </div>
-                                <div class="metric-item">
-                                    <strong>60%</strong>
-                                    <small>Faster Claims Processing</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 animate-on-scroll delay-3">
-                    <div class="case-study-card">
-                        <div class="case-study-img">
-                            <img src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=500&h=300&fit=crop&q=80" alt="Fintech startup scaling">
-                            <i class="bi bi-currency-bitcoin"></i>
-                            <span class="case-category">Fintech</span>
-                        </div>
-                        <div class="case-study-body">
-                            <h4>Risk & Compliance Team for NBFC</h4>
-                            <p>Recruited a complete risk management and compliance team for a fast-growing digital NBFC — from CRO to credit analysts, all RBI-compliant.</p>
-                            <div class="case-metrics">
-                                <div class="metric-item">
-                                    <strong>22</strong>
-                                    <small>Risk & Compliance Hires</small>
-                                </div>
-                                <div class="metric-item">
-                                    <strong>100%</strong>
-                                    <small>RBI Audit Clearance</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="col-lg-5 text-end animate-on-scroll delay-2 d-none d-lg-block">
+                    <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=450&h=320&fit=crop&q=80" alt="Banking team collaborating on financial strategy" style="border-radius:20px;box-shadow:0 20px 60px rgba(0,0,0,0.3);max-width:100%;">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ===== TESTIMONIALS ===== -->
-    <section class="testimonials-section section-padding" id="testimonials">
-        <div class="container">
-            <div class="section-title animate-on-scroll">
-                <span class="label">Client Voices</span>
-                <h2>Trusted by BFSI Leaders</h2>
-                <p>Hear from CHROs, branch heads, and business leaders who've transformed their workforce with Talennexus.</p>
-            </div>
-            <div class="row g-4">
-                <div class="col-lg-4 col-md-6 animate-on-scroll delay-1">
-                    <div class="testimonial-card">
-                        <div class="stars">
-                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                        </div>
-                        <div class="quote-icon"><i class="bi bi-quote"></i></div>
-                        <p>"We needed to open 100 branches in 6 months. Talennexus delivered 500+ staff — branch managers, RMs, and operations — with 97% compliance clearance. Their understanding of BFSI regulations is unmatched."</p>
-                        <div class="testimonial-author">
-                            <div class="testimonial-avatar">SG</div>
-                            <div>
-                                <strong>Sunil Gupta</strong>
-                                <span>CHRO, Leading Private Sector Bank</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 animate-on-scroll delay-2">
-                    <div class="testimonial-card">
-                        <div class="stars">
-                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                        </div>
-                        <div class="quote-icon"><i class="bi bi-quote"></i></div>
-                        <p>"Finding actuaries and underwriters with both technical depth and regulatory knowledge is incredibly hard. Talennexus's domain-expert panels ensured every candidate we interviewed was interview-ready from day one."</p>
-                        <div class="testimonial-author">
-                            <div class="testimonial-avatar">MV</div>
-                            <div>
-                                <strong>Meera Venkatesh</strong>
-                                <span>Head of HR, Top 5 Life Insurance Company</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 animate-on-scroll delay-3">
-                    <div class="testimonial-card">
-                        <div class="stars">
-                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
-                        </div>
-                        <div class="quote-icon"><i class="bi bi-quote"></i></div>
-                        <p>"As a fintech, we needed people who understand both technology and finance. Talennexus found us a CRO, 8 risk analysts, and a compliance head in under 3 weeks — all cleared our RBI audit with zero observations."</p>
-                        <div class="testimonial-author">
-                            <div class="testimonial-avatar">NK</div>
-                            <div>
-                                <strong>Nikhil Kapoor</strong>
-                                <span>Co-Founder & CEO, Digital NBFC</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+     <!-- ==================== FOOTER ==================== -->
+    <!-- Contact form (Business / Individual → Zoho) -->
+    <site-contact id="contact-form"></site-contact>
 
     <!-- ===== FAQ ===== -->
     <section class="faq-section section-padding" id="faq">
@@ -1504,7 +1547,7 @@
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">Can you handle large-scale branch staffing?</button>
                             </h2>
                             <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">Yes, branch staffing is one of our strongest capabilities. We have dedicated branch hiring teams with zone-level deployment experience across all Indian states. We handle everything from candidate sourcing and regional language proficiency screening to compliance clearance and onboarding documentation. Our largest single engagement involved staffing 180 branches (540+ positions) across 12 states in 45 days. We provide real-time fill-rate dashboards and zone-wise deployment tracking throughout the program.</div>
+                                <div class="accordion-body">Yes. We plan branch hiring with you by zone and location, and source locally for each branch. We handle everything from candidate sourcing and regional language proficiency screening to compliance clearance and onboarding documentation. We provide real-time fill-rate dashboards and zone-wise deployment tracking throughout the program.</div>
                             </div>
                         </div>
                         <div class="accordion-item animate-on-scroll delay-4">
@@ -1512,7 +1555,7 @@
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">What is your replacement guarantee for BFSI roles?</button>
                             </h2>
                             <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">We offer an industry-leading 120-day replacement guarantee for all permanent BFSI placements — the longest in the segment. If a candidate leaves or is terminated for performance reasons within 120 days of joining, we find a replacement at no additional recruitment fee. For contract staffing, we provide immediate replacement if a contractor exits during the engagement period. We also conduct 30/60/90-day post-placement check-ins to proactively identify and address any retention risks.</div>
+                                <div class="accordion-body">We offer a replacement guarantee for permanent BFSI placements, with the period agreed in your contract. If a candidate leaves or is terminated for performance reasons within 120 days of joining, we find a replacement at no additional recruitment fee. For contract staffing, we provide immediate replacement if a contractor exits during the engagement period. We also conduct 30/60/90-day post-placement check-ins to proactively identify and address any retention risks.</div>
                             </div>
                         </div>
                         <div class="accordion-item animate-on-scroll delay-1">
@@ -1537,31 +1580,6 @@
         </div>
     </section>
 
-    <!-- ===== CTA SECTION ===== -->
-    <section class="cta-section" id="cta">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-7 animate-on-scroll">
-                    <div class="cta-content">
-                        <h2>Ready to Strengthen Your BFSI Workforce?</h2>
-                        <p>Whether you're opening branches, building a risk team, or digitizing your insurance operations — our BFSI hiring specialists are ready to deliver compliance-ready talent at scale.</p>
-                        <div style="display:flex;gap:15px;flex-wrap:wrap;">
-                            <a href="#contact-form" class="btn-white">Start Hiring Now <i class="bi bi-arrow-right"></i></a>
-                            <a href="#process" class="btn-ghost">See How It Works <i class="bi bi-play-circle"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-5 text-end animate-on-scroll delay-2 d-none d-lg-block">
-                    <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=450&h=320&fit=crop&q=80" alt="Banking team collaborating on financial strategy" style="border-radius:20px;box-shadow:0 20px 60px rgba(0,0,0,0.3);max-width:100%;">
-                </div>
-            </div>
-        </div>
-    </section>
-
-     <!-- ==================== FOOTER ==================== -->
-    <!-- Contact form (Business / Individual → Zoho) -->
-    <site-contact id="contact-form"></site-contact>
-
     <site-footer></site-footer>
 
 
@@ -1571,6 +1589,29 @@
     </button>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+    /* White-collar / Blue-collar job tabs */
+    (function () {
+        var tabs = [].slice.call(document.querySelectorAll('.collar-tab'));
+        function show(tab) {
+            tabs.forEach(function (t) {
+                var on = t === tab, pane = document.getElementById(t.getAttribute('aria-controls'));
+                t.classList.toggle('active', on); t.setAttribute('aria-selected', on ? 'true' : 'false'); t.tabIndex = on ? 0 : -1;
+                pane.hidden = !on; pane.classList.toggle('show', on);
+            });
+        }
+        tabs.forEach(function (t) { t.addEventListener('click', function () { show(t); }); });
+        // Links like #blue-collar-jobs open that tab
+        function fromHash() {
+            var h = location.hash.replace('#', '');
+            tabs.forEach(function (t) {
+                if (t.getAttribute('aria-controls') === h) { show(t); t.closest('section').scrollIntoView({ behavior: 'smooth' }); }
+            });
+        }
+        fromHash();
+        window.addEventListener('hashchange', fromHash);
+    })();
+    </script>
     <script>
         // ===== Back to top =====
         const backToTop = document.getElementById('backToTop');

@@ -33,35 +33,33 @@
     {
       label: 'Services',
       href: '#',
+      columns: true,   // groups sit side by side on desktop (Recruitment | Campus Nexus)
       children: [
-        { label: 'Staffing Support', icon: 'bi-people', href: 'staffingsupport' },
-        { label: 'Recruitment Management', icon: 'bi-calculator', href: 'recruitment' },
-        { label: 'Technical Interview', icon: 'bi-laptop', href: 'staffingsupport' },
-        { label: 'Psychometric Assessment', icon: 'bi-people', href: 'staffingsupport' },
         {
-          label: 'Payroll Services',
-          icon: 'bi-graph-up',
-          href: 'payroll',
+          label: 'Recruitment Management',
+          icon: 'bi-person-workspace',
+          href: 'recruitment',
+          group: true,   // sub-items always shown below it (no hover pop-out)
           children: [
-            { label: 'Leave & Timesheet Tracking', icon: 'bi-calendar-check', href: 'payroll#leave-time-tracking' },
-            { label: 'Online Tax Reports & IT Declaration', icon: 'bi-file-earmark-text', href: 'payroll#online-tax-reports' },
-            { label: 'Online Salary Slip & Form 16', icon: 'bi-receipt', href: 'payroll#salary-slip-form16' },
-            { label: 'On-Time Payment Disbursement', icon: 'bi-cash-coin', href: 'payroll#on-time-disbursement' },
-            { label: 'Handling Payroll & Tax Queries', icon: 'bi-headset', href: 'payroll#payroll-tax-queries' }
+            { label: 'Staffing Support', icon: 'bi-people', href: 'staffingsupport' },
+            { label: 'Technical Interview', icon: 'bi-laptop', href: 'technical-interview' },
+            { label: 'Psychometric Assessment', icon: 'bi-clipboard-data', href: 'psychometric-assessment' },
+            { label: 'Exit Interview', icon: 'bi-door-open', href: 'exit-interview' },
+            { label: 'Payroll Services', icon: 'bi-graph-up', href: 'payroll' }
           ]
         },
-        { label: 'Exit Interview', icon: 'bi-door-open', href: 'exit-interview' },
         {
           label: 'Campus Nexus',
           icon: 'bi-mortarboard',
           href: 'campushiring',
+          group: true,   // sub-items always shown below it (no hover pop-out)
           children: [
             { label: 'Campus Hiring', icon: 'bi-mortarboard', href: 'campushiring' },
-            { label: 'Self Skill Training', icon: 'bi-chat-dots', href: 'self-skill' },
+            { label: 'Soft Skill Training', icon: 'bi-chat-dots', href: 'soft-skill' },
             { label: 'Tech Training on Demand', icon: 'bi-code-slash', href: 'techtraining' }
           ]
         },
-        { label: 'Organisation Development', icon: 'bi-diagram-3', href: 'organization-development' }
+        { label: 'Virtual HR', icon: 'bi-diagram-3', href: 'organization-development' }
       ]
     },
     {
@@ -69,25 +67,13 @@
       href: '#',
       industries: true,
       heading: 'Sectors We Serve',
+      // One page per industry — each page has White-Collar and Blue-Collar job tabs
       children: [
-        { label: 'IT', sub: 'Software, Cloud, Data, QA & IT Services', icon: 'bi-cpu', href: 'it' },
-        { label: 'Healthcare', sub: 'Hospitals, Pharma, MedTech & Life Sciences', icon: 'bi-heart-pulse', href: './#industries-healthcare' },
-        { label: 'Telecom', sub: 'Telecommunications, ISP & 5G Networks', icon: 'bi-broadcast-pin', href: 'leadership', dividerAfter: true },
-        { label: 'Retail', sub: 'E-Commerce, Fashion, FMCG & D2C Brands', icon: 'bi-cart4', href: 'leadership' },
-        { label: 'Banking', sub: 'Commercial Banks, NBFCs, Fintech & Insurance', icon: 'bi-bank2', href: 'bfsi-hiring' },
-        { label: 'FMCG', sub: 'Fast Moving Goods, Manufacturing & Supply Chain', icon: 'bi-box-seam-fill', href: './#industries-FMCG', dividerAfter: true },
-        {
-          label: 'Workforce Solutions',
-          icon: 'bi-briefcase',
-          href: 'workforce_solutions',
-          children: [
-            { label: 'Workforce Solutions Overview', icon: 'bi-grid', href: 'workforce_solutions' },
-            { label: 'Technology Hiring', icon: 'bi-cpu', href: 'technology-hiring' },
-            { label: 'BFSI Hiring', icon: 'bi-bank', href: 'bfsi-hiring' },
-            { label: 'Health Care', icon: 'bi-heart-pulse', href: 'healthcare' },
-            { label: 'Retail Telecom', icon: 'bi-person-badge', href: 'leadership' }
-          ]
-        }
+        { label: 'IT', sub: 'Software, Cloud, Data, QA & IT Technicians', icon: 'bi-cpu', href: 'it' },
+        { label: 'Healthcare', sub: 'Hospitals, Pharma, MedTech & Support Staff', icon: 'bi-heart-pulse', href: 'healthcare' },
+        { label: 'Banking & Finance', sub: 'Banks, NBFCs, Fintech, Insurance & Field Staff', icon: 'bi-bank2', href: 'bfsi-hiring' },
+        { label: 'Retail & Telecom', sub: 'Stores, E-Commerce, Telecom Networks & Frontline', icon: 'bi-broadcast-pin', href: 'leadership' },
+        { label: 'FMCG', sub: 'Fast Moving Goods, Manufacturing & Supply Chain', icon: 'bi-box-seam-fill', href: './#industries-FMCG' }
       ]
     },
     { label: 'Find a Job?', href: 'https://verifitech.zohorecruit.in/jobs/Careers', external: true }
@@ -269,6 +255,168 @@
     site-header .dropdown-item:hover i {
       color: var(--primary-accent);
       transform: scale(1.15);
+    }
+    /* Group: parent item with its sub-items always listed below (smaller, indented) */
+    site-header .dropdown-group .group-title {
+      font-weight: 600;
+      color: var(--primary-color);
+    }
+    site-header .dropdown-group .group-list {
+      list-style: none;
+      margin: 2px 0 8px 31px;
+      padding: 0 0 0 10px;
+      border-left: 2px solid var(--primary-light);
+    }
+    site-header .dropdown-group .group-item {
+      padding: 6px 12px;
+      font-size: 0.86rem;
+      gap: 8px;
+    }
+    site-header .dropdown-group .group-item i {
+      font-size: 0.9rem;
+      width: 18px;
+    }
+    /* Services: groups side by side on desktop (Recruitment | Campus Nexus | Virtual HR) */
+    @media (min-width: 1200px) {
+    site-header .dropdown-menu-columns.show {
+      display: grid;
+      /* 2 columns: Recruitment on the left; Campus Nexus with Virtual HR below it on the right */
+      grid-template-columns: max-content max-content;
+      grid-auto-flow: row;
+      column-gap: 0;
+      align-items: stretch;
+      padding: 18px 10px;
+      max-width: calc(100vw - 32px);
+    }
+    site-header .dropdown-menu-columns > li {
+      padding: 0 14px;
+      min-width: 210px;
+    }
+    /* thin divider between columns */
+    site-header .dropdown-menu-columns > li + li {
+      border-left: 1px solid var(--primary-light);
+    }
+    site-header .dropdown-menu-columns .dropdown-item {
+      white-space: nowrap;
+    }
+    /* column titles: no slide on hover, so they never overlap the next column */
+    site-header .dropdown-menu-columns .group-title,
+    site-header .dropdown-menu-columns > li:not(.dropdown-group) > .dropdown-item {
+      font-weight: 600;
+      color: var(--primary-color);
+      transform: none !important;
+    }
+    site-header .dropdown-menu-columns > li:first-child {
+      grid-row: span 2;
+    }
+    /* Virtual HR: under Campus Nexus, separated by a thin line */
+    site-header .dropdown-menu-columns > li:not(.dropdown-group) {
+      grid-column: 2;
+      border-top: 1px solid var(--primary-light);
+      margin-top: 6px;
+      padding-top: 8px;
+    }
+    }
+    /* Hover focus: the column under the mouse stands out, the others fade back,
+       its items slide in from the side and an arrow slides in on the hovered item */
+    @media (min-width: 1200px) {
+    site-header .dropdown-menu-columns > li {
+      border-radius: 12px;
+      transition: opacity .25s ease, background-color .25s ease;
+    }
+    site-header .dropdown-menu-columns > li:hover .group-list > li {
+      animation: ddSideIn .35s cubic-bezier(.2,.8,.2,1) both;
+    }
+    site-header .dropdown-menu-columns > li:hover .group-list > li:nth-child(2) { animation-delay: .04s; }
+    site-header .dropdown-menu-columns > li:hover .group-list > li:nth-child(3) { animation-delay: .08s; }
+    site-header .dropdown-menu-columns > li:hover .group-list > li:nth-child(4) { animation-delay: .12s; }
+    site-header .dropdown-menu-columns > li:hover .group-list > li:nth-child(5) { animation-delay: .16s; }
+    site-header .dropdown-menu-columns > li:hover .group-list { border-left-color: var(--primary-accent); }
+    site-header .dropdown-menu-columns .group-list { transition: border-color .25s ease; }
+    site-header .dropdown-menu-columns .group-item::after,
+    site-header .dropdown-menu-columns > li:not(.dropdown-group) > .dropdown-item::after {
+      content: '→';
+      margin-left: 6px;
+      opacity: 0;
+      transform: translateX(-8px);
+      transition: opacity .2s ease, transform .2s ease;
+      color: var(--primary-accent);
+    }
+    site-header .dropdown-menu-columns .group-item:hover::after,
+    site-header .dropdown-menu-columns > li:not(.dropdown-group) > .dropdown-item:hover::after {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    }
+    @keyframes ddSideIn {
+      from { opacity: 0; transform: translateX(-12px); }
+      to   { opacity: 1; transform: none; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+    site-header .dropdown-menu-columns .group-list > li { animation: none !important; }
+    }
+    /* In-page links stop just below the fixed header */
+    html { scroll-padding-top: 100px; }
+    /* Desktop: every dropdown opens centred under the middle of the header menu */
+    @media (min-width: 1200px) {
+    site-header .navbar .navbar-nav > .nav-item.dropdown { position: static; }
+    site-header .navbar .navbar-nav > .nav-item.dropdown > .dropdown-menu {
+      left: 50% !important;
+      right: auto !important;
+      top: 100%;
+      translate: -50% 0;
+      max-width: calc(100vw - 32px);
+    }
+    }
+    /* no box around Services/Industries/Find a Job after hover or click */
+    site-header .navbar .nav-link:focus,
+    site-header .navbar .nav-link:focus-visible,
+    site-header .navbar .nav-link:active,
+    site-header .navbar .nav-link.show {
+      outline: none !important;
+      box-shadow: none !important;
+      border-color: transparent !important;
+    }
+    /* keyboard users still see where they are: the menu word turns blue */
+    site-header .navbar .nav-link:focus-visible {
+      color: var(--primary-accent) !important;
+    }
+    /* Desktop: dropdowns open on hover with a smooth pop-in */
+    @media (min-width: 1200px) {
+    site-header .navbar .nav-item.dropdown > .dropdown-menu.show {
+      animation: ddPopIn .28s cubic-bezier(.2,.8,.2,1) both;
+      transform-origin: top center;
+    }
+    /* invisible bridge so the menu doesn't close while the mouse moves down to it */
+    site-header .navbar .nav-item.dropdown > .dropdown-menu::before {
+      content: '';
+      position: absolute;
+      left: 0; right: 0; top: -18px;
+      height: 18px;
+    }
+    site-header .navbar .nav-item.dropdown > .dropdown-menu.show > li {
+      animation: ddItemIn .35s ease both;
+    }
+    site-header .navbar .nav-item.dropdown > .dropdown-menu.show > li:nth-child(2) { animation-delay: .04s; }
+    site-header .navbar .nav-item.dropdown > .dropdown-menu.show > li:nth-child(3) { animation-delay: .08s; }
+    site-header .navbar .nav-item.dropdown > .dropdown-menu.show > li:nth-child(4) { animation-delay: .12s; }
+    site-header .navbar .nav-item.dropdown > .dropdown-menu.show > li:nth-child(5) { animation-delay: .16s; }
+    site-header .navbar .nav-item.dropdown > .dropdown-menu.show > li:nth-child(6) { animation-delay: .20s; }
+    site-header .navbar .nav-item.dropdown > .dropdown-menu.show > li:nth-child(n+7) { animation-delay: .24s; }
+    site-header .navbar .nav-item.dropdown:hover > .nav-link { color: var(--primary-accent); }
+    site-header .dropdown-item { transition: background .2s ease, color .2s ease, transform .2s ease; }
+    site-header .dropdown-item:hover { transform: translateX(4px); }
+    }
+    @keyframes ddPopIn {
+      from { opacity: 0; transform: translateY(12px) scale(.97); }
+      to   { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    @keyframes ddItemIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to   { opacity: 1; transform: none; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+    site-header .dropdown-menu, site-header .dropdown-menu > li { animation: none !important; }
     }
     site-header .dropdown-industry-header {
       padding: 8px 20px 12px;
@@ -634,6 +782,16 @@ site-header .navbar .btn-primary-custom.is-current { box-shadow: 0 0 0 3px #ffff
   /* ----------------------------- RENDER ----------------------------- */
   function renderChild(item, child) {
     var a = isActive(child) ? ' active' : '';
+    if (child.children && child.group) {
+      return '<li class="dropdown-group">' +
+        '<a class="dropdown-item group-title' + a + '" href="' + esc(resolve(child.href)) + '">' +
+        icon(child.icon) + ' ' + esc(child.label) + '</a>' +
+        '<ul class="group-list">' +
+        child.children.map(function (s) {
+          return '<li><a class="dropdown-item group-item' + (isActive(s) ? ' active' : '') + '" href="' + esc(resolve(s.href)) + '">' + icon(s.icon) + esc(s.label) + '</a></li>';
+        }).join('') +
+        '</ul></li>';
+    }
     if (child.children) {
       return '<li class="dropdown-submenu">' +
         '<a class="dropdown-item submenu-toggle' + a + '" href="' + esc(resolve(child.href)) + '" role="button">' +
@@ -661,7 +819,7 @@ site-header .navbar .btn-primary-custom.is-current { box-shadow: 0 0 0 3px #ffff
     }
   return '<li class="nav-item dropdown">' +
       '<a class="nav-link dropdown-toggle' + active + '" href="' + esc(resolve(item.href)) + '" role="button" data-bs-toggle="dropdown" aria-expanded="false">' + esc(item.label) + '</a>' +
-      '<ul class="dropdown-menu' + (item.industries ? ' dropdown-menu-industries' : '') + '">' +
+      '<ul class="dropdown-menu' + (item.industries ? ' dropdown-menu-industries' : '') + (item.columns ? ' dropdown-menu-columns' : '') + '">' +
       (item.heading ? '<li><div class="dropdown-industry-header">' + esc(item.heading) + '</div></li>' : '') +
       item.children.map(function (c) { return renderChild(item, c); }).join('') +
       '</ul></li>';
@@ -719,6 +877,12 @@ site-header .navbar .btn-primary-custom.is-current { box-shadow: 0 0 0 3px #ffff
         toggle.parentElement.classList.toggle('show-submenu');
       }, true);
 
+      // Dropdowns open on click only (Bootstrap default). After closing, drop the focus
+      // so the menu word doesn't stay highlighted.
+      this.addEventListener('hidden.bs.dropdown', function (e) {
+        if (e.target && e.target.blur) e.target.blur();
+      });
+
       // Close open sub-menus when another dropdown opens
       this.addEventListener('show.bs.dropdown', function (e) {
         navbar.querySelectorAll('.dropdown-submenu.show-submenu').forEach(function (sub) {
@@ -738,4 +902,37 @@ site-header .navbar .btn-primary-custom.is-current { box-shadow: 0 0 0 3px #ffff
   }
 
   if (!customElements.get('site-header')) customElements.define('site-header', SiteHeader);
+
+  /* ---------- Clean addresses: no "#section" left in the address bar ----------
+     In-page links (e.g. FMCG → #industries-FMCG, "Talk to Us" → #contact-form) still
+     scroll to their section, but the address stays talennexus.com/page.
+     Pages that read the #part on load (job-type tabs) still get it first. */
+  function cleanHash() {
+    if (location.hash && window.history && history.replaceState) {
+      history.replaceState(history.state, '', location.pathname + location.search);
+    }
+  }
+  // Arriving from another page with a #section: let the page jump/scroll first, then tidy the address
+  if (location.hash) {
+    window.addEventListener('load', function () { setTimeout(cleanHash, 800); });
+  }
+  // Clicking an in-page link: scroll smoothly without adding #section to the address
+  document.addEventListener('click', function (e) {
+    if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    var a = e.target.closest && e.target.closest('a[href*="#"]');
+    if (!a || a.hasAttribute('data-bs-toggle') || a.target === '_blank') return;
+    var url;
+    try { url = new URL(a.getAttribute('href'), location.href); } catch (err) { return; }
+    if (url.origin !== location.origin || url.pathname.replace(/\/$/, '') !== location.pathname.replace(/\/$/, '')) return;
+    var id = decodeURIComponent(url.hash.slice(1));
+    if (!id) return;
+    var el = document.getElementById(id);
+    if (!el) return;
+    e.preventDefault();
+    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    // let page scripts that react to the #part (e.g. job-type tabs) still see it
+    if (typeof window.HashChangeEvent === 'function') {
+      try { window.dispatchEvent(new HashChangeEvent('hashchange')); } catch (err) {}
+    }
+  });
 })();

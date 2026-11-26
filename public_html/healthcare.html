@@ -6,9 +6,9 @@
 <script src="components/site-gtm.js?v=20261118"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Talennexus Healthcare Hiring — Scalable, fast, and precise recruitment for hospitals, pharma, medtech, and life sciences organizations.">
+    <meta name="description" content="Healthcare hiring for hospitals, clinics, pharma and medtech — doctors, nurses and allied health roles, plus ward, patient-care and support staff.">
     <meta name="keywords" content="Healthcare Hiring, Medical Staffing, Nurse Recruitment, Physician Hiring, Pharma Talent, Clinical Research Staffing, Healthcare IT, Allied Health Staffing">
-    <title>Healthcare Hiring | Talennexus</title>
+    <title>Healthcare Recruitment | Hospital &amp; Pharma Hiring | Talennexus</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -901,6 +901,19 @@
             .floating-card, .hero-content h1, .hero-content p, .hero-buttons, .hero-image, .bar { animation: none !important; }
             .animate-on-scroll { opacity: 1; transform: none; transition: none; }
         }
+            /* White-collar / Blue-collar job tabs (roles section) */
+        .collar-tabs { display: flex; justify-content: center; margin: -10px 0 36px; }
+        .collar-tabs .wrap { display: inline-flex; background: #fff; border: 1px solid #d9e5f2; border-radius: 60px; padding: 7px; box-shadow: 0 12px 32px rgba(20,53,93,.10); }
+        .collar-tab { display: inline-flex; align-items: center; gap: 10px; padding: 15px 34px; border: 0; background: transparent; border-radius: 60px; font-size: 1.15rem; font-weight: 600; color: #4a5b70; cursor: pointer; transition: all .25s ease; font-family: inherit; }
+        .collar-tab:hover { color: #14355d; background: #e6eef7; }
+        .collar-tab.active { background: #14355d; color: #fff; }
+        .collar-tab small { font-weight: 500; opacity: .75; font-size: .95rem; }
+        .collar-tab i { font-size: 1.25rem; }
+        .collar-pane[hidden] { display: none; }
+        .collar-pane.show { animation: collarIn .35s ease; }
+        @keyframes collarIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+        .collar-note { text-align: center; color: #5a6a7a; max-width: 760px; margin: 0 auto 30px; font-size: .98rem; }
+        @media (max-width: 575.98px) { .collar-tab { padding: 11px 16px; font-size: .95rem; } .collar-tab small { display: none; } }
     </style>
 <!-- Favicon (Talennexus figure from tl.png) -->
 <link rel="icon" href="assets/favicon.ico" sizes="any">
@@ -911,6 +924,78 @@
 <script src="components/site-header.js?v=20261118"></script>
 <script src="components/site-footer.js?v=20261118"></script>
 <script src="components/site-contact.js?v=20261118"></script>
+<link rel="canonical" href="https://talennexus.com/healthcare">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Talennexus">
+<meta property="og:title" content="Healthcare Recruitment | Hospital &amp; Pharma Hiring | Talennexus">
+<meta property="og:description" content="Healthcare hiring for hospitals, clinics, pharma and medtech — doctors, nurses and allied health roles, plus ward, patient-care and support staff.">
+<meta property="og:url" content="https://talennexus.com/healthcare">
+<meta property="og:image" content="https://talennexus.com/assets/talennexus-og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Healthcare Recruitment | Hospital &amp; Pharma Hiring | Talennexus">
+<meta name="twitter:description" content="Healthcare hiring for hospitals, clinics, pharma and medtech — doctors, nurses and allied health roles, plus ward, patient-care and support staff.">
+<meta name="twitter:image" content="https://talennexus.com/assets/talennexus-og.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "Healthcare Recruitment",
+      "serviceType": "Recruitment",
+      "description": "Healthcare hiring for hospitals, clinics, pharma and medtech — doctors, nurses and allied health roles, plus ward, patient-care and support staff.",
+      "url": "https://talennexus.com/healthcare",
+      "provider": {
+        "@id": "https://talennexus.com/#organization"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "India"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://talennexus.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Healthcare Recruitment",
+          "item": "https://talennexus.com/healthcare"
+        }
+      ]
+    },
+    {
+      "@type": "EmploymentAgency",
+      "@id": "https://talennexus.com/#organization",
+      "name": "Talennexus",
+      "url": "https://talennexus.com/",
+      "logo": "https://talennexus.com/assets/tl-logo.png",
+      "image": "https://talennexus.com/assets/talennexus-og.png",
+      "description": "HR partner for Indian businesses offering recruitment, contract staffing, payroll, campus hiring, training and Virtual HR.",
+      "telephone": "+91-99529-78818",
+      "email": "connect@talennexus.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Module No.17, SDF-III, MEPZ SEZ, Tambaram",
+        "addressLocality": "Chennai",
+        "addressRegion": "Tamil Nadu",
+        "postalCode": "600045",
+        "addressCountry": "IN"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "India"
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
     <!-- ==================== NAVIGATION ==================== -->
@@ -931,11 +1016,11 @@
                         <div class="hero-mobile-stats">
                             <div class="floating-card" style="display:flex;align-items:center;gap:12px;">
                                 <i class="bi bi-heart-pulse"></i>
-                                <div><strong>4,500+</strong><br><small style="color:var(--text-gray)">Healthcare Hires Annually</small></div>
+                                <div><strong>Healthcare</strong><br><small style="color:var(--text-gray)">Clinical &amp; support roles</small></div>
                             </div>
                             <div class="floating-card" style="display:flex;align-items:center;gap:12px;border-left-color:var(--primary-color);">
                                 <i class="bi bi-lightning-charge"></i>
-                                <div><strong>12 Days</strong><br><small style="color:var(--text-gray)">Avg. Time-to-Hire</small></div>
+                                <div><strong>Fast</strong><br><small style="color:var(--text-gray)">Timelines agreed up front</small></div>
                             </div>
                         </div>
                     </div>
@@ -946,19 +1031,19 @@
                         <div class="floating-card card-1">
                             <div style="display:flex;align-items:center;gap:12px;">
                                 <i class="bi bi-heart-pulse"></i>
-                                <div><strong>4,500+</strong><br><small style="color:var(--text-gray)">Healthcare Hires Annually</small></div>
+                                <div><strong>Healthcare</strong><br><small style="color:var(--text-gray)">Clinical &amp; support roles</small></div>
                             </div>
                         </div>
                         <div class="floating-card card-2">
                             <div style="display:flex;align-items:center;gap:12px;">
                                 <i class="bi bi-lightning-charge"></i>
-                                <div><strong>12 Days</strong><br><small style="color:var(--text-gray)">Avg. Time-to-Hire</small></div>
+                                <div><strong>Fast</strong><br><small style="color:var(--text-gray)">Timelines agreed up front</small></div>
                             </div>
                         </div>
                         <div class="floating-card card-3">
                             <div style="display:flex;align-items:center;gap:12px;">
                                 <i class="bi bi-check-circle-fill" style="-webkit-text-fill-color:#2ecc71;background:none;"></i>
-                                <div><strong>97%</strong><br><small style="color:var(--text-gray)">Offer Acceptance Rate</small></div>
+                                <div><strong>Verified</strong><br><small style="color:var(--text-gray)">Licence &amp; background checks</small></div>
                             </div>
                         </div>
                     </div>
@@ -972,9 +1057,17 @@
         <div class="container">
             <div class="section-title animate-on-scroll">
                 <span class="label">Healthcare Specialties</span>
-                <h2>Hiring Across Every Healthcare Discipline</h2>
-                <p>We recruit specialized talent across the full spectrum of healthcare — from frontline clinical roles to pharma, medtech, and digital health innovation.</p>
+                <h2>Healthcare Jobs We Hire For</h2>
+                <p>From doctors and nurses to ward staff and patient care attendants &mdash; we hire for both. Choose a job type to see the roles.</p>
             </div>
+            <div class="collar-tabs">
+                <div class="wrap" role="tablist" aria-label="Job type">
+                    <button type="button" class="collar-tab active" role="tab" id="tab-white" aria-controls="white-collar-jobs" aria-selected="true"><i class="bi bi-briefcase"></i> White-Collar <small>· Professional</small></button>
+                    <button type="button" class="collar-tab" role="tab" id="tab-blue" aria-controls="blue-collar-jobs" aria-selected="false" tabindex="-1"><i class="bi bi-tools"></i> Blue-Collar <small>· Support Staff</small></button>
+                </div>
+            </div>
+            <div class="collar-pane show" role="tabpanel" id="white-collar-jobs" aria-labelledby="tab-white">
+                <p class="collar-note">Clinical, pharma, medtech and hospital management professionals &mdash; qualified and registered, hired mostly on permanent roles.</p>
             <div class="row g-4">
                 <div class="col-lg-3 col-md-4 col-sm-6 animate-on-scroll delay-1">
                     <div class="domain-card">
@@ -1083,6 +1176,101 @@
                     </div>
                 </div>
             </div>
+            </div>
+            <div class="collar-pane" role="tabpanel" id="blue-collar-jobs" aria-labelledby="tab-blue" hidden>
+                <p class="collar-note">Ward, patient care, housekeeping and support staff &mdash; verified, medically fit and ready for 24&times;7 shifts, hired individually, on contract or in bulk.</p>
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="domain-card">
+                            <div class="domain-icon"><i class="bi bi-person-heart"></i></div>
+                            <h4>GDA &amp; Ward Staff</h4>
+                            <p>Ward boys and girls for patient movement and ward support</p>
+                            <div class="domain-tags">
+                            <span class="domain-tag">GDA</span>
+                            <span class="domain-tag">Ward boy</span>
+                            <span class="domain-tag">Ward girl</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="domain-card">
+                            <div class="domain-icon"><i class="bi bi-heart"></i></div>
+                            <h4>Patient Care Attendants</h4>
+                            <p>Bedside care, feeding and daily-living support</p>
+                            <div class="domain-tags">
+                            <span class="domain-tag">Bedside care</span>
+                            <span class="domain-tag">Hygiene</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="domain-card">
+                            <div class="domain-icon"><i class="bi bi-house-heart"></i></div>
+                            <h4>Home-Care Attendants</h4>
+                            <p>Elderly and post-hospital care at patients&rsquo; homes</p>
+                            <div class="domain-tags">
+                            <span class="domain-tag">Elder care</span>
+                            <span class="domain-tag">Home visits</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="domain-card">
+                            <div class="domain-icon"><i class="bi bi-droplet"></i></div>
+                            <h4>Phlebotomists &amp; Lab Helpers</h4>
+                            <p>Sample collection, labelling and lab support</p>
+                            <div class="domain-tags">
+                            <span class="domain-tag">Blood draw</span>
+                            <span class="domain-tag">Samples</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="domain-card">
+                            <div class="domain-icon"><i class="bi bi-stars"></i></div>
+                            <h4>Housekeeping Staff</h4>
+                            <p>Hospital-grade cleaning, waste handling and sanitation</p>
+                            <div class="domain-tags">
+                            <span class="domain-tag">Cleaning</span>
+                            <span class="domain-tag">Bio-waste</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="domain-card">
+                            <div class="domain-icon"><i class="bi bi-truck-front"></i></div>
+                            <h4>Ambulance Drivers &amp; Helpers</h4>
+                            <p>Licensed drivers and trained helpers for patient transport</p>
+                            <div class="domain-tags">
+                            <span class="domain-tag">Driver</span>
+                            <span class="domain-tag">EMT helper</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="domain-card">
+                            <div class="domain-icon"><i class="bi bi-capsule"></i></div>
+                            <h4>Pharmacy &amp; Store Helpers</h4>
+                            <p>Stock handling, dispensing support and store keeping</p>
+                            <div class="domain-tags">
+                            <span class="domain-tag">Pharmacy</span>
+                            <span class="domain-tag">Stores</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="domain-card">
+                            <div class="domain-icon"><i class="bi bi-shield-check"></i></div>
+                            <h4>Hospital Security</h4>
+                            <p>Gate, ward and emergency-area security staff</p>
+                            <div class="domain-tags">
+                            <span class="domain-tag">Gate</span>
+                            <span class="domain-tag">Emergency</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -1092,7 +1280,7 @@
             <div class="section-title animate-on-scroll">
                 <span class="label">Our Process</span>
                 <h2>How We Deliver Healthcare Talent</h2>
-                <p>A structured, compliant, and accelerated hiring process designed specifically for healthcare roles — from requisition to onboarding in as little as 12 days.</p>
+                <p>A structured, compliant, and accelerated hiring process designed specifically for healthcare roles — from requisition to onboarding, with timelines agreed up front.</p>
             </div>
             <div class="row align-items-center">
                 <div class="col-lg-2 col-md-4 col-6 animate-on-scroll delay-1">
@@ -1107,7 +1295,7 @@
                     <div class="process-card">
                         <div class="process-number">2</div>
                         <h5>Credential Sourcing</h5>
-                        <p>Targeted sourcing across medical registries, hospital networks, and our proprietary healthcare talent database.</p>
+                        <p>Targeted sourcing across medical registries, hospital networks, job portals and referrals.</p>
                     </div>
                 </div>
                 <div class="col-lg-1 col-md-1 col-1 d-none d-lg-block"><div class="process-connector"><i class="bi bi-arrow-right"></i></div></div>
@@ -1143,7 +1331,7 @@
                     <div class="feature-card">
                         <div class="feature-icon"><i class="bi bi-search"></i></div>
                         <h4>AI-Powered Talent Matching</h4>
-                        <p>Our proprietary AI engine analyzes millions of data points — specialty, licensure, clinical experience, and career trajectory — to match you with the right caregiver, not just the right resume.</p>
+                        <p>We match on specialty, licensure, clinical experience and career goals — to find the right caregiver, not just the right resume.</p>
                         <ul class="feature-list">
                             <li><i class="bi bi-check-circle-fill"></i> Specialty & credential matching</li>
                             <li><i class="bi bi-check-circle-fill"></i> Licensure and registry verification</li>
@@ -1155,7 +1343,7 @@
                     <div class="feature-card">
                         <div class="feature-icon"><i class="bi bi-person-check"></i></div>
                         <h4>Clinical Vetting by Experts</h4>
-                        <p>Every candidate goes through rigorous clinical evaluation conducted by senior medical professionals with 10+ years of experience in the relevant specialty.</p>
+                        <p>Every candidate goes through a role-specific clinical evaluation before you meet them.</p>
                         <ul class="feature-list">
                             <li><i class="bi bi-check-circle-fill"></i> Clinical competency assessments</li>
                             <li><i class="bi bi-check-circle-fill"></i> License & certification verification</li>
@@ -1167,7 +1355,7 @@
                     <div class="feature-card">
                         <div class="feature-icon"><i class="bi bi-lightning-charge"></i></div>
                         <h4>Speed at Scale</h4>
-                        <p>Our optimized pipeline and pre-built talent pools enable us to present shortlisted candidates within 48 hours of requisition — even for bulk hiring of 50+ positions.</p>
+                        <p>We start sourcing the day you share the requisition and aim to share shortlists quickly — including for bulk hiring.</p>
                         <ul class="feature-list">
                             <li><i class="bi bi-check-circle-fill"></i> 48-hour first shortlist</li>
                             <li><i class="bi bi-check-circle-fill"></i> 12-day average time-to-hire</li>
@@ -1179,9 +1367,9 @@
                     <div class="feature-card">
                         <div class="feature-icon"><i class="bi bi-globe2"></i></div>
                         <h4>Global Healthcare Network</h4>
-                        <p>Access to a curated network of 400,000+ healthcare professionals across India, the US, Europe, and the Middle East — ready for hospital, clinic, or remote-care roles.</p>
+                        <p>Targeted sourcing of healthcare professionals across India — ready for hospital, clinic, or remote-care roles.</p>
                         <ul class="feature-list">
-                            <li><i class="bi bi-check-circle-fill"></i> 400K+ healthcare professionals</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Targeted healthcare sourcing</li>
                             <li><i class="bi bi-check-circle-fill"></i> Multi-geography sourcing</li>
                             <li><i class="bi bi-check-circle-fill"></i> Locum & travel-ready candidates</li>
                         </ul>
@@ -1303,41 +1491,6 @@
         </div>
     </section>
 
-    <!-- ===== STATS ===== -->
-    <section class="stats-section section-padding" id="stats">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-6 animate-on-scroll delay-1">
-                    <div class="stat-item">
-                        <div class="stat-number" data-target="4500">0</div>
-                        <div class="stat-label">Healthcare Professionals Hired Yearly</div>
-                        <div class="stat-divider"></div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 animate-on-scroll delay-2">
-                    <div class="stat-item">
-                        <div class="stat-number" data-target="420">0</div>
-                        <div class="stat-label">Hospitals & Healthcare Clients Served</div>
-                        <div class="stat-divider"></div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 animate-on-scroll delay-3">
-                    <div class="stat-item">
-                        <div class="stat-number" data-target="97">0</div>
-                        <div class="stat-label">% Offer Acceptance Rate</div>
-                        <div class="stat-divider"></div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 animate-on-scroll delay-4">
-                    <div class="stat-item">
-                        <div class="stat-number" data-target="12">0</div>
-                        <div class="stat-label">Days Average Time-to-Hire</div>
-                        <div class="stat-divider"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- ===== ENGAGEMENT MODELS ===== -->
     <section class="engagement-section section-padding" id="engagement">
@@ -1384,7 +1537,7 @@
                         <h4>Managed Care Teams</h4>
                         <p>Outsource entire clinical or administrative functions — we recruit, manage, and deliver outcomes.</p>
                         <ul class="engagement-features">
-                            <li><i class="bi bi-check-circle-fill"></i> Dedicated team of 5–200+</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Team size planned with you</li>
                             <li><i class="bi bi-check-circle-fill"></i> Project management included</li>
                             <li><i class="bi bi-check-circle-fill"></i> Performance monitoring & KPIs</li>
                             <li><i class="bi bi-check-circle-fill"></i> Scalable up or down on demand</li>
@@ -1397,213 +1550,8 @@
         </div>
     </section>
 
-    <!-- ===== CASE STUDIES ===== -->
-    <section class="features-section section-padding" id="cases">
-        <div class="container">
-            <div class="section-title animate-on-scroll">
-                <span class="label">Success Stories</span>
-                <h2>Healthcare Hiring in Action</h2>
-                <p>Real results from real engagements — see how we've helped leading healthcare organizations solve their toughest hiring challenges.</p>
-            </div>
-            <div class="row g-4">
-                <div class="col-lg-4 col-md-6 animate-on-scroll delay-1">
-                    <div class="case-study-card">
-                        <div class="case-study-img">
-                            <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=500&h=300&fit=crop&q=80" alt="Hospital network case study">
-                            <i class="bi bi-hospital"></i>
-                            <span class="case-category">Hospital Network</span>
-                        </div>
-                        <div class="case-study-body">
-                            <h4>Staffing a Multi-Specialty Hospital Wing</h4>
-                            <p>Built a 60-member clinical team spanning nursing, critical care, and diagnostics for a new hospital wing — in just 8 weeks.</p>
-                            <div class="case-metrics">
-                                <div class="metric-item">
-                                    <strong>60</strong>
-                                    <small>Hires in 8 Weeks</small>
-                                </div>
-                                <div class="metric-item">
-                                    <strong>94%</strong>
-                                    <small>Retention at 12 Mo.</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 animate-on-scroll delay-2">
-                    <div class="case-study-card">
-                        <div class="case-study-img">
-                            <img src="https://images.unsplash.com/photo-1576671081837-49000212a370?w=500&h=300&fit=crop&q=80" alt="Pharma clinical trials case study">
-                            <i class="bi bi-capsule"></i>
-                            <span class="case-category">Pharma</span>
-                        </div>
-                        <div class="case-study-body">
-                            <h4>Scaling a Clinical Trials Team</h4>
-                            <p>Recruited CRAs, data managers, and biostatisticians to support a Phase III trial rollout across five countries.</p>
-                            <div class="case-metrics">
-                                <div class="metric-item">
-                                    <strong>22</strong>
-                                    <small>Clinical Research Hires</small>
-                                </div>
-                                <div class="metric-item">
-                                    <strong>35%</strong>
-                                    <small>Faster Trial Start</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 animate-on-scroll delay-3">
-                    <div class="case-study-card">
-                        <div class="case-study-img">
-                            <img src="https://images.unsplash.com/photo-1551190822-a9333d879b1f?w=500&h=300&fit=crop&q=80" alt="Digital health case study">
-                            <i class="bi bi-laptop"></i>
-                            <span class="case-category">Digital Health</span>
-                        </div>
-                        <div class="case-study-body">
-                            <h4>Building a Telehealth Care Team</h4>
-                            <p>Staffed a fast-growing telehealth platform with physicians, nurse practitioners, and health informaticians from scratch.</p>
-                            <div class="case-metrics">
-                                <div class="metric-item">
-                                    <strong>28</strong>
-                                    <small>Care Team Members</small>
-                                </div>
-                                <div class="metric-item">
-                                    <strong>97%</strong>
-                                    <small>Offer Acceptance</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- ===== TESTIMONIALS ===== -->
-    <section class="testimonials-section section-padding" id="testimonials">
-        <div class="container">
-            <div class="section-title animate-on-scroll">
-                <span class="label">Client Voices</span>
-                <h2>Trusted by Healthcare Leaders</h2>
-                <p>Hear from CMOs, Directors of Nursing, and healthcare leaders who've transformed their hiring with Talennexus.</p>
-            </div>
-            <div class="row g-4">
-                <div class="col-lg-4 col-md-6 animate-on-scroll delay-1">
-                    <div class="testimonial-card">
-                        <div class="stars">
-                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                        </div>
-                        <div class="quote-icon"><i class="bi bi-quote"></i></div>
-                        <p>"Talennexus filled 25 ICU nursing positions in under 3 weeks. The clinical quality of candidates was significantly better than what we'd seen from other agencies. Their credentialing process saved us hundreds of hours."</p>
-                        <div class="testimonial-author">
-                            <div class="testimonial-avatar">DN</div>
-                            <div>
-                                <strong>Dr. Nandini Rao</strong>
-                                <span>Director of Nursing, Multi-Specialty Hospital</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 animate-on-scroll delay-2">
-                    <div class="testimonial-card">
-                        <div class="stars">
-                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                        </div>
-                        <div class="quote-icon"><i class="bi bi-quote"></i></div>
-                        <p>"We needed 10 senior consultants across specialties — roles that are notoriously hard to fill. Talennexus delivered all 10 in 4 weeks, and every single one cleared our internal clinical panel on the first attempt."</p>
-                        <div class="testimonial-author">
-                            <div class="testimonial-avatar">SV</div>
-                            <div>
-                                <strong>Dr. Sanjay Verma</strong>
-                                <span>Chief Medical Officer, Healthcare Group</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 animate-on-scroll delay-3">
-                    <div class="testimonial-card">
-                        <div class="stars">
-                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
-                        </div>
-                        <div class="quote-icon"><i class="bi bi-quote"></i></div>
-                        <p>"Their managed team model is a game-changer. We outsourced our entire diagnostics staffing — 20 technicians — and saw turnaround times drop by 55% in the first quarter. Truly outcome-driven."</p>
-                        <div class="testimonial-author">
-                            <div class="testimonial-avatar">AM</div>
-                            <div>
-                                <strong>Anita Menon</strong>
-                                <span>Head of Operations, Diagnostics Chain</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- ===== FAQ ===== -->
-    <section class="faq-section section-padding" id="faq">
-        <div class="container">
-            <div class="section-title animate-on-scroll">
-                <span class="label">FAQs</span>
-                <h2>Frequently Asked Questions</h2>
-                <p>Everything you need to know about our Healthcare Hiring services.</p>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-9">
-                    <div class="accordion" id="faqAccordion">
-                        <div class="accordion-item animate-on-scroll delay-1">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">What healthcare roles do you hire for?</button>
-                            </h2>
-                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">We hire across all major healthcare disciplines including Physicians & Specialists (Cardiology, Oncology, Radiology, Orthopedics), Nursing & Clinical Staff (ICU, ER, OT, NICU, Home Care), Pharma & Life Sciences (R&D, Regulatory Affairs, Pharmacovigilance, QA/QC), Allied Health (Physiotherapy, Lab Technicians, Radiography, Dietetics), Clinical Research (CRAs, Biostatisticians, Data Managers), Hospital Administration, MedTech & Devices, and Digital Health & HealthIT.</div>
-                            </div>
-                        </div>
-                        <div class="accordion-item animate-on-scroll delay-2">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">How do you verify clinical credentials?</button>
-                            </h2>
-                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">Our credentialing process is multi-layered. It starts with license and registration verification against relevant medical councils and registries, followed by a domain-specific clinical competency assessment. Shortlisted candidates then go through a panel interview conducted by our in-house senior clinicians with 10+ years of experience. For senior roles, we also conduct case-based evaluations and background verification through certified agencies. Every candidate receives a detailed credentialing scorecard.</div>
-                            </div>
-                        </div>
-                        <div class="accordion-item animate-on-scroll delay-3">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">What is your typical time-to-hire for healthcare roles?</button>
-                            </h2>
-                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">Our average time-to-hire is 12 working days from requisition to offer acceptance. For locum and contract staffing roles, we can deploy candidates in as little as 5–7 days from our pre-vetted talent pool. For niche or senior specialist roles, the timeline may extend to 20–30 days depending on market availability and interview schedules.</div>
-                            </div>
-                        </div>
-                        <div class="accordion-item animate-on-scroll delay-4">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">Do you offer a replacement guarantee?</button>
-                            </h2>
-                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">Yes, all our permanent placements come with a 90-day replacement guarantee. If a candidate leaves or is terminated for performance reasons within 90 days of joining, we will find a replacement candidate at no additional recruitment fee. For contract and locum staffing, we offer immediate replacement if a professional exits during the engagement period.</div>
-                            </div>
-                        </div>
-                        <div class="accordion-item animate-on-scroll delay-1">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">Can you handle bulk hiring for new facilities or expansions?</button>
-                            </h2>
-                            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">Absolutely. Bulk hiring for hospital launches and expansions is one of our core strengths. We have dedicated account teams and scalable sourcing infrastructure to handle volumes of 50–500+ positions simultaneously. We use parallel pipeline processing, pre-built talent communities, and credentialing bootcamps to maintain quality even at scale. Our largest single engagement involved staffing 250+ clinical and support roles for a new hospital launch in 10 weeks.</div>
-                            </div>
-                        </div>
-                        <div class="accordion-item animate-on-scroll delay-2">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">Do you support remote, locum, and international hiring?</button>
-                            </h2>
-                            <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">Yes, we support locum, remote-care, and on-site hiring models across multiple geographies. Our talent network spans India, the United States, the United Kingdom, Europe, and the Middle East. For international placements, we handle compliance, credentialing, payroll, and contractor management through our global employer-of-record partners, so you can hire globally without setting up local entities.</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- ===== CTA SECTION ===== -->
     <section class="cta-section" id="cta">
@@ -1753,6 +1701,71 @@
     <!-- Contact form (Business / Individual → Zoho) -->
     <site-contact id="contact-form"></site-contact>
 
+    <!-- ===== FAQ ===== -->
+    <section class="faq-section section-padding" id="faq">
+        <div class="container">
+            <div class="section-title animate-on-scroll">
+                <span class="label">FAQs</span>
+                <h2>Frequently Asked Questions</h2>
+                <p>Everything you need to know about our Healthcare Hiring services.</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-9">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item animate-on-scroll delay-1">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">What healthcare roles do you hire for?</button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">We hire across all major healthcare disciplines including Physicians & Specialists (Cardiology, Oncology, Radiology, Orthopedics), Nursing & Clinical Staff (ICU, ER, OT, NICU, Home Care), Pharma & Life Sciences (R&D, Regulatory Affairs, Pharmacovigilance, QA/QC), Allied Health (Physiotherapy, Lab Technicians, Radiography, Dietetics), Clinical Research (CRAs, Biostatisticians, Data Managers), Hospital Administration, MedTech & Devices, and Digital Health & HealthIT.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item animate-on-scroll delay-2">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">How do you verify clinical credentials?</button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">Our credentialing process is multi-layered. It starts with license and registration verification against relevant medical councils and registries, followed by a domain-specific clinical competency assessment. Shortlisted candidates then go through a panel interview conducted by our in-house senior clinicians with 10+ years of experience. For senior roles, we also conduct case-based evaluations and background verification through certified agencies. Every candidate receives a detailed credentialing scorecard.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item animate-on-scroll delay-3">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">What is your typical time-to-hire for healthcare roles?</button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">We agree a hiring timeline with you at the start, based on the role and volume. For locum and contract staffing roles, we can deploy candidates in as little as 5–7 days from our pre-vetted talent pool. For niche or senior specialist roles, the timeline may extend to 20–30 days depending on market availability and interview schedules.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item animate-on-scroll delay-4">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">Do you offer a replacement guarantee?</button>
+                            </h2>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">Yes, all our permanent placements come with a 90-day replacement guarantee. If a candidate leaves or is terminated for performance reasons within 90 days of joining, we will find a replacement candidate at no additional recruitment fee. For contract and locum staffing, we offer immediate replacement if a professional exits during the engagement period.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item animate-on-scroll delay-1">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">Can you handle bulk hiring for new facilities or expansions?</button>
+                            </h2>
+                            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">Yes. For hospital launches and expansions we plan bulk hiring with you, with a single point of contact and parallel sourcing for large volumes. We keep quality checks the same at every volume — credentials, clinical evaluation and background verification.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item animate-on-scroll delay-2">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">Do you support remote, locum, and international hiring?</button>
+                            </h2>
+                            <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">Yes, we support locum, remote-care, and on-site hiring models across multiple geographies. Our talent network spans India, the United States, the United Kingdom, Europe, and the Middle East. For international placements, we handle compliance, credentialing, payroll, and contractor management through our global employer-of-record partners, so you can hire globally without setting up local entities.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <site-footer></site-footer>
 
     <!-- ===== TOAST ===== -->
@@ -1769,6 +1782,29 @@
     </button>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+    /* White-collar / Blue-collar job tabs */
+    (function () {
+        var tabs = [].slice.call(document.querySelectorAll('.collar-tab'));
+        function show(tab) {
+            tabs.forEach(function (t) {
+                var on = t === tab, pane = document.getElementById(t.getAttribute('aria-controls'));
+                t.classList.toggle('active', on); t.setAttribute('aria-selected', on ? 'true' : 'false'); t.tabIndex = on ? 0 : -1;
+                pane.hidden = !on; pane.classList.toggle('show', on);
+            });
+        }
+        tabs.forEach(function (t) { t.addEventListener('click', function () { show(t); }); });
+        // Links like #blue-collar-jobs open that tab
+        function fromHash() {
+            var h = location.hash.replace('#', '');
+            tabs.forEach(function (t) {
+                if (t.getAttribute('aria-controls') === h) { show(t); t.closest('section').scrollIntoView({ behavior: 'smooth' }); }
+            });
+        }
+        fromHash();
+        window.addEventListener('hashchange', fromHash);
+    })();
+    </script>
     <script>
         // ===== Navbar scroll effect =====
         const navbar = document.querySelector('.navbar');

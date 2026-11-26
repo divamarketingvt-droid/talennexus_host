@@ -1,10 +1,6 @@
-
 User-agent: *
 Allow: /
+Disallow: /blog/admin/
+Disallow: /api/
 
-Disallow: /wp/
-Disallow: /checks/lp-id%20verification
-Disallow: /checks/lp-reference
-
-Sitemap: https://www.verifitech.com/sitemap.xml
-
+Sitemap: https://talennexus.com/sitemap.xml

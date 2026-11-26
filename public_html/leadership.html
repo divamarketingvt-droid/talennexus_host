@@ -5,9 +5,9 @@
 <script src="components/site-gtm.js?v=20261118"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Talennexus Retail & Telecom Hiring — Specialized staffing and recruitment for retail stores, e-commerce, telecom networks, customer experience, field operations, and technology roles across India.">
+    <meta name="description" content="Retail and telecom hiring across India — store, e-commerce and network roles, plus bulk hiring of store staff, delivery executives, tower and fibre technicians.">
     <meta name="keywords" content="Retail Hiring, Telecom Hiring, Retail Staffing, Telecom Recruitment, Store Manager Hiring, Network Engineer Recruitment, Customer Support Staffing, 5G Talent, E-commerce Hiring, Field Technician Recruitment">
-    <title>Retail & Telecom Hiring | Talennexus</title>
+    <title>Retail &amp; Telecom Recruitment | Bulk Hiring | Talennexus</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -1233,7 +1233,29 @@
             .section-title h2 { font-size: 2rem; }
             .floating-card { display: none; }
         }
-    </style>
+            /* White-collar / Blue-collar job tabs (roles section) */
+        .collar-tabs { display: flex; justify-content: center; margin: -10px 0 36px; }
+        .collar-tabs .wrap { display: inline-flex; background: #fff; border: 1px solid #d9e5f2; border-radius: 60px; padding: 7px; box-shadow: 0 12px 32px rgba(20,53,93,.10); }
+        .collar-tab { display: inline-flex; align-items: center; gap: 10px; padding: 15px 34px; border: 0; background: transparent; border-radius: 60px; font-size: 1.15rem; font-weight: 600; color: #4a5b70; cursor: pointer; transition: all .25s ease; font-family: inherit; }
+        .collar-tab:hover { color: #14355d; background: #e6eef7; }
+        .collar-tab.active { background: #14355d; color: #fff; }
+        .collar-tab small { font-weight: 500; opacity: .75; font-size: .95rem; }
+        .collar-tab i { font-size: 1.25rem; }
+        .collar-pane[hidden] { display: none; }
+        .collar-pane.show { animation: collarIn .35s ease; }
+        @keyframes collarIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+        .collar-note { text-align: center; color: #5a6a7a; max-width: 760px; margin: 0 auto 30px; font-size: .98rem; }
+        @media (max-width: 575.98px) { .collar-tab { padding: 11px 16px; font-size: .95rem; } .collar-tab small { display: none; } }
+    
+/* Hero: content centred vertically, no empty band at the bottom (desktop) */
+@media (min-width: 992px) {
+.hero-section { display: flex; align-items: center; }
+.hero-section > .container { width: 100%; }
+}
+@media (min-width: 1200px) {
+.hero-section { min-height: 80vh; padding: 130px 0 70px; }
+}
+</style>
 <!-- Favicon (Talennexus figure from tl.png) -->
 <link rel="icon" href="assets/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
@@ -1243,6 +1265,78 @@
 <script src="components/site-header.js?v=20261118"></script>
 <script src="components/site-footer.js?v=20261118"></script>
 <script src="components/site-contact.js?v=20261118"></script>
+<link rel="canonical" href="https://talennexus.com/leadership">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Talennexus">
+<meta property="og:title" content="Retail &amp; Telecom Recruitment | Bulk Hiring | Talennexus">
+<meta property="og:description" content="Retail and telecom hiring across India — store, e-commerce and network roles, plus bulk hiring of store staff, delivery executives, tower and fibre technicians.">
+<meta property="og:url" content="https://talennexus.com/leadership">
+<meta property="og:image" content="https://talennexus.com/assets/talennexus-og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Retail &amp; Telecom Recruitment | Bulk Hiring | Talennexus">
+<meta name="twitter:description" content="Retail and telecom hiring across India — store, e-commerce and network roles, plus bulk hiring of store staff, delivery executives, tower and fibre technicians.">
+<meta name="twitter:image" content="https://talennexus.com/assets/talennexus-og.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "Retail & Telecom Recruitment",
+      "serviceType": "Recruitment",
+      "description": "Retail and telecom hiring across India — store, e-commerce and network roles, plus bulk hiring of store staff, delivery executives, tower and fibre technicians.",
+      "url": "https://talennexus.com/leadership",
+      "provider": {
+        "@id": "https://talennexus.com/#organization"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "India"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://talennexus.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Retail & Telecom Recruitment",
+          "item": "https://talennexus.com/leadership"
+        }
+      ]
+    },
+    {
+      "@type": "EmploymentAgency",
+      "@id": "https://talennexus.com/#organization",
+      "name": "Talennexus",
+      "url": "https://talennexus.com/",
+      "logo": "https://talennexus.com/assets/tl-logo.png",
+      "image": "https://talennexus.com/assets/talennexus-og.png",
+      "description": "HR partner for Indian businesses offering recruitment, contract staffing, payroll, campus hiring, training and Virtual HR.",
+      "telephone": "+91-99529-78818",
+      "email": "connect@talennexus.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Module No.17, SDF-III, MEPZ SEZ, Tambaram",
+        "addressLocality": "Chennai",
+        "addressRegion": "Tamil Nadu",
+        "postalCode": "600045",
+        "addressCountry": "IN"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "India"
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -1265,15 +1359,15 @@
                 <div style="height:420px; background:linear-gradient(150deg,var(--primary-color),var(--secondary-color)); border-radius:22px; position:relative; box-shadow:var(--shadow-lg);">
                     <div class="floating-card card-1">
                         <i class="bi bi-shop"></i>
-                        <div><strong>3,800+</strong><br><small style="color:var(--text-gray)">Retail Hires / Year</small></div>
+                        <div><strong>Retail</strong><br><small style="color:var(--text-gray)">Store, warehouse &amp; delivery roles</small></div>
                     </div>
                     <div class="floating-card card-2">
                         <i class="bi bi-broadcast"></i>
-                        <div><strong>1,200+</strong><br><small style="color:var(--text-gray)">Telecom Placements</small></div>
+                        <div><strong>Telecom</strong><br><small style="color:var(--text-gray)">Network, field &amp; sales roles</small></div>
                     </div>
                     <div class="floating-card card-3">
                         <i class="bi bi-check-circle"></i>
-                        <div><strong>94%</strong><br><small style="color:var(--text-gray)">Client Retention</small></div>
+                        <div><strong>Bulk</strong><br><small style="color:var(--text-gray)">Volume hiring for launches</small></div>
                     </div>
                 </div>
             </div>
@@ -1286,9 +1380,17 @@
     <div class="container">
         <div class="section-title animate-on-scroll">
             <span class="label">What We Hire</span>
-            <h2>Roles Across Retail & Telecom</h2>
-            <p>We cover the full spectrum — from frontline customer-facing roles to specialised technical and leadership positions.</p>
+            <h2>Retail &amp; Telecom Jobs We Hire For</h2>
+            <p>From store and network managers to delivery riders and tower technicians &mdash; we hire for both. Choose a job type to see the roles.</p>
         </div>
+        <div class="collar-tabs">
+            <div class="wrap" role="tablist" aria-label="Job type">
+                <button type="button" class="collar-tab active" role="tab" id="tab-white" aria-controls="white-collar-jobs" aria-selected="true"><i class="bi bi-briefcase"></i> White-Collar <small>· Professional</small></button>
+                <button type="button" class="collar-tab" role="tab" id="tab-blue" aria-controls="blue-collar-jobs" aria-selected="false" tabindex="-1"><i class="bi bi-tools"></i> Blue-Collar <small>· Frontline</small></button>
+            </div>
+        </div>
+        <div class="collar-pane show" role="tabpanel" id="white-collar-jobs" aria-labelledby="tab-white">
+            <p class="collar-note">Store, category, e-commerce, network and leadership roles &mdash; experienced professionals hired mostly on permanent roles.</p>
         <div class="row g-4">
             <div class="col-md-6 col-lg-4 animate-on-scroll delay-1">
                 <div class="domain-card">
@@ -1363,6 +1465,101 @@
                 </div>
             </div>
         </div>
+        </div>
+        <div class="collar-pane" role="tabpanel" id="blue-collar-jobs" aria-labelledby="tab-blue" hidden>
+            <p class="collar-note">Store floor, warehouse, delivery and field technician roles &mdash; skill-tested and hired fast, individually, on contract or in bulk for launches and peak seasons.</p>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="domain-card">
+                        <div class="domain-icon"><i class="bi bi-shop-window"></i></div>
+                        <h4>Store Staff &amp; Sales Associates</h4>
+                        <p>Customer help, billing support and shelf upkeep</p>
+                        <div class="domain-tags">
+                        <span class="domain-tag">Sales floor</span>
+                        <span class="domain-tag">Billing</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="domain-card">
+                        <div class="domain-icon"><i class="bi bi-cash-coin"></i></div>
+                        <h4>Cashiers</h4>
+                        <p>Billing counters, cash handling and returns</p>
+                        <div class="domain-tags">
+                        <span class="domain-tag">POS</span>
+                        <span class="domain-tag">Cash handling</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="domain-card">
+                        <div class="domain-icon"><i class="bi bi-box-seam"></i></div>
+                        <h4>Warehouse Pickers &amp; Packers</h4>
+                        <p>Picking, packing, sorting and dispatch</p>
+                        <div class="domain-tags">
+                        <span class="domain-tag">Picking</span>
+                        <span class="domain-tag">Packing</span>
+                        <span class="domain-tag">Dispatch</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="domain-card">
+                        <div class="domain-icon"><i class="bi bi-bicycle"></i></div>
+                        <h4>Delivery Executives</h4>
+                        <p>Last-mile delivery riders for e-commerce and quick commerce</p>
+                        <div class="domain-tags">
+                        <span class="domain-tag">Last mile</span>
+                        <span class="domain-tag">Bike riders</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="domain-card">
+                        <div class="domain-icon"><i class="bi bi-broadcast-pin"></i></div>
+                        <h4>Tower Technicians</h4>
+                        <p>Tower installation, maintenance and power backup checks</p>
+                        <div class="domain-tags">
+                        <span class="domain-tag">Towers</span>
+                        <span class="domain-tag">DG / battery</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="domain-card">
+                        <div class="domain-icon"><i class="bi bi-router"></i></div>
+                        <h4>FTTH &amp; Broadband Installers</h4>
+                        <p>Home fibre and broadband installation and repair</p>
+                        <div class="domain-tags">
+                        <span class="domain-tag">FTTH</span>
+                        <span class="domain-tag">Broadband</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="domain-card">
+                        <div class="domain-icon"><i class="bi bi-sim"></i></div>
+                        <h4>SIM &amp; Field Sales Promoters</h4>
+                        <p>Field promotion, SIM activation and customer sign-ups</p>
+                        <div class="domain-tags">
+                        <span class="domain-tag">SIM</span>
+                        <span class="domain-tag">Promotion</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="domain-card">
+                        <div class="domain-icon"><i class="bi bi-tags"></i></div>
+                        <h4>Merchandisers</h4>
+                        <p>Display setup, stock checks and planogram upkeep</p>
+                        <div class="domain-tags">
+                        <span class="domain-tag">Display</span>
+                        <span class="domain-tag">Planogram</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
@@ -1413,14 +1610,14 @@
         <div class="section-title animate-on-scroll">
             <span class="label">Why Talennexus</span>
             <h2>Built for High-Volume & High-Skill Needs</h2>
-            <p>Whether you need 50 store associates in 10 days or specialised RF engineers, we deliver.</p>
+            <p>Whether you need a batch of store associates or specialised RF engineers, we plan the hiring around your timeline.</p>
         </div>
         <div class="row g-4">
             <div class="col-md-6 col-lg-4 animate-on-scroll delay-1">
                 <div class="feature-card">
                     <div class="feature-icon"><i class="bi bi-lightning-charge"></i></div>
                     <h4>Speed at Scale</h4>
-                    <p>Average time-to-hire for retail frontline roles is under 8 days. Telecom specialised roles average 12–18 days.</p>
+                    <p>We agree a timeline with you up front — frontline roles move faster; specialised telecom roles take longer.</p>
                     <ul class="feature-list">
                         <li><i class="bi bi-check-circle-fill"></i> Bulk hiring capability</li>
                         <li><i class="bi bi-check-circle-fill"></i> Pan-India coverage</li>
@@ -1456,41 +1653,6 @@
     </div>
 </section>
 
-<!-- ===== STATS ===== -->
-<section class="section-padding stats-section">
-    <div class="container">
-        <div class="row">
-            <div class="col-6 col-md-3">
-                <div class="stat-item animate-on-scroll">
-                    <div class="stat-number" data-target="3800">0</div>
-                    <div class="stat-label">Retail Placements / Year</div>
-                    <div class="stat-divider"></div>
-                </div>
-            </div>
-            <div class="col-6 col-md-3">
-                <div class="stat-item animate-on-scroll delay-1">
-                    <div class="stat-number" data-target="1200">0</div>
-                    <div class="stat-label">Telecom Hires / Year</div>
-                    <div class="stat-divider"></div>
-                </div>
-            </div>
-            <div class="col-6 col-md-3">
-                <div class="stat-item animate-on-scroll delay-2">
-                    <div class="stat-number" data-target="94">0</div>
-                    <div class="stat-label">Client Retention Rate</div>
-                    <div class="stat-divider"></div>
-                </div>
-            </div>
-            <div class="col-6 col-md-3">
-                <div class="stat-item animate-on-scroll delay-3">
-                    <div class="stat-number" data-target="8">0</div>
-                    <div class="stat-label">Avg. Days to Hire (Retail)</div>
-                    <div class="stat-divider"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
 <!-- ===== ENGAGEMENT MODELS ===== -->
 <section class="section-padding engagement-section">
@@ -1526,129 +1688,7 @@
     </div>
 </section>
 
-<!-- ===== TESTIMONIALS ===== -->
-<section class="section-padding testimonial-section">
-    <div class="container">
-        <div class="section-title animate-on-scroll">
-            <span class="label">Client Stories</span>
-            <h2>What Our Partners Say</h2>
-        </div>
-        <div class="row g-4">
-            <div class="col-md-4 animate-on-scroll delay-1">
-                <div class="testimonial-card">
-                    <p class="quote">“Talennexus helped us staff 18 new stores in under three weeks. The quality of store managers and associates was consistently high.”</p>
-                    <div class="testimonial-author">
-                        <div class="avatar">RK</div>
-                        <div>
-                            <div class="author-name">Ravi Kumar</div>
-                            <div class="author-role">HR Head, National Fashion Retail Chain</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 animate-on-scroll delay-2">
-                <div class="testimonial-card">
-                    <p class="quote">“We needed RF and field engineers across four circles on a tight timeline. They delivered screened candidates within 12 days every time.”</p>
-                    <div class="testimonial-author">
-                        <div class="avatar">PS</div>
-                        <div>
-                            <div class="author-name">Priya Sharma</div>
-                            <div class="author-role">Talent Lead, Telecom Infrastructure Company</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 animate-on-scroll delay-3">
-                <div class="testimonial-card">
-                    <p class="quote">“The replacement guarantee gave us real confidence. When two hires didn’t work out, replacements were in place within a week.”</p>
-                    <div class="testimonial-author">
-                        <div class="avatar">AM</div>
-                        <div>
-                            <div class="author-name">Ankit Mehta</div>
-                            <div class="author-role">Operations Director, E-commerce Fulfilment</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
-<!-- ===== FAQ ===== -->
-<section class="section-padding faq-section">
-    <div class="container">
-        <div class="section-title animate-on-scroll">
-            <span class="label">FAQ</span>
-            <h2>Frequently Asked Questions</h2>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <div class="accordion" id="retailFaq">
-                    <div class="accordion-item animate-on-scroll">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
-                                How quickly can you fill high-volume retail roles?
-                            </button>
-                        </h2>
-                        <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#retailFaq">
-                            <div class="accordion-body">
-                                For standard store associate and cashier roles we typically deliver shortlists within 5–8 days. For bulk requirements (50+ positions) we run parallel sourcing drives and can ramp up in phases.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item animate-on-scroll delay-1">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
-                                Do you hire for both permanent and contractual positions?
-                            </button>
-                        </h2>
-                        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#retailFaq">
-                            <div class="accordion-body">
-                                Yes. We support pure contract staffing, contract-to-hire and permanent recruitment across retail and telecom roles.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item animate-on-scroll delay-2">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
-                                Can you support multi-location / pan-India hiring?
-                            </button>
-                        </h2>
-                        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#retailFaq">
-                            <div class="accordion-body">
-                                Absolutely. We have active talent pools and local partners across major metros, Tier-2 cities and key telecom circles.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item animate-on-scroll delay-3">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
-                                What is your replacement policy?
-                            </button>
-                        </h2>
-                        <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#retailFaq">
-                            <div class="accordion-body">
-                                Most engagements come with a 30 to 90-day free replacement guarantee depending on the role level and engagement model.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item animate-on-scroll delay-4">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
-                                Do you handle background verification and documentation?
-                            </button>
-                        </h2>
-                        <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#retailFaq">
-                            <div class="accordion-body">
-                                Yes. We manage standard background checks, address verification and joining formalities as part of the process.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
 <!-- ===== CTA ===== -->
 <section class="cta-section">
@@ -1765,6 +1805,82 @@
 <!-- Contact form (Business / Individual → Zoho) -->
 <site-contact id="contact-form"></site-contact>
 
+<!-- ===== FAQ ===== -->
+<section class="section-padding faq-section">
+    <div class="container">
+        <div class="section-title animate-on-scroll">
+            <span class="label">FAQ</span>
+            <h2>Frequently Asked Questions</h2>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="accordion" id="retailFaq">
+                    <div class="accordion-item animate-on-scroll">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                How quickly can you fill high-volume retail roles?
+                            </button>
+                        </h2>
+                        <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#retailFaq">
+                            <div class="accordion-body">
+                                For store associate and cashier roles we aim to share shortlists within days, with the timeline agreed up front. For bulk requirements (50+ positions) we run parallel sourcing drives and can ramp up in phases.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item animate-on-scroll delay-1">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                Do you hire for both permanent and contractual positions?
+                            </button>
+                        </h2>
+                        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#retailFaq">
+                            <div class="accordion-body">
+                                Yes. We support pure contract staffing, contract-to-hire and permanent recruitment across retail and telecom roles.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item animate-on-scroll delay-2">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                Can you support multi-location / pan-India hiring?
+                            </button>
+                        </h2>
+                        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#retailFaq">
+                            <div class="accordion-body">
+                                Yes. We source locally in each city and circle, using job portals, local job fairs and referrals.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item animate-on-scroll delay-3">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                What is your replacement policy?
+                            </button>
+                        </h2>
+                        <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#retailFaq">
+                            <div class="accordion-body">
+                                Most engagements come with a 30 to 90-day free replacement guarantee depending on the role level and engagement model.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item animate-on-scroll delay-4">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                                Do you handle background verification and documentation?
+                            </button>
+                        </h2>
+                        <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#retailFaq">
+                            <div class="accordion-body">
+                                Yes. We manage standard background checks, address verification and joining formalities as part of the process.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <site-footer></site-footer>
 
 <!-- Toast -->
@@ -1781,6 +1897,29 @@
 </button>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+    /* White-collar / Blue-collar job tabs */
+    (function () {
+        var tabs = [].slice.call(document.querySelectorAll('.collar-tab'));
+        function show(tab) {
+            tabs.forEach(function (t) {
+                var on = t === tab, pane = document.getElementById(t.getAttribute('aria-controls'));
+                t.classList.toggle('active', on); t.setAttribute('aria-selected', on ? 'true' : 'false'); t.tabIndex = on ? 0 : -1;
+                pane.hidden = !on; pane.classList.toggle('show', on);
+            });
+        }
+        tabs.forEach(function (t) { t.addEventListener('click', function () { show(t); }); });
+        // Links like #blue-collar-jobs open that tab
+        function fromHash() {
+            var h = location.hash.replace('#', '');
+            tabs.forEach(function (t) {
+                if (t.getAttribute('aria-controls') === h) { show(t); t.closest('section').scrollIntoView({ behavior: 'smooth' }); }
+            });
+        }
+        fromHash();
+        window.addEventListener('hashchange', fromHash);
+    })();
+    </script>
 <script>
     // Navbar scroll
     const navbar = document.querySelector('.navbar');

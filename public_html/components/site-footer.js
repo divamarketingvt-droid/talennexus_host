@@ -31,13 +31,27 @@
     columns: [
       {
         title: 'Services',
+        // Same structure as the Services menu in the header
         links: [
-          { label: 'Recruitment', href: '#' },
-          { label: 'Payroll Management', href: '#' },
-          { label: 'Compliance', href: '#' },
-          { label: 'Virtual HR', href: '#' },
-          { label: 'Training & Development', href: '#' },
-          { label: 'Campus Nexus', href: '#' }
+          {
+            label: 'Recruitment Management', href: 'recruitment',
+            children: [
+              { label: 'Staffing Support', href: 'staffingsupport' },
+              { label: 'Technical Interview', href: 'technical-interview' },
+              { label: 'Psychometric Assessment', href: 'psychometric-assessment' },
+              { label: 'Exit Interview', href: 'exit-interview' },
+              { label: 'Payroll Services', href: 'payroll' }
+            ]
+          },
+          {
+            label: 'Campus Nexus', href: 'campushiring',
+            children: [
+              { label: 'Campus Hiring', href: 'campushiring' },
+              { label: 'Soft Skill Training', href: 'soft-skill' },
+              { label: 'Tech Training on Demand', href: 'techtraining' }
+            ]
+          },
+          { label: 'Virtual HR', href: 'organization-development' }
         ]
       },
       {
@@ -189,6 +203,24 @@
       color: var(--primary-accent);
       padding-left: 5px;
     }
+    /* Sub-items listed below a service (smaller, indented) */
+    site-footer .footer-links .has-sub > a {
+      color: #fff;
+      font-weight: 600;
+    }
+    site-footer .footer-sublinks {
+      list-style: none;
+      margin: 8px 0 0 2px;
+      padding: 0 0 0 12px;
+      border-left: 2px solid rgba(255, 255, 255, 0.15);
+    }
+    site-footer .footer-sublinks li {
+      margin-bottom: 6px;
+    }
+    site-footer .footer-sublinks a {
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.6);
+    }
     site-footer .footer-contact {
       list-style: none;
       padding: 0;
@@ -289,7 +321,10 @@
       f.columns.map(function (col) {
         return '<div class="col-lg-2 col-md-4"><h5>' + esc(col.title) + '</h5><ul class="footer-links">' +
           col.links.map(function (l) {
-            return '<li><a href="' + esc(resolve(l.href)) + '">' + esc(l.label) + '</a></li>';
+            var sub = l.children ? '<ul class="footer-sublinks">' + l.children.map(function (c) {
+              return '<li><a href="' + esc(resolve(c.href)) + '">' + esc(c.label) + '</a></li>';
+            }).join('') + '</ul>' : '';
+            return '<li' + (l.children ? ' class="has-sub"' : '') + '><a href="' + esc(resolve(l.href)) + '">' + esc(l.label) + '</a>' + sub + '</li>';
           }).join('') +
           '</ul></div>';
       }).join('') +

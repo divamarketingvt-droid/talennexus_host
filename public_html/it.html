@@ -12,7 +12,7 @@
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Talennexus">
     <meta property="og:title" content="IT Hiring &amp; IT Recruitment Services | Talennexus">
-    <meta property="og:description" content="Hire developers, cloud, DevOps, data, QA and cybersecurity talent with technically screened shortlists and a replacement guarantee.">
+    <meta property="og:description" content="IT hiring by Talennexus: developers, cloud, DevOps, data, QA, cybersecurity and tech leaders. Technically screened candidates, contract IT staff in 48–72 hours.">
     <meta property="og:url" content="https://talennexus.com/it">
     <meta property="og:image" content="https://talennexus.com/assets/talennexus-og.png">
     <meta name="twitter:card" content="summary_large_image">
@@ -891,6 +891,25 @@
         .domain-icon i, .feature-icon i, .engagement-icon i { transition: color .3s ease; }
         .feature-card a.svc-link { display: inline-flex; align-items: center; gap: 6px; margin-top: 16px; font-weight: 600; color: var(--primary-accent); text-decoration: none; }
         .feature-card a.svc-link:hover { color: var(--primary-color); }
+            /* White-collar / Blue-collar job tabs (IT Roles section) */
+        .collar-tabs { display: flex; justify-content: center; margin: -10px 0 36px; }
+        .collar-tabs .wrap { display: inline-flex; background: #fff; border: 1px solid #d9e5f2; border-radius: 60px; padding: 7px; box-shadow: 0 12px 32px rgba(20,53,93,.10); }
+        .collar-tab { display: inline-flex; align-items: center; gap: 10px; padding: 15px 34px; border: 0; background: transparent; border-radius: 60px; font-size: 1.15rem; font-weight: 600; color: #4a5b70; cursor: pointer; transition: all .25s ease; font-family: inherit; }
+        .collar-tab:hover { color: #14355d; background: #e6eef7; }
+        .collar-tab.active { background: #14355d; color: #fff; }
+        .collar-tab small { font-weight: 500; opacity: .75; font-size: .95rem; }
+        .collar-tab i { font-size: 1.25rem; }
+        .collar-pane[hidden] { display: none; }
+        .collar-pane.show { animation: collarIn .35s ease; }
+        @keyframes collarIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+        .collar-note { text-align: center; color: var(--text-gray); max-width: 760px; margin: 0 auto 30px; font-size: .98rem; }
+        @media (max-width: 575.98px) { .collar-tab { padding: 11px 16px; font-size: .95rem; } .collar-tab small { display: none; } }
+    
+        /* IT services: 3 equal cards; links inside the lists */
+        #it-services .feature-card { height: 100%; display: flex; flex-direction: column; }
+        #it-services .feature-card .svc-link { margin-top: auto; padding-top: 16px; }
+        #it-services .feature-list a { color: inherit; text-decoration: none; border-bottom: 1px dashed rgba(74,144,217,.5); }
+        #it-services .feature-list a:hover { color: var(--primary-accent); }
     </style>
 <!-- Favicon (Talennexus figure from tl.png) -->
 <link rel="icon" href="assets/favicon.ico" sizes="any">
@@ -901,6 +920,9 @@
 <script src="components/site-header.js?v=20261118"></script>
 <script src="components/site-footer.js?v=20261118"></script>
 <script src="components/site-contact.js?v=20261118"></script>
+<meta name="twitter:title" content="IT Hiring &amp; IT Recruitment Services | Talennexus">
+<meta name="twitter:description" content="IT hiring by Talennexus: developers, cloud, DevOps, data, QA, cybersecurity and tech leaders. Technically screened candidates, contract IT staff in 48–72 hours.">
+<meta name="twitter:image" content="https://talennexus.com/assets/talennexus-og.png">
 </head>
 <body>
 
@@ -925,7 +947,7 @@
                             </div>
                             <div class="floating-card" style="display:flex;align-items:center;gap:12px;border-left-color:var(--primary-color);">
                                 <i class="bi bi-terminal"></i>
-                                <div><strong>100%</strong><br><small style="color:var(--text-gray)">Technically screened</small></div>
+                                <div><strong>Screened</strong><br><small style="color:var(--text-gray)">Technical checks on every shortlist</small></div>
                             </div>
                         </div>
                     </div>
@@ -942,7 +964,7 @@
                         <div class="floating-card card-2">
                             <div style="display:flex;align-items:center;gap:12px;">
                                 <i class="bi bi-terminal"></i>
-                                <div><strong>100%</strong><br><small style="color:var(--text-gray)">Technically screened</small></div>
+                                <div><strong>Screened</strong><br><small style="color:var(--text-gray)">Technical checks on every shortlist</small></div>
                             </div>
                         </div>
                         <div class="floating-card card-3">
@@ -963,85 +985,47 @@
             <div class="section-title animate-on-scroll">
                 <span class="label">IT Services</span>
                 <h2>Our IT Hiring Services</h2>
-                <p>Everything your tech team needs — from hiring and assessment to payroll and exit interviews — with one partner.</p>
+                <p>Three ways we support tech companies — hiring, campus talent and HR — with one partner.</p>
             </div>
-            <div class="row g-4">
+            <div class="row g-4 justify-content-center">
                 <div class="col-lg-4 col-md-6 animate-on-scroll delay-1">
                     <div class="feature-card">
-                        <div class="feature-icon"><i class="bi bi-people"></i></div>
-                        <h3>IT Staffing Support</h3>
-                        <p>Contract and temporary IT professionals for projects, releases and short-term skill gaps — kept on our payroll.</p>
-                        <ul class="feature-list">
-                            <li><i class="bi bi-check-circle-fill"></i> Contract IT staff in 48–72 hours</li>
-                            <li><i class="bi bi-check-circle-fill"></i> Temp-to-perm option</li>
-                            <li><i class="bi bi-check-circle-fill"></i> Flexible contract terms</li>
-                        </ul>
-                        <a class="svc-link" href="staffingsupport">Explore staffing support <i class="bi bi-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 animate-on-scroll delay-2">
-                    <div class="feature-card">
-                        <div class="feature-icon"><i class="bi bi-calculator"></i></div>
+                        <div class="feature-icon"><i class="bi bi-person-workspace"></i></div>
                         <h3>IT Recruitment Management</h3>
-                        <p>End-to-end permanent hiring for developers, cloud, data, QA and security roles — from sourcing to joining.</p>
+                        <p>End-to-end hiring for developers, cloud, data, QA and security roles — permanent or contract, from sourcing to joining.</p>
                         <ul class="feature-list">
-                            <li><i class="bi bi-check-circle-fill"></i> Sourcing & technical screening</li>
-                            <li><i class="bi bi-check-circle-fill"></i> Onboarding in as little as 15 days</li>
-                            <li><i class="bi bi-check-circle-fill"></i> Replacement guarantee</li>
+                            <li><i class="bi bi-check-circle-fill"></i> <a href="staffingsupport">Contract &amp; temporary IT staffing</a></li>
+                            <li><i class="bi bi-check-circle-fill"></i> <a href="technical-interview">Technical interviews</a></li>
+                            <li><i class="bi bi-check-circle-fill"></i> <a href="psychometric-assessment">Psychometric assessments</a></li>
+                            <li><i class="bi bi-check-circle-fill"></i> <a href="exit-interview">Exit interviews</a> &amp; <a href="payroll">payroll</a></li>
                         </ul>
-                        <a class="svc-link" href="it/recruitment-agency-in-india">Explore recruitment across India <i class="bi bi-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 animate-on-scroll delay-3">
-                    <div class="feature-card">
-                        <div class="feature-icon"><i class="bi bi-laptop"></i></div>
-                        <h3>IT Technical Interview</h3>
-                        <p>Our panel runs technical interviews and coding assessments for your candidates, so your engineers save time.</p>
-                        <ul class="feature-list">
-                            <li><i class="bi bi-check-circle-fill"></i> Stack-specific interview rounds</li>
-                            <li><i class="bi bi-check-circle-fill"></i> Coding & problem-solving tests</li>
-                            <li><i class="bi bi-check-circle-fill"></i> Clear hire / no-hire report</li>
-                        </ul>
-                        <a class="svc-link" href="staffingsupport">Explore technical interviews <i class="bi bi-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 animate-on-scroll delay-1">
-                    <div class="feature-card">
-                        <div class="feature-icon"><i class="bi bi-people"></i></div>
-                        <h3>IT Psychometric Assessment</h3>
-                        <p>Check aptitude, personality and team fit so you hire engineers who will do well in your team.</p>
-                        <ul class="feature-list">
-                            <li><i class="bi bi-check-circle-fill"></i> Aptitude & reasoning tests</li>
-                            <li><i class="bi bi-check-circle-fill"></i> Personality & behaviour profile</li>
-                            <li><i class="bi bi-check-circle-fill"></i> Team & culture-fit insights</li>
-                        </ul>
-                        <a class="svc-link" href="staffingsupport">Explore assessments <i class="bi bi-arrow-right"></i></a>
+                        <a class="svc-link" href="it/recruitment-agency-in-india">Explore IT recruitment across India <i class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 animate-on-scroll delay-2">
                     <div class="feature-card">
-                        <div class="feature-icon"><i class="bi bi-graph-up"></i></div>
-                        <h3>IT Payroll Services</h3>
-                        <p>Salary processing and statutory compliance for your contract IT staff — handled every month.</p>
+                        <div class="feature-icon"><i class="bi bi-mortarboard-fill"></i></div>
+                        <h3>Campus Nexus</h3>
+                        <p>Hire engineering freshers from campus and make them project-ready with focused training.</p>
                         <ul class="feature-list">
-                            <li><i class="bi bi-check-circle-fill"></i> PF, ESI, TDS, PT & LWF</li>
-                            <li><i class="bi bi-check-circle-fill"></i> Online salary slips & Form 16</li>
-                            <li><i class="bi bi-check-circle-fill"></i> On-time salary payments</li>
+                            <li><i class="bi bi-check-circle-fill"></i> <a href="campushiring">Campus hiring drives</a></li>
+                            <li><i class="bi bi-check-circle-fill"></i> <a href="techtraining">Tech training on demand</a></li>
+                            <li><i class="bi bi-check-circle-fill"></i> <a href="soft-skill">Soft skill training</a></li>
                         </ul>
-                        <a class="svc-link" href="payroll">Explore payroll services <i class="bi bi-arrow-right"></i></a>
+                        <a class="svc-link" href="campushiring">Explore Campus Nexus <i class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 animate-on-scroll delay-3">
                     <div class="feature-card">
-                        <div class="feature-icon"><i class="bi bi-door-open"></i></div>
-                        <h3>IT Exit Interview</h3>
-                        <p>Understand why IT employees leave and get clear steps to improve retention.</p>
+                        <div class="feature-icon"><i class="bi bi-diagram-3-fill"></i></div>
+                        <h3>Virtual HR</h3>
+                        <p>An outsourced HR team for your tech company — HR policies, onboarding, engagement and people development.</p>
                         <ul class="feature-list">
-                            <li><i class="bi bi-check-circle-fill"></i> Confidential exit conversations</li>
-                            <li><i class="bi bi-check-circle-fill"></i> Attrition reasons & trends</li>
-                            <li><i class="bi bi-check-circle-fill"></i> Retention action report</li>
+                            <li><i class="bi bi-check-circle-fill"></i> HR policies &amp; processes</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Employee onboarding &amp; engagement</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Leadership &amp; team development</li>
                         </ul>
-                        <a class="svc-link" href="exit-interview">Explore exit interviews <i class="bi bi-arrow-right"></i></a>
+                        <a class="svc-link" href="organization-development">Explore Virtual HR <i class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -1053,9 +1037,17 @@
         <div class="container">
             <div class="section-title animate-on-scroll">
                 <span class="label">IT Roles</span>
-                <h2>Hiring Across Every Area of Technology</h2>
-                <p>We recruit IT professionals at every level — from freshers to engineering leaders — across product companies, IT services, startups and global capability centres.</p>
+                <h2>IT Jobs We Hire For</h2>
+                <p>From software engineers in the office to technicians on site — we hire for both. Choose a job type to see the roles.</p>
             </div>
+            <div class="collar-tabs">
+                <div class="wrap" role="tablist" aria-label="Job type">
+                    <button type="button" class="collar-tab active" role="tab" id="tab-white" aria-controls="white-collar-jobs" aria-selected="true"><i class="bi bi-briefcase"></i> White-Collar <small>· Professional</small></button>
+                    <button type="button" class="collar-tab" role="tab" id="tab-blue" aria-controls="blue-collar-jobs" aria-selected="false" tabindex="-1"><i class="bi bi-tools"></i> Blue-Collar <small>· Technicians</small></button>
+                </div>
+            </div>
+            <div class="collar-pane show" role="tabpanel" id="white-collar-jobs" aria-labelledby="tab-white">
+                <p class="collar-note">Office-based IT professionals — graduates and certified specialists, from freshers to engineering leaders, hired mostly on permanent roles.</p>
             <div class="row g-4">
                 <div class="col-lg-3 col-md-4 col-sm-6 animate-on-scroll delay-1">
                     <div class="domain-card">
@@ -1159,6 +1151,108 @@
                             <span class="domain-tag">CTO</span>
                         </div>
                     </div>
+                </div>
+            </div>
+            </div>
+            <div class="collar-pane" role="tabpanel" id="blue-collar-jobs" aria-labelledby="tab-blue" hidden>
+                <p class="collar-note">On-site and field IT technicians — ITI, diploma or skill-based roles, screened with practical tests and hired individually, on contract or in bulk.</p>
+                <div class="row g-4">
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="domain-card">
+                        <div class="domain-icon"><i class="bi bi-pc-display"></i></div>
+                        <h3>Desktop &amp; IT Support Technicians</h3>
+                        <p>Laptop, desktop and printer setup, troubleshooting and repair</p>
+                        <div class="domain-tags">
+                            <span class="domain-tag">Hardware</span>
+                            <span class="domain-tag">Windows</span>
+                            <span class="domain-tag">Printers</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="domain-card">
+                        <div class="domain-icon"><i class="bi bi-router"></i></div>
+                        <h3>Network Technicians</h3>
+                        <p>LAN cabling, router and switch installation, on-site network support</p>
+                        <div class="domain-tags">
+                            <span class="domain-tag">LAN</span>
+                            <span class="domain-tag">Cabling</span>
+                            <span class="domain-tag">Switches</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="domain-card">
+                        <div class="domain-icon"><i class="bi bi-camera-video"></i></div>
+                        <h3>CCTV &amp; Security Installers</h3>
+                        <p>Camera, access control and alarm installation and maintenance</p>
+                        <div class="domain-tags">
+                            <span class="domain-tag">CCTV</span>
+                            <span class="domain-tag">Biometric</span>
+                            <span class="domain-tag">Access control</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="domain-card">
+                        <div class="domain-icon"><i class="bi bi-hdd-rack"></i></div>
+                        <h3>Data-Centre Technicians</h3>
+                        <p>Rack and stack, cabling, hardware swaps and shift monitoring</p>
+                        <div class="domain-tags">
+                            <span class="domain-tag">Racking</span>
+                            <span class="domain-tag">Servers</span>
+                            <span class="domain-tag">Shifts</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="domain-card">
+                        <div class="domain-icon"><i class="bi bi-bezier2"></i></div>
+                        <h3>Fibre Splicers &amp; Cable Technicians</h3>
+                        <p>Fibre laying, splicing, termination and testing</p>
+                        <div class="domain-tags">
+                            <span class="domain-tag">Fibre</span>
+                            <span class="domain-tag">Splicing</span>
+                            <span class="domain-tag">OTDR</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="domain-card">
+                        <div class="domain-icon"><i class="bi bi-wrench-adjustable"></i></div>
+                        <h3>Field Service Engineers</h3>
+                        <p>Installation and service visits for equipment at customer sites</p>
+                        <div class="domain-tags">
+                            <span class="domain-tag">Installation</span>
+                            <span class="domain-tag">AMC</span>
+                            <span class="domain-tag">Field visits</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="domain-card">
+                        <div class="domain-icon"><i class="bi bi-motherboard"></i></div>
+                        <h3>Electronics Assembly Operators</h3>
+                        <p>Assembly, soldering and testing on electronics production lines</p>
+                        <div class="domain-tags">
+                            <span class="domain-tag">Soldering</span>
+                            <span class="domain-tag">Assembly</span>
+                            <span class="domain-tag">Testing</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="domain-card">
+                        <div class="domain-icon"><i class="bi bi-box-seam"></i></div>
+                        <h3>IT Asset &amp; Store Helpers</h3>
+                        <p>Asset tagging, stock movement and IT store management</p>
+                        <div class="domain-tags">
+                            <span class="domain-tag">Asset tagging</span>
+                            <span class="domain-tag">Inventory</span>
+                            <span class="domain-tag">Dispatch</span>
+                        </div>
+                    </div>
+                </div>
                 </div>
             </div>
         </div>
@@ -1293,41 +1387,6 @@
         </div>
     </section>
 
-    <!-- ===== STATS ===== -->
-    <section class="stats-section section-padding" id="stats">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-6 animate-on-scroll delay-1">
-                    <div class="stat-item">
-                        <div class="stat-number" data-target="500" data-suffix="+">500+</div>
-                        <div class="stat-label">Placements Delivered</div>
-                        <div class="stat-divider"></div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 animate-on-scroll delay-2">
-                    <div class="stat-item">
-                        <div class="stat-number" data-target="50" data-suffix="+">50+</div>
-                        <div class="stat-label">Client Companies</div>
-                        <div class="stat-divider"></div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 animate-on-scroll delay-3">
-                    <div class="stat-item">
-                        <div class="stat-number" data-target="15" data-suffix=" days">15 days</div>
-                        <div class="stat-label">Tech Hire to Onboarding</div>
-                        <div class="stat-divider"></div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 animate-on-scroll delay-4">
-                    <div class="stat-item">
-                        <div class="stat-number" data-target="98" data-suffix="%">98%</div>
-                        <div class="stat-label">Retention</div>
-                        <div class="stat-divider"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- ===== ENGAGEMENT MODELS ===== -->
     <section class="engagement-section section-padding" id="engagement">
@@ -1384,41 +1443,31 @@
         </div>
     </section>
 
-    <!-- ===== CASE STUDY ===== -->
-    <section class="features-section section-padding" id="cases">
+
+
+    <!-- ===== CTA SECTION ===== -->
+    <section class="cta-section" id="cta">
         <div class="container">
-            <div class="section-title animate-on-scroll">
-                <span class="label">Success Story</span>
-                <h2>IT Hiring in Action</h2>
-                <p>A real result from a Talennexus technology hiring engagement.</p>
-            </div>
-            <div class="row g-4 justify-content-center">
-                <div class="col-lg-5 col-md-8 animate-on-scroll delay-1">
-                    <div class="case-study-card">
-                        <div class="case-study-img">
-                            <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=500&h=300&fit=crop&q=80" alt="Engineering team at work">
-                            <i class="bi bi-code-slash"></i>
-                            <span class="case-category">Fintech</span>
-                        </div>
-                        <div class="case-study-body">
-                            <h3>Scaling a Fintech Engineering Team</h3>
-                            <p>60+ technology hires in 90 days for a fintech company — from senior architects to junior developers.</p>
-                            <div class="case-metrics">
-                                <div class="metric-item">
-                                    <strong>60+</strong>
-                                    <small>Hires in 90 Days</small>
-                                </div>
-                                <div class="metric-item">
-                                    <strong>95%</strong>
-                                    <small>Offer Acceptance</small>
-                                </div>
-                            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-7 animate-on-scroll">
+                    <div class="cta-content">
+                        <h2>Ready to Strengthen Your Tech Team?</h2>
+                        <p>Whether you need one critical engineer, contract developers for a release, or a whole new squad — our IT hiring team is ready to help.</p>
+                        <div style="display:flex;gap:15px;flex-wrap:wrap;">
+                            <a href="#contact-form" class="btn-white">Start Hiring Now <i class="bi bi-arrow-right"></i></a>
+                            <a href="#process" class="btn-ghost">See How It Works <i class="bi bi-play-circle"></i></a>
                         </div>
                     </div>
+                </div>
+                <div class="col-lg-5 text-end animate-on-scroll delay-2 d-none d-lg-block">
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=450&h=320&fit=crop&q=80" alt="Code on a laptop screen" style="border-radius:20px;box-shadow:0 20px 60px rgba(0,0,0,0.3);max-width:100%;">
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Contact form (Business / Individual → Zoho) -->
+    <site-contact id="contact-form"></site-contact>
 
     <!-- ===== FAQ ===== -->
     <section class="faq-section section-padding" id="faq">
@@ -1485,30 +1534,6 @@
         </div>
     </section>
 
-    <!-- ===== CTA SECTION ===== -->
-    <section class="cta-section" id="cta">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-7 animate-on-scroll">
-                    <div class="cta-content">
-                        <h2>Ready to Strengthen Your Tech Team?</h2>
-                        <p>Whether you need one critical engineer, contract developers for a release, or a whole new squad — our IT hiring team is ready to help.</p>
-                        <div style="display:flex;gap:15px;flex-wrap:wrap;">
-                            <a href="#contact-form" class="btn-white">Start Hiring Now <i class="bi bi-arrow-right"></i></a>
-                            <a href="#process" class="btn-ghost">See How It Works <i class="bi bi-play-circle"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-5 text-end animate-on-scroll delay-2 d-none d-lg-block">
-                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=450&h=320&fit=crop&q=80" alt="Code on a laptop screen" style="border-radius:20px;box-shadow:0 20px 60px rgba(0,0,0,0.3);max-width:100%;">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact form (Business / Individual → Zoho) -->
-    <site-contact id="contact-form"></site-contact>
-
     <site-footer></site-footer>
 
     <!-- ===== BACK TO TOP ===== -->
@@ -1517,6 +1542,29 @@
     </button>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+    /* White-collar / Blue-collar job tabs */
+    (function () {
+        var tabs = [].slice.call(document.querySelectorAll('.collar-tab'));
+        function show(tab) {
+            tabs.forEach(function (t) {
+                var on = t === tab, pane = document.getElementById(t.getAttribute('aria-controls'));
+                t.classList.toggle('active', on); t.setAttribute('aria-selected', on ? 'true' : 'false'); t.tabIndex = on ? 0 : -1;
+                pane.hidden = !on; pane.classList.toggle('show', on);
+            });
+        }
+        tabs.forEach(function (t) { t.addEventListener('click', function () { show(t); }); });
+        // Links like /it#blue-collar-jobs open that tab
+        function fromHash() {
+            var h = location.hash.replace('#', '');
+            tabs.forEach(function (t) {
+                if (t.getAttribute('aria-controls') === h) { show(t); t.closest('section').scrollIntoView({ behavior: 'smooth' }); }
+            });
+        }
+        fromHash();
+        window.addEventListener('hashchange', fromHash);
+    })();
+    </script>
     <script>
         // ===== Back to top =====
         const backToTop = document.getElementById('backToTop');

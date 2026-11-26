@@ -651,7 +651,7 @@
     var form = e.target;
     var cur = $('s-current').value, u = $('s-user').value.trim(), p1 = $('s-pass').value, p2 = $('s-pass2').value;
     if (!u) return toast('Enter a username.', true);
-    if (p1.length < 8) return toast('Password must be at least 8 characters.', true);
+    if (p1.length < 8) return toast(' must be at least 8 characters.', true);
     if (p1 !== p2) return toast('New passwords do not match.', true);
     api('password', { current: cur, user: u, pass: p1 }).then(function () {
       form.reset(); toast('Login updated. Use the new username and password next time.');

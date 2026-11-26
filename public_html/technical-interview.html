@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script src="components/site-gtm.js?v=20261124"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Technical Interview Services for Tech Hiring | Talennexus</title>
+<meta name="description" content="Outsourced technical interviews for tech hiring — coding, stack knowledge and system design rounds with a clear, scored report on every candidate.">
+<link rel="canonical" href="https://talennexus.com/technical-interview">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Talennexus">
+<meta property="og:title" content="Technical Interview Services for Tech Hiring | Talennexus">
+<meta property="og:description" content="Outsourced technical interviews for tech hiring — coding, stack knowledge and system design rounds with a clear, scored report on every candidate.">
+<meta property="og:url" content="https://talennexus.com/technical-interview">
+<meta property="og:image" content="https://talennexus.com/assets/talennexus-og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Technical Interview Services for Tech Hiring | Talennexus">
+<meta name="twitter:description" content="Outsourced technical interviews for tech hiring — coding, stack knowledge and system design rounds with a clear, scored report on every candidate.">
+<meta name="twitter:image" content="https://talennexus.com/assets/talennexus-og.png">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" href="assets/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="512x512" href="assets/favicon-512.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<script src="components/site-header.js?v=20261124"></script>
+<script src="components/site-footer.js?v=20261124"></script>
+<script src="components/site-contact.js?v=20261124"></script>
+<style>
+:root {
+  --navy: #14355d; --navy-deep: #0d2442; --primary: #1e3a5f; --accent: #4a90d9; --accent-dark: #2f6fb6; --accent-soft: #9cc6f2;
+  --gradient: linear-gradient(135deg, #1e3a5f 0%, #4a90d9 100%);
+  --light: #e6eef7; --paper: #f5f8fc; --ink: #0f2440; --text: #4a5b70; --line: #d9e5f2;
+  --shadow: 0 12px 32px rgba(20, 53, 93, 0.10); --shadow-lg: 0 22px 50px rgba(20, 53, 93, 0.18);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', sans-serif; color: var(--ink); line-height: 1.65; background: #fff; overflow-x: hidden; margin: 0; }
+h1, h2, h3, h4, h5 { font-family: 'Poppins', sans-serif; font-weight: 700; color: var(--ink); }
+.sec { padding: 90px 0; }
+.eyebrow { display: inline-flex; align-items: center; gap: 10px; font-size: .78rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--accent-dark); margin-bottom: 12px; }
+.eyebrow::after { content: ''; width: 46px; height: 2px; background: var(--accent); }
+.sec-title { font-size: clamp(1.9rem, 3.4vw, 2.6rem); font-weight: 800; margin-bottom: 12px; }
+.sec-intro { color: var(--text); font-size: 1.05rem; max-width: 720px; margin-bottom: 40px; }
+.center { text-align: center; } .center .sec-intro { margin-left: auto; margin-right: auto; }
+
+.as-hero { padding: 140px 0 80px; background: radial-gradient(800px 400px at 90% 10%, rgba(74,144,217,.18), transparent 60%), linear-gradient(180deg, #f5f8fc 0%, #fff 100%); }
+.as-badge { display: inline-flex; align-items: center; gap: 8px; background: #fff; border: 1px solid var(--line); border-radius: 50px; padding: 8px 16px; font-size: .85rem; font-weight: 600; color: var(--navy); box-shadow: var(--shadow); margin-bottom: 20px; }
+.as-badge i { color: var(--accent); }
+.as-hero h1 { font-size: clamp(2.1rem, 4.4vw, 3.3rem); font-weight: 800; line-height: 1.15; margin-bottom: 18px; }
+.as-hero h1 span { color: var(--accent); }
+.as-hero .lead { color: var(--text); font-size: 1.1rem; max-width: 600px; margin-bottom: 22px; }
+.as-points { list-style: none; padding: 0; margin: 0 0 28px; display: flex; flex-wrap: wrap; gap: 10px 22px; }
+.as-points li { display: flex; align-items: center; gap: 8px; font-weight: 600; color: var(--navy); font-size: .95rem; }
+.as-points i { color: var(--accent); }
+.btn-fill, .btn-line { display: inline-flex; align-items: center; gap: 9px; padding: 14px 28px; border-radius: 50px; font-weight: 600; text-decoration: none; transition: all .25s ease; }
+.btn-fill { background: var(--gradient); color: #fff; box-shadow: 0 10px 24px rgba(30,58,95,.25); }
+.btn-fill:hover { color: #fff; transform: translateY(-2px); }
+.btn-line { border: 2px solid var(--navy); color: var(--navy); }
+.btn-line:hover { background: var(--navy); color: #fff; }
+.as-hero-img { border-radius: 26px; overflow: hidden; box-shadow: var(--shadow-lg); }
+.as-hero-img img { width: 100%; height: auto; display: block; }
+
+.card-x { height: 100%; background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 26px 22px; transition: all .25s ease; }
+.card-x:hover { border-color: var(--accent); transform: translateY(-6px); box-shadow: var(--shadow); }
+.card-x .ic { width: 54px; height: 54px; border-radius: 16px; background: var(--light); color: var(--accent-dark); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 16px; transition: all .25s ease; }
+.card-x:hover .ic { background: var(--gradient); color: #fff; }
+.card-x h3 { font-size: 1.05rem; margin-bottom: 6px; }
+.card-x p { color: var(--text); font-size: .92rem; margin: 0; }
+
+.split { background: var(--paper); }
+.split-img { border-radius: 22px; overflow: hidden; box-shadow: var(--shadow-lg); }
+.split-img img { width: 100%; height: auto; display: block; }
+.split-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 14px; }
+.split-list li { background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 16px 18px; display: flex; gap: 14px; }
+.split-list li i { color: var(--accent); font-size: 1.2rem; margin-top: 2px; }
+.split-list b { display: block; color: var(--ink); font-family: 'Poppins', sans-serif; font-weight: 600; }
+.split-list span { color: var(--text); font-size: .92rem; }
+
+.step { height: 100%; position: relative; padding: 28px 22px 24px; border-radius: 18px; background: #fff; border: 1px solid var(--line); }
+.step .num { position: absolute; top: 14px; right: 18px; font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 2rem; color: rgba(30,58,95,.08); }
+.step .ic { width: 48px; height: 48px; border-radius: 14px; background: var(--gradient); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; margin-bottom: 14px; }
+.step h3 { font-size: 1.02rem; margin-bottom: 6px; }
+.step p { color: var(--text); font-size: .9rem; margin: 0; }
+
+.who { color: #c9d7e8; background: radial-gradient(700px 360px at 100% 0%, rgba(74,144,217,.35) 0%, rgba(74,144,217,0) 60%), linear-gradient(150deg, var(--navy-deep) 0%, var(--navy) 100%); }
+.who .sec-title { color: #fff; } .who .sec-intro { color: #c9d7e8; } .who .eyebrow { color: var(--accent-soft); } .who .eyebrow::after { background: var(--accent-soft); }
+.who-card { height: 100%; border-radius: 18px; padding: 26px 22px; background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.12); }
+.who-card i { font-size: 1.6rem; color: var(--accent-soft); }
+.who-card h3 { color: #fff; font-size: 1.1rem; margin: 12px 0 6px; }
+.who-card p { color: #c9d7e8; font-size: .93rem; margin: 0; }
+
+.faq .accordion-item { border: 1px solid var(--line); border-radius: 14px !important; margin-bottom: 12px; overflow: hidden; }
+.faq .accordion-button { font-weight: 600; color: var(--ink); }
+.faq .accordion-button:not(.collapsed) { background: var(--light); color: var(--navy); box-shadow: none; }
+.faq .accordion-body { color: var(--text); }
+.cta-band { background: var(--paper); padding: 60px 0; text-align: center; }
+.cta-band h2 { font-size: clamp(1.5rem, 3vw, 2.1rem); margin-bottom: 18px; }
+
+@media (max-width: 991.98px) { .as-hero { padding: 120px 0 60px; } .as-hero-img { margin-top: 40px; } .split-img { margin-bottom: 30px; } }
+@media (max-width: 575.98px) { .sec { padding: 64px 0; } }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "Technical Interview",
+      "serviceType": "Technical interview outsourcing",
+      "description": "Outsourced technical interviews for tech hiring — coding, stack knowledge and system design rounds with a clear, scored report on every candidate.",
+      "url": "https://talennexus.com/technical-interview",
+      "provider": {
+        "@id": "https://talennexus.com/#organization"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "India"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://talennexus.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Technical Interview",
+          "item": "https://talennexus.com/technical-interview"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Which technologies do you cover?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Common stacks including Java, Python, .NET, JavaScript and front-end frameworks, mobile, cloud and DevOps, data and QA. Tell us your stack and we will confirm before we start."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can we use our own interview questions?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We can use your questions, ours, or a mix — the scoring guide is always agreed with you first."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does the report include?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A score for each area assessed, notes on strengths and gaps, and a clear recommendation: proceed, hold or reject."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are interviews recorded?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Only if you need it and the candidate agrees in advance."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you also find the candidates?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Technical interviews can be used on their own, or as part of our full recruitment service."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "EmploymentAgency",
+      "@id": "https://talennexus.com/#organization",
+      "name": "Talennexus",
+      "url": "https://talennexus.com/",
+      "logo": "https://talennexus.com/assets/tl-logo.png",
+      "telephone": "+91-99529-78818",
+      "email": "connect@talennexus.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Module No.17, SDF-III, MEPZ SEZ, Tambaram",
+        "addressLocality": "Chennai",
+        "addressRegion": "Tamil Nadu",
+        "postalCode": "600045",
+        "addressCountry": "IN"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<site-header></site-header>
+
+<!-- ================= Hero ================= -->
+<section class="as-hero" id="home">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6">
+        <span class="as-badge"><i class="bi bi-laptop"></i> Technical Interview</span>
+        <h1>Technical Interviews That Show <span>Who Can Really Code</span></h1>
+        <p class="lead">We run structured technical interviews for your candidates — so your engineers spend less time interviewing, and you get a clear, scored report on every person before you decide.</p>
+        <ul class="as-points"><li><i class="bi bi-check-circle-fill"></i>Coding &amp; problem solving</li><li><i class="bi bi-check-circle-fill"></i>Your tech stack</li><li><i class="bi bi-check-circle-fill"></i>Scored written report</li></ul>
+        <div class="d-flex flex-wrap gap-3">
+          <a href="#contact-form" class="btn-fill">Talk to Us <i class="bi bi-arrow-right"></i></a>
+          <a href="#how" class="btn-line">How It Works <i class="bi bi-arrow-down"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="as-hero-img"><img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=720&h=560&fit=crop&q=80" alt="Two developers reviewing code together on a screen" width="720" height="560" fetchpriority="high"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= What we assess ================= -->
+<section class="sec" id="what">
+  <div class="container">
+    <div class="center">
+      <div class="eyebrow">Technical Interview</div>
+      <h2 class="sec-title">What We Assess</h2>
+      <p class="sec-intro">Every interview follows a question set and scoring guide agreed with you, so candidates are compared fairly.</p>
+    </div>
+    <div class="row g-4">
+        <div class="col-lg-4 col-md-6"><div class="card-x"><div class="ic"><i class="bi bi-code-slash"></i></div><h3>Coding &amp; Problem Solving</h3><p>Live coding or a short task to see how candidates think, structure and debug code.</p></div></div>
+        <div class="col-lg-4 col-md-6"><div class="card-x"><div class="ic"><i class="bi bi-stack"></i></div><h3>Stack Knowledge</h3><p>Depth in your technologies — Java, Python, .NET, JavaScript, cloud, databases, testing and more.</p></div></div>
+        <div class="col-lg-4 col-md-6"><div class="card-x"><div class="ic"><i class="bi bi-diagram-3"></i></div><h3>System Design</h3><p>For senior roles: designing scalable, reliable systems and explaining the trade-offs.</p></div></div>
+        <div class="col-lg-4 col-md-6"><div class="card-x"><div class="ic"><i class="bi bi-tools"></i></div><h3>Hands-on Practice</h3><p>Practical questions from real work — not just definitions learned for interviews.</p></div></div>
+        <div class="col-lg-4 col-md-6"><div class="card-x"><div class="ic"><i class="bi bi-chat-left-text"></i></div><h3>Communication</h3><p>How clearly candidates explain their approach and work through questions.</p></div></div>
+        <div class="col-lg-4 col-md-6"><div class="card-x"><div class="ic"><i class="bi bi-bullseye"></i></div><h3>Role Fit</h3><p>Whether the candidate’s level and experience match the role you are hiring for.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= Formats / where it helps ================= -->
+<section class="sec split">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6"><div class="split-img"><img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=640&h=480&fit=crop&q=80" alt="Laptop showing code during a technical interview" width="640" height="480" loading="lazy"></div></div>
+      <div class="col-lg-6">
+        <h2 class="sec-title">Interview Formats</h2>
+        <p class="sec-intro" style="margin-bottom:24px">Pick the round you need, or combine them into a full technical process.</p>
+        <ul class="split-list"><li><i class="bi bi-check2-circle"></i><div><b>Screening round</b><span>A short call to check fundamentals before your team spends time on the candidate.</span></div></li><li><i class="bi bi-check2-circle"></i><div><b>Full technical round</b><span>An in-depth interview covering coding, stack knowledge and practical scenarios.</span></div></li><li><i class="bi bi-check2-circle"></i><div><b>System design round</b><span>For senior and lead roles — architecture, scalability and decision-making.</span></div></li><li><i class="bi bi-check2-circle"></i><div><b>Take-home or online test</b><span>A practical assignment or coding test, reviewed and scored by us.</span></div></li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= How it works ================= -->
+<section class="sec" id="how">
+  <div class="container">
+    <div class="center">
+      <div class="eyebrow">How it works</div>
+      <h2 class="sec-title">Simple 4-Step Process</h2>
+      <p class="sec-intro">From your first message to a clear report on every candidate.</p>
+    </div>
+    <div class="row g-4">
+        <div class="col-lg-3 col-md-6"><div class="step"><span class="num">01</span><div class="ic"><i class="bi bi-file-earmark-text"></i></div><h3>Share the Role</h3><p>Send the job description, must-have skills and the level you are hiring for.</p></div></div>
+        <div class="col-lg-3 col-md-6"><div class="step"><span class="num">02</span><div class="ic"><i class="bi bi-list-check"></i></div><h3>Agree the Questions</h3><p>We prepare the question set and scoring guide, and align it with you.</p></div></div>
+        <div class="col-lg-3 col-md-6"><div class="step"><span class="num">03</span><div class="ic"><i class="bi bi-camera-video"></i></div><h3>We Interview</h3><p>Our interviewer runs the round online at a time that suits the candidate.</p></div></div>
+        <div class="col-lg-3 col-md-6"><div class="step"><span class="num">04</span><div class="ic"><i class="bi bi-clipboard-data"></i></div><h3>You Get a Report</h3><p>Scores, strengths, gaps and a clear recommendation for each candidate.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= Who it's for ================= -->
+<section class="sec who">
+  <div class="container">
+    <div class="eyebrow">Who it's for</div>
+    <h2 class="sec-title">Built for Teams Like Yours</h2>
+    <p class="sec-intro">Use it on its own, or together with our recruitment and campus hiring services.</p>
+    <div class="row g-4">
+        <div class="col-md-4"><div class="who-card"><i class="bi bi-rocket-takeoff"></i><h3>Startups</h3><p>No large tech panel yet? Get reliable technical screening without pulling engineers off product work.</p></div></div>
+        <div class="col-md-4"><div class="who-card"><i class="bi bi-people"></i><h3>High-volume hiring</h3><p>Hiring many developers at once? Keep the bar consistent across every candidate.</p></div></div>
+        <div class="col-md-4"><div class="who-card"><i class="bi bi-person-badge"></i><h3>HR &amp; recruiters</h3><p>Non-technical recruiters get a clear technical view before shortlisting.</p></div></div>
+    </div>
+  </div>
+</section>
+
+
+<section class="cta-band">
+  <div class="container">
+    <h2>Need technical interviews for your next tech hire?</h2>
+    <a href="#contact-form" class="btn-fill">Send Your Requirement <i class="bi bi-arrow-right"></i></a>
+  </div>
+</section>
+
+<site-contact id="contact-form"></site-contact>
+<!-- ================= FAQ ================= -->
+<section class="sec faq" id="faq">
+  <div class="container" style="max-width: 900px;">
+    <div class="eyebrow">FAQ</div>
+    <h2 class="sec-title">Frequently Asked Questions</h2>
+    <div class="accordion mt-4" id="faqList">
+        <div class="accordion-item">
+          <h3 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq0" aria-expanded="true">Which technologies do you cover?</button></h3>
+          <div id="faq0" class="accordion-collapse collapse show" data-bs-parent="#faqList"><div class="accordion-body">Common stacks including Java, Python, .NET, JavaScript and front-end frameworks, mobile, cloud and DevOps, data and QA. Tell us your stack and we will confirm before we start.</div></div>
+        </div>
+        <div class="accordion-item">
+          <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="false">Can we use our own interview questions?</button></h3>
+          <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqList"><div class="accordion-body">Yes. We can use your questions, ours, or a mix — the scoring guide is always agreed with you first.</div></div>
+        </div>
+        <div class="accordion-item">
+          <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false">What does the report include?</button></h3>
+          <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqList"><div class="accordion-body">A score for each area assessed, notes on strengths and gaps, and a clear recommendation: proceed, hold or reject.</div></div>
+        </div>
+        <div class="accordion-item">
+          <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false">Are interviews recorded?</button></h3>
+          <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqList"><div class="accordion-body">Only if you need it and the candidate agrees in advance.</div></div>
+        </div>
+        <div class="accordion-item">
+          <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false">Can you also find the candidates?</button></h3>
+          <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqList"><div class="accordion-body">Yes. Technical interviews can be used on their own, or as part of our full <a href="recruitment">recruitment service</a>.</div></div>
+        </div>
+    </div>
+  </div>
+</section>
+
+<site-footer></site-footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
